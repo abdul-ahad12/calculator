@@ -8,7 +8,7 @@ const Points = () => {
     const [calc,setCalc]=useState("")
   return (
     <>
-    <div className="flex flex-row w-[30vw] gap-5">
+    {/* <div className="flex flex-row w-[30vw] gap-5">
     <div>Point1:</div>
     <input
     className="border-cyan-900"
@@ -43,7 +43,7 @@ const Points = () => {
         setby(e.target.value);
       }}
     ></input>
-  </div>
+  </div> */}
   </>
   )
 }
