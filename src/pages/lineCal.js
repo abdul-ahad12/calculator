@@ -3,19 +3,20 @@ import SubCard from "../component/sections/subCard";
 import MainLayout from "./mainLayout";
 
 const LineCal = () => {
+  const title="Line"
   const lineElements = [
     {
       title: "Distance between two points",
 
-      link: "/pages/lineCal",
+      link: "/distance",
     },
     {
       title: "Slope of a line",
-      link: "",
+      link: "/slopeLine",
     },
     {
       title: "Point of intersection of two lines",
-      link: "",
+      link: "/pointofint",
     },
     {
       title: "x-intercept and y-intercept of a line.",
@@ -49,22 +50,22 @@ const LineCal = () => {
   ];
 
   return (
-    // <MainLayout>
+    <MainLayout>
 
     <div className='className="w-full flex flex-col items-center justify-center h-[100%] '>
-      <div className="font-[600] mb-[4rem] text-[3rem] mt-7 ">Lines</div>
-      <div className="mx-2 mb-24 h-20rem flex-wrap flex items-center justify-center gap-10">
+      <div className="font-[600] mb-[4rem] text-[3rem] mt-7 ">{title}</div>
+      <div className=" mb-24 h-20rem flex-wrap flex items-center justify-center gap-10">
         {lineElements.map((data, index) => {
           return (
             <div key={index}>
-              <SubCard title={data.title} />
+              <SubCard title={data.title} link={data.link} />
             </div>
           );
         })}
       </div>
     </div>
 
-    // </MainLayout>
+     </MainLayout>
   );
 };
 

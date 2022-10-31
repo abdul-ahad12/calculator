@@ -4,10 +4,10 @@ import Navbar from "../component/navbar";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="flex w-screen flex-col justify-between min-h-screen "
+    <div className="flex w-full flex-col  min-h-screen "
     //  className="flex flex-col justify-between h-full min-h-screen">
     >
-      <Navbar /> {children} <Footer />
+    <Navbar />   <div className="min-h-[65vh] h-full">{children} </div><Footer />
     </div>
   );
 };

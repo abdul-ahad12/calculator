@@ -1,10 +1,4 @@
-import { useState } from "react";
-import Line from "../calculations/line";
-import Footer from "../component/footer";
-import Navbar from "../component/navbar";
-import Points from "../component/points";
 import MainCard from "../component/sections/mainCard";
-import LineCal from "./lineCal";
 import MainLayout from "./mainLayout";
 
 function App() {
@@ -12,27 +6,27 @@ function App() {
     {
       title: "Line",
       url: "",
-      link:"/pages/lineCal",
+      link: "/lineCal",
     },
     {
       title: "Circle",
       url: "",
-      link:"",
+      link: "",
     },
     {
       title: "Parabola",
       url: "",
-      link:"",
+      link: "",
     },
     {
       title: "Ellipse",
       url: "",
-      link:"",
+      link: "",
     },
     {
       title: "Hypderbola",
       url: "",
-      link:"",
+      link: "",
     },
   ];
 
@@ -73,20 +67,18 @@ function App() {
 
   return (
     <MainLayout>
-      {/* <div className="w-full flex justify-center  h-[35rem] my-11 ">
-        <div className="w-90vw mx-3 flex flex-wrap normal gap-11">
-          {mainElements.map((data, index)=>{
+      <div className="w-full flex justify-center  min-h-[35rem] my-11 ">
+        <div className="w-90vw mx-3 flex flex-wrap items-center justify-center normal gap-11">
+          {mainElements.map((data, index) => {
             return (
-            <div key={index}>
-              <MainCard 
-                title={data.title}
-                link={data.link}
-              />
-            </div>)
+              <div key={index}>
+                <MainCard title={data.title} link={data.link} />
+              </div>
+            );
           })}
         </div>
-      </div> */}
-      <LineCal />
+      </div>
+      {/* <LineCal title={"Line"} /> */}
       {/* <div className="flex flex-row w-[30vw] gap-5">
     <div>Point1:</div>
     <input

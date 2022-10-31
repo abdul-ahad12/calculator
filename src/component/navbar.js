@@ -10,17 +10,20 @@ const Navbar = () => {
           <div>CG GEOMETRY</div>
           {/* has to change div to link */}
 
+          <div className="hidden lg:flex flex-row align-middle items-center gap-6">
+
           <div>Home</div>
           <div>Line</div>
           <div>Circle</div>
           <div>Parabola</div>
           <div>Ellipse</div>
           <div>Hyperbola</div>
+          </div>
         </div>
 
         {/* Hero */}
         <div className="w-full flex justify-center items-center flex-col h-64">
-       <div className="text-[3rem] font-[500]"> Cordinate Geometry Calculator</div>
+       <div className="base:text-[2rem] text-center font-[500] lg:text-[3rem]"> Cordinate Geometry Calculator</div>
 
         </div>
       </div>
