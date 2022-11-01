@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
-import MainLayout from "../mainLayout";
 
 const SlopeLine = () => {
     const [variables, setvariables] = useState({

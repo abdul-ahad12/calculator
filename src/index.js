@@ -5,6 +5,7 @@ import './font/stylesheet.css'
 import './index.css';
 import App from './pages/App';
 import Distance from './pages/line/distance';
+import Perpendicular from './pages/line/perpendicular';
 import PointOfInt from './pages/line/pointOfInt';
 import SlopeLine from './pages/line/slopeLine';
 import Xyintercept from './pages/line/xyintercept';
@@ -23,6 +24,8 @@ root.render(
         <Route path="slopeLine" element={<SlopeLine />}></Route>
         <Route path="pointofint" element={<PointOfInt />}></Route>
         <Route path="xyintercept" element={<Xyintercept />}></Route>
+        <Route path="perpendicular" element={<Perpendicular />}></Route>
+
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           
