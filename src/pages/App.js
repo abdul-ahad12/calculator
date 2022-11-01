@@ -1,43 +1,45 @@
 import MainCard from "../component/sections/mainCard";
 import MainLayout from "./mainLayout";
 
+
+
 function App() {
   const mainElements = [
     {
       title: "Line",
-      url: "",
+      url: "/line.JPG",
       link: "/lineCal",
     },
     {
       title: "Circle",
-      url: "",
+      url: "/circle.JPG",
       link: "",
     },
     {
       title: "Parabola",
-      url: "",
+      url: "/parabola.JPG",
       link: "",
     },
     {
       title: "Ellipse",
-      url: "",
+      url: "/ellipse.JPG",
       link: "",
     },
     {
       title: "Hypderbola",
-      url: "",
+      url: "/hyperbola.JPG",
       link: "",
     },
   ];
 
   return (
     <MainLayout>
-      <div className="w-full flex justify-center  min-h-[35rem] my-11 ">
+      <div className="w-full flex justify-center  min-h-[35rem] my-5  ">
         <div className="w-90vw mx-3 flex flex-wrap items-center justify-center normal gap-11">
           {mainElements.map((data, index) => {
             return (
               <div key={index}>
-                <MainCard title={data.title} link={data.link} />
+                <MainCard title={data.title} url={data.url} link={data.link} />
               </div>
             );
           })}

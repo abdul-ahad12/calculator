@@ -7,7 +7,7 @@ const Navbar = () => {
 
       {/* navbar */}
         <div className="flex flex-row align-middle items-center  h-16  gap-6">
-          <div>CG GEOMETRY</div>
+          <div className="flex flex-row items-center">CG-<img className="w-7" src="/favicon.ico"></img></div>
           {/* has to change div to link */}
 
           <div className="hidden lg:flex flex-row align-middle items-center gap-6">
@@ -22,8 +22,8 @@ const Navbar = () => {
         </div>
 
         {/* Hero */}
-        <div className="w-full flex justify-center items-center flex-col h-64">
-       <div className="base:text-[2rem] text-center font-[500] lg:text-[3rem]"> Cordinate Geometry Calculator</div>
+        <div className="w-full flex justify-center items-center flex-col h-56">
+       <div className="base:text-[2rem] text-center font-[500] lg:text-[3rem]"> Coordinate Geometry Calculator</div>
 
         </div>
       </div>

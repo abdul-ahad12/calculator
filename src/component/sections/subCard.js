@@ -5,7 +5,7 @@ const SubCard = ({ title, link }) => {
   return (
     <div className="min-w-[10rem] rounded-[12px] bg-white  flex flex-col ">
       <div className="h-[6rem] lg:w-[30rem] base:w-[18rem] flex flex-col justify-center   ">
-        <div className="flex text-[25px] font-[600] text-center justify-center">
+        <div className="flex text-[25px] font-[500] text-center justify-center">
           {title}
         </div>
       </div>
