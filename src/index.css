@@ -6,7 +6,7 @@ body {
     font-family: 'Gilroy';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(236, 222, 222);
+    background-color: #ECECEC
 }
 
 code {
