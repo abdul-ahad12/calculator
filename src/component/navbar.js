@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -12,12 +13,12 @@ const Navbar = () => {
 
           <div className="hidden lg:flex flex-row align-middle items-center gap-6">
 
-          <div>Home</div>
-          <div>Line</div>
-          <div>Circle</div>
-          <div>Parabola</div>
-          <div>Ellipse</div>
-          <div>Hyperbola</div>
+          <div className="text-[#d6d6d6] hover:text-white"><Link to={"/"}> Home</Link></div>
+          <div><Link to={"/lineCal"}> Line </Link></div>
+          <div><Link to={"/circle"}> Circle</Link></div>
+          <div><Link to={"/parabola"}> Parabola</Link></div>
+          <div><Link to={"/ellipse"}> Ellipse</Link></div>
+          <div><Link to={"/hyperbola"}> Hyperbola</Link></div>
           </div>
         </div>
 

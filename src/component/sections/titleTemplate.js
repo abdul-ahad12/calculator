@@ -277,7 +277,7 @@ const TitleTemplate = ({
         />
         <button
           onClick={onResult}
-          className="bg-black rounded-[10px] px-5 py-2 text-white"
+          className="hover:bg-black bg-[#292929] rounded-[10px] px-5 py-2 text-white"
         >
           Calculate
         </button>

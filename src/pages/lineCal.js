@@ -35,25 +35,14 @@ const LineCal = () => {
       title: "Equation of a line. Point slope form.",
       link: "/pointslopeform",
     },
-    {
-      title: "Equation of a line. Slope intercept form.",
-      link: "",
-    },
-    {
-      title: "Equation of a line. Intercept form.",
-      link: "",
-    },
-    {
-      title: "Area of a triangle (3 points).",
-      link: "",
-    },
+ 
   ];
 
   return (
     <MainLayout>
 
     <div className='className="w-full flex flex-col items-center justify-center h-[100%] '>
-      <div className="font-[600] mb-[4rem] text-[3rem] mt-7 ">{title}</div>
+      <div className="font-[500] mb-[4rem] text-[3rem] mt-7 ">{title}</div>
       <div className=" mb-24 max-w-[1800px] h-20rem flex-wrap flex base:px-[1.5rem] lg:px-[2.5rem] items-center justify-center gap-10">
         {lineElements.map((data, index) => {
           return (
