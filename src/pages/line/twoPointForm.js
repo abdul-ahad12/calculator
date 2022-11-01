@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 
-const Perpendicular = () => {
+const TwoPointForm = () => {
   const [variables, setvariables] = useState({
     ax: "",
     ay: "",
@@ -38,46 +38,40 @@ const Perpendicular = () => {
     });
   };
   const resultDumm = () => {
-    const result = line.bisector(
-        variables.ax,
-        variables.ay,
-        variables.bx,
-        variables.by
-      );
+    const result = line.twopointform(
+      variables.ax,
+      variables.ay,
+      variables.bx,
+      variables.by
+    );
 
-      let m=result[0]
-      let b=result[1]
-      let a=`y=${m}x+${b}`
-      setResult(a);
-   
+    let m = result[0];
+    let c = result[1];
+    let a = `y=${m}x+${c}`;
+    setResult(a);
   };
 
   const onResult = () => {
-    
-      variables.ax === "" ||
-      variables.ay === "" ||
-      variables.bx === "" ||
-      variables.by === ""
-        ? alert("Enter all inputs")
-        :  resultDumm()
-        // setvariables({
-        //     ax:"",
-        //     ay:"",
-        //     bx:"",
-        //     by:"",
+    variables.ax === "" ||
+    variables.ay === "" ||
+    variables.bx === "" ||
+    variables.by === ""
+      ? alert("Enter all inputs")
+      : resultDumm();
+    // setvariables({
+    //     ax:"",
+    //     ay:"",
+    //     bx:"",
+    //     by:"",
 
-        // })
-        
-    
+    // })
   };
 
   return (
     <div>
-      {" "}
       <TitleTemplate
-        title={"Perpendicular bisector"}
-        subTitle={"per"}
-        formula={""}
+        title={"Equation of a line. Two point form."}
+        subTitle={"formula"}
         type={"twoPoints"}
         valueax={variables.ax}
         onAxChange={onAxChange}
@@ -94,4 +88,4 @@ const Perpendicular = () => {
   );
 };
 
-export default Perpendicular;
+export default TwoPointForm;

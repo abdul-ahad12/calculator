@@ -20,20 +20,20 @@ const LineCal = () => {
     },
     {
       title: "x-intercept and y-intercept of a line.",
-      link: "",
+      link: "/xyintercept",
     },
     {
       title: "Equation of perpendicular bisector.",
-      link: "",
+      link: "/perpendicular",
     },
     {
       title: "Equation of a line. Two point form.",
 
-      link: "/pages/lineCal",
+      link: "/twopointform",
     },
     {
       title: "Equation of a line. Point slope form.",
-      link: "",
+      link: "/pointslopeform",
     },
     {
       title: "Equation of a line. Slope intercept form.",
@@ -54,7 +54,7 @@ const LineCal = () => {
 
     <div className='className="w-full flex flex-col items-center justify-center h-[100%] '>
       <div className="font-[600] mb-[4rem] text-[3rem] mt-7 ">{title}</div>
-      <div className=" mb-24 h-20rem flex-wrap flex items-center justify-center gap-10">
+      <div className=" mb-24 max-w-[1800px] h-20rem flex-wrap flex base:px-[1.5rem] lg:px-[2.5rem] items-center justify-center gap-10">
         {lineElements.map((data, index) => {
           return (
             <div key={index}>
