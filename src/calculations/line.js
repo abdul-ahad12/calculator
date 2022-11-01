@@ -1,5 +1,6 @@
 class Line {
     constructor(ax, ay, bx, by, a1, b1, c1, a2, b2, c2) {
+
         this.ax = ax;
         this.ay = ay;
         this.bx = bx;
