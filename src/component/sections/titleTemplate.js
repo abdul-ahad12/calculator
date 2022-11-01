@@ -26,6 +26,8 @@ const InputTemplate = ({
   onAbChange,
   onBbChange,
   onCbChange,
+  valueM,
+  onMChange,
 }) => {
   switch (type) {
     case "twoPoints":
@@ -127,6 +129,7 @@ const InputTemplate = ({
           </div>
         </div>
       );
+
     case "oneline":
       return (
         <div className="flex flex-col gap-8">
@@ -154,6 +157,39 @@ const InputTemplate = ({
               value={valueCa}
               onChange={onCaChange}
               placeholder="c1"
+              type="number"
+            />
+          </div>
+        </div>
+      );
+
+    case "slopePoint":
+      return (
+        <div className="flex flex-col gap-8">
+          <div className="flex gap-2 flex-row items-center">
+            <div>Slope :</div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueM}
+              onChange={onMChange}
+              placeholder="m"
+              type="number"
+            />
+            <div className="lg:mr-8">x :</div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueax}
+              onChange={onAxChange}
+              placeholder="x"
+              type="number"
+            />
+            <div className="lg:mr-8">y :</div>
+
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueay}
+              onChange={onAyChange}
+              placeholder="y"
               type="number"
             />
           </div>
@@ -197,6 +233,8 @@ const TitleTemplate = ({
   onCbChange,
   resultx,
   resulty,
+  valueM,
+  onMChange,
 }) => {
   return (
     <MainLayout>
@@ -234,10 +272,12 @@ const TitleTemplate = ({
           onAbChange={onAbChange}
           onBbChange={onBbChange}
           onCbChange={onCbChange}
+          valueM={valueM}
+          onMChange={onMChange}
         />
         <button
           onClick={onResult}
-          className="bg-black rounded-[10px] px-5 py-2 text-white"
+          className="hover:bg-black bg-[#292929] rounded-[10px] px-5 py-2 text-white"
         >
           Calculate
         </button>
