@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="w-full bg-slate-800 text-white flex justify-center base:text-[10px] lg:text-[1rem] items-center h-9">
       {" "}
-      Copyright© 2021 | Designed and Developed by AJK, OMZ, SFH.{" "}
+      Copyright© 2021 | Designed and Developed by AJK.{" "}
     </div>
   );
 };
