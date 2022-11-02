@@ -61,12 +61,12 @@ class Circle {
   }
 
   powerofpoint(x,y,g,f,c){
-    let a = (Number(x)*Number(x)) + (y*y) + (g*x) + (f*y) + (c);
+    let a = (x*x) + (y*y) + (g*x) + (f*y) + Number(c);
     return (a)
 
   }
  lengthoftangent(x,y,g,f,c){
-  let a = Math.sqrt((x*x) + (y*y) + (g*x) + (f*y) + c);
+  let a = Math.sqrt((x*x) + (y*y) + (g*x) + (f*y) + Number(c));
 	let m = x + (-g/2);
 	let n = y + (-f/2);
 	let l = ((-g/2) * x) + ((-f/2) * y) + c;

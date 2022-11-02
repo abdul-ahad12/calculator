@@ -334,7 +334,7 @@ const InputTemplate = ({
       <div className="flex text=[2rem] flex-col gap-8">
       <div className="flex gap-2 flex-row items-center">
         <div>
-          <MathComponent tex={"Point"} />
+          <MathComponent tex={"Point \\hspace{0.1cm}"} />
         </div>
         <input
           className="rounded-[5px] w-[5rem]"

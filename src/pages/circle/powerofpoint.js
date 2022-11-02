@@ -50,7 +50,7 @@ const Powerofpoint = () => {
         const result = circle.powerofpoint(eqInput.x,eqInput.y,eqInput.g, eqInput.f, eqInput.c);
         let a = result
     
-        let final =<MathComponent tex={`Power of point is:${a}`}/>
+        let final =<MathComponent tex={`Power \\hspace{0.15cm} of \\hspace{0.15cm} point \\hspace{0.15cm} is:${a}`}/>
     
         setresult(final);
       };
@@ -67,12 +67,17 @@ const Powerofpoint = () => {
     
         // })
       };
+
+      const s = 'P:(x_1,y_1), \\hspace{0.5cm} S_{11}: (x_1)^2 + (y_1)^2 + x(x_1) + y(y_1) - c';
+      const f2 = <MathComponent tex={s} />
+
   return (
     
     <div>
       <TitleTemplate
         title={"Power of point wrt Circle"}
         type={"pointeqCircle"}
+        formula = {f2}
         valueX={eqInput.x}
         valueY={eqInput.y}
         valueG={eqInput.g}
