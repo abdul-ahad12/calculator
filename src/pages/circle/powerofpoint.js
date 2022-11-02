@@ -6,14 +6,28 @@ import { MathComponent } from "mathjax-react";
 
 const Powerofpoint = () => {
     const [eqInput, seteqInput] = useState({
+        x:"",
+        y:"",
         g: "",
         f: "",
         c: "",
       });
     
       const [result, setresult] = useState("");
-      const circle = new Circle(eqInput.g, eqInput.f, eqInput.c);
+      const circle = new Circle(eqInput.x,eqInput.y,eqInput.g, eqInput.f, eqInput.c);
       console.log(eqInput);
+      const onXChange = (e) => {
+        seteqInput({
+          ...eqInput,
+          x: e.target.value,
+        });
+      };
+      const onYChange = (e) => {
+        seteqInput({
+          ...eqInput,
+          y: e.target.value,
+        });
+      };
       const onGChange = (e) => {
         seteqInput({
           ...eqInput,
@@ -33,18 +47,16 @@ const Powerofpoint = () => {
         });
       };
       const resultDumm = () => {
-        const result = circle.parametriceq(eqInput.g, eqInput.f, eqInput.c);
-        let a = result[0];
-        let b = result[1];
-        let c=result[2]
+        const result = circle.powerofpoint(eqInput.x,eqInput.y,eqInput.g, eqInput.f, eqInput.c);
+        let a = result
     
-        let final =<MathComponent tex={`Eq:x=${a}+${c}Cos(n),y=${b}+${c}Sin(n), 0<n<2Pi`}/>
+        let final =<MathComponent tex={`Power of point is:${a}`}/>
     
         setresult(final);
       };
     
       const onResult = () => {
-        eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
+        eqInput.x===""||eqInput.y===""|| eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
           ? alert("Enter all inputs")
           : resultDumm();
         // setvariables({
@@ -60,13 +72,17 @@ const Powerofpoint = () => {
     <div>
       <TitleTemplate
         title={"Power of point wrt Circle"}
-        type={"eqCircle"}
+        type={"pointeqCircle"}
+        valueX={eqInput.x}
+        valueY={eqInput.y}
         valueG={eqInput.g}
         valueF={eqInput.f}
         valueC={eqInput.c}
         onGChange={onGChange}
         onFChange={onFChange}
         onCChange={onCChange}
+        onXChange={onXChange}
+        onYChange={onYChange}
         result={result}
         onResult={onResult}
       />

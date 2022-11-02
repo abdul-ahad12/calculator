@@ -329,7 +329,69 @@ const InputTemplate = ({
         </div>
       );
 
-    default:
+   case "pointeqCircle":
+    return(
+      <div className="flex text=[2rem] flex-col gap-8">
+      <div className="flex gap-2 flex-row items-center">
+        <div>
+          <MathComponent tex={"Point"} />
+        </div>
+        <input
+          className="rounded-[5px] w-[5rem]"
+          value={valueX}
+          onChange={onXChange}
+          placeholder="x"
+          type="number"
+        />
+
+        <input
+          className="rounded-[5px] w-[5rem]"
+          value={valueY}
+          onChange={onYChange}
+          placeholder="y"
+          type="number"
+        />
+         <div>
+              <MathComponent tex={"Eqn: "} />
+            </div>
+
+            <div>
+              <MathComponent tex={"x^2 + y^2 +"} />{" "}
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueG}
+              onChange={onGChange}
+              placeholder="g"
+              type="number"
+            />
+            <div className="lg:mr-3">
+              <MathComponent tex={"x +"} />
+            </div>
+
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueF}
+              onChange={onFChange}
+              placeholder="f"
+              type="number"
+            />
+
+            <div className="lg:mr-3">
+              <MathComponent tex={"y +"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueC}
+              onChange={onCChange}
+              placeholder="c"
+              type="number"
+            />
+      </div>
+    </div>
+
+    )
+      default:
       break;
   }
 };

@@ -37,7 +37,7 @@ class Circle {
     let a = ax - x;
     let b = ay - y;
     let r = Math.sqrt(a * a + b * b);
-    let c = x * x + y * y + r * r;
+    let c = x * x + y * y - r * r;
     let g = -2 * x;
     let f = -2 * y;
 
@@ -61,6 +61,8 @@ class Circle {
   }
 
   powerofpoint(x,y,g,f,c){
+    let a = (Number(x)*Number(x)) + (y*y) + (g*x) + (f*y) + (c);
+    return (a)
 
   }
  lengthoftangent(x,y,g,f,c){
