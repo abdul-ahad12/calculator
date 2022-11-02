@@ -58,11 +58,16 @@ const GenToStand = () => {
     // })
   };
 
+  const f = 'General Eq: x^2 + y^2 + 2gx + 2fy + c \\hspace{0.5cm} Standard Eq: (x-h)^2 + (y-k)^2 = r^2';
+  const f1 = <MathComponent tex={f} />
+  
+
   return (
     <div>
       <TitleTemplate
         title={"General form equation to standard form"}
         type={"eqCircle"}
+        formula = {f1}
         valueG={eqInput.g}
         valueF={eqInput.f}
         valueC={eqInput.c}

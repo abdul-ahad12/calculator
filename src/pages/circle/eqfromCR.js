@@ -57,7 +57,7 @@ const EqfromCR = () => {
     // })
   };
 
-  const s = 'Equation \\hspace{0.25cm} of \\hspace{0.25cm} Circle: (x-h)^2 + (y-k)^2 = r^2';
+  const s = 'S: (x-h)^2 + (y-k)^2 = r^2';
   const f2 = <MathComponent tex={s} />
 
   return (
