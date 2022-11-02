@@ -394,7 +394,8 @@ const TitleTemplate = ({
         </button>
 
         <div className="font-[500] px-5 text-center text-[2rem]">
-          {subTitle} : {result}
+          {/* {subTitle} : */}
+           {result}
         </div>
       </div>
     </MainLayout>
