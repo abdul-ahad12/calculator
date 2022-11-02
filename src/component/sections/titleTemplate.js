@@ -342,7 +342,7 @@ const TitleTemplate = ({
           {title}
         </div>
         <div className="font-[500] text-center base:text-[1.5rem] lg:text-[2rem]">
-          {subTitle} : {formula}
+          {formula}
         </div>
 
         <InputTemplate

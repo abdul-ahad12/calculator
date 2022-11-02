@@ -7,7 +7,7 @@ const MainLayout = ({ children }) => {
     <div className="flex w-full flex-col justify-between  min-h-screen "
     //  className="flex flex-col justify-between h-full min-h-screen">
     >
-    <Navbar />   <div className=" h-full">{children} </div><Footer />
+    <Navbar />   <div className=" ">{children} </div><Footer />
     </div>
   );
 };
