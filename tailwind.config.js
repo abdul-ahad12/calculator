@@ -21,5 +21,7 @@ module.exports = {
             // => @media (min-width: 1536px) { ... }
         }
     },
-    plugins: [require('tailwind-scrollbar-hide')],
+    plugins: [
+        require('tailwind-scrollbar-hide')
+    ],
 }

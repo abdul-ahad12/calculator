@@ -215,7 +215,7 @@ const InputTemplate = ({
         <div
           className="flex text=[2rem] flex-col gap-8"
         >
-          <div className="flex gap-2 flex-row items-center">
+          <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
             <div><MathComponent tex={'Eqn: '} /></div>
 
             <div><MathComponent tex={'x^2 + y^2 +'} /> </div>
@@ -226,7 +226,7 @@ const InputTemplate = ({
               placeholder="g"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={'x +'} /></div>
+            <div className="lg:mr-3"><MathComponent tex={'x +'} /></div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -235,7 +235,8 @@ const InputTemplate = ({
               placeholder="f"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={'y +'} /></div>
+          
+            <div className="lg:mr-3"><MathComponent tex={'y +'} /></div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueC}
@@ -342,8 +343,8 @@ const TitleTemplate = ({
         <div className="font-[500] base:text-[2rem] lg:text-[3rem] mx-4 text-center">
           {title}
         </div>
-        <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden overflow-x-scroll  lg:text-[2rem]">
-          <div className="overflow-x-scroll ">{formula}</div>
+        <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden md:scrollbar-hide overflow-x-scroll  lg:text-[2rem]">
+          {formula}
         </div>
 
         <InputTemplate
