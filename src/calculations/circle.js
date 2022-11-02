@@ -8,9 +8,10 @@ class Circle {
   cenAndrad(g, f, c) {
     let c1 = -g / 2;
     let c2 = -f / 2;
-
+    let a = c1*c1;
+    let b = c2*c2
     let r = Math.sqrt(
-      Number(c1) * Number(c1) + Number(c2) * Number(c2) - Number(c)
+      Number(a) + Number(b) - Number(c)
     );
 
     return [c1, c2, r];

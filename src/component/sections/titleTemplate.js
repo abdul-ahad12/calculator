@@ -1,5 +1,6 @@
 import React from "react";
 import MainLayout from "../../pages/mainLayout";
+import { MathComponent } from "mathjax-react";
 
 const InputTemplate = ({
   type,
@@ -215,9 +216,9 @@ const InputTemplate = ({
           className="flex text=[2rem] flex-col gap-8"
         >
           <div className="flex gap-2 flex-row items-center">
-            <div>Eq :</div>
+            <div><MathComponent tex={'Eqn: '} /></div>
 
-            <div>x2+y2 + </div>
+            <div><MathComponent tex={'x^2 + y^2 +'} /> </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueG}
@@ -225,7 +226,7 @@ const InputTemplate = ({
               placeholder="g"
               type="number"
             />
-            <div className="lg:mr-8">x +</div>
+            <div className="lg:mr-8"><MathComponent tex={'x +'} /></div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -234,7 +235,7 @@ const InputTemplate = ({
               placeholder="f"
               type="number"
             />
-            <div className="lg:mr-8">y +</div>
+            <div className="lg:mr-8"><MathComponent tex={'y +'} /></div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueC}
