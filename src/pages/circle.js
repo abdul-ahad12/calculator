@@ -13,7 +13,7 @@ const Circle = () => {
       link: "/eqfromcr",
     },
     {
-      title: "General form equation to standard form",
+      title: "Equation of Circle General form to standard form",
       link: "/gentostand",
     },
     {
@@ -30,7 +30,7 @@ const Circle = () => {
       link: "/powerofpoint",
     },
     {
-      title: "Equationn and length of tangent at a point to a circle",
+      title: "Equation and length of tangent at a point to a circle",
       link: "/lengthoftangent",
     },
   ];

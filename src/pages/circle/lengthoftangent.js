@@ -65,7 +65,7 @@ const Lengthoftangent = () => {
         let c = result[2];
         let d = result[3];
     
-        let final = <MathComponent tex={`Eqn of tangent:${b}x+${c}y+${d}=0,Length of tangent:${a}`} />;
+        let final = <MathComponent tex={`Eqn of tangent:${b}x+${c}y+${d}=0, \\hspace{.5cm} Length of tangent:${a}`} />;
     
         setresult(final);
       };
@@ -86,11 +86,16 @@ const Lengthoftangent = () => {
     
         // })
       };
+
+      const f = 'Tangent \\hspace{.15cm} at \\hspace{.15cm} P(x_1,y_1): xx_1 + yy_1 + g(x +x_1) + f(y + y_1) +c';
+      const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
         title={"Eqn and length of tangent at a point to a circle"}
         type={"pointeqCircle"}
+        formula = {f1}
         valueX={eqInput.x}
         valueY={eqInput.y}
         valueG={eqInput.g}

@@ -224,7 +224,7 @@ const InputTemplate = ({
               className="rounded-[5px] w-[5rem]"
               value={valueG}
               onChange={onGChange}
-              placeholder="g"
+              placeholder="2g"
               type="number"
             />
             <div className="lg:mr-3">
@@ -235,7 +235,7 @@ const InputTemplate = ({
               className="rounded-[5px] w-[5rem]"
               value={valueF}
               onChange={onFChange}
-              placeholder="f"
+              placeholder="2f"
               type="number"
             />
 
@@ -362,7 +362,7 @@ const InputTemplate = ({
               className="rounded-[5px] w-[5rem]"
               value={valueG}
               onChange={onGChange}
-              placeholder="g"
+              placeholder="2g"
               type="number"
             />
             <div className="lg:mr-3">
@@ -373,7 +373,7 @@ const InputTemplate = ({
               className="rounded-[5px] w-[5rem]"
               value={valueF}
               onChange={onFChange}
-              placeholder="f"
+              placeholder="2f"
               type="number"
             />
 
