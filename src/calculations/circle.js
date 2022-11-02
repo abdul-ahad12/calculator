@@ -57,23 +57,28 @@ class Circle {
 
     let r = Math.sqrt(c1 * c1 + c2 * c2 - c);
 
-    return [c1,c2,r]
+    return [c1, c2, r];
   }
 
-  powerofpoint(x,y,g,f,c){
-    
-    let a = (x*x) + (y*y) + (g*x) + (f*y) + Number(c);
-    return a
-
+  powerofpoint(x, y, g, f, c) {
+    let a = x * x + y * y + g * x + f * y + Number(c);
+    return a;
   }
- lengthoftangent(x,y,g,f,c){
-  let a = Math.sqrt((x*x) + (y*y) + (g*x) + (f*y) + c);
-	let m = x + (-g/2);
-	let n = y + (-f/2);
-	let l = ((-g/2) * x) + ((-f/2) * y) + c;
+  lengthoftangent(x, y, g, f, c) {
+    let a = Math.sqrt(
+      Number(x) * Number(x) +
+        Number(y) * Number(y) +
+        Number(g) * Number(x) +
+        Number(f) * Number(y) +
+        Number(c)
+    );
+    let m = Number(x) + -Number(g) / 2;
+    let n = Number(y) + -Number(f) / 2;
+    let l =
+      (-Number(g) / 2) * Number(x) + (-Number(f) / 2) * Number(y) + Number(c);
 
-  return [a,m,n,l]
- }
+    return [a, m, n, l];
+  }
 }
 
 export default Circle;
