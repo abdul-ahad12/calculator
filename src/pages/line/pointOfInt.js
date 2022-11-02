@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
 
 const PointOfInt = () => {
   const [coeficient, setcoeficient] = useState({
@@ -93,12 +94,14 @@ const PointOfInt = () => {
     // })
   };
 
+  
+
   return (
     <div>
       <TitleTemplate
         title={"Point of intersection of two lines"}
-        subTitle={"P"}
-        formula={"x2+x3"}
+        
+        formula={""}
         type={"twolines"}
         valueAa={coeficient.aa}
         valueBa={coeficient.ba}

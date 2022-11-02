@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
 
 const PointSlopeForm = () => {
   const [variables, setvariables] = useState({
@@ -59,12 +60,15 @@ const PointSlopeForm = () => {
     setvalueM(e.target.value);
   };
 
+  const f = 'y - y_1 = m (x - x_1)';
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
         title={"Equation of a line. Point slope form."}
         type={"slopePoint"}
-        subTitle={"for"}
+        formula={f1}
         valueax={variables.ax}
         onAxChange={onAxChange}
         valueay={variables.ay}

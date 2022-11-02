@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
 
 const Xyintercept = () => {
   const [coeficient, setcoeficient] = useState({
@@ -58,12 +59,14 @@ const Xyintercept = () => {
     // })
   };
 
+  const f = 'line: ax + by + c = 0 \\hspace{1cm} x-intercept : -\\frac{c}{a} \\hspace{1cm} y-intercept : -\\frac{c}{b}';
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
         title={"x-intercept and y-intercept of a line."}
-        formula={"x2+x2"}
-        subTitle={"I"}
+        formula={f1}
         type={"oneline"}
         valueAa={coeficient.aa}
         valueBa={coeficient.ba}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import 'katex/dist/katex.min.css';
+import { MathComponent } from "mathjax-react";
 
 const Distance = () => {
   const [variables, setvariables] = useState({
@@ -66,14 +68,17 @@ const Distance = () => {
         
     
   };
+  const f = 'd = \\sqrt{{(x_2-x_1)^2}+{(y_2-y_1)^2}}';
+  const f1 = <MathComponent tex={f} />
+
+
 
   return (
     <div>
       <TitleTemplate
-        title={"Distance between 2 points"}
-        subTitle={"Distance"}
+        title={"Distance between two points"}
         type={"twoPoints"}
-        formula={"x2+x2"}
+        formula={f1}
         valueax={variables.ax}
         onAxChange={onAxChange}
         valueay={variables.ay}

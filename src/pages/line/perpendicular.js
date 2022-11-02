@@ -76,7 +76,7 @@ const Perpendicular = () => {
       {" "}
       <TitleTemplate
         title={"Perpendicular bisector"}
-        subTitle={"per"}
+        subTitle={""}
         formula={""}
         type={"twoPoints"}
         valueax={variables.ax}

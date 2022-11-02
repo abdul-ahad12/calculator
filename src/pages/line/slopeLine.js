@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { InlineMath} from 'react-katex';
+
 
 const SlopeLine = () => {
     const [variables, setvariables] = useState({
@@ -69,12 +71,14 @@ const SlopeLine = () => {
         
       };
     
+  const f = 'm = \\frac{y_2-y_1}{x_2-x_1}';
+  const f1 = <p> <InlineMath math={f} /></p>
+
   return (
     <div>
       <TitleTemplate
         title={"Calculate Slope of a Line"}
-        formula={"x2+x3"}
-        subTitle="Slope"
+        formula={f1}
         type={"twoPoints"}
         valueax={variables.ax}
         onAxChange={onAxChange}
