@@ -502,7 +502,7 @@ const TitleTemplate = ({
           Calculate
         </button>
 
-        <div className="font-[500] px-5 text-center text-[2rem]">
+        <div className="font-[500] px-5 text-center max-w-[90vw] overflow-hidden overflow-x-scroll scrollbar-hide text-[2rem]">
           {/* {subTitle} : */}
           {result}
         </div>
