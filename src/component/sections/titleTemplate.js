@@ -342,8 +342,8 @@ const TitleTemplate = ({
         <div className="font-[500] base:text-[2rem] lg:text-[3rem] mx-4 text-center">
           {title}
         </div>
-        <div className="font-[500] text-center base:text-[1.5rem] lg:text-[2rem]">
-          {formula}
+        <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden overflow-x-scroll  lg:text-[2rem]">
+          <div className="overflow-x-scroll ">{formula}</div>
         </div>
 
         <InputTemplate

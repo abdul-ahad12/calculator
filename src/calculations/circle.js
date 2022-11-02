@@ -23,6 +23,9 @@ class Circle {
     let c = (c1 * c1) + (c2 * c2) - (r*r);
     return [g, f, c];
   }
+
+// gentostand()
+
 }
 
 export default Circle;
