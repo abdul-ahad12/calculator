@@ -38,7 +38,7 @@ const Parametriceq = () => {
     let b = result[1];
     let c=result[2]
 
-    let final =<MathComponent tex={`Eq:x=${a}+${c}Cos(n),y=${b}+${c}Sin(n), 0<n<2Pi`}/>
+    let final =<MathComponent tex={`x=${a}+${c}Cos(\\theta) \\hspace{1cm} y=${b}+${c}Sin(\\theta) \\hspace{1cm} 0<\\theta<2\\pi`}/>
 
     setresult(final);
   };
@@ -55,11 +55,16 @@ const Parametriceq = () => {
 
     // })
   };
+
+  const f = 'x = -g + rcos(\\theta) \\hspace{1cm} y = -f + rSin(\\theta)';
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
         title={"Parametric equation of circle"}
         type={"eqCircle"}
+        formula = {f1}
         valueG={eqInput.g}
         valueF={eqInput.f}
         valueC={eqInput.c}

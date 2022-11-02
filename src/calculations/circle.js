@@ -37,7 +37,7 @@ class Circle {
     let a = ax - x;
     let b = ay - y;
     let r = Math.sqrt(a * a + b * b);
-    let c = x * x + y * y + r * r;
+    let c = x * x + y * y - r * r;
     let g = -2 * x;
     let f = -2 * y;
 
