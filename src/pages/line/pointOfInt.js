@@ -72,8 +72,9 @@ const PointOfInt = () => {
     );
     let x=result[0]
     let y=result[1]
-    let c=`(${x},${y})`
+    let c=<MathComponent tex={`(${x},${y})`} />
     setResult(c);
+    
   };
 
   const onResult = () => {

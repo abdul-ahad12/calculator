@@ -37,7 +37,7 @@ const CrEquation = () => {
     let b=result[1]
     let c=result[2]
 
-    let final=`Center:(${a},${b}) and Radius:${c}`
+    let final= <MathComponent tex={`Center:(${a},${b}) \\hspace{0.5cm} Radius:${c}`} />
 
     setresult(final)
   };
