@@ -3,7 +3,6 @@ import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
-
 const Powerofpoint = () => {
     const [eqInput, seteqInput] = useState({
         x:"",
@@ -72,7 +71,6 @@ const Powerofpoint = () => {
       const f2 = <MathComponent tex={s} />
 
   return (
-    
     <div>
       <TitleTemplate
         title={"Power of point wrt Circle"}
