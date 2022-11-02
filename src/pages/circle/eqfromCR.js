@@ -41,6 +41,7 @@ const EqfromCR = () => {
     let c = result[2];
 
     let final = `x^2+y^2+${a}x+${b}y+${c}`;
+    
 
     setresult(final);
   };

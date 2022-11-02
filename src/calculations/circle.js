@@ -1,3 +1,5 @@
+import { Result } from "postcss";
+
 class Circle {
   constructor(g, f, c) {
     this.g = g;
@@ -8,11 +10,9 @@ class Circle {
   cenAndrad(g, f, c) {
     let c1 = -g / 2;
     let c2 = -f / 2;
-    let a = c1*c1;
-    let b = c2*c2
-    let r = Math.sqrt(
-      Number(a) + Number(b) - Number(c)
-    );
+    let a = c1 * c1;
+    let b = c2 * c2;
+    let r = Math.sqrt(Number(a) + Number(b) - Number(c));
 
     return [c1, c2, r];
   }
@@ -20,12 +20,19 @@ class Circle {
   eqFromCR(c1, c2, r) {
     let g = -2 * c1;
     let f = -2 * c2;
-    let c = (c1 * c1) + (c2 * c2) - (r*r);
+    let c = c1 * c1 + c2 * c2 - r * r;
     return [g, f, c];
   }
 
-// gentostand()
+  gentostand(g,f,c) {
+    let c1=-g/2;
+    let c2=-f/2
+    let r=Math.sqrt((c1*c1)+(c2*c2)-c)
+    let r2=r*r
+    
+    return [c1,c2,r2]
 
+  }
 }
 
 export default Circle;
