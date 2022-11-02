@@ -5,6 +5,9 @@ import './font/stylesheet.css'
 import './index.css';
 import App from './pages/App';
 import Circle from './pages/circle';
+import CrEquation from './pages/circle/crEquation';
+import EqfromCR from './pages/circle/eqfromCR';
+import GenToStand from './pages/circle/genToStand';
 import Ellipse from './pages/ellipse';
 import Hyperbola from './pages/hyperbola';
 import Distance from './pages/line/distance';
@@ -37,6 +40,10 @@ root.render(
         <Route path="parabola" element={<Parabola />}></Route>
         <Route path="ellipse" element={<Ellipse />}></Route>
         <Route path="hyperbola" element={<Hyperbola />}></Route>
+        <Route path="crequation" element={<CrEquation />}></Route>
+        <Route path="eqfromcr" element={<EqfromCR />}></Route>
+        <Route path="gentostand" element={<GenToStand />}></Route>
+        
 
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
