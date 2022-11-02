@@ -34,7 +34,7 @@ function App() {
 
   return (
     <MainLayout>
-      <div className="w-full flex justify-center items-start  min-h-[35rem] my-5  ">
+      <div className="w-full flex justify-center items-start  min-h-[30rem] py-[3rem]  ">
         <div className="w-90vw mx-3 flex flex-wrap items-center justify-center normal gap-11">
           {mainElements.map((data, index) => {
             return (

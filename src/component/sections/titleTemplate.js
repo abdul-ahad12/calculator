@@ -343,7 +343,7 @@ const TitleTemplate = ({
           {title}
         </div>
         <div className="font-[500] text-center base:text-[1.5rem] lg:text-[2rem]">
-          {subTitle} : {formula}
+          {formula}
         </div>
 
         <InputTemplate
@@ -395,7 +395,8 @@ const TitleTemplate = ({
         </button>
 
         <div className="font-[500] px-5 text-center text-[2rem]">
-          {subTitle} : {result}
+          {/* {subTitle} : */}
+           {result}
         </div>
       </div>
     </MainLayout>
