@@ -13,22 +13,22 @@ function App() {
     {
       title: "Circle",
       url: "/circle.JPG",
-      link: "",
+      link: "/circle",
     },
     {
       title: "Parabola",
       url: "/parabola.JPG",
-      link: "",
+      link: "/parabola",
     },
     {
       title: "Ellipse",
       url: "/ellipse.JPG",
-      link: "",
+      link: "/ellipse",
     },
     {
-      title: "Hypderbola",
+      title: "Hyperbola",
       url: "/hyperbola.JPG",
-      link: "",
+      link: "/hyperbola",
     },
   ];
 

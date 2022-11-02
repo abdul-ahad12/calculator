@@ -34,7 +34,7 @@ const InputTemplate = ({
       return (
         <div className="flex flex-col gap-8">
           <div className="flex gap-4 flex-row items-center">
-            <div>Point 1:</div>
+            <div className="w-[4rem]">Point 1:</div>
             <input
               className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
               value={valueax}
@@ -51,7 +51,7 @@ const InputTemplate = ({
             />
           </div>
           <div className="flex gap-4 flex-row items-center">
-            <div>Point 2:</div>
+            <div className="w-[4rem]">Point 2:</div>
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
               value={valuebx}
@@ -74,7 +74,7 @@ const InputTemplate = ({
       return (
         <div className="flex flex-col gap-8">
           <div className="flex gap-2 flex-row items-center">
-            <div>Line 1 :</div>
+            <div className="w-[3.5rem]">Line 1 :</div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueAa}
@@ -101,7 +101,7 @@ const InputTemplate = ({
             />
           </div>
           <div className="flex gap-2 flex-row items-center">
-            <div>Line 2 :</div>
+            <div className="w-[3.5rem]">Line 2 :</div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueAb}
@@ -239,7 +239,7 @@ const TitleTemplate = ({
   return (
     <MainLayout>
       <div className="w-full flex flex-col items-center  base:my-[6rem] lg:my-[2rem] justify-center gap-12">
-        <div className="font-[500] base:text-[2rem] lg:text-[3rem]  text-center">
+        <div className="font-[500] base:text-[2rem] lg:text-[3rem] mx-4 text-center">
           {title}
         </div>
         <div className="font-[500] text-center base:text-[1.5rem] lg:text-[2rem]">
