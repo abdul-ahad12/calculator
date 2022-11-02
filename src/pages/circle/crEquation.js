@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
-
 const CrEquation = () => {
   const [eqInput, seteqInput] = useState({
     g: "",

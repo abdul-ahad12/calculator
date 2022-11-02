@@ -18,20 +18,20 @@ const Circle = () => {
     },
     {
       title: "Equation of circle passing through a point with center given",
-      link: "/xyintercept",
+      link: "/eqfromcp",
     },
     {
-      title: "Equation of perpendicular bisector.",
-      link: "/perpendicular",
+      title: "Parametric equation of circle",
+      link: "/parametriceq",
     },
     {
-      title: "Equation of a line. Two point form.",
+      title: "Power of point wrt Circle",
 
-      link: "/twopointform",
+      link: "/powerofpoint",
     },
     {
-      title: "Equation of a line. Point slope form.",
-      link: "/pointslopeform",
+      title: "Equationn and length of tangent at a point to a circle",
+      link: "/lengthoftangent",
     },
   ];
 

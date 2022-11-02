@@ -4,7 +4,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 
-const GenToStand = () => {
+const Parametriceq = () => {
   const [eqInput, seteqInput] = useState({
     g: "",
     f: "",
@@ -33,14 +33,12 @@ const GenToStand = () => {
     });
   };
   const resultDumm = () => {
-    const result = circle.gentostand(eqInput.g, eqInput.f, eqInput.c);
+    const result = circle.parametriceq(eqInput.g, eqInput.f, eqInput.c);
     let a = result[0];
     let b = result[1];
-    let c = result[2];
+    let c=result[2]
 
-    let final = (
-      <MathComponent tex={`(x-(${a}))^2+(y-(${b}))^2=${c}`} />
-    );
+    let final =<MathComponent tex={`Eq:x=${a}+${c}Cos(n),y=${b}+${c}Sin(n), 0<n<2Pi`}/>
 
     setresult(final);
   };
@@ -57,11 +55,10 @@ const GenToStand = () => {
 
     // })
   };
-
   return (
     <div>
       <TitleTemplate
-        title={"General form equation to standard form"}
+        title={"Parametric equation of circle"}
         type={"eqCircle"}
         valueG={eqInput.g}
         valueF={eqInput.f}
@@ -76,4 +73,4 @@ const GenToStand = () => {
   );
 };
 
-export default GenToStand;
+export default Parametriceq;
