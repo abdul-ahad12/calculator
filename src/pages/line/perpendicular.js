@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
 
 const Perpendicular = () => {
   const [variables, setvariables] = useState({
@@ -47,9 +48,9 @@ const Perpendicular = () => {
 
       let m=result[0]
       let b=result[1]
-      let a=`y=${m}x+${b}`
+      let a=<MathComponent tex={`y=${m}x+${b}`} />
       setResult(a);
-   
+      
   };
 
   const onResult = () => {

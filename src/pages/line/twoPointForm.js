@@ -48,7 +48,7 @@ const TwoPointForm = () => {
 
     let m = result[0];
     let c = result[1];
-    let a = `y=${m}x+${c}`;
+    let a = <MathComponent tex={`y=${m}x+${c}`} />
     setResult(a);
   };
 
