@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
-import 'katex/dist/katex.min.css';
 import { InlineMath} from 'react-katex';
 
 
@@ -72,7 +71,7 @@ const SlopeLine = () => {
         
       };
     
-  const f = 'm = {y_2-y_1}/{x_2-x_1}';
+  const f = 'm = \\frac{y_2-y_1}{x_2-x_1}';
   const f1 = <p> <InlineMath math={f} /></p>
 
   return (

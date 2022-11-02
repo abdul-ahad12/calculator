@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
 
 const TwoPointForm = () => {
   const [variables, setvariables] = useState({
@@ -67,11 +68,14 @@ const TwoPointForm = () => {
     // })
   };
 
+  const f = 'y - y_1 = \\frac{y_2-y_1}{x_2-x_1} (x - x_1)';
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
         title={"Equation of a line. Two point form."}
-        subTitle={"formula"}
+        formula={f1}
         type={"twoPoints"}
         valueax={variables.ax}
         onAxChange={onAxChange}

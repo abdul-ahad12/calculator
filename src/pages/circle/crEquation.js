@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
 
 const CrEquation = () => {
   const [eqInput, seteqInput] = useState({
@@ -54,12 +55,15 @@ const CrEquation = () => {
     // })
   };
 
+  const s = 'Centre: (-g,-f) \\hspace{0.5cm} Radius: \\sqrt{g^2+f^2-c}';
+  const f2 = <MathComponent tex={s} />
+  
   return (
     <div>
       <TitleTemplate
         title={"Center and radius from circle equation"}
-        subTitle={"C and R"}
-        formula={"empty"}
+        subTitle={""}
+        formula={f2}
         type={"eqCircle"}
         valueG={eqInput.g}
         valueF={eqInput.f}

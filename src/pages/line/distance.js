@@ -68,7 +68,7 @@ const Distance = () => {
         
     
   };
-  const f = 'd = {sqrt{(x_2-x_1)^2}+{(y_2-y_1)^2}}';
+  const f = 'd = \\sqrt{{(x_2-x_1)^2}+{(y_2-y_1)^2}}';
   const f1 = <MathComponent tex={f} />
 
 
