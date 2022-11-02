@@ -1,6 +1,5 @@
 import React from "react";
 import GeoTemp from "../component/sections/geoTemp";
-import LineCal from "./lineCal";
 
 const Circle = () => {
   const lineElements = [
