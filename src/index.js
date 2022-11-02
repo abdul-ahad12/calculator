@@ -5,9 +5,14 @@ import './font/stylesheet.css'
 import './index.css';
 import App from './pages/App';
 import Circle from './pages/circle';
-import CrEquation from './pages/circle/crEquation';
-import EqfromCR from './pages/circle/eqfromCR';
-import GenToStand from './pages/circle/genToStand';
+import CrEquation from './pages/circle/crequation';
+import Eqfromcp from './pages/circle/eqfromcp';
+import EqfromCR from './pages/circle/eqfromcr';
+import GenToStand from './pages/circle/gentostand';
+import Lengthoftangent from './pages/circle/lengthoftangent';
+import Lengthxy from './pages/circle/lengthxy';
+import Parametriceq from './pages/circle/parametriceq';
+import Powerofpoint from './pages/circle/powerofpoint';
 import Ellipse from './pages/ellipse';
 import Hyperbola from './pages/hyperbola';
 import Distance from './pages/line/distance';
@@ -19,6 +24,7 @@ import TwoPointForm from './pages/line/twoPointForm';
 import Xyintercept from './pages/line/xyintercept';
 import LineCal from './pages/lineCal';
 import Parabola from './pages/parabola';
+
 
 import reportWebVitals from './reportWebVitals';
 
@@ -43,6 +49,11 @@ root.render(
         <Route path="crequation" element={<CrEquation />}></Route>
         <Route path="eqfromcr" element={<EqfromCR />}></Route>
         <Route path="gentostand" element={<GenToStand />}></Route>
+        <Route path="eqfromcp" element={<Eqfromcp />}></Route>
+        <Route path="lengthxy" element={<Lengthxy />}></Route>
+        <Route path="parametriceq" element={<Parametriceq />}></Route>
+        <Route path="powerofpoint" element={<Powerofpoint />}></Route>
+        <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
         
 
           {/* <Route index element={<App />} />

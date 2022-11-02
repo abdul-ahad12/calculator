@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
+import Circle from "../../calculations/circle";
 
-
-const GenToStand = () => {
+const Lengthxy = () => {
   const [eqInput, seteqInput] = useState({
     g: "",
     f: "",
@@ -33,14 +32,11 @@ const GenToStand = () => {
     });
   };
   const resultDumm = () => {
-    const result = circle.gentostand(eqInput.g, eqInput.f, eqInput.c);
+    const result = circle.lengthXY(eqInput.g, eqInput.f, eqInput.c);
     let a = result[0];
     let b = result[1];
-    let c = result[2];
 
-    let final = (
-      <MathComponent tex={`(x-(${a}))^2+(y-(${b}))^2=${c}`} />
-    );
+    let final = `Length of intercept on x-axis : ${ a} , Length of intercept on y-axis is : ${ b}`
 
     setresult(final);
   };
@@ -57,11 +53,10 @@ const GenToStand = () => {
 
     // })
   };
-
   return (
     <div>
       <TitleTemplate
-        title={"General form equation to standard form"}
+        title={"Length of X and Y intercepts"}
         type={"eqCircle"}
         valueG={eqInput.g}
         valueF={eqInput.f}
@@ -76,4 +71,4 @@ const GenToStand = () => {
   );
 };
 
-export default GenToStand;
+export default Lengthxy;
