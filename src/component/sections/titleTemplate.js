@@ -28,6 +28,19 @@ const InputTemplate = ({
   onCbChange,
   valueM,
   onMChange,
+  valueG,
+  valueF,
+  valueC,
+  onGChange,
+  onFChange,
+  onCChange,
+  valueX,
+  valueY,
+  valueR,
+  onXChange,
+  onYChange,
+  onRChange,
+  
 }) => {
   switch (type) {
     case "twoPoints":
@@ -195,7 +208,79 @@ const InputTemplate = ({
           </div>
         </div>
       );
-    default:
+
+    case "eqCircle":
+      return (
+        <div
+          className="flex text=[2rem] flex-col gap-8"
+        >
+          <div className="flex gap-2 flex-row items-center">
+            <div>Eq :</div>
+
+            <div>x2+y2 + </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueG}
+              onChange={onGChange}
+              placeholder="g"
+              type="number"
+            />
+            <div className="lg:mr-8">x +</div>
+
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueF}
+              onChange={onFChange}
+              placeholder="f"
+              type="number"
+            />
+            <div className="lg:mr-8">y +</div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueC}
+              onChange={onCChange}
+              placeholder="c"
+              type="number"
+            />
+          </div>
+        </div>
+      );
+   
+   case "centerAR":
+    return(
+      <div
+      className="flex text=[2rem] flex-col gap-8"
+    >
+      <div className="flex gap-2 flex-row items-center">
+<div>Point:</div>
+        <input
+          className="rounded-[5px] w-[5rem]"
+          value={valueX}
+          onChange={onXChange}
+          placeholder="x"
+          type="number"
+        />
+
+        <input
+          className="rounded-[5px] w-[5rem]"
+          value={valueY}
+          onChange={onYChange}
+          placeholder="y"
+          type="number"
+        />
+        <div>, Radius:</div>
+        <input
+          className="rounded-[5px] w-[5rem]"
+          value={valueR}
+          onChange={onRChange}
+          placeholder="r"
+          type="number"
+        />
+      </div>
+    </div>
+      
+    )
+      default:
       break;
   }
 };
@@ -235,6 +320,20 @@ const TitleTemplate = ({
   resulty,
   valueM,
   onMChange,
+  valueG,
+  valueF,
+  valueC,
+  onGChange,
+  onFChange,
+  onCChange,
+  valueX,
+  valueY,
+  valueR,
+  onXChange,
+  onYChange,
+  onRChange,
+  
+  
 }) => {
   return (
     <MainLayout>
@@ -274,6 +373,18 @@ const TitleTemplate = ({
           onCbChange={onCbChange}
           valueM={valueM}
           onMChange={onMChange}
+          valueG={valueG}
+          valueF={valueF}
+          valueC={valueC}
+          onGChange={onGChange}
+          onFChange={onFChange}
+          onCChange={onCChange}
+          valueX={valueX}
+        valueY={valueY}
+        valueR={valueR}
+        onXChange={onXChange}
+        onYChange={onYChange}
+        onRChange={onRChange}
         />
         <button
           onClick={onResult}
@@ -283,7 +394,7 @@ const TitleTemplate = ({
         </button>
 
         <div className="font-[500] px-5 text-center text-[2rem]">
-          {subTitle} = {result}
+          {subTitle} : {result}
         </div>
       </div>
     </MainLayout>

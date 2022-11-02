@@ -16,24 +16,27 @@ class Line {
   distance(ax, ay, bx, by) {
     let first = Number(ax) - Number(bx);
     let second = Number(ay) - Number(by);
+    let result= Math.sqrt(first * first + second * second);
 
-    return Math.sqrt(first * first + second * second);
+    return result.toFixed(2);
   }
   slope(ax, ay, bx, by) {
     let first = Number(by) - Number(ay);
     let second = Number(bx) - Number(ax);
+    let result=first/second
 
-    return first / second;
+    return result.toFixed(3)
   }
 
   pointOfint(a1, b1, c1, a2, b2, c2) {
     if (a1 / b1 === a2 / b2) {
-      return "The two lines are parallel, hence point of intersection does not exist";
+      return "XX";
     } else {
       let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
       let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
+ 
 
-      return [x, y];
+      return [x.toFixed(3), y.toFixed(3)];
     }
   }
 
@@ -41,7 +44,7 @@ class Line {
     let xint = -c1 / a1;
     let yint = -c1 / b1;
 
-    return [xint, yint];
+    return [xint.toFixed(3), yint.toFixed(3)];
   }
   bisector(ax, ay, bx, by) {
     let m1 = (Number(ax) + Number(bx)) / 2;
@@ -50,7 +53,7 @@ class Line {
     let m = -1 / ((Number(by) - Number(ay)) / (Number(bx) - Number(ax)));
     let b = m2 - m * m1;
 
-    return [m, b];
+    return [m.toFixed(3), b.toFixed(3)];
   }
   twopointform(ax, ay, bx, by) {
     let m = (Number(by) - Number(ay)) / (Number(bx) - Number(ax));

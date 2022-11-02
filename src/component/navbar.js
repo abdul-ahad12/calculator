@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const LinkItem = ({ href, text }) => {
+
+
+
   const location = useLocation();
   const path = location.pathname;
-  const active = href === path;
+  const active =  href === path;
 
   return (
     <Link
