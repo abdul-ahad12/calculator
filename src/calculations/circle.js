@@ -61,6 +61,8 @@ class Circle {
   }
 
   powerofpoint(x,y,g,f,c){
+    let a = (Number(x)*Number(x)) + (y*y) + (g*x) + (f*y) + (c);
+    return (a)
 
   }
  lengthoftangent(x,y,g,f,c){
