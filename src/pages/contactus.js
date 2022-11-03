@@ -9,7 +9,7 @@ const Contactus = () => {
       <MainLayout>
         <div className="w-full flex  justify-center items-center ">
           <div className="max-w-[40rem] bg-[#f6f6f6] shadow-2xl w-[35rem] min-w-[18rem] h-[35rem] items-center py-5 my-3 flex flex-col mx-4 rounded-[25px] gap-2">
-            <div className="text-[1.5rem] font-[600] ">Contact Us</div>
+            <div className="text-[1.5rem] font-[600] ">Contact</div>
             <div className="text-[1.2rem]">Any problem you have to add</div>
             <form className="flex flex-col w-[90%] gap-2" action="submit">
               <label className="font-[600]">Name</label>
