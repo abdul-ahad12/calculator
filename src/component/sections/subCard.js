@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const SubCard = ({ title, link }) => {
   return (
-    <div className="min-w-[10rem] rounded-[12px] bg-white  flex flex-col ">
+    <div className="min-w-[10rem] rounded-[12px] shadow-xl bg-white  flex flex-col ">
       <div className="  base:h-[7rem] md:h-[9rem] lg:h-[8rem] lg:w-[28rem] base:w-[90vw] md:w-[43vw] flex flex-col justify-center   ">
         <div className="flex text-[25px] mx-3 font-[500] text-center justify-center">
           {title}

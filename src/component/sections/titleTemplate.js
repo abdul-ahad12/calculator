@@ -273,7 +273,7 @@ const InputTemplate = ({
               placeholder="y"
               type="number"
             />
-            <div>, Radius:</div>
+            <div>Radius:</div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueR}
@@ -446,7 +446,7 @@ const TitleTemplate = ({
 }) => {
   return (
     <MainLayout>
-      <div className="w-full flex flex-col items-center  base:my-[6rem] lg:my-[2rem] justify-center gap-12">
+      <div className="w-full flex flex-col items-center  base:my-[6rem] lg:my-[2rem] justify-center gap-10">
         <div className="font-[500] base:text-[2rem] lg:text-[3rem] mx-4 text-center">
           {title}
         </div>
@@ -502,7 +502,7 @@ const TitleTemplate = ({
           Calculate
         </button>
 
-        <div className="font-[500] px-5 text-center max-w-[90vw] overflow-hidden overflow-x-scroll scrollbar-hide text-[2rem]">
+        <div className="font-[500] px-5 text-center max-w-[90vw] overflow-hidden overflow-x-scroll lg:scrollbar-hide text-[2rem]">
           {/* {subTitle} : */}
           {result}
         </div>

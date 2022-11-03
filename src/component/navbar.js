@@ -73,7 +73,9 @@ const Navbar = () => {
               <LinkItem text={"Ellipse"} href={"/ellipse"} />
             </div>
             <div>
-              <LinkItem text={"Hyperbola"} href={"/hyperbola"} />
+            <LinkItem text={"Hyperbola"} href={"/hyperbola"} />
+            </div> <div>
+            <LinkItem text={"Contact Us"} href={"/contactus"} />
             </div>
           </div>
         </div>

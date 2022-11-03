@@ -1,4 +1,3 @@
-import { Result } from "postcss";
 
 class Circle {
   constructor(g, f, c) {
@@ -14,14 +13,14 @@ class Circle {
     let b = c2 * c2;
     let r = Math.sqrt(Number(a) + Number(b) - Number(c));
 
-    return [c1, c2, r];
+    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
   }
 
   eqFromCR(c1, c2, r) {
     let g = -2 * c1;
     let f = -2 * c2;
     let c = c1 * c1 + c2 * c2 - r * r;
-    return [g, f, c];
+    return [g.toFixed(3), f.toFixed(3), c.toFixed(3)];
   }
 
   gentostand(g, f, c) {
@@ -57,7 +56,7 @@ class Circle {
 
     let r = Math.sqrt(c1 * c1 + c2 * c2 - c);
 
-    return [c1, c2, r];
+    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
   }
 
   powerofpoint(x,y,g,f,c){
