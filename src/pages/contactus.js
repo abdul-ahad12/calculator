@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "./mainLayout";
 
 const Contactus = () => {
-  
+
+
   return (
     <div>
       <MainLayout>
@@ -11,11 +12,11 @@ const Contactus = () => {
             <div className="text-[1.5rem] font-[600] ">Contact Us</div>
             <div className="text-[1.2rem]">Any problem you have to add</div>
             <form className="flex flex-col w-[90%] gap-2" action="submit">
-              <label className="">Name</label>
+              <label className="font-[600]">Name</label>
               <input className="p-2 bg-[#fbfbfb] rounded-[20px]" type="text" />
-              <label>Email address</label>
+              <label className="font-[600]">Email address</label>
               <input className="p-2 bg-[#fbfbfb] rounded-[20px]" type="text" />
-              <label>Write your problem here </label>
+              <label className="font-[600]">Write your problem here </label>
               <textarea rows={"7"} className=" bg-[#fbfbfb] p-2 rounded-[20px]" type="text" />
             </form>
             <button className="bg-[#383838] text-white px-10 py-2 mt-4 rounded-[20px]">Submit</button>
