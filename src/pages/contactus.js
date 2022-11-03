@@ -16,8 +16,8 @@ const Contactus = () => {
               <input className="p-2 bg-[#fbfbfb] rounded-[20px]" type="text" />
               <label className="font-[600]">Email address</label>
               <input className="p-2 bg-[#fbfbfb] rounded-[20px]" type="text" />
-              <label className="font-[600]">Write your problem here </label>
-              <textarea rows={"8"} className=" bg-[#fbfbfb] p-2 rounded-[20px]" type="text" />
+              <label className="font-[600]">Write your message here </label>
+              <textarea rows={"9"} className=" bg-[#fbfbfb] p-2 rounded-[20px]" type="text" />
             </form>
             <button className="bg-[#383838] text-white px-10 py-2 mt-4 rounded-[20px]">Submit</button>
           </div>
