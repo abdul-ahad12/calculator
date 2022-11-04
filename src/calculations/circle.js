@@ -59,19 +59,33 @@ class Circle {
     return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
   }
 
-  powerofpoint(x,y,g,f,c){
-    let a = (x*x) + (y*y) + (g*x) + (f*y) + Number(c);
+  powerofpoint(x, y, g, f, c) {
+    let a = (x * x) + (y * y) + (g * x) + (f * y) + Number(c);
     return (a)
 
   }
- lengthoftangent(x,y,g,f,c){
-  let a = Math.sqrt((Number(x)*Number(x)) + (Number(y)*Number(y)) + (Number(g)*Number(x)) + (Number(f)*Number(y)) + Number(c));
-	let m = Number(x) + (Number(g)/2);
-	let n = Number(y) + (Number(f)/2);
-	let l = ((Number(g)/2) * Number(x)) + ((Number(f)/2) * Number(y)) + Number(c);
+  lengthoftangent(x, y, g, f, c) {
+    let a = Math.sqrt((Number(x) * Number(x)) + (Number(y) * Number(y)) + (Number(g) * Number(x)) + (Number(f) * Number(y)) + Number(c));
+    let m = Number(x) + (Number(g) / 2);
+    let n = Number(y) + (Number(f) / 2);
+    let l = ((Number(g) / 2) * Number(x)) + ((Number(f) / 2) * Number(y)) + Number(c);
 
     return [a, m, n, l];
   }
+  areacircum(g, f, c) {
+    let c1 = -g / 2;
+    let c2 = -f / 2;
+
+    let r = Math.sqrt(c1 * c1 + c2 * c2 - c);
+
+    let area = Math.PI * r * r;
+    let circum = 2 * Math.PI *r;
+
+
+    return [area.toFixed(2), circum.toFixed(2)];
+}
+
+
 }
 
 export default Circle;

@@ -4,9 +4,9 @@ import emailjs from "emailjs-com";
 import MainLayout from "./mainLayout";
 
 const Contactus = () => {
-  
+
   const sendEmail = (e) => {
-   e.preventDefault();
+    e.preventDefault();
 
     emailjs
       .sendForm(
@@ -66,7 +66,7 @@ const Contactus = () => {
               <textarea
                 rows={"7"}
                 // value={contact.message}
-                
+
                 name="message"
                 className=" bg-[#fbfbfb] p-2 rounded-[20px]"
                 type="text"
