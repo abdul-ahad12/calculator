@@ -65,8 +65,6 @@ const Contactus = () => {
               <label className="font-[600]">Write your problem here </label>
               <textarea
                 rows={"7"}
-                // value={contact.message}
-
                 name="message"
                 className=" bg-[#fbfbfb] p-2 rounded-[20px]"
                 type="text"
