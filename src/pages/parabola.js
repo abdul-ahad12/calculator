@@ -4,9 +4,9 @@ import GeoTemp from '../component/sections/geoTemp'
 const Parabola = () => {
     const lineElements = [
         {
-          title: "Distance between two points",
+          title: "Find the vertex and focus of parabola alongside x-axis",
     
-          link: "/distance",
+          link: "/vertexfocusx",
         },
         {
           title: "Slope of a line",

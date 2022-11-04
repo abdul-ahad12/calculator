@@ -4,8 +4,9 @@ import emailjs from "emailjs-com";
 import MainLayout from "./mainLayout";
 
 const Contactus = () => {
+  
   const sendEmail = (e) => {
-    e.preventDefault();
+   e.preventDefault();
 
     emailjs
       .sendForm(
@@ -30,11 +31,15 @@ const Contactus = () => {
             <div className="text-[1.5rem] font-[600] ">Contact Us</div>
             <div className="text-[1.2rem] text-center">
               Have feedback for us?
-              <br/>
-              Want us to add some new calculator<br/>
-              Found a bug?<br />
-              Just want to connect?<br/>
-              Feel free to use the following form,we<br />
+              <br />
+              Want us to add some new calculator
+              <br />
+              Found a bug?
+              <br />
+              Just want to connect?
+              <br />
+              Feel free to use the following form,we
+              <br />
               respond to every message.
             </div>
             <form
@@ -45,18 +50,23 @@ const Contactus = () => {
               <label className="font-[600]">Name</label>
               <input
                 name="name"
+                // value={contact.name}
                 className="p-2 bg-[#fbfbfb] rounded-[20px]"
                 type="text"
               />
               <label className="font-[600]">Email address</label>
               <input
                 name="email"
+                // value={contact.email}
+
                 className="p-2 bg-[#fbfbfb] rounded-[20px]"
                 type="text"
               />
               <label className="font-[600]">Write your problem here </label>
               <textarea
                 rows={"7"}
+                // value={contact.message}
+                
                 name="message"
                 className=" bg-[#fbfbfb] p-2 rounded-[20px]"
                 type="text"
