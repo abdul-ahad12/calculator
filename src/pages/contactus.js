@@ -4,9 +4,9 @@ import emailjs from "emailjs-com";
 import MainLayout from "./mainLayout";
 
 const Contactus = () => {
-  
+
   const sendEmail = (e) => {
-   e.preventDefault();
+    e.preventDefault();
 
     emailjs
       .sendForm(

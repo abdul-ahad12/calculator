@@ -45,6 +45,15 @@ const InputTemplate = ({
   onDdChange,
   valueCc,
   valueDd,
+  valueL,
+  valueN,
+  valueO,
+  valueP,
+  onLChange,
+  onNChange,
+  onPChange,
+  onOChange
+
 }) => {
   switch (type) {
     case "twoPoints":
@@ -333,29 +342,29 @@ const InputTemplate = ({
         </div>
       );
 
-   case "pointeqCircle":
-    return(
-      <div className="flex text=[2rem] flex-col gap-8">
-      <div className="flex gap-2 flex-row items-center">
-        <div>
-          <MathComponent tex={"Point \\hspace{0.1cm}"} />
-        </div>
-        <input
-          className="rounded-[5px] w-[5rem]"
-          value={valueX}
-          onChange={onXChange}
-          placeholder="x"
-          type="number"
-        />
+    case "pointeqCircle":
+      return (
+        <div className="flex text=[2rem] flex-col gap-8">
+          <div className="flex gap-2 flex-row items-center">
+            <div>
+              <MathComponent tex={"Point \\hspace{0.1cm}"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueX}
+              onChange={onXChange}
+              placeholder="x"
+              type="number"
+            />
 
-        <input
-          className="rounded-[5px] w-[5rem]"
-          value={valueY}
-          onChange={onYChange}
-          placeholder="y"
-          type="number"
-        />
-         <div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueY}
+              onChange={onYChange}
+              placeholder="y"
+              type="number"
+            />
+            <div>
               <MathComponent tex={"Eqn: "} />
             </div>
 
@@ -391,55 +400,132 @@ const InputTemplate = ({
               placeholder="c"
               type="number"
             />
-      </div>
-    </div>
-
-    )
+          </div>
+        </div>
+      );
     case "yparabola":
       return (
         <div className="flex text=[2rem] flex-col gap-8">
-        <div className="flex gap-2 flex-row items-center">
-          <div>
-          <MathComponent tex={"Eqn: "} />
+          <div className="flex gap-2 flex-row items-center">
+            <div>
+              <MathComponent tex={"Eqn: "} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueAa}
+              onChange={onAaChange}
+              placeholder="a"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"y^2+"} />
+            </div>
+
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueBb}
+              onChange={onBbChange}
+              placeholder="b"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"x+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueCc}
+              onChange={onCcChange}
+              placeholder="c"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"y+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueDd}
+              onChange={onDdChange}
+              placeholder="d"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
-          <input
-            className="rounded-[5px] w-[5rem]"
-            value={valueAa}
-            onChange={onAaChange}
-            placeholder="a"
-            type="number"
-          />
-          <div> <MathComponent tex={"y^2+"} /></div>
-
-          <input
-            className="rounded-[5px] w-[5rem]"
-            value={valueBb}
-            onChange={onBbChange}
-            placeholder="b"
-            type="number"
-          />
-          <div> <MathComponent tex={"x+"} /></div>
-          <input
-            className="rounded-[5px] w-[5rem]"
-            value={valueCc}
-            onChange={onCcChange}
-            placeholder="c"
-            type="number"
-          />
-          <div> <MathComponent tex={"y+"} /></div>
-          <input
-            className="rounded-[5px] w-[5rem]"
-            value={valueDd}
-            onChange={onDdChange}
-            placeholder="d"
-            type="number"
-          />
-          <div> <MathComponent tex={"=0"} /></div>
-
-
         </div>
-      </div>
-      ) 
+      );
+
+    case "ellipse":
+      return (
+        <div className="flex text=[2rem] flex-col gap-8">
+          <div className="flex gap-2 flex-row items-center">
+            <div>
+              <MathComponent tex={"Eqn: "} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueL}
+              onChange={onLChange}
+              placeholder="l"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"x^2+"} />
+            </div>
+
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueM}
+              onChange={onMChange}
+              placeholder="m"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"y^2 +"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              // value={valueCc}
+              // onChange={onCcChange}
+              placeholder="n"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"x+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              // value={valueDd}
+              // onChange={onDdChange}
+              placeholder="o"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"y+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              // value={valueDd}
+              // onChange={onDdChange}
+              placeholder="p"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"= 0"} />
+            </div>
+          </div>
+        </div>
+      );
+
     default:
       break;
   }
@@ -496,6 +582,14 @@ const TitleTemplate = ({
   onXChange,
   onYChange,
   onRChange,
+  valueL,
+  valueN,
+  valueO,
+  valueP,
+  onLChange,
+  onNChange,
+  onOChange,
+  onPChange,
 }) => {
   return (
     <MainLayout>
@@ -551,6 +645,15 @@ const TitleTemplate = ({
           valueDd={valueDd}
           onCcChange={onCcChange}
           onDdChange={onDdChange}
+          valueL = {valueL}
+          valueN = {valueN}
+          valueO = {valueO}
+          valueP = {valueP}
+
+          onLChange = {onLChange}
+          onNChange = {onNChange}
+          onOChange = {onOChange}
+          onPChange = {onPChange}
         />
         <button
           onClick={onResult}

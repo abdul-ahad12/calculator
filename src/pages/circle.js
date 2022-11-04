@@ -4,6 +4,10 @@ import GeoTemp from "../component/sections/geoTemp";
 const Circle = () => {
   const lineElements = [
     {
+      title: "Area and Circumference of a circle from equation",
+      link: "/areacircum",
+    },
+    {
       title: "Center and Radius from equation",
 
       link: "/crequation",
@@ -33,6 +37,8 @@ const Circle = () => {
       title: "Equation and length of tangent at a point to a circle",
       link: "/lengthoftangent",
     },
+
+
   ];
 
   return (
