@@ -5,6 +5,7 @@ import './font/stylesheet.css'
 import './index.css';
 import App from './pages/App';
 import Circle from './pages/circle';
+import Areacircum from './pages/circle/areacircum';
 import CrEquation from './pages/circle/crequation';
 import Eqfromcp from './pages/circle/eqfromcp';
 import EqfromCR from './pages/circle/eqfromcr';
@@ -58,6 +59,7 @@ root.render(
         <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
         <Route path="contactus" element={<Contactus />}></Route>
         <Route path="vertexfocusx" element={<Vertexfocus />}></Route>
+        <Route path="areacircum" element={<Areacircum />}></Route>
         
 
           {/* <Route index element={<App />} />
