@@ -20,10 +20,10 @@ class Ellipse {
 
   areacircum(l,m)
 {
-	let a = Math.sqrt(m);
-	let b = Math.sqrt(l);
+	let a = Math.sqrt(Math.abs(m));
+	let b = Math.sqrt(Math.abs(l));
 
-	let area = b;
+	let area = Math.PI*a*b;
 
 	let perimeter = 2*Math.PI*(Math.sqrt(((a*a)+(b*b))/2));
 
