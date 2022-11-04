@@ -54,7 +54,7 @@ const Areacircumellipse = () => {
     // })
   };
 
-  const s = "Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r";
+  const s = "Area = \\pi ab \\hspace{1cm} Circumference = \\pi \\sqrt{2(a^2+b^2)}";
   const f2 = <MathComponent tex={s} />;
 
   return (
