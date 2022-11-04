@@ -4,9 +4,9 @@ import GeoTemp from '../component/sections/geoTemp'
 const Ellipse = () => {
     const lineElements = [
         {
-          title: "Distance between two points",
+          title: "Program to find attributes of ellipse",
     
-          link: "/distance",
+          link: "/attributes",
         },
         {
           title: "Slope of a line",

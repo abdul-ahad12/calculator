@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Parabola from "../../calculations/parabola";
-import parabola from "../../calculations/parabola";
 import TitleTemplate from "../../component/sections/titleTemplate";
+import { MathComponent } from "mathjax-react";
+
 
 const Vertexfocus = () => {
   const [input, setinput] = useState({
@@ -47,7 +48,7 @@ const Vertexfocus = () => {
       let k=result[1]
       let aaa=result[2]
 
-      let final=`${h}..${k}..${aaa}`
+      let final=<MathComponent tex={`Vertex A is(${h},${k}) Focus is S(${aaa},${k})`}/>
       setResult(final);
    
   };

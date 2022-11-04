@@ -15,6 +15,7 @@ import Parametriceq from './pages/circle/parametriceq';
 import Powerofpoint from './pages/circle/powerofpoint';
 import Contactus from './pages/contactus';
 import Ellipse from './pages/ellipse';
+import Attributes from './pages/ellipse/attributes';
 import Hyperbola from './pages/hyperbola';
 import Distance from './pages/line/distance';
 import Perpendicular from './pages/line/perpendicular';
@@ -58,6 +59,7 @@ root.render(
         <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
         <Route path="contactus" element={<Contactus />}></Route>
         <Route path="vertexfocusx" element={<Vertexfocus />}></Route>
+        <Route path="attributes" element={<Attributes />}></Route>
         
 
           {/* <Route index element={<App />} />
