@@ -19,8 +19,10 @@ class Parabola {
     //value of h
     let h=(-1)*(f/bb)
     let aaa=bb/4
+    let focusy=Number(h)+Number(aaa)
 
-    return [h,k,aaa]
+    return [h,k,focusy]
+    
 
   }
 
