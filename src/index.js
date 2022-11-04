@@ -25,6 +25,7 @@ import TwoPointForm from './pages/line/twoPointForm';
 import Xyintercept from './pages/line/xyintercept';
 import LineCal from './pages/lineCal';
 import Parabola from './pages/parabola';
+import Vertexfocus from './pages/parabola/vertexfocus';
 
 
 import reportWebVitals from './reportWebVitals';
@@ -56,6 +57,7 @@ root.render(
         <Route path="powerofpoint" element={<Powerofpoint />}></Route>
         <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
         <Route path="contactus" element={<Contactus />}></Route>
+        <Route path="vertexfocusx" element={<Vertexfocus />}></Route>
         
 
           {/* <Route index element={<App />} />
