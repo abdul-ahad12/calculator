@@ -42,7 +42,7 @@ const Xyintercept = () => {
     let y = result[1];
     let c = `(${x},0)`;
     let d = `(0,${y})`;
-    let e = <MathComponent tex={`x-intercept:${c} y-intercept:${d}`} />;
+    let e = <MathComponent tex={`x-intercept:${c} \\hspace{.5cm} y-intercept:${d}`} />;
     setResult(e);
   };
 

@@ -46,7 +46,9 @@ const Distance = () => {
         variables.bx,
         variables.by
       );
-      setResult(result);
+
+      let a = <MathComponent tex={`d = ${result}`} />
+      setResult(a);
    
   };
 

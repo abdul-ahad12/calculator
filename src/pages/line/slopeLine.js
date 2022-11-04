@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { InlineMath} from 'react-katex';
+import { MathComponent } from "mathjax-react";
+
+
 
 
 const SlopeLine = () => {
@@ -47,7 +50,9 @@ const SlopeLine = () => {
             variables.bx,
             variables.by
           );
-          setResult(result);
+
+          let a = <MathComponent tex={`m = ${result}`} />
+          setResult(a);
        
       };
     
