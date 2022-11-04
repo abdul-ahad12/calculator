@@ -41,6 +41,10 @@ const InputTemplate = ({
   onXChange,
   onYChange,
   onRChange,
+  onCcChange,
+  onDdChange,
+  valueCc,
+  valueDd,
 }) => {
   switch (type) {
     case "twoPoints":
@@ -391,7 +395,52 @@ const InputTemplate = ({
     </div>
 
     )
-      default:
+    case "yparabola":
+      return (
+        <div className="flex text=[2rem] flex-col gap-8">
+        <div className="flex gap-2 flex-row items-center">
+          <div>
+          <MathComponent tex={"Eqn: "} />
+          </div>
+          <input
+            className="rounded-[5px] w-[5rem]"
+            value={valueAa}
+            onChange={onAaChange}
+            placeholder="a"
+            type="number"
+          />
+          <div> <MathComponent tex={"y^2+"} /></div>
+
+          <input
+            className="rounded-[5px] w-[5rem]"
+            value={valueBb}
+            onChange={onBbChange}
+            placeholder="b"
+            type="number"
+          />
+          <div> <MathComponent tex={"x+"} /></div>
+          <input
+            className="rounded-[5px] w-[5rem]"
+            value={valueCc}
+            onChange={onCcChange}
+            placeholder="c"
+            type="number"
+          />
+          <div> <MathComponent tex={"y+"} /></div>
+          <input
+            className="rounded-[5px] w-[5rem]"
+            value={valueDd}
+            onChange={onDdChange}
+            placeholder="d"
+            type="number"
+          />
+          <div> <MathComponent tex={"=0"} /></div>
+
+
+        </div>
+      </div>
+      ) 
+    default:
       break;
   }
 };
@@ -416,12 +465,16 @@ const TitleTemplate = ({
   result,
   onResult,
   valueAa,
+  valueCc,
+  valueDd,
   valueBa,
   valueCa,
   valueAb,
   valueBb,
   valueCb,
   onAaChange,
+  onCcChange,
+  onDdChange,
   onBaChange,
   onCaChange,
   onAbChange,
@@ -494,6 +547,10 @@ const TitleTemplate = ({
           onXChange={onXChange}
           onYChange={onYChange}
           onRChange={onRChange}
+          valueCc={valueCc}
+          valueDd={valueDd}
+          onCcChange={onCcChange}
+          onDdChange={onDdChange}
         />
         <button
           onClick={onResult}
