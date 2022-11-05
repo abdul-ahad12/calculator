@@ -491,8 +491,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              // value={valueCc}
-              // onChange={onCcChange}
+              value={valueN}
+              onChange={onNChange}
               placeholder="n"
               type="number"
             />
@@ -502,8 +502,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              // value={valueDd}
-              // onChange={onDdChange}
+              value={valueO}
+              onChange={onOChange}
               placeholder="o"
               type="number"
             />
@@ -513,8 +513,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              // value={valueDd}
-              // onChange={onDdChange}
+              value={valueP}
+              onChange={onPChange}
               placeholder="p"
               type="number"
             />
