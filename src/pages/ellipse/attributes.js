@@ -68,12 +68,9 @@ const Attributes = () => {
     let e = result[4];
     let f = result[5];
     let g = result[6];
-    let h = result[7];
-    let i = result[8];
-    let j = result[9];
-    let k = result[10];
-    let l = result[10];
-    let m = result[10];
+ 
+
+    // let final=`${a},${b},${c},${d},${e},${f},${g}`
 
     let final = (
       <ResultTemp
@@ -84,12 +81,7 @@ const Attributes = () => {
         e={e}
         f={f}
         g={g}
-        h={h}
-        i={i}
-        j={j}
-        k={k}
-        l={l}
-        m={m}
+   
       />
     );
 
