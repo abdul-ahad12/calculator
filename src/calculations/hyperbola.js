@@ -1,4 +1,4 @@
-class Ellipse {
+class Hyperbola {
   constructor(l, m, n, o, p) {
     this.l = l;
     this.m = m;
@@ -86,18 +86,6 @@ class Ellipse {
       ];
     }
   }
-
-  areacircum(l,m)
-{
-	let a = Math.sqrt(Math.abs(m));
-	let b = Math.sqrt(Math.abs(l));
-
-	let area = b;
-
-    let perimeter = 2 * Math.PI * Math.sqrt((a * a + b * b) / 2);
-
-    return [area.toFixed(2), perimeter.toFixed(2)];
-  }
 }
 
-export default Ellipse;
+export default Hyperbola;
