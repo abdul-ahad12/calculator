@@ -57,7 +57,8 @@ const Areacircum = () => {
       const f2 = <MathComponent tex={s} />
   
     return (
-    <div><TitleTemplate
+    <div>
+    <TitleTemplate
     title={"Area and Circumference of a circle from equation"}
     subTitle={""}
     formula={f2}
