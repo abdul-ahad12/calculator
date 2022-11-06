@@ -38,8 +38,12 @@ const LineCal = () => {
       link: "/pointslopeform",
     },
     {
-      title: "Circumcentre of a triangle from sides",
-      link: "/trianglecircumcentre",
+      title: "Circumcentre of a Triangle from sides",
+      link: "/tricircumcentre",
+    },
+    {
+      title: "Circumcentre of a Triangle from Vertices",
+      link: "/tricircumpoints",
     },
  
   ];

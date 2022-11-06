@@ -16,16 +16,16 @@ class Line {
   distance(ax, ay, bx, by) {
     let first = Number(ax) - Number(bx);
     let second = Number(ay) - Number(by);
-    let result= Math.sqrt(first * first + second * second);
+    let result = Math.sqrt(first * first + second * second);
 
     return result.toFixed(2);
   }
   slope(ax, ay, bx, by) {
     let first = Number(by) - Number(ay);
     let second = Number(bx) - Number(ax);
-    let result=first/second
+    let result = first / second;
 
-    return result.toFixed(3)
+    return result.toFixed(3);
   }
 
   pointOfint(a1, b1, c1, a2, b2, c2) {
@@ -34,7 +34,6 @@ class Line {
     } else {
       let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
       let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
- 
 
       return [x.toFixed(3), y.toFixed(3)];
     }
@@ -66,6 +65,7 @@ class Line {
 
     return [m, c];
   }
+
 
   trianglecircumcentre(a1,b1,c1,a2,b2,c2,a3,b3,c3)
   {

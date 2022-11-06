@@ -25,13 +25,15 @@ import Perpendicular from './pages/line/perpendicular';
 import PointOfInt from './pages/line/pointOfInt';
 import PointSlopeForm from './pages/line/pointSlopeForm';
 import SlopeLine from './pages/line/slopeLine';
-import Trianglecircumcentre from './pages/line/trianglecircumcentre';
+import Tricircumcentre from './pages/triangle/tricircumcentre';
+import Tricircumpoints from './pages/triangle/tricircumpoints';
 import TwoPointForm from './pages/line/twoPointForm';
 import Xyintercept from './pages/line/xyintercept';
 import LineCal from './pages/lineCal';
 import Parabola from './pages/parabola';
 import AttributesPara from './pages/parabola/attributespara';
 import Vertexfocus from './pages/parabola/vertexfocus';
+import Triangle from './pages/triangle';
 
 
 import reportWebVitals from './reportWebVitals';
@@ -68,8 +70,10 @@ root.render(
         <Route path="attributes" element={<Attributes />}></Route>
         <Route path="areacircumellipse" element={<Areacircumellipse />}></Route>
         <Route path="attributesel" element={<AttributesEl />}></Route>
+        <Route path="triangle" element={<Triangle/>}></Route>
+        <Route path="tricircumcentre" element={<Tricircumcentre />}></Route>
+        <Route path="tricircumpoints" element={<Tricircumpoints />}></Route>
         <Route path="attributespara" element={<AttributesPara />}></Route>
-        <Route path="trianglecircumcentre" element={<Trianglecircumcentre />}></Route>
 
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />

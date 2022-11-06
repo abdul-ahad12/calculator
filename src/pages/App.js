@@ -11,6 +11,11 @@ function App() {
       link: "/lineCal",
     },
     {
+      title: "Triangle",
+      url: "/triangle.png",
+      link: "/triangle",
+    },
+    {
       title: "Circle",
       url: "/circle.JPG",
       link: "/circle",
