@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
+import Triangle from "../../calculations/triangle";
 
 const Tricircumpoints = () => {
     const [coeficient, setcoeficient] = useState({
@@ -14,7 +14,7 @@ const Tricircumpoints = () => {
       });
       const [result, setResult] = useState("");
     
-      const line = new Line(coeficient.a, coeficient.b, coeficient.c, coeficient.d, coeficient.e, coeficient.f);
+      const triangle = new Triangle(coeficient.a, coeficient.b, coeficient.c, coeficient.d, coeficient.e, coeficient.f);
       console.log(coeficient);
     
       const onAChange = (e) => {
@@ -55,7 +55,7 @@ const Tricircumpoints = () => {
       };
     
       const resultDumm = () => {
-        const result = line.tricircumpoints(coeficient.a, coeficient.b, coeficient.c,coeficient.d, coeficient.e, coeficient.f);
+        const result = triangle.tricircumpoints(coeficient.a, coeficient.b, coeficient.c,coeficient.d, coeficient.e, coeficient.f);
         let x = result[0];
         let y = result[1];
         let c = `(${x},${y})`;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
+import Triangle from "../../calculations/triangle";
 
 
 const Tricircumcentre = () => {
@@ -18,7 +18,7 @@ const Tricircumcentre = () => {
   });
   const [result, setResult] = useState("");
 
-  const line = new Line(
+  const triangle = new Triangle(
     coeficient.a,
     coeficient.b,
     coeficient.c,
@@ -87,7 +87,7 @@ const Tricircumcentre = () => {
   };
 
   const resultDumm = () => {
-    const result = line.tricircumcentre(coeficient.a, coeficient.b, coeficient.c,coeficient.d, coeficient.e, coeficient.f, coeficient.g, coeficient.h, coeficient.i);
+    const result = triangle.tricircumcentre(coeficient.a, coeficient.b, coeficient.c,coeficient.d, coeficient.e, coeficient.f, coeficient.g, coeficient.h, coeficient.i);
     let x = result[0];
     let y = result[1];
     let c = `(${x},${y})`;
