@@ -156,6 +156,7 @@ const InputTemplate = ({
               placeholder="c1"
               type="number"
             />
+            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
           </div>
           <div className="flex gap-2 flex-row items-center">
             <div className="w-[3.5rem]"><MathComponent tex={"Line 2:"} /></div>
@@ -183,6 +184,7 @@ const InputTemplate = ({
               placeholder="c2"
               type="number"
             />
+            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
           </div>
         </div>
       );
