@@ -1,4 +1,6 @@
 import React from "react";
+import { MathComponent } from "mathjax-react";
+
 
 const ResultTemp = ({
   a,

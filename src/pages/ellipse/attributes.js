@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Ellipse from "../../calculations/ellipse";
 import TitleTemplate from "../../component/sections/titleTemplate";
-import { MathComponent } from "mathjax-react";
 import ResultTemp from "../../component/sections/resultTemp";
 
 const Attributes = () => {
