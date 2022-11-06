@@ -37,6 +37,10 @@ const LineCal = () => {
       title: "Equation of a line. Point slope form.",
       link: "/pointslopeform",
     },
+    {
+      title: "Circumcentre of a Triangle from sides",
+      link: "/tricircumcentre",
+    },
  
   ];
 
