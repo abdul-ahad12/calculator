@@ -69,6 +69,64 @@ const InputTemplate = ({
         </div>
       );
 
+      case "threePoints":
+      return (
+        <div className="flex flex-col gap-1">
+          <div className="flex gap-4 flex-row items-center">
+            <div className="w-[4rem]"><MathComponent tex={"Point 1:"} /></div>
+            <input
+              className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
+              value={valueA}
+              onChange={onAChange}
+              placeholder="x1"
+              type="number"
+            />
+            <input
+              className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
+              value={valueB}
+              onChange={onBChange}
+              placeholder="y1"
+              type="number"
+            />
+          </div>
+          <div className="flex gap-4 flex-row items-center">
+            <div className="w-[4rem]"><MathComponent tex={"Point 2:"} /></div>
+            <input
+              className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
+              value={valueC}
+              onChange={onCChange}
+              placeholder="x2"
+              type="number"
+            />
+            <input
+              className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
+              value={valueD}
+              onChange={onDChange}
+              placeholder="y2"
+              type="number"
+            />
+          </div>
+
+          <div className="flex gap-4 flex-row items-center">
+            <div className="w-[4rem]"><MathComponent tex={"Point 3:"} /></div>
+            <input
+              className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
+              value={valueE}
+              onChange={onEChange}
+              placeholder="x2"
+              type="number"
+            />
+            <input
+              className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
+              value={valueF}
+              onChange={onFChange}
+              placeholder="y2"
+              type="number"
+            />
+          </div>
+        </div>
+      );
+
     case "twolines":
       return (
         <div className="flex flex-col gap-8">

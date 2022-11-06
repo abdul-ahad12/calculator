@@ -41,6 +41,10 @@ const LineCal = () => {
       title: "Circumcentre of a Triangle from sides",
       link: "/tricircumcentre",
     },
+    {
+      title: "Circumcentre of a Triangle from Vertices",
+      link: "/tricircumpoints",
+    },
  
   ];
 
