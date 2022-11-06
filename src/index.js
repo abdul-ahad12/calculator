@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './font/stylesheet.css'
-import AttributesEl from './hyperbola/attributes';
 import './index.css';
 import App from './pages/App';
 import Circle from './pages/circle';
@@ -20,17 +19,21 @@ import Ellipse from './pages/ellipse';
 import Areacircumellipse from './pages/ellipse/areacircumellipse';
 import Attributes from './pages/ellipse/attributes';
 import Hyperbola from './pages/hyperbola';
+import AttributesEl from './pages/hyperbola/attributes';
 import Distance from './pages/line/distance';
 import Perpendicular from './pages/line/perpendicular';
 import PointOfInt from './pages/line/pointOfInt';
 import PointSlopeForm from './pages/line/pointSlopeForm';
 import SlopeLine from './pages/line/slopeLine';
-import Trianglecircumcentre from './pages/line/trianglecircumcentre';
+import Tricircumcentre from './pages/triangle/tricircumcentre';
+import Tricircumpoints from './pages/triangle/tricircumpoints';
 import TwoPointForm from './pages/line/twoPointForm';
 import Xyintercept from './pages/line/xyintercept';
 import LineCal from './pages/lineCal';
 import Parabola from './pages/parabola';
+import AttributesPara from './pages/parabola/attributespara';
 import Vertexfocus from './pages/parabola/vertexfocus';
+import Triangle from './pages/triangle';
 
 
 import reportWebVitals from './reportWebVitals';
@@ -67,7 +70,10 @@ root.render(
         <Route path="attributes" element={<Attributes />}></Route>
         <Route path="areacircumellipse" element={<Areacircumellipse />}></Route>
         <Route path="attributesel" element={<AttributesEl />}></Route>
-        <Route path="trianglecircumcentre" element={<Trianglecircumcentre />}></Route>
+        <Route path="triangle" element={<Triangle/>}></Route>
+        <Route path="tricircumcentre" element={<Tricircumcentre />}></Route>
+        <Route path="tricircumpoints" element={<Tricircumpoints />}></Route>
+        <Route path="attributespara" element={<AttributesPara />}></Route>
 
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
