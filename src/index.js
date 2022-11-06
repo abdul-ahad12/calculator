@@ -25,6 +25,7 @@ import Perpendicular from './pages/line/perpendicular';
 import PointOfInt from './pages/line/pointOfInt';
 import PointSlopeForm from './pages/line/pointSlopeForm';
 import SlopeLine from './pages/line/slopeLine';
+import Trianglecircumcentre from './pages/line/trianglecircumcentre';
 import TwoPointForm from './pages/line/twoPointForm';
 import Xyintercept from './pages/line/xyintercept';
 import LineCal from './pages/lineCal';
@@ -66,6 +67,7 @@ root.render(
         <Route path="attributes" element={<Attributes />}></Route>
         <Route path="areacircumellipse" element={<Areacircumellipse />}></Route>
         <Route path="attributesel" element={<AttributesEl />}></Route>
+        <Route path="trianglecircumcentre" element={<Trianglecircumcentre />}></Route>
 
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
