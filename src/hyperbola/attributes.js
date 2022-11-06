@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Ellipse from "../../calculations/ellipse";
-import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
-import ResultTemp from "../../component/sections/resultTemp";
+import Hyperbola from "../calculations/hyperbola";
+import TitleTemplate from "../component/sections/titleTemplate";
+import ResultTemp from "../component/sections/resultTemp";
 
-const Attributes = () => {
+const AttributesEl = () => {
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",
@@ -14,7 +14,7 @@ const Attributes = () => {
   });
 
   const [result, setresult] = useState("");
-  const ellipse = new Ellipse(
+  const hyperbola = new Hyperbola(
     eqInput.l,
     eqInput.m,
     eqInput.n,
@@ -54,7 +54,7 @@ const Attributes = () => {
   };
 
   const resultDumm = () => {
-    const result = ellipse.attributes(
+    const result = hyperbola.attributes(
       eqInput.l,
       eqInput.m,
       eqInput.n,
@@ -89,6 +89,8 @@ const Attributes = () => {
         i={i}
         j={j}
         k={k}
+        subtitle1={"tranverse axis"}
+        subtitle2={"conjugate axis"}
    
       />
     );
@@ -115,7 +117,7 @@ const Attributes = () => {
     <div>
       {" "}
       <TitleTemplate
-        title={"Program to find attributes of ellipse"}
+        title={"Program to find attributes of hyperbola"}
         type={"ellipse"}
         // formula = {f2}
         valueL={eqInput.l}
@@ -137,7 +139,7 @@ const Attributes = () => {
   );
 };
 
-export default Attributes;
+export default AttributesEl;
 
 {
   /* <MathComponent tex={`${a}..${b}..${c}..${d}..${e}..${f}..${g}..${h}..${i}..${j}..${k}`} /> */

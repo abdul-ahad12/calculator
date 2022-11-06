@@ -13,7 +13,6 @@ class Ellipse {
     let nn = n / l;
     //    let mm=m/m
     let oo = o / m;
-    let pp = -1 * p;
     //this is alpha
     let aa = -1 * (nn / 2);
     //this is beta
@@ -30,21 +29,21 @@ class Ellipse {
       let LgMajor = 2 * Math.sqrt(b);
       let lgMinor = 2 * Math.sqrt(a);
       let lgLactur = (2 * a) / Math.sqrt(b);
-      let center = `Center:(${aa},${bb})`;
+      let center = `Center:(${aa.toFixed(2)},${bb.toFixed(2)})`;
       let ee = Math.sqrt((Number(b) - Number(a)) / Number(b));
-      let foci = `(${aa},${bb}±${Math.sqrt(b) * ee})`;
-      let eqDirect = `y=${bb}±${Math.sqrt(b) / ee}`;
-      let vertices = `(${aa},${bb}±${Math.sqrt(b)})`;
-      let eqMajor = `x-${aa}=0`;
-      let eqMinor = `y-${bb}=0`;
-      let eqOfLatus = `y=${bb}±${Math.sqrt(b) * ee}`;
+      let foci = `(${aa.toFixed(2)},${bb.toFixed(2)}±${(Math.sqrt(b) * ee).toFixed(2)})`;
+      let eqDirect = `y=${bb.toFixed(2)}±${(Math.sqrt(b) / ee).toFixed(2)}`;
+      let vertices = `(${aa.toFixed(2)},${bb.toFixed(2)}±${(Math.sqrt(b)).toFixed(2)})`;
+      let eqMajor = `x-${aa.toFixed(2)}=0`;
+      let eqMinor = `y-${bb.toFixed(2)}=0`;
+      let eqOfLatus = `y=${bb.toFixed(2)}±${(Math.sqrt(b) * ee).toFixed(2)}`;
 
       return [
-        LgMajor,
-        lgMinor,
-        lgLactur,
+        LgMajor.toFixed(2),
+        lgMinor.toFixed(2),
+        lgLactur.toFixed(2),
         center,
-        ee,
+        ee.toFixed(2),
         foci,
         eqDirect,
         vertices,

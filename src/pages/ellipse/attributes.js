@@ -89,6 +89,8 @@ const Attributes = () => {
         i={i}
         j={j}
         k={k}
+        subtitle1={"Major axis"}
+        subtitle2={"Minor axis"}
    
       />
     );

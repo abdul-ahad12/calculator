@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './font/stylesheet.css'
+import AttributesEl from './hyperbola/attributes';
 import './index.css';
 import App from './pages/App';
 import Circle from './pages/circle';
@@ -64,6 +65,7 @@ root.render(
         <Route path="areacircum" element={<Areacircum />}></Route>
         <Route path="attributes" element={<Attributes />}></Route>
         <Route path="areacircumellipse" element={<Areacircumellipse />}></Route>
+        <Route path="attributesel" element={<AttributesEl />}></Route>
 
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
