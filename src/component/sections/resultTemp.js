@@ -1,4 +1,6 @@
 import React from "react";
+import { MathComponent } from "mathjax-react";
+
 
 const ResultTemp = ({ a, b, c, d, e, f, g, h, i, j, k ,subtitle1,subtitle2}) => {
   return (
@@ -7,67 +9,67 @@ const ResultTemp = ({ a, b, c, d, e, f, g, h, i, j, k ,subtitle1,subtitle2}) => 
         {" "}
         <div className="flex flex-row">
         <div className="result">Length of {subtitle1}</div>
-        <div className="result">{a}</div>
+        <div className="result"><MathComponent tex={`${a}`} /></div>
         </div>
         <div className="flex flex-row">
 
         <div className="result">Length of {subtitle2}</div>
-        <div className="result">{b}</div>
+        <div className="result"><MathComponent tex={`${b}`}/></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Length of latusrectrum</div>
         
-        <div className="result">{c}</div>
+        <div className="result"><MathComponent tex={`${c}`}/></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Center</div>
-        <div className="result">{d}</div>
+        <div className="result"><MathComponent tex={`${d}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">e</div>
-        <div className="result">{e}</div>
+        <div className="result"><MathComponent tex={`${e}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Foci</div>
-        <div className="result">{f}</div>
+        <div className="result"><MathComponent tex={`${f}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Equation of directrices are</div>
-        <div className="result">{g}</div>
+        <div className="result"><MathComponent tex={`${g}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Vertices</div>
-        <div className="result">{h}</div>
+        <div className="result"><MathComponent tex={`${h}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Equation of {subtitle1}</div>
-        <div className="result">{i}</div>
+        <div className="result"><MathComponent tex={`${i}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Equation of {subtitle2}</div>
-        <div className="result">{j}</div>
+        <div className="result"><MathComponent tex={`${j}`} /></div>
         </div>
 
         <div className="flex flex-row">
 
         <div className="result">Equation of Latus Rectrum</div>
-        <div className="result">{k}</div>
+        <div className="result"><MathComponent tex={`${k}`} /></div>
       </div>
       
         {" "}

@@ -34,8 +34,8 @@ class Hyperbola {
       let foci = `(${aa},${bb}±${Math.sqrt(b) * ee})`;
       let eqDirect = `y=${bb}±${Math.sqrt(b) / ee}`;
       let vertices = `(${aa},${bb}±${Math.sqrt(b)})`;
-      let eqMajor = `x-${aa}=0`;
-      let eqMinor = `y-${bb}=0`;
+      let eqMajor = `x=${aa}`;
+      let eqMinor = `y=${bb}`;
       let eqOfLatus = `y=${bb}±${Math.sqrt(b) * ee}`;
 
       return [
@@ -63,8 +63,8 @@ class Hyperbola {
     let vertices = `(${aa.toFixed(2)}±${Math.sqrt(a.toFixed(2))},${bb.toFixed(
       2
     )})`;
-    let eqMajor = `y-${bb.toFixed(2)}=0`;
-    let eqMinor = `x-${aa.toFixed(2)}=0`;
+    let eqMajor = `y=${bb.toFixed(2)}`;
+    let eqMinor = `x=${aa.toFixed(2)}`;
     let eqOfLatus = `x=${aa.toFixed(2)}±${
       Math.sqrt(a.toFixed(2)) * ee.toFixed(2)
     }`;
