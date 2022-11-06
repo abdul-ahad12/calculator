@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Circle from "../../calculations/circle";
-import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
+import TitleTemplate from '../../component/sections/titleTemplate';
 
 const Areacircum = () => {
     const [value, setValue] = useState({
