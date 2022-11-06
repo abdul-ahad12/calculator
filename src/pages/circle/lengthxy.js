@@ -37,8 +37,9 @@ const Lengthxy = () => {
     let b = result[1];
 
     let final = `Length of intercept on x-axis : ${ a} , Length of intercept on y-axis is : ${ b}`
+    let res = <MathComponent tex={final}/>
 
-    setresult(final);
+    setresult(res);
   };
 
   const onResult = () => {
