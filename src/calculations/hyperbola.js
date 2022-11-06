@@ -1,4 +1,4 @@
-class Hyperbola {
+class Hyperbola{
   constructor(l, m, n, o, p) {
     this.l = l;
     this.m = m;
