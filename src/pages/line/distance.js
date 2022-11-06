@@ -81,14 +81,14 @@ const Distance = () => {
         title={"Distance between two points"}
         type={"twoPoints"}
         formula={f1}
-        valueax={variables.ax}
-        onAxChange={onAxChange}
-        valueay={variables.ay}
-        onAyChange={onAyChange}
-        valuebx={variables.bx}
-        onBxChange={onBxChange}
-        valueby={variables.by}
-        onByChange={onByChange}
+        valueA={variables.ax}
+        onAChange={onAxChange}
+        valueB={variables.ay}
+        onBChange={onAyChange}
+        valueC={variables.bx}
+        onCChange={onBxChange}
+        valueD={variables.by}
+        onDChange={onByChange}
         onResult={onResult}
         result={result}
       />

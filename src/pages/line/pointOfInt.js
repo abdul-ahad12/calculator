@@ -104,18 +104,18 @@ const PointOfInt = () => {
         
         formula={""}
         type={"twolines"}
-        valueAa={coeficient.aa}
-        valueBa={coeficient.ba}
-        valueCa={coeficient.ca}
-        valueAb={coeficient.ab}
-        valueBb={coeficient.bb}
-        valueCb={coeficient.cb}
-        onAaChange={onAaChange}
-        onBaChange={onBaChange}
-        onCaChange={onCaChange}
-        onAbChange={onAbChange}
-        onBbChange={onBbChange}
-        onCbChange={onCbChange}
+        valueA={coeficient.aa}
+        valueB={coeficient.ba}
+        valueC={coeficient.ca}
+        valueD={coeficient.ab}
+        valueE={coeficient.bb}
+        valueF={coeficient.cb}
+        onAChange={onAaChange}
+        onBChange={onBaChange}
+        onCChange={onCaChange}
+        onDChange={onAbChange}
+        onEChange={onBbChange}
+        onFChange={onCbChange}
         onResult={onResult}
       result={result}
       />

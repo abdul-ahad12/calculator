@@ -68,12 +68,12 @@ const Xyintercept = () => {
         title={"x-intercept and y-intercept of a line."}
         formula={f1}
         type={"oneline"}
-        valueAa={coeficient.aa}
-        valueBa={coeficient.ba}
-        valueCa={coeficient.ca}
-        onAaChange={onAaChange}
-        onBaChange={onBaChange}
-        onCaChange={onCaChange}
+        valueA={coeficient.aa}
+        valueB={coeficient.ba}
+        valueC={coeficient.ca}
+        onAChange={onAaChange}
+        onBChange={onBaChange}
+        onCChange={onCaChange}
         onResult={onResult}
         result={result}
       />

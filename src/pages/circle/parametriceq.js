@@ -65,11 +65,11 @@ const Parametriceq = () => {
         title={"Parametric equation of circle"}
         type={"eqCircle"}
         formula = {f1}
-        valueG={eqInput.g}
-        valueF={eqInput.f}
+        valueA={eqInput.g}
+        valueB={eqInput.f}
         valueC={eqInput.c}
-        onGChange={onGChange}
-        onFChange={onFChange}
+        onAChange={onGChange}
+        onBChange={onFChange}
         onCChange={onCChange}
         result={result}
         onResult={onResult}

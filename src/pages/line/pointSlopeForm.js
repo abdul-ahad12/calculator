@@ -69,12 +69,12 @@ const PointSlopeForm = () => {
         title={"Equation of a line. Point slope form."}
         type={"slopePoint"}
         formula={f1}
-        valueax={variables.ax}
-        onAxChange={onAxChange}
-        valueay={variables.ay}
-        onAyChange={onAyChange}
-        valueM={valueM}
-        onMChange={onMChange}
+        valueA={variables.ax}
+        onAChange={onAxChange}
+        valueB={variables.ay}
+        onBChange={onAyChange}
+        valueC={valueM}
+        onCChange={onMChange}
         result={result}
         onResult={onResult}
       />

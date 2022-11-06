@@ -24,6 +24,12 @@ class Ellipse {
     let a = c / l;
     //this is b^2
     let b = c / m;
+if(aa===0&&bb===0){
+  var genForm=`(x^2/${a})+(y^2/${b})=1`
+}else{
+  genForm=`((x-(${aa}))^2/${a})+((y-(${bb}))^2/${b})=1`
+
+}
 
     if (b > a) {
       let LgMajor = 2 * Math.sqrt(b);
@@ -50,6 +56,7 @@ class Ellipse {
         eqMajor,
         eqMinor,
         eqOfLatus,
+        genForm,
       ];
     } else {
       let LgMajor = 2 * Math.sqrt(a);
@@ -82,6 +89,7 @@ class Ellipse {
         eqMajor,
         eqMinor,
         eqOfLatus,
+        genForm
       ];
     }
   }

@@ -63,10 +63,10 @@ const Areacircumellipse = () => {
       title={"Area and circumference of ellipse from equation"}
       type={"ellipse"}
       formula = {f2}
-      valueL={eqInput.l}
-      valueM={eqInput.m}
-      onLChange={onLChange}
-      onMChange={onMChange}
+      valueA={eqInput.l}
+      valueB={eqInput.m}
+      onAChange={onLChange}
+      onBChange={onMChange}
       result={result}
       onResult={onResult}
     />

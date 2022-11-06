@@ -76,16 +76,16 @@ const Powerofpoint = () => {
         title={"Power of point wrt Circle"}
         type={"pointeqCircle"}
         formula = {f2}
-        valueX={eqInput.x}
-        valueY={eqInput.y}
-        valueG={eqInput.g}
-        valueF={eqInput.f}
-        valueC={eqInput.c}
-        onGChange={onGChange}
-        onFChange={onFChange}
+        valueA={eqInput.x}
+        valueB={eqInput.y}
+        valueC={eqInput.g}
+        valueD={eqInput.f}
+        valueE={eqInput.c}
+        onAChange={onGChange}
+        onBChange={onFChange}
         onCChange={onCChange}
-        onXChange={onXChange}
-        onYChange={onYChange}
+        onDChange={onXChange}
+        onEChange={onYChange}
         result={result}
         onResult={onResult}
       />

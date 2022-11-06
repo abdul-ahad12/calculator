@@ -96,16 +96,16 @@ const Lengthoftangent = () => {
         title={"Eqn and length of tangent at a point to a circle"}
         type={"pointeqCircle"}
         formula = {f1}
-        valueX={eqInput.x}
-        valueY={eqInput.y}
-        valueG={eqInput.g}
-        valueF={eqInput.f}
-        valueC={eqInput.c}
-        onGChange={onGChange}
-        onFChange={onFChange}
+        valueA={eqInput.x}
+        valueB={eqInput.y}
+        valueC={eqInput.g}
+        valueD={eqInput.f}
+        valueE={eqInput.c}
+        onAChange={onGChange}
+        onBChange={onFChange}
         onCChange={onCChange}
-        onXChange={onXChange}
-        onYChange={onYChange}
+        onDChange={onXChange}
+        onEChange={onYChange}
         result={result}
         onResult={onResult}
       />
