@@ -4,55 +4,28 @@ import { MathComponent } from "mathjax-react";
 
 const InputTemplate = ({
   type,
-  ax,
-  valueax,
-  ay,
-  valueay,
-  bx,
-  valuebx,
-  valueby,
-  onAxChange,
-  onAyChange,
-  onBxChange,
-  onByChange,
-  valueAa,
-  valueBa,
-  valueCa,
-  valueAb,
-  valueBb,
-  valueCb,
-  onAaChange,
-  onBaChange,
-  onCaChange,
-  onAbChange,
-  onBbChange,
-  onCbChange,
-  valueM,
-  onMChange,
-  valueG,
-  valueF,
+  valueA,
+  valueB,
   valueC,
-  onGChange,
-  onFChange,
+  valueD,
+  valueE,
+  valueF,
+  valueG,
+  valueH,
+  valueI,
+  valueJ,
+  valueK,
+  onAChange,
+  onBChange,
   onCChange,
-  valueX,
-  valueY,
-  valueR,
-  onXChange,
-  onYChange,
-  onRChange,
-  onCcChange,
-  onDdChange,
-  valueCc,
-  valueDd,
-  valueL,
-  valueN,
-  valueO,
-  valueP,
-  onLChange,
-  onNChange,
-  onPChange,
-  onOChange
+  onDChange,
+  onEChange,
+  onFChange,
+  onGChange,
+  onHChange,
+  onIChange,
+  onJChange,
+  onKChange,
 
 }) => {
   switch (type) {
@@ -63,15 +36,15 @@ const InputTemplate = ({
             <div className="w-[4rem]">Point 1:</div>
             <input
               className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
-              value={valueax}
-              onChange={onAxChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="x1"
               type="number"
             />
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
-              value={valueay}
-              onChange={onAyChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="y1"
               type="number"
             />
@@ -80,15 +53,15 @@ const InputTemplate = ({
             <div className="w-[4rem]">Point 2:</div>
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
-              value={valuebx}
-              onChange={onBxChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="x2"
               type="number"
             />
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
-              value={valueby}
-              onChange={onByChange}
+              value={valueD}
+              onChange={onDChange}
               placeholder="y2"
               type="number"
             />
@@ -103,16 +76,16 @@ const InputTemplate = ({
             <div className="w-[3.5rem]">Line 1 :</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueAa}
-              onChange={onAaChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="a1"
               type="number"
             />
             <div className="lg:mr-8">x</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueBa}
-              onChange={onBaChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="b1"
               type="number"
             />
@@ -120,8 +93,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueCa}
-              onChange={onCaChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="c1"
               type="number"
             />
@@ -130,16 +103,16 @@ const InputTemplate = ({
             <div className="w-[3.5rem]">Line 2 :</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueAb}
-              onChange={onAbChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="a2"
               type="number"
             />
             <div className="lg:mr-8">x</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueBb}
-              onChange={onBbChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="b2"
               type="number"
             />
@@ -147,8 +120,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueCb}
-              onChange={onCbChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="c2"
               type="number"
             />
@@ -163,16 +136,16 @@ const InputTemplate = ({
             <div>Line 1 :</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueAa}
-              onChange={onAaChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="a1"
               type="number"
             />
             <div className="lg:mr-8">x</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueBa}
-              onChange={onBaChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="b1"
               type="number"
             />
@@ -180,8 +153,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueCa}
-              onChange={onCaChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="c1"
               type="number"
             />
@@ -196,16 +169,16 @@ const InputTemplate = ({
             <div>Slope :</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueM}
-              onChange={onMChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="m"
               type="number"
             />
             <div className="lg:mr-8">x :</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueax}
-              onChange={onAxChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="x"
               type="number"
             />
@@ -213,8 +186,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueay}
-              onChange={onAyChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="y"
               type="number"
             />
@@ -235,8 +208,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueG}
-              onChange={onGChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="2g"
               type="number"
             />
@@ -246,8 +219,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueF}
-              onChange={onFChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="2f"
               type="number"
             />
@@ -273,24 +246,24 @@ const InputTemplate = ({
             <div>Point:</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueX}
-              onChange={onXChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="x"
               type="number"
             />
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueY}
-              onChange={onYChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="y"
               type="number"
             />
             <div>Radius:</div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueR}
-              onChange={onRChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="r"
               type="number"
             />
@@ -306,16 +279,16 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueax}
-              onChange={onAxChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="x"
               type="number"
             />
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueay}
-              onChange={onAyChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="y"
               type="number"
             />
@@ -325,16 +298,16 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueX}
-              onChange={onXChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="c1"
               type="number"
             />
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueY}
-              onChange={onYChange}
+              value={valueD}
+              onChange={onDChange}
               placeholder="c2"
               type="number"
             />
@@ -351,16 +324,16 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueX}
-              onChange={onXChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="x"
               type="number"
             />
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueY}
-              onChange={onYChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="y"
               type="number"
             />
@@ -373,8 +346,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueG}
-              onChange={onGChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="2g"
               type="number"
             />
@@ -384,8 +357,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueF}
-              onChange={onFChange}
+              value={valueD}
+              onChange={onDChange}
               placeholder="2f"
               type="number"
             />
@@ -395,8 +368,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueC}
-              onChange={onCChange}
+              value={valueE}
+              onChange={onEChange}
               placeholder="c"
               type="number"
             />
@@ -412,8 +385,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueAa}
-              onChange={onAaChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="a"
               type="number"
             />
@@ -424,8 +397,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueBb}
-              onChange={onBbChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="b"
               type="number"
             />
@@ -435,8 +408,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueCc}
-              onChange={onCcChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="c"
               type="number"
             />
@@ -446,8 +419,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueDd}
-              onChange={onDdChange}
+              value={valueD}
+              onChange={onDChange}
               placeholder="d"
               type="number"
             />
@@ -468,8 +441,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueL}
-              onChange={onLChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="l"
               type="number"
             />
@@ -480,8 +453,8 @@ const InputTemplate = ({
 
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueM}
-              onChange={onMChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="m"
               type="number"
             />
@@ -491,8 +464,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueN}
-              onChange={onNChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="n"
               type="number"
             />
@@ -502,8 +475,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueO}
-              onChange={onOChange}
+              value={valueD}
+              onChange={onDChange}
               placeholder="o"
               type="number"
             />
@@ -513,8 +486,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueP}
-              onChange={onPChange}
+              value={valueE}
+              onChange={onEChange}
               placeholder="p"
               type="number"
             />
@@ -534,62 +507,33 @@ const InputTemplate = ({
 const TitleTemplate = ({
   title,
   formula,
-  subTitle,
   type,
-  ax,
-  ay,
-  bx,
-  by,
-  valueax,
-  valueay,
-  valuebx,
-  valueby,
-  onAxChange,
-  onAyChange,
-  onBxChange,
-  onByChange,
   result,
   onResult,
-  valueAa,
-  valueCc,
-  valueDd,
-  valueBa,
-  valueCa,
-  valueAb,
-  valueBb,
-  valueCb,
-  onAaChange,
-  onCcChange,
-  onDdChange,
-  onBaChange,
-  onCaChange,
-  onAbChange,
-  onBbChange,
-  onCbChange,
-  resultx,
-  resulty,
-  valueM,
-  onMChange,
-  valueG,
-  valueF,
+  valueA,
+  valueB,
   valueC,
-  onGChange,
-  onFChange,
+  valueD,
+  valueE,
+  valueF,
+  valueG,
+  valueH,
+  valueI,
+  valueJ,
+  valueK,
+  onAChange,
+  onBChange,
   onCChange,
-  valueX,
-  valueY,
-  valueR,
-  onXChange,
-  onYChange,
-  onRChange,
-  valueL,
-  valueN,
-  valueO,
-  valueP,
-  onLChange,
-  onNChange,
-  onOChange,
-  onPChange,
+  onDChange,
+  onEChange,
+  onFChange,
+  onGChange,
+  onHChange,
+  onIChange,
+  onJChange,
+  onKChange,
+
+  
 }) => {
   return (
     <MainLayout>
@@ -603,57 +547,29 @@ const TitleTemplate = ({
 
         <InputTemplate
           type={type}
-          ax={ax}
-          ay={ay}
-          bx={bx}
-          by={by}
-          valueax={valueax}
-          valueay={valueay}
-          valuebx={valuebx}
-          valueby={valueby}
-          onAxChange={onAxChange}
-          onAyChange={onAyChange}
-          onBxChange={onBxChange}
-          onByChange={onByChange}
-          valueAa={valueAa}
-          valueBa={valueBa}
-          valueCa={valueCa}
-          valueAb={valueAb}
-          valueBb={valueBb}
-          valueCb={valueCb}
-          onAaChange={onAaChange}
-          onBaChange={onBaChange}
-          onCaChange={onCaChange}
-          onAbChange={onAbChange}
-          onBbChange={onBbChange}
-          onCbChange={onCbChange}
-          valueM={valueM}
-          onMChange={onMChange}
-          valueG={valueG}
-          valueF={valueF}
+          valueA={valueA}
+          valueB={valueB}
           valueC={valueC}
-          onGChange={onGChange}
-          onFChange={onFChange}
+          valueD={valueD}
+          valueE={valueE}
+          valueF={valueF}
+          valueG={valueG}
+          valueH={valueH}
+          valueI={valueI}
+          valueJ={valueJ}
+          valueK={valueK}
+          onAChange={onAChange}
+          onBChange={onBChange}
           onCChange={onCChange}
-          valueX={valueX}
-          valueY={valueY}
-          valueR={valueR}
-          onXChange={onXChange}
-          onYChange={onYChange}
-          onRChange={onRChange}
-          valueCc={valueCc}
-          valueDd={valueDd}
-          onCcChange={onCcChange}
-          onDdChange={onDdChange}
-          valueL = {valueL}
-          valueN = {valueN}
-          valueO = {valueO}
-          valueP = {valueP}
-
-          onLChange = {onLChange}
-          onNChange = {onNChange}
-          onOChange = {onOChange}
-          onPChange = {onPChange}
+          onDChange={onDChange}
+          onEChange={onEChange}
+          onFChange={onFChange}
+          onGChange={onGChange}
+          onHChange={onHChange}
+          onIChange={onIChange}
+          onJChange={onJChange}
+          onKChange={onKChange}
+         
         />
         <button
           onClick={onResult}

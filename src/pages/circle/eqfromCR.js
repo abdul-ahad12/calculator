@@ -66,12 +66,12 @@ const EqfromCR = () => {
         title={"Equation of circle from center and radius"}
         formula={f2}
         type={"centerAR"}
-        valueX={point.x}
-        valueY={point.y}
-        valueR={point.r}
-        onXChange={onXChange}
-        onYChange={onYChange}
-        onRChange={onRChange}
+        valueA={point.x}
+        valueB={point.y}
+        valueC={point.r}
+        onAChange={onXChange}
+        onBChange={onYChange}
+        onCChange={onRChange}
         onResult={onResult}
         result={result}
       />

@@ -78,14 +78,14 @@ const Vertexfocus = () => {
       <TitleTemplate
         title={"Find the vertex and focus of parabola along side x-axis"}
         type={"yparabola"}
-        valueAa={input.aa}
-        onAaChange={onAaChange}
-        valueBb={input.bb}
-        onBbChange={onBbChange}
-        valueCc={input.cc}
-        onCcChange={onCcChange}
-        valueDd={input.dd}
-        onDdChange={onDdChange}
+        valueA={input.aa}
+        onAChange={onAaChange}
+        valueB={input.bb}
+        onBChange={onBbChange}
+        valueC={input.cc}
+        onCChange={onCcChange}
+        valueD={input.dd}
+        onDChange={onDdChange}
         onResult={onResult}
         result={result}
       />

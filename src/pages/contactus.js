@@ -51,7 +51,7 @@ const Contactus = () => {
               <input
                 name="name"
                 // value={contact.name}
-                className="p-2 bg-[#fbfbfb] rounded-[20px]"
+                className="p-2 shadow-md bg-[#fbfbfb] rounded-[20px]"
                 type="text"
               />
               <label className="font-[600]">Email address</label>
@@ -59,19 +59,19 @@ const Contactus = () => {
                 name="email"
                 // value={contact.email}
 
-                className="p-2 bg-[#fbfbfb] rounded-[20px]"
+                className="p-2 bg-[#fbfbfb] shadow-md rounded-[20px]"
                 type="text"
               />
               <label className="font-[600]">Write your problem here </label>
               <textarea
                 rows={"7"}
                 name="message"
-                className=" bg-[#fbfbfb] p-2 rounded-[20px]"
+                className=" bg-[#fbfbfb] shadow-md p-2 rounded-[20px]"
                 type="text"
               />
               <button
                 type="submit"
-                className="bg-[#383838] text-white px-10 py-2 mt-4 rounded-[20px]"
+                className="bg-[#383838] shadow-md text-white px-10 py-2 mt-4 rounded-[20px]"
               >
                 Submit
               </button>

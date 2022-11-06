@@ -4,35 +4,34 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 const Areacircum = () => {
-    const [eqInput, seteqInput] = useState({
-        g: "",
-        f: "",
+    const [value, setValue] = useState({
+        a: "",
+        b: "",
         c: "",
       });
     
       const [result, setresult] = useState("")
-      const circle = new Circle(eqInput.g, eqInput.f, eqInput.c);
-      console.log(eqInput);
-      const onGChange = (e) => {
-        seteqInput({
-          ...eqInput,
-          g: e.target.value,
+      const circle = new Circle(value.a, value.b, value.c);
+      const onAChange = (e) => {
+        setValue({
+          ...value,
+          a: e.target.value,
         });
       };
-      const onFChange = (e) => {
-        seteqInput({
-          ...eqInput,
-          f: e.target.value,
+      const onBChange = (e) => {
+        setValue({
+          ...value,
+          b: e.target.value,
         });
       };
       const onCChange = (e) => {
-        seteqInput({
-          ...eqInput,
+        setValue({
+          ...value,
           c: e.target.value,
         });
       };
       const resultDumm = () => {
-        const result = circle.areacircum(eqInput.g, eqInput.f, eqInput.c);
+        const result = circle.areacircum(value.a, value.b, value.c);
         let a=result[0]
         let b=result[1]
     
@@ -42,7 +41,7 @@ const Areacircum = () => {
       };
     
       const onResult = () => {
-        eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
+        value.a === "" || value.b === "" || value.c === ""
           ? alert("Enter all inputs")
           : resultDumm();
         // setvariables({
@@ -63,11 +62,11 @@ const Areacircum = () => {
     subTitle={""}
     formula={f2}
     type={"eqCircle"}
-    valueG={eqInput.g}
-    valueF={eqInput.f}
-    valueC={eqInput.c}
-    onGChange={onGChange}
-    onFChange={onFChange}
+    valueA={value.a}
+    valueB={value.b}
+    valueC={value.c}
+    onAChange={onAChange}
+    onBChange={onBChange}
     onCChange={onCChange}
     result={result}
     onResult={onResult}

@@ -72,6 +72,8 @@ const AttributesEl = () => {
     let i = result[8];
     let j = result[9];
     let k = result[10];
+    let l = result[11];
+    let m = result[12];
  
 
     // let final=`${a},${b},${c},${d},${e},${f},${g}`
@@ -89,6 +91,8 @@ const AttributesEl = () => {
         i={i}
         j={j}
         k={k}
+        l={l}
+        m={m}
         subtitle1={"tranverse axis"}
         subtitle2={"conjugate axis"}
    
@@ -120,16 +124,16 @@ const AttributesEl = () => {
         title={"Program to find attributes of hyperbola"}
         type={"ellipse"}
         // formula = {f2}
-        valueL={eqInput.l}
-        valueM={eqInput.m}
-        valueN={eqInput.n}
-        valueO={eqInput.o}
-        valueP={eqInput.p}
-        onLChange={onLChange}
-        onMChange={onMChange}
-        onNChange={onNChange}
-        onOChange={onOChange}
-        onPChange={onPChange}
+        valueA={eqInput.l}
+        valueB={eqInput.m}
+        valueC={eqInput.n}
+        valueD={eqInput.o}
+        valueE={eqInput.p}
+        onAChange={onLChange}
+        onBChange={onMChange}
+        onCChange={onNChange}
+        onDChange={onOChange}
+        onEChange={onPChange}
         result={result}
         onResult={onResult}
       >

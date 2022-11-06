@@ -77,14 +77,14 @@ const TwoPointForm = () => {
         title={"Equation of a line. Two point form."}
         formula={f1}
         type={"twoPoints"}
-        valueax={variables.ax}
-        onAxChange={onAxChange}
-        valueay={variables.ay}
-        onAyChange={onAyChange}
-        valuebx={variables.bx}
-        onBxChange={onBxChange}
-        valueby={variables.by}
-        onByChange={onByChange}
+        valueA={variables.ax}
+        onAChange={onAxChange}
+        valueB={variables.ay}
+        onBChange={onAyChange}
+        valueC={variables.bx}
+        onCChange={onBxChange}
+        valueD={variables.by}
+        onDChange={onByChange}
         onResult={onResult}
         result={result}
       />

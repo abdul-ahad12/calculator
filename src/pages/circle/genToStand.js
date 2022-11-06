@@ -68,11 +68,11 @@ const GenToStand = () => {
         title={"General form equation to standard form"}
         type={"eqCircle"}
         formula = {f1}
-        valueG={eqInput.g}
-        valueF={eqInput.f}
+        valueA={eqInput.g}
+        valueB={eqInput.f}
         valueC={eqInput.c}
-        onGChange={onGChange}
-        onFChange={onFChange}
+        onAChange={onGChange}
+        onBChange={onFChange}
         onCChange={onCChange}
         result={result}
         onResult={onResult}

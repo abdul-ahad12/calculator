@@ -66,14 +66,14 @@ const Eqfromcp = () => {
       <TitleTemplate
         title={"Equation of circle passing through a point with center given"}
         type={"centerpoint"}
-        valueax={points.ax}
-        valueay={points.ay}
-        valueX={points.x}
-        valueY={points.y}
-        onAxChange={onAxChange}
-        onAyChange={onAyChange}
-        onXChange={onXChange}
-        onYChange={onYChange}
+        valueA={points.ax}
+        valueB={points.ay}
+        valueC={points.x}
+        valueD={points.y}
+        onAChange={onAxChange}
+        onBChange={onAyChange}
+        onCChange={onXChange}
+        onDChange={onYChange}
         onResult={onResult}
         result={result}
       />

@@ -20,12 +20,13 @@ class Hyperbola {
     //this is the coeeficient we are dividing with
     let c =
       -1 * p + l * (Number(aa) * Number(aa)) + m * (Number(bb) * Number(bb));
-    //this is a^2
-    let a = -1*(c / l);
-    //this is b^2
-    let b =  (c / m);
+    
 
     if (l <0 ) {
+      //this is a^2
+    let a = -1*(c / l);
+    //this is b^2
+    let b = (c / m);
       let LgMajor = 2 * Math.sqrt(b);
       let lgMinor = 2 * Math.sqrt(a);
       let lgLactur = (2 * a) / Math.sqrt(b);
@@ -37,6 +38,12 @@ class Hyperbola {
       let eqMajor = `x-${aa}=0`;
       let eqMinor = `y-${bb}=0`;
       let eqOfLatus = `y=${bb}±${Math.sqrt(b) * ee}`;
+      if(aa===0 && bb===0){
+        var genForm1=`y^2/${b}-x^2/${a}=1`
+        
+      }else{
+        var genForm1=`((y-${bb})^2/${b}^2)-((x-${aa})^2/${a}^2)=1`
+      }
 
       return [
         LgMajor.toFixed(2),
@@ -50,8 +57,13 @@ class Hyperbola {
         eqMajor,
         eqMinor,
         eqOfLatus,
+        genForm1,
       ];
     } else {
+      //this is a^2
+    let a = (c / l);
+    //this is b^2
+    let b = -1*(c / m);
     let LgMajor = 2 * Math.sqrt(a);
     let lgMinor = 2 * Math.sqrt(b);
     let lgLactur = (2 * b) / Math.sqrt(a);
@@ -68,6 +80,12 @@ class Hyperbola {
     let eqOfLatus = `x=${aa.toFixed(2)}±${
       Math.sqrt(a.toFixed(2)) * ee.toFixed(2)
     }`;
+    if(aa&&bb===0){
+      var genForm3=`x^2/${a}-y^2/${b}=1`
+      
+    }else{
+      var genForm3=`((x-(${aa}))^2/${a})-((y-(${bb}))^2/${b})=1`
+    }
     
 
     return [
@@ -82,6 +100,8 @@ class Hyperbola {
       eqMajor,
       eqMinor,
       eqOfLatus,
+      genForm3,
+      
     ];
   }
   }

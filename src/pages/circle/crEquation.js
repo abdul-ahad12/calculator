@@ -64,11 +64,11 @@ const CrEquation = () => {
         subTitle={""}
         formula={f2}
         type={"eqCircle"}
-        valueG={eqInput.g}
-        valueF={eqInput.f}
+        valueA={eqInput.g}
+        valueB={eqInput.f}
         valueC={eqInput.c}
-        onGChange={onGChange}
-        onFChange={onFChange}
+        onAChange={onGChange}
+        onBChange={onFChange}
         onCChange={onCChange}
         result={result}
         onResult={onResult}
