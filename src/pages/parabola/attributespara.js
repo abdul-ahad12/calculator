@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Ellipse from "../../calculations/ellipse";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import ResultTemp from "../../component/sections/resultTemp";
+import Parabola from "../../calculations/parabola";
 
-const Attributes = () => {
+const AttributesPara = () => {
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",
@@ -14,7 +14,7 @@ const Attributes = () => {
   });
 
   const [result, setresult] = useState("");
-  const ellipse = new Ellipse(
+  const parabola = new Parabola(
     eqInput.l,
     eqInput.m,
     eqInput.n,
@@ -54,7 +54,7 @@ const Attributes = () => {
   };
 
   const resultDumm = () => {
-    const result = ellipse.attributes(
+    const result = parabola.attributes(
       eqInput.l,
       eqInput.m,
       eqInput.n,
@@ -75,7 +75,7 @@ const Attributes = () => {
     let l = result[11];
  
 
-    // let final=`${a},${b},${c},${d},${e},${f},${g}`
+    // let final=`${a},${b},${c},${d},${e}`
 
     let final = (
       <ResultTemp
@@ -91,18 +91,14 @@ const Attributes = () => {
         j={j}
         k={k}
         l={l}
-        title1={"Length of Major Axis"}
-        title2={"Length of Minor Axis"}
-        title3={"Length of Latus rectrum"}
-        title4={" Center"}
-        title5={"e"}
-        title6={"Foci"}
-        title7={"Equation of directrices"}
-        title8={"Vertices"}
-        title9={"Equation of Major Axis"}
-        title10={"Equation of Minor Axis"}
-        title11={"Equation of Latus rectrum"}
-        title12={"Standard Form"}
+        title1={"Vertex"}
+        title2={"Focus"}
+        title3={"Equation of Axis"}
+        title4={"Equation of directrix"}
+        title5={"Equation of lactus rectrum"}
+        title6={"Length of Lactus rectrum"}
+        title7={"Equation of tangent"}
+        title8={"Standard Form"}
    
       />
     );
@@ -111,9 +107,10 @@ const Attributes = () => {
   };
 
   const onResult = () => {
-    eqInput.l === "" || eqInput.m === ""
-      ? alert("Enter all inputs")
-      : resultDumm();
+    // eqInput.l === "" || eqInput.m === ""
+    //   ? alert("Enter all inputs")
+    //   :
+       resultDumm();
     // setvariables({
     //     ax:"",
     //     ay:"",
@@ -129,7 +126,7 @@ const Attributes = () => {
     <div>
       {" "}
       <TitleTemplate
-        title={"Program to find attributes of ellipse"}
+        title={"Program to find attributes of parabola"}
         type={"ellipse"}
         // formula = {f2}
         valueA={eqInput.l}
@@ -151,7 +148,7 @@ const Attributes = () => {
   );
 };
 
-export default Attributes;
+export default AttributesPara;
 
 {
   /* <MathComponent tex={`${a}..${b}..${c}..${d}..${e}..${f}..${g}..${h}..${i}..${j}..${k}`} /> */

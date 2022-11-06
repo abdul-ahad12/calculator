@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { MathComponent } from "mathjax-react";
-import Hyperbola from "../calculations/hyperbola";
-import TitleTemplate from "../component/sections/titleTemplate";
-import ResultTemp from "../component/sections/resultTemp";
+import Hyperbola from "../../calculations/hyperbola";
+import ResultTemp from "../../component/sections/resultTemp";
+import TitleTemplate from "../../component/sections/titleTemplate";
+
+
 
 const AttributesEl = () => {
   const [eqInput, seteqInput] = useState({
@@ -74,6 +76,7 @@ const AttributesEl = () => {
     let k = result[10];
     let l = result[11];
     let m = result[12];
+    
  
 
     // let final=`${a},${b},${c},${d},${e},${f},${g}`
@@ -93,8 +96,18 @@ const AttributesEl = () => {
         k={k}
         l={l}
         m={m}
-        subtitle1={"tranverse axis"}
-        subtitle2={"conjugate axis"}
+        title1={"Length of Tranverse Axis"}
+        title2={"Length of Conjugate Axis"}
+        title3={"Length of Latus rectrum"}
+        title4={" Center"}
+        title5={"e"}
+        title6={"Foci"}
+        title7={"Equation of directrices"}
+        title8={"Vertices"}
+        title9={"Equation of Tranverse Axis"}
+        title10={"Equation of Conjugate Axis"}
+        title11={"Equation of Latus rectrum"}
+        title12={"Standard Form"}
    
       />
     );
