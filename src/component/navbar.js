@@ -64,6 +64,9 @@ const Navbar = () => {
               <LinkItem text={"Line"} href={"/lineCal"} />
             </div>
             <div>
+              <LinkItem text={"Triangle"} href={"/triangle"} />
+            </div>
+            <div>
               <LinkItem text={"Circle"} href={"/circle"} />
             </div>
             <div>
