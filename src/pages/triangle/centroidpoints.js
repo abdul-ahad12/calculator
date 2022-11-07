@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Tricircumpoints = () => {
+const Centroidpoints = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -62,7 +62,7 @@ const Tricircumpoints = () => {
   };
 
   const resultDumm = () => {
-    const result = triangle.tricircumpoints(
+    const result = triangle.centroidpoints(
       coeficient.a,
       coeficient.b,
       coeficient.c,
@@ -73,7 +73,7 @@ const Tricircumpoints = () => {
     let x = result[0];
     let y = result[1];
     let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Circumcentre :${c}`} />;
+    let e = <MathComponent tex={`Centroid :${c}`} />;
     setResult(e);
   };
 
@@ -90,11 +90,19 @@ const Tricircumpoints = () => {
     // })
   };
 
+  const f = "Centroid = (\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_1}{3})";
+  const f1 = (
+    <p>
+      {" "}
+      <MathComponent tex={f} />
+    </p>
+  );
+
   return (
     <div>
       <TitleTemplate
-        title={"Circumcentre of a triangle from Vertices"}
-        // formula={f1}
+        title={"Centroid of a triangle from Vertices"}
+        formula={f1}
         type={"threePoints"}
         valueA={coeficient.a}
         valueB={coeficient.b}
@@ -114,4 +122,5 @@ const Tricircumpoints = () => {
     </div>
   );
 };
-export default Tricircumpoints;
+
+export default Centroidpoints;

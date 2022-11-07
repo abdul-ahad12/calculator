@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Tricircumpoints = () => {
+const Incentre = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -11,6 +11,9 @@ const Tricircumpoints = () => {
     d: "",
     e: "",
     f: "",
+    g: "",
+    h: "",
+    i: "",
   });
   const [result, setResult] = useState("");
 
@@ -20,7 +23,10 @@ const Tricircumpoints = () => {
     coeficient.c,
     coeficient.d,
     coeficient.e,
-    coeficient.f
+    coeficient.f,
+    coeficient.g,
+    coeficient.h,
+    coeficient.i
   );
   console.log(coeficient);
 
@@ -60,20 +66,41 @@ const Tricircumpoints = () => {
       f: e.target.value,
     });
   };
+  const onGChange = (e) => {
+    setcoeficient({
+      ...coeficient,
+      g: e.target.value,
+    });
+  };
+  const onHChange = (e) => {
+    setcoeficient({
+      ...coeficient,
+      h: e.target.value,
+    });
+  };
+  const onIChange = (e) => {
+    setcoeficient({
+      ...coeficient,
+      i: e.target.value,
+    });
+  };
 
   const resultDumm = () => {
-    const result = triangle.tricircumpoints(
+    const result = triangle.incentre(
       coeficient.a,
       coeficient.b,
       coeficient.c,
       coeficient.d,
       coeficient.e,
-      coeficient.f
+      coeficient.f,
+      coeficient.g,
+      coeficient.h,
+      coeficient.i
     );
     let x = result[0];
     let y = result[1];
     let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Circumcentre :${c}`} />;
+    let e = <MathComponent tex={`Incenter :${c}`} />;
     setResult(e);
   };
 
@@ -90,28 +117,40 @@ const Tricircumpoints = () => {
     // })
   };
 
+  const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c}) ";
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
-        title={"Circumcentre of a triangle from Vertices"}
-        // formula={f1}
-        type={"threePoints"}
+        title={"Incenter of a triangle from sides"}
+        formula={f1}
+        type={"threelines"}
         valueA={coeficient.a}
         valueB={coeficient.b}
         valueC={coeficient.c}
         valueD={coeficient.d}
         valueE={coeficient.e}
         valueF={coeficient.f}
+        valueG={coeficient.g}
+        valueH={coeficient.h}
+        valueI={coeficient.i}
         onAChange={onAChange}
         onBChange={onBChange}
         onCChange={onCChange}
         onDChange={onDChange}
         onEChange={onEChange}
         onFChange={onFChange}
+        onGChange={onGChange}
+        onHChange={onHChange}
+        onIChange={onIChange}
         onResult={onResult}
         result={result}
       />
     </div>
   );
+  
+
 };
-export default Tricircumpoints;
+
+export default Incentre;

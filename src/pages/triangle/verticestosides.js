@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Tricircumpoints = () => {
+const Verticestosides = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -62,7 +62,7 @@ const Tricircumpoints = () => {
   };
 
   const resultDumm = () => {
-    const result = triangle.tricircumpoints(
+    const result = triangle.verticestosides(
       coeficient.a,
       coeficient.b,
       coeficient.c,
@@ -70,10 +70,18 @@ const Tricircumpoints = () => {
       coeficient.e,
       coeficient.f
     );
-    let x = result[0];
-    let y = result[1];
-    let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Circumcentre :${c}`} />;
+    let m1 = result[0];
+    let c1 = result[1];
+    let m2 = result[2];
+    let c2 = result[3];
+    let m3 = result[4];
+    let c3 = result[5];
+
+    let e = (
+      <MathComponent
+        tex={`Side1: y = ${m1}x + ${c1} \\hspace{1cm} Side2: y = ${m2}x + ${c2} \\hspace{1cm} Side3: y = ${m3}x + ${c3}`}
+      />
+    );
     setResult(e);
   };
 
@@ -93,7 +101,7 @@ const Tricircumpoints = () => {
   return (
     <div>
       <TitleTemplate
-        title={"Circumcentre of a triangle from Vertices"}
+        title={"Equations of Sides of a Triangle from Vertices"}
         // formula={f1}
         type={"threePoints"}
         valueA={coeficient.a}
@@ -114,4 +122,5 @@ const Tricircumpoints = () => {
     </div>
   );
 };
-export default Tricircumpoints;
+
+export default Verticestosides;

@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Tricircumpoints = () => {
+const Areaperipoints = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -62,7 +62,7 @@ const Tricircumpoints = () => {
   };
 
   const resultDumm = () => {
-    const result = triangle.tricircumpoints(
+    const result = triangle.areaperipoints(
       coeficient.a,
       coeficient.b,
       coeficient.c,
@@ -72,8 +72,8 @@ const Tricircumpoints = () => {
     );
     let x = result[0];
     let y = result[1];
-    let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Circumcentre :${c}`} />;
+
+    let e = <MathComponent tex={`Area :${x} \\hspace{1cm} Perimeter: ${y}`} />;
     setResult(e);
   };
 
@@ -93,7 +93,7 @@ const Tricircumpoints = () => {
   return (
     <div>
       <TitleTemplate
-        title={"Circumcentre of a triangle from Vertices"}
+        title={"Area and Perimeter of a triangle from equations of sides"}
         // formula={f1}
         type={"threePoints"}
         valueA={coeficient.a}
@@ -114,4 +114,5 @@ const Tricircumpoints = () => {
     </div>
   );
 };
-export default Tricircumpoints;
+
+export default Areaperipoints;

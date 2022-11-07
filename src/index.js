@@ -35,8 +35,17 @@ import AttributesPara from './pages/parabola/attributespara';
 import Vertexfocus from './pages/parabola/vertexfocus';
 import Triangle from './pages/triangle';
 
-
 import reportWebVitals from './reportWebVitals';
+import Orthocentre from './pages/triangle/orthocentre';
+import Orthopoints from './pages/triangle/orthopoints';
+import Areaperimeter from './pages/triangle/areaperimeter';
+import Areaperipoints from './pages/triangle/areaperipoints';
+import Centroid from './pages/triangle/centroid';
+import Centroidpoints from './pages/triangle/centroidpoints';
+import Sidestovertices from './pages/triangle/sidestovertices';
+import Verticestosides from './pages/triangle/verticestosides';
+import Incentre from './pages/triangle/incentre';
+import Incentrepoints from './pages/triangle/incentrepoints';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -74,7 +83,16 @@ root.render(
         <Route path="tricircumcentre" element={<Tricircumcentre />}></Route>
         <Route path="tricircumpoints" element={<Tricircumpoints />}></Route>
         <Route path="attributespara" element={<AttributesPara />}></Route>
-
+        <Route path="orthocentre" element={<Orthocentre />}></Route>
+        <Route path="orthopoints" element={<Orthopoints />}></Route>
+        <Route path="areaperimeter" element={<Areaperimeter />}></Route>
+        <Route path="areaperipoints" element={<Areaperipoints/>}></Route>
+        <Route path="centroid" element={<Centroid/>}></Route>
+        <Route path="centroidpoints" element={<Centroidpoints/>}></Route>
+        <Route path="sidestovertices" element={<Sidestovertices/>}></Route>
+        <Route path="verticestosides" element={<Verticestosides/>}></Route>
+        <Route path="incentre" element={<Incentre/>}></Route>
+        <Route path="incentrepoints" element={<Incentrepoints/>}></Route>
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           

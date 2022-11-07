@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Tricircumpoints = () => {
+const Incentrepoints = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -62,7 +62,7 @@ const Tricircumpoints = () => {
   };
 
   const resultDumm = () => {
-    const result = triangle.tricircumpoints(
+    const result = triangle.incentrepoints(
       coeficient.a,
       coeficient.b,
       coeficient.c,
@@ -72,8 +72,15 @@ const Tricircumpoints = () => {
     );
     let x = result[0];
     let y = result[1];
+    // let x1 = result[2];
+    // let x2 = result[3];
+    // let x3 = result[4];
+    // let x4 = result[5];
+    // let x5 = result[6];
+    // let x6 = result[7];
+    // ${y},${x1},${x2},${x3},${x4},${x5},${x6}
     let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Circumcentre :${c}`} />;
+    let e = <MathComponent tex={`Incenter :${c}`} />;
     setResult(e);
   };
 
@@ -90,11 +97,14 @@ const Tricircumpoints = () => {
     // })
   };
 
+  const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c})";
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
-        title={"Circumcentre of a triangle from Vertices"}
-        // formula={f1}
+        title={"Incenter of a triangle from Vertices"}
+        formula={f1}
         type={"threePoints"}
         valueA={coeficient.a}
         valueB={coeficient.b}
@@ -114,4 +124,4 @@ const Tricircumpoints = () => {
     </div>
   );
 };
-export default Tricircumpoints;
+export default Incentrepoints;

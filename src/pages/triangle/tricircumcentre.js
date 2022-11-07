@@ -3,7 +3,6 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-
 const Tricircumcentre = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -87,13 +86,21 @@ const Tricircumcentre = () => {
   };
 
   const resultDumm = () => {
-    const result = triangle.tricircumcentre(coeficient.a, coeficient.b, coeficient.c,coeficient.d, coeficient.e, coeficient.f, coeficient.g, coeficient.h, coeficient.i);
+    const result = triangle.tricircumcentre(
+      coeficient.a,
+      coeficient.b,
+      coeficient.c,
+      coeficient.d,
+      coeficient.e,
+      coeficient.f,
+      coeficient.g,
+      coeficient.h,
+      coeficient.i
+    );
     let x = result[0];
     let y = result[1];
     let c = `(${x},${y})`;
-    let e = (
-      <MathComponent tex={`Circumcentre :${c}`} />
-    );
+    let e = <MathComponent tex={`Circumcentre :${c}`} />;
     setResult(e);
   };
 
@@ -110,8 +117,9 @@ const Tricircumcentre = () => {
     // })
   };
 
-  return <div>
-    <TitleTemplate
+  return (
+    <div>
+      <TitleTemplate
         title={"Circumcentre of a triangle from sides"}
         // formula={f1}
         type={"threelines"}
@@ -136,7 +144,8 @@ const Tricircumcentre = () => {
         onResult={onResult}
         result={result}
       />
-  </div>;
+    </div>
+  );
 };
 
 export default Tricircumcentre;
