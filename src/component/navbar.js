@@ -22,9 +22,9 @@ const LinkItem = ({ href, text }) => {
 const Navbar = () => {
   const [isMenu, setisMenu] = useState(false);
 
-  const openDrawer = () => {
-    setisMenu(true);
-  };
+  // const openDrawer = () => {
+  //   setisMenu(true);
+  // };
 
   return (
     <div className="w-full justify-center flex  bg-[#383838] ">
@@ -43,7 +43,7 @@ const Navbar = () => {
           <Link to={"/"}>
             {" "}
             <div className="flex flex-row items-center">
-              CG-<img className="w-7" src="/favicon.ico"></img>
+              CG-<img className="w-7" src="/favicon.ico" alt="logo"></img>
             </div>
           </Link>
           <div 
@@ -62,6 +62,9 @@ const Navbar = () => {
             </div>
             <div>
               <LinkItem text={"Line"} href={"/lineCal"} />
+            </div>
+            <div>
+              <LinkItem text={"Triangle"} href={"/triangle"} />
             </div>
             <div>
               <LinkItem text={"Circle"} href={"/circle"} />

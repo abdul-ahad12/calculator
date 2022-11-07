@@ -4,7 +4,7 @@ import GeoTemp from '../component/sections/geoTemp'
 const Ellipse = () => {
     const lineElements = [
         {
-          title: "Program to find attributes of ellipse",
+          title: "Attributes of ellipse",
     
           link: "/attributes",
         },

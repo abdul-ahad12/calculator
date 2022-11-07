@@ -46,7 +46,8 @@ class Parabola {
       //value of beta
       let beta = constant / (oo);
       let vertex=`(${alpha},${beta})`
-      let focus=`(${alpha},${-1*beta+Number(a)})`
+      let focus=`(${alpha},${-1*a+Number(beta
+        )})`
       let eqaxis=`x=${alpha}`
       let eqdirec=`y=${beta+a}`
       let eqlatus=`x=${beta-a}`
@@ -63,22 +64,9 @@ class Parabola {
     }
   }
 
-  vertexfocusx(a, b, c, d) {
-    // let aa = a / a;
-    let bb = -1 * (b / a);
-    let cc = c / a;
-    let dd = -1 * (d / a);
-    let e = (cc / 2) * (cc / 2);
-    //value of k
-    let k = -1 * (cc / 2);
-    let f = Number(dd) + Number(e);
-    //value of h
-    let h = -1 * (f / bb);
-    let aaa = bb / 4;
-    let focusy = Number(h) + Number(aaa);
+eqfocver(a,b,c,d){
 
-    return [h, k, focusy];
-  }
+}
 }
 
 export default Parabola;
