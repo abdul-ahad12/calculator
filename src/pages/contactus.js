@@ -38,9 +38,9 @@ const Contactus = () => {
               <br />
               Just want to connect?
               <br />
-              Feel free to use the following form,we
+              Feel free to use the following form,
               <br />
-              respond to every message.
+              we respond to every message.
             </div>
             <form
               className="flex flex-col w-[90%] gap-2"
@@ -62,7 +62,7 @@ const Contactus = () => {
                 className="p-2 bg-[#fbfbfb] shadow-md rounded-[20px]"
                 type="text"
               />
-              <label className="font-[600]">Write your problem here </label>
+              <label className="font-[600]">Write your Message here </label>
               <textarea
                 rows={"7"}
                 name="message"
