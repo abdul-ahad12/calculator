@@ -14,6 +14,16 @@ const Triangle = () => {
       link: "/areaperipoints",
     },
     {
+      title: "Vertices of a Triangle from equations of sides",
+
+      link: "/sidestovertices",
+    },
+    {
+      title: "Equations of sides of a Triangle from Vertices",
+
+      link: "/verticestosides",
+    },
+    {
       title: "Centroid of a Triangle from equations of sides",
 
       link: "/centroid",

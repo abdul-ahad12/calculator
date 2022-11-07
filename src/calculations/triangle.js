@@ -88,10 +88,10 @@ class Triangle {
     let m1 = -a2 / b2;
     let m2 = -a3 / b3;
 
-    let c_1 = Number(a[1]) - Number(-1/m1) * Number(a[0]);
-    let c_2 = Number(b[1]) - Number(-1/m2) * Number(b[0]);
+    let c_1 = Number(a[1]) - Number(-1 / m1) * Number(a[0]);
+    let c_2 = Number(b[1]) - Number(-1 / m2) * Number(b[0]);
 
-    let res = pointOfint((-1/m1), -1, c_1, (-1/m2), -1, c_2);
+    let res = pointOfint(-1 / m1, -1, c_1, -1 / m2, -1, c_2);
 
     return [res[0], res[1]];
   }
@@ -108,19 +108,18 @@ class Triangle {
       }
     }
 
-    let m1 = (y2-y3)/(x2-x3);
-    let m2 = (y1-y3)/(x1-x3);
+    let m1 = (y2 - y3) / (x2 - x3);
+    let m2 = (y1 - y3) / (x1 - x3);
 
-    let c_1 = Number(y1) - Number(-1/m1) * Number(x1);
-    let c_2 = Number(y2) - Number(-1/m2) * Number(x2);
+    let c_1 = Number(y1) - Number(-1 / m1) * Number(x1);
+    let c_2 = Number(y2) - Number(-1 / m2) * Number(x2);
 
-    let res = pointOfint((-1/m1), -1, c_1, (-1/m2), -1, c_2);
+    let res = pointOfint(-1 / m1, -1, c_1, -1 / m2, -1, c_2);
 
     return [res[0], res[1]];
   }
 
-  areaperimeter(a1, b1, c1, a2, b2, c2, a3, b3, c3)
-  {
+  areaperimeter(a1, b1, c1, a2, b2, c2, a3, b3, c3) {
     function pointOfint(a1, b1, c1, a2, b2, c2) {
       if (a1 / b1 === a2 / b2) {
         return "XX";
@@ -135,54 +134,50 @@ class Triangle {
       let first = Number(ax) - Number(bx);
       let second = Number(ay) - Number(by);
       let result = Math.sqrt(first * first + second * second);
-  
+
       return result.toFixed(2);
     }
 
     let a = pointOfint(a1, b1, c1, a2, b2, c2);
     let b = pointOfint(a2, b2, c2, a3, b3, c3);
     let c = pointOfint(a1, b1, c1, a3, b3, c3);
-    
-    let x = (a[0] - b[0])*(a[1] - c[1]);
-    let y = (a[0] - c[0])*(a[1] - b[1]);
-    let area = 0.5 * (Number(x)-Number(y));
 
-    let ab = distance(a[0],a[1],b[0],b[1]);
-    let bc = distance(b[0],b[1],c[0],c[1]);
-    let ac = distance(a[0],a[1],c[0],c[1]);
+    let x = (a[0] - b[0]) * (a[1] - c[1]);
+    let y = (a[0] - c[0]) * (a[1] - b[1]);
+    let area = 0.5 * (Number(x) - Number(y));
 
-    let perimeter = Number(ab)+Number(bc)+Number(ac);
+    let ab = distance(a[0], a[1], b[0], b[1]);
+    let bc = distance(b[0], b[1], c[0], c[1]);
+    let ac = distance(a[0], a[1], c[0], c[1]);
 
-    return[area.toFixed(2), perimeter.toFixed(2)]
+    let perimeter = Number(ab) + Number(bc) + Number(ac);
 
+    return [area.toFixed(2), perimeter.toFixed(2)];
   }
 
-  areaperipoints(x1, y1, x2, y2, x3, y3)
-  {
+  areaperipoints(x1, y1, x2, y2, x3, y3) {
     function distance(ax, ay, bx, by) {
       let first = Number(ax) - Number(bx);
       let second = Number(ay) - Number(by);
       let result = Math.sqrt(first * first + second * second);
-  
+
       return result.toFixed(2);
     }
 
-    let x = (x1 - x2)*(y1 - y3);
-    let y = (x1 - x3)*(y1 - y2);
-    let area = 0.5 * (Number(x)-Number(y));
+    let x = (x1 - x2) * (y1 - y3);
+    let y = (x1 - x3) * (y1 - y2);
+    let area = 0.5 * (Number(x) - Number(y));
 
     let ab = distance(x1, y1, x2, y2);
     let bc = distance(x2, y2, x3, y3);
     let ac = distance(x1, y1, x3, y3);
 
-    let perimeter = Number(ab)+Number(bc)+Number(ac);
+    let perimeter = Number(ab) + Number(bc) + Number(ac);
 
-    return[area.toFixed(2), perimeter.toFixed(2)]
-
+    return [area.toFixed(2), perimeter.toFixed(2)];
   }
 
-  centroid(a1, b1, c1, a2, b2, c2, a3, b3, c3)
-  {
+  centroid(a1, b1, c1, a2, b2, c2, a3, b3, c3) {
     function pointOfint(a1, b1, c1, a2, b2, c2) {
       if (a1 / b1 === a2 / b2) {
         return "XX";
@@ -198,21 +193,52 @@ class Triangle {
     let b = pointOfint(a2, b2, c2, a3, b3, c3);
     let c = pointOfint(a1, b1, c1, a3, b3, c3);
 
-    let cx = (a[0]+b[0]+c[0])/3;
-    let cy = (a[1]+b[1]+c[1])/3;
+    let cx = (a[0] + b[0] + c[0]) / 3;
+    let cy = (a[1] + b[1] + c[1]) / 3;
 
-    return[cx.toFixed(2),cy.toFixed(2)];
-
+    return [cx.toFixed(2), cy.toFixed(2)];
   }
 
-  centroidpoints(x1, y1, x2, y2, x3, y3)
-  {
-    let cx = (Number(x1)+Number(x2)+Number(x3))/3;
-    let cy = (Number(y1)+Number(y2)+Number(y3))/3;
+  centroidpoints(x1, y1, x2, y2, x3, y3) {
+    let cx = (Number(x1) + Number(x2) + Number(x3)) / 3;
+    let cy = (Number(y1) + Number(y2) + Number(y3)) / 3;
 
-    return[cx.toFixed(2),cy.toFixed(2)];
+    return [cx.toFixed(2), cy.toFixed(2)];
   }
 
+  sidestovertices(a1, b1, c1, a2, b2, c2, a3, b3, c3) {
+    function pointOfint(a1, b1, c1, a2, b2, c2) {
+      if (a1 / b1 === a2 / b2) {
+        return "XX";
+      } else {
+        let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
+        let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
+
+        return [Number(x.toFixed(3)), Number(y.toFixed(3))];
+      }
+    }
+
+    let a = pointOfint(a1, b1, c1, a2, b2, c2);
+    let b = pointOfint(a2, b2, c2, a3, b3, c3);
+    let c = pointOfint(a1, b1, c1, a3, b3, c3);
+
+    return [a[0], a[1], b[0], b[1], c[0], c[1]];
+  }
+
+  verticestosides(x1, y1, x2, y2, x3, y3) {
+    function twopointform(ax, ay, bx, by) {
+      let m = (Number(by) - Number(ay)) / (Number(bx) - Number(ax));
+      let c = ay - m * ax;
+
+      return [m, c];
+    }
+
+    let a = twopointform(x1, y1, x2, y2);
+    let b = twopointform(x2, y2, x3, y3);
+    let c = twopointform(x3, y3, x1, y1);
+
+    return [a[0], a[1], b[0], b[1], c[0], c[1]];
+  }
 }
 
 export default Triangle;
