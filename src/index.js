@@ -40,6 +40,8 @@ import Orthocentre from './pages/triangle/orthocentre';
 import Orthopoints from './pages/triangle/orthopoints';
 import Areaperimeter from './pages/triangle/areaperimeter';
 import Areaperipoints from './pages/triangle/areaperipoints';
+import Centroid from './pages/triangle/centroid';
+import Centroidpoints from './pages/triangle/centroidpoints';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -81,6 +83,8 @@ root.render(
         <Route path="orthopoints" element={<Orthopoints />}></Route>
         <Route path="areaperimeter" element={<Areaperimeter />}></Route>
         <Route path="areaperipoints" element={<Areaperipoints/>}></Route>
+        <Route path="centroid" element={<Centroid/>}></Route>
+        <Route path="centroidpoints" element={<Centroidpoints/>}></Route>
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           

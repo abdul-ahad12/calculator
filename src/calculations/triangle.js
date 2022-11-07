@@ -181,6 +181,38 @@ class Triangle {
 
   }
 
+  centroid(a1, b1, c1, a2, b2, c2, a3, b3, c3)
+  {
+    function pointOfint(a1, b1, c1, a2, b2, c2) {
+      if (a1 / b1 === a2 / b2) {
+        return "XX";
+      } else {
+        let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
+        let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
+
+        return [Number(x.toFixed(3)), Number(y.toFixed(3))];
+      }
+    }
+
+    let a = pointOfint(a1, b1, c1, a2, b2, c2);
+    let b = pointOfint(a2, b2, c2, a3, b3, c3);
+    let c = pointOfint(a1, b1, c1, a3, b3, c3);
+
+    let cx = (a[0]+b[0]+c[0])/3;
+    let cy = (a[1]+b[1]+c[1])/3;
+
+    return[cx.toFixed(2),cy.toFixed(2)];
+
+  }
+
+  centroidpoints(x1, y1, x2, y2, x3, y3)
+  {
+    let cx = (Number(x1)+Number(x2)+Number(x3))/3;
+    let cy = (Number(y1)+Number(y2)+Number(y3))/3;
+
+    return[cx.toFixed(2),cy.toFixed(2)];
+  }
+
 }
 
 export default Triangle;
