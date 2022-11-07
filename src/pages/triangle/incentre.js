@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Centroid = () => {
+const Incentre = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -86,7 +86,7 @@ const Centroid = () => {
   };
 
   const resultDumm = () => {
-    const result = triangle.centroid(
+    const result = triangle.incentre(
       coeficient.a,
       coeficient.b,
       coeficient.c,
@@ -100,7 +100,7 @@ const Centroid = () => {
     let x = result[0];
     let y = result[1];
     let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Centroid :${c}`} />;
+    let e = <MathComponent tex={`Incenter :${c}`} />;
     setResult(e);
   };
 
@@ -117,13 +117,13 @@ const Centroid = () => {
     // })
   };
 
-  const f = "Centroid = (\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_1}{3})";
+  const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c}) ";
   const f1 = <MathComponent tex={f} />
 
   return (
     <div>
       <TitleTemplate
-        title={"Centroid of a triangle from equations of sides"}
+        title={"Incenter of a triangle from sides"}
         formula={f1}
         type={"threelines"}
         valueA={coeficient.a}
@@ -149,6 +149,8 @@ const Centroid = () => {
       />
     </div>
   );
+  
+
 };
 
-export default Centroid;
+export default Incentre;

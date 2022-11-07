@@ -239,6 +239,64 @@ class Triangle {
 
     return [a[0], a[1], b[0], b[1], c[0], c[1]];
   }
+
+  incentre(a1, b1, c1, a2, b2, c2, a3, b3, c3) {
+    function pointOfint(a1, b1, c1, a2, b2, c2) {
+      if (a1 / b1 === a2 / b2) {
+        return "XX";
+      } else {
+        let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
+        let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
+
+        return [Number(x.toFixed(3)), Number(y.toFixed(3))];
+      }
+    }
+    function distance(ax, ay, bx, by) {
+      let first = Number(ax) - Number(bx);
+      let second = Number(ay) - Number(by);
+      let result = Math.sqrt(first * first + second * second);
+
+      return result.toFixed(2);
+    }
+
+    let a = pointOfint(a1, b1, c1, a2, b2, c2);
+    let b = pointOfint(a2, b2, c2, a3, b3, c3);
+    let c = pointOfint(a1, b1, c1, a3, b3, c3);
+
+    let ab = Number(distance(a[0], a[1], b[0], b[1]));
+    let bc = Number(distance(b[0], b[1], c[0], c[1]));
+    let ac = Number(distance(a[0], a[1], c[0], c[1]));
+
+    let l = (Number(a[0])*bc)+(Number(b[0])*ac)+(Number(c[0])*ab); 
+    let m = (Number(a[1])*bc)+(Number(b[1])*ac)+(Number(c[1])*ab);
+    let n = Number(ab+bc+ac);
+    let ix = (l)/(n);
+    let iy = (m)/(n);
+
+    return [ix, iy];
+  }
+
+  incentrepoints(x1, y1, x2, y2, x3, y3) {
+    function distance(ax, ay, bx, by) {
+      let first = Number(ax) - Number(bx);
+      let second = Number(ay) - Number(by);
+      let result = Math.sqrt(first * first + second * second);
+
+      return Number(result.toFixed(2));
+    }
+
+      let ab = distance(x1, y1, x2, y2);
+      let bc = distance(x2, y2, x3, y3);
+      let ac = distance(x3, y3, x1, y1);
+      let a = (Number(x1)*bc)+(Number(x2)*ac)+(Number(x3)*ab); 
+      let b = (Number(y1)*bc)+(Number(y2)*ac)+(Number(y3)*ab);
+      let c= Number(ab+bc+ac);
+      let ix = (a)/(c);
+      let iy = (b)/(c);
+  
+      return[ix,iy];
+    
+  }
 }
 
 export default Triangle;

@@ -52,6 +52,16 @@ const Triangle = () => {
 
       link: "/orthopoints",
     },
+    {
+      title: "Incentre of a Triangle from from Equations of sides",
+
+      link: "/incentre",
+    },
+    {
+      title: "Incentre of a Triangle from Vertices",
+
+      link: "/incentrepoints",
+    },
     
 
 

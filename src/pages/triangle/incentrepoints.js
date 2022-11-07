@@ -3,7 +3,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
-const Centroid = () => {
+const Incentrepoints = () => {
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -11,9 +11,6 @@ const Centroid = () => {
     d: "",
     e: "",
     f: "",
-    g: "",
-    h: "",
-    i: "",
   });
   const [result, setResult] = useState("");
 
@@ -23,10 +20,7 @@ const Centroid = () => {
     coeficient.c,
     coeficient.d,
     coeficient.e,
-    coeficient.f,
-    coeficient.g,
-    coeficient.h,
-    coeficient.i
+    coeficient.f
   );
   console.log(coeficient);
 
@@ -66,41 +60,27 @@ const Centroid = () => {
       f: e.target.value,
     });
   };
-  const onGChange = (e) => {
-    setcoeficient({
-      ...coeficient,
-      g: e.target.value,
-    });
-  };
-  const onHChange = (e) => {
-    setcoeficient({
-      ...coeficient,
-      h: e.target.value,
-    });
-  };
-  const onIChange = (e) => {
-    setcoeficient({
-      ...coeficient,
-      i: e.target.value,
-    });
-  };
 
   const resultDumm = () => {
-    const result = triangle.centroid(
+    const result = triangle.incentrepoints(
       coeficient.a,
       coeficient.b,
       coeficient.c,
       coeficient.d,
       coeficient.e,
-      coeficient.f,
-      coeficient.g,
-      coeficient.h,
-      coeficient.i
+      coeficient.f
     );
     let x = result[0];
     let y = result[1];
+    // let x1 = result[2];
+    // let x2 = result[3];
+    // let x3 = result[4];
+    // let x4 = result[5];
+    // let x5 = result[6];
+    // let x6 = result[7];
+    // ${y},${x1},${x2},${x3},${x4},${x5},${x6}
     let c = `(${x},${y})`;
-    let e = <MathComponent tex={`Centroid :${c}`} />;
+    let e = <MathComponent tex={`Incenter :${c}`} />;
     setResult(e);
   };
 
@@ -117,38 +97,31 @@ const Centroid = () => {
     // })
   };
 
-  const f = "Centroid = (\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_1}{3})";
+  const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c})";
   const f1 = <MathComponent tex={f} />
 
   return (
     <div>
       <TitleTemplate
-        title={"Centroid of a triangle from equations of sides"}
+        title={"Incenter of a triangle from Vertices"}
         formula={f1}
-        type={"threelines"}
+        type={"threePoints"}
         valueA={coeficient.a}
         valueB={coeficient.b}
         valueC={coeficient.c}
         valueD={coeficient.d}
         valueE={coeficient.e}
         valueF={coeficient.f}
-        valueG={coeficient.g}
-        valueH={coeficient.h}
-        valueI={coeficient.i}
         onAChange={onAChange}
         onBChange={onBChange}
         onCChange={onCChange}
         onDChange={onDChange}
         onEChange={onEChange}
         onFChange={onFChange}
-        onGChange={onGChange}
-        onHChange={onHChange}
-        onIChange={onIChange}
         onResult={onResult}
         result={result}
       />
     </div>
   );
 };
-
-export default Centroid;
+export default Incentrepoints;
