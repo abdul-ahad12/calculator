@@ -50,6 +50,7 @@ import Imageofpoint from './pages/line/imageofpoint';
 import Footofperpendicular from './pages/line/footofperpendicular';
 import Perpendiculardist from './pages/line/perpendiculardist';
 import Anglebwlines from './pages/line/anglebwlines';
+import Paralinesdist from './pages/line/paralinesdist';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -101,6 +102,8 @@ root.render(
         <Route path="footofperpendicular" element={<Footofperpendicular/>}></Route>
         <Route path="perpendiculardist" element={<Perpendiculardist/>}></Route>
         <Route path="anglebwlines" element={<Anglebwlines/>}></Route>
+        <Route path="paralinesdist" element={<Paralinesdist/>}></Route>
+        
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           

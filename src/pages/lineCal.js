@@ -53,6 +53,10 @@ const LineCal = () => {
       title: "Angle between two Lines",
       link: "/anglebwlines",
     },
+    {
+      title: "Perpendicular Distance between two parallel lines",
+      link: "/paralinesdist",
+    },
   ];
 
   return (

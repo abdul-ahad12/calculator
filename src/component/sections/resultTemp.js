@@ -36,54 +36,55 @@ const ResultTemp = ({
       <div className="text-start">
         {" "}
         <div className="flex flex-row">
+          <div className="result">{title12}</div>
+          <div className="result">{<MathComponent tex={`${l}`} />}</div>
+        </div>{" "}
+        <div className="flex flex-row">
           <div className="result">{title1}</div>
-          <div className="result">{a}</div>
+          <div className="result">{<MathComponent tex={`${a}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title2}</div>
-          <div className="result">{b}</div>
+          <div className="result">{<MathComponent tex={`${b}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title3}</div>
 
-          <div className="result">{c}</div>
+          <div className="result">{<MathComponent tex={`${c}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title4}</div>
-          <div className="result">{d}</div>
+          <div className="result">{<MathComponent tex={`${d}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title5}</div>
-          <div className="result">{e}</div>
+          <div className="result">{<MathComponent tex={`${e}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title6}</div>
-          <div className="result">{f}</div>
+          <div className="result">{<MathComponent tex={`${f}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title7}</div>
-          <div className="result">{g}</div>
+          <div className="result">{<MathComponent tex={`${g}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title8}</div>
-          <div className="result">{h}</div>
+          <div className="result">{<MathComponent tex={`${h}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title9}</div>
-          <div className="result">{i}</div>
+          <div className="result">{<MathComponent tex={`${i}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title10}</div>
-          <div className="result">{j}</div>
+          <div className="result">{<MathComponent tex={`${j}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title11}</div>
-          <div className="result">{k}</div>
+          <div className="result">{<MathComponent tex={`${k}`} />}</div>
         </div>{" "}
-        <div className="flex flex-row">
-          <div className="result">{title12}</div>
-          <div className="result">{l}</div>
-        </div>{" "}
+        
        
       </div>
     </div>

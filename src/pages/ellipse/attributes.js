@@ -121,8 +121,6 @@ const Attributes = () => {
 
     // })
   };
-  // const s = "Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r";
-  // const f2 = <MathComponent tex={s} />;
 
   return (
     <div>
@@ -151,7 +149,3 @@ const Attributes = () => {
 };
 
 export default Attributes;
-
-{
-  /* <MathComponent tex={`${a}..${b}..${c}..${d}..${e}..${f}..${g}..${h}..${i}..${j}..${k}`} /> */
-}

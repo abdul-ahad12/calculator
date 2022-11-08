@@ -71,8 +71,7 @@ const Perpendiculardist = () => {
     coeficient.ba === "" ||
     coeficient.ca === "" ||
     coeficient.ab === "" ||
-    coeficient.bb === "" ||
-    coeficient.cb === ""
+    coeficient.bb === "" 
       ? alert("Enter all inputs")
       : resultDumm();
     // setvariables({

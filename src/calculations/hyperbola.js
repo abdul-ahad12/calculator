@@ -39,10 +39,10 @@ class Hyperbola{
       let eqMinor = `y=${bb}`;
       let eqOfLatus = `y=${bb}±${Math.sqrt(b) * ee}`;
       if(aa===0 && bb===0){
-        var genForm1=`y^2/${b}-x^2/${a}=1`
+        var genForm1=`\\frac{y^2}{${b}}-\\frac{x^2}{${a}}=1`
         
       }else{
-        var genForm1=`((y-${bb})^2/${b}^2)-((x-${aa})^2/${a}^2)=1`
+        var genForm1=`\\frac{(y-(${bb}))^2}{${b}^2}-\\frac{(x-(${aa}))^2}{${a}^2}=1`
       }
 
       return [
@@ -80,11 +80,11 @@ class Hyperbola{
     let eqOfLatus = `x=${aa.toFixed(2)}±${
       Math.sqrt(a.toFixed(2)) * ee.toFixed(2)
     }`;
-    if(aa&&bb===0){
-      var genForm3=`x^2/${a}-y^2/${b}=1`
+    if(aa===0 && bb===0){
+      var genForm3=`\\frac{x^2}{${a}}-\\frac{y^2}{${b}}=1`
       
     }else{
-      var genForm3=`((x-(${aa}))^2/${a})-((y-(${bb}))^2/${b})=1`
+      var genForm3=`\\frac{(x-(${aa}))^2}{${a}}-\\frac{(y-(${bb}))^2}{${b}}=1`
     }
     
 

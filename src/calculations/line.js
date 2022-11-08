@@ -114,6 +114,15 @@ class Line {
     return[c.toFixed(2), x.toFixed(2)];
   }
 
+  paralinesdist(a1, b1, c1, a2, b2, c2)
+  {
+    let a = Math.abs(c1-c2);
+    let b = Math.sqrt((a1*a1)+(b1*b1))
+
+    let c = a/b;
+
+    return[c.toFixed(2)]
+  }
 }
 
 export default Line;
