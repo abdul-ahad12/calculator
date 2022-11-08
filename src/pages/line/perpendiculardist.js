@@ -3,14 +3,13 @@ import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
-const PointOfInt = () => {
+const Perpendiculardist = () => {
   const [coeficient, setcoeficient] = useState({
     aa: "",
     ba: "",
     ca: "",
     ab: "",
     bb: "",
-    cb: "",
   });
   const [result, setResult] = useState("");
 
@@ -19,8 +18,7 @@ const PointOfInt = () => {
     coeficient.ba,
     coeficient.ca,
     coeficient.ab,
-    coeficient.bb,
-    coeficient.cb
+    coeficient.bb
   );
   console.log(coeficient);
 
@@ -54,25 +52,17 @@ const PointOfInt = () => {
       bb: e.target.value,
     });
   };
-  const onCbChange = (e) => {
-    setcoeficient({
-      ...coeficient,
-      cb: e.target.value,
-    });
-  };
 
   const resultDumm = () => {
-    const result = line.pointOfint(
+    const result = line.perpendiculardist(
       coeficient.aa,
       coeficient.ba,
       coeficient.ca,
       coeficient.ab,
-      coeficient.bb,
-      coeficient.cb
+      coeficient.bb
     );
     let x = result[0];
-    let y = result[1];
-    let c = <MathComponent tex={`(${x},${y})`} />;
+    let c = <MathComponent tex={`d= ${x}`} />;
     setResult(c);
   };
 
@@ -94,24 +84,26 @@ const PointOfInt = () => {
     // })
   };
 
+  const f =
+    "d = \\frac{|ax_1+by_1+c|}{\\sqrt{a^2+b^2}}";
+  const f1 = <MathComponent tex={f} />;
+
   return (
     <div>
       <TitleTemplate
-        title={"Point of intersection of two lines"}
-        formula={""}
-        type={"twolines"}
+        title={"Perpendicular Distance between a Line and a Point"}
+        formula={f1}
+        type={"onelinepoint"}
         valueA={coeficient.aa}
         valueB={coeficient.ba}
         valueC={coeficient.ca}
         valueD={coeficient.ab}
         valueE={coeficient.bb}
-        valueF={coeficient.cb}
         onAChange={onAaChange}
         onBChange={onBaChange}
         onCChange={onCaChange}
         onDChange={onAbChange}
         onEChange={onBbChange}
-        onFChange={onCbChange}
         onResult={onResult}
         result={result}
       />
@@ -119,4 +111,4 @@ const PointOfInt = () => {
   );
 };
 
-export default PointOfInt;
+export default Perpendiculardist;

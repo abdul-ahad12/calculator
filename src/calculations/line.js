@@ -66,6 +66,54 @@ class Line {
     return [m, c];
   }
 
+  imageofpoint(ax,ay,a1,b1,c1)
+  {
+    let a = -2*(Number(ax*a1)+Number(ay*b1)+Number(c1));
+    let b = Number(a1*a1)+Number(b1*b1);
+    let c = Number(a/b);
+
+    let h = (c*a1) + Number(ax);
+    let k = (c*b1) + Number(ay);
+
+    return[h,k];
+  }
+
+  footofperpendicular(ax,ay,a1,b1,c1)
+  {
+    let a = -1 *(Number(ax*a1)+Number(ay*b1)+Number(c1));
+    let b = Number(a1*a1)+Number(b1*b1);
+    let c = Number(a/b);
+
+    let h = (c*a1) + Number(ax);
+    let k = (c*b1) + Number(ay);
+
+    return[h,k];
+  }
+
+  perpendiculardist(ax,ay,a1,b1,c1)
+  {
+    let a = Math.abs((Number(ax*a1)+Number(ay*b1)+Number(c1)));
+    let b = Math.sqrt(Number(a1*a1)+Number(b1*b1));
+    
+    let d = Number(a/b);
+
+    return[d];
+  }
+
+  anglebwlines(a1,b1,c1,a2,b2,c2)
+  {
+    let a = Math.abs((Number(a2)*Number(b1)) - (Number(a1)*Number(b2)));
+    let b = Math.abs((Number(a2)*Number(a1)) + (Number(b1)*Number(b2)));
+
+    let c = a/b;
+
+    let d = Math.atan(c)
+    
+    let x = d * (180/Math.PI);
+
+    return[c.toFixed(2), x.toFixed(2)];
+  }
+
 }
 
 export default Line;

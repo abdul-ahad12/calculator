@@ -1,7 +1,7 @@
 import React from "react";
 import GeoTemp from "../component/sections/geoTemp";
-import SubCard from "../component/sections/subCard";
-import MainLayout from "./mainLayout";
+// import SubCard from "../component/sections/subCard";
+// import MainLayout from "./mainLayout";
 
 const LineCal = () => {
 
@@ -37,7 +37,22 @@ const LineCal = () => {
       title: "Equation of a line. Point slope form.",
       link: "/pointslopeform",
     },
- 
+    {
+      title: "Mirror image of a point with respect to a Line",
+      link: "/imageofpoint",
+    },
+    {
+      title: "Foot of Perpendicular from a point to a line",
+      link: "/footofperpendicular",
+    },
+    {
+      title: "Perpendicular Distance between a point and a line",
+      link: "/perpendiculardist",
+    },
+    {
+      title: "Angle between two Lines",
+      link: "/anglebwlines",
+    },
   ];
 
   return (
