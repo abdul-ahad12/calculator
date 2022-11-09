@@ -73,9 +73,6 @@ const AttributesPara = () => {
     let j = result[9];
     let k = result[10];
     let l = result[11];
- 
-
-    // let final=`${a},${b},${c},${d},${e}`
 
     let final = (
       <ResultTemp
@@ -99,7 +96,6 @@ const AttributesPara = () => {
         title6={"Length of Lactus rectrum"}
         title7={"Equation of tangent"}
         title8={"Standard Form"}
-   
       />
     );
 
@@ -107,10 +103,13 @@ const AttributesPara = () => {
   };
 
   const onResult = () => {
-    // eqInput.l === "" || eqInput.m === ""
-    //   ? alert("Enter all inputs")
-    //   :
-       resultDumm();
+    eqInput.l === "" ||
+    eqInput.m === "" ||
+    eqInput.n === "" ||
+    eqInput.o === "" ||
+    eqInput.p === ""
+      ? alert("Enter all inputs")
+      : resultDumm();
     // setvariables({
     //     ax:"",
     //     ay:"",
