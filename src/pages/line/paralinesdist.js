@@ -3,7 +3,7 @@ import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
-const PointOfInt = () => {
+const Paralinesdist = () => {
   const [coeficient, setcoeficient] = useState({
     aa: "",
     ba: "",
@@ -62,7 +62,7 @@ const PointOfInt = () => {
   };
 
   const resultDumm = () => {
-    const result = line.pointOfint(
+    const result = line.paralinesdist(
       coeficient.aa,
       coeficient.ba,
       coeficient.ca,
@@ -71,8 +71,8 @@ const PointOfInt = () => {
       coeficient.cb
     );
     let x = result[0];
-    let y = result[1];
-    let c = <MathComponent tex={`(${x},${y})`} />;
+    
+    let c = <MathComponent tex={`d = ${x}`} />;
     setResult(c);
   };
 
@@ -85,6 +85,10 @@ const PointOfInt = () => {
     coeficient.cb === ""
       ? alert("Enter all inputs")
       : resultDumm();
+
+    coeficient.aa/coeficient.ba !== coeficient.ab/coeficient.bb 
+      ? alert("Lines are not Parallel")
+      : resultDumm();
     // setvariables({
     //     ax:"",
     //     ay:"",
@@ -94,11 +98,15 @@ const PointOfInt = () => {
     // })
   };
 
+
+  const f =" d = \\frac{|c_1-c_2|}{\\sqrt{a^2+b^2}}";
+  const f1 = <MathComponent tex={f} />;
+
   return (
     <div>
       <TitleTemplate
-        title={"Point of intersection of two lines"}
-        formula={""}
+        title={"Perpendicular Distance between two parallel lines"}
+        formula={f1}
         type={"twolines"}
         valueA={coeficient.aa}
         valueB={coeficient.ba}
@@ -119,4 +127,4 @@ const PointOfInt = () => {
   );
 };
 
-export default PointOfInt;
+export default Paralinesdist;

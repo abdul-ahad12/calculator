@@ -3,7 +3,7 @@ import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
-const PointOfInt = () => {
+const Anglebwlines = () => {
   const [coeficient, setcoeficient] = useState({
     aa: "",
     ba: "",
@@ -62,7 +62,7 @@ const PointOfInt = () => {
   };
 
   const resultDumm = () => {
-    const result = line.pointOfint(
+    const result = line.anglebwlines(
       coeficient.aa,
       coeficient.ba,
       coeficient.ca,
@@ -72,7 +72,7 @@ const PointOfInt = () => {
     );
     let x = result[0];
     let y = result[1];
-    let c = <MathComponent tex={`(${x},${y})`} />;
+    let c = <MathComponent tex={`\\theta= Tan^{-1}(${x}) \\hspace{1cm} \\theta = ${y}^o`} />;
     setResult(c);
   };
 
@@ -92,13 +92,21 @@ const PointOfInt = () => {
     //     by:"",
 
     // })
+
+    coeficient.aa/coeficient.ba === coeficient.ab/coeficient.bb
+      ? alert("Lines are parallel")
+      : resultDumm();
   };
+
+
+  const f ="\\theta = Tan^{-1} |\\frac{m_1-m_2}{1+m_1m_2}|";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
       <TitleTemplate
-        title={"Point of intersection of two lines"}
-        formula={""}
+        title={"Angle between two lines"}
+        formula={f1}
         type={"twolines"}
         valueA={coeficient.aa}
         valueB={coeficient.ba}
@@ -119,4 +127,4 @@ const PointOfInt = () => {
   );
 };
 
-export default PointOfInt;
+export default Anglebwlines;
