@@ -51,6 +51,12 @@ import Footofperpendicular from './pages/line/footofperpendicular';
 import Perpendiculardist from './pages/line/perpendiculardist';
 import Anglebwlines from './pages/line/anglebwlines';
 import Paralinesdist from './pages/line/paralinesdist';
+import Distancepairpara from './pages/line/distancepairpara';
+import Anglebwpairlines from './pages/line/Anglebwpairlines';
+import Intpair from './pages/line/intpair';
+import Pairfromlines from './pages/line/pairfromlines';
+import Eqlinenormal from './pages/line/eqlinenormal';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -103,7 +109,11 @@ root.render(
         <Route path="perpendiculardist" element={<Perpendiculardist/>}></Route>
         <Route path="anglebwlines" element={<Anglebwlines/>}></Route>
         <Route path="paralinesdist" element={<Paralinesdist/>}></Route>
-        
+        <Route path="distancepairpara" element={<Distancepairpara/>}></Route>
+        <Route path="anglebwpairlines" element={<Anglebwpairlines/>}></Route>
+        <Route path="intpair" element={<Intpair/>}></Route>
+        <Route path="pairfromlines" element={<Pairfromlines/>}></Route>
+        <Route path="eqlinenormal" element={<Eqlinenormal/>}></Route>
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           

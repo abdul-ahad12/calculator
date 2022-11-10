@@ -72,8 +72,20 @@ const Anglebwlines = () => {
     );
     let x = result[0];
     let y = result[1];
-    let c = <MathComponent tex={`\\theta= Tan^{-1}(${x}) \\hspace{1cm} \\theta = ${y}^o`} />;
+    let c = (
+      <MathComponent
+        tex={`\\theta= Tan^{-1}(${x}) \\hspace{1cm} \\theta = ${y}^o`}
+      />
+    );
     setResult(c);
+  };
+
+  const check_lines = () => {
+    coeficient.aa === coeficient.ab &&
+    coeficient.ba === coeficient.bb &&
+    coeficient.ca === coeficient.cb
+      ? alert("Lines are same! Enter two distinct lines")
+      : check_parallel();
   };
 
   const onResult = () => {
@@ -84,22 +96,16 @@ const Anglebwlines = () => {
     coeficient.bb === "" ||
     coeficient.cb === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
+      : check_lines();
+  };
 
-    // })
-
-    coeficient.aa/coeficient.ba === coeficient.ab/coeficient.bb
+  const check_parallel = () => {
+    coeficient.aa / coeficient.ba === coeficient.ab / coeficient.bb
       ? alert("Lines are parallel")
       : resultDumm();
   };
 
-
-  const f ="\\theta = Tan^{-1} |\\frac{m_1-m_2}{1+m_1m_2}|";
+  const f = "\\theta = Tan^{-1} |\\frac{m_1-m_2}{1+m_1m_2}|";
   const f1 = <MathComponent tex={f} />;
 
   return (

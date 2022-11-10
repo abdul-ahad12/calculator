@@ -70,11 +70,19 @@ const Paralinesdist = () => {
       coeficient.bb,
       coeficient.cb
     );
-    let x = result[0];
+    
+  
+    let x = `${result[0]}`;
     
     let c = <MathComponent tex={`d = ${x}`} />;
     setResult(c);
   };
+ 
+  const check_input = () => {
+    coeficient.aa/coeficient.ba !== coeficient.ab/coeficient.bb 
+    ? alert("Lines are not Parallel")
+    : resultDumm();
+  }
 
   const onResult = () => {
     coeficient.aa === "" ||
@@ -84,18 +92,7 @@ const Paralinesdist = () => {
     coeficient.bb === "" ||
     coeficient.cb === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-
-    coeficient.aa/coeficient.ba !== coeficient.ab/coeficient.bb 
-      ? alert("Lines are not Parallel")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_input();
   };
 
 
