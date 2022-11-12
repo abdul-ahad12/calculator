@@ -3,51 +3,48 @@ import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
-const Xyintercept = () => {
+const Eqlinenormal = () => {
   const [coeficient, setcoeficient] = useState({
-    aa: "",
-    ba: "",
-    ca: "",
-    ab: "",
-    bb: "",
-    cb: "",
+    a: "",
+    b: "",
+    c: "",
   });
   const [result, setResult] = useState("");
 
   const line = new Line(coeficient.aa, coeficient.ba, coeficient.ca);
   console.log(coeficient);
 
-  const onAaChange = (e) => {
+  const onAChange = (e) => {
     setcoeficient({
       ...coeficient,
-      aa: e.target.value,
+      a: e.target.value,
     });
   };
-  const onBaChange = (e) => {
+  const onBChange = (e) => {
     setcoeficient({
       ...coeficient,
-      ba: e.target.value,
+      b: e.target.value,
     });
   };
-  const onCaChange = (e) => {
+  const onCChange = (e) => {
     setcoeficient({
       ...coeficient,
-      ca: e.target.value,
+      c: e.target.value,
     });
   };
 
   const resultDumm = () => {
-    const result = line.intercepts(coeficient.aa, coeficient.ba, coeficient.ca);
+    const result = line.eqlinenormal(coeficient.a, coeficient.b, coeficient.c);
     let x = result[0];
     let y = result[1];
-    let c = `(${x},0)`;
-    let d = `(0,${y})`;
-    let e = <MathComponent tex={`\\displaylines{x-intercept:${c} \\\\ y-intercept:${d}}`} />;
+    let z = result[2];
+    
+    let e = <MathComponent tex={`xCos(${x})+ ySin(${y}) = ${z}`} />;
     setResult(e);
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" || coeficient.b === "" || coeficient.c === ""
       ? alert("Enter all inputs")
       : resultDumm();
     // setvariables({
@@ -59,21 +56,21 @@ const Xyintercept = () => {
     // })
   };
 
-  const f = '\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\hspace{1cm} y-intercept : -\\frac{c}{b}}';
+  const f = '\\displaylines{Normal \\hspace{.25cm} Form: xCos(\\alpha) +ySin(\\alpha) = r \\hspace{.5cm} \\\\ \\\\ r = \\sqrt{a^2+b^2}}';
   const f1 = <MathComponent tex={f} />
 
   return (
     <div>
       <TitleTemplate
-        title={"x-intercept and y-intercept of a line."}
+        title={"Normal Form of a Line from equation of a line"}
         formula={f1}
         type={"oneline"}
         valueA={coeficient.aa}
         valueB={coeficient.ba}
         valueC={coeficient.ca}
-        onAChange={onAaChange}
-        onBChange={onBaChange}
-        onCChange={onCaChange}
+        onAChange={onAChange}
+        onBChange={onBChange}
+        onCChange={onCChange}
         onResult={onResult}
         result={result}
       />
@@ -81,4 +78,4 @@ const Xyintercept = () => {
   );
 };
 
-export default Xyintercept;
+export default Eqlinenormal;

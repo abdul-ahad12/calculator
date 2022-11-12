@@ -38,7 +38,7 @@ const Parametriceq = () => {
     let b = result[1];
     let c=result[2]
 
-    let final =<MathComponent tex={`x=${a}+${c}Cos(\\theta) \\hspace{1cm} y=${b}+${c}Sin(\\theta) \\hspace{1cm} 0<\\theta<2\\pi`}/>
+    let final =<MathComponent tex={`\\displaylines{x=${a}+${c}Cos(\\theta) \\\\ y=${b}+${c}Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}/>
 
     setresult(final);
   };

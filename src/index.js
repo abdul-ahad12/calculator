@@ -34,7 +34,6 @@ import Parabola from './pages/parabola';
 import AttributesPara from './pages/parabola/attributespara';
 import Vertexfocus from './pages/parabola/vertexfocus';
 import Triangle from './pages/triangle';
-
 import reportWebVitals from './reportWebVitals';
 import Orthocentre from './pages/triangle/orthocentre';
 import Orthopoints from './pages/triangle/orthopoints';
@@ -51,6 +50,13 @@ import Footofperpendicular from './pages/line/footofperpendicular';
 import Perpendiculardist from './pages/line/perpendiculardist';
 import Anglebwlines from './pages/line/anglebwlines';
 import Paralinesdist from './pages/line/paralinesdist';
+import Distancepairpara from './pages/line/distancepairpara';
+import Anglebwpairlines from './pages/line/Anglebwpairlines';
+import Intpair from './pages/line/intpair';
+import Pairfromlines from './pages/line/pairfromlines';
+import Eqlinenormal from './pages/line/eqlinenormal';
+import Eqnoftangent from './pages/circle/eqnoftangent';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -58,6 +64,8 @@ root.render(
   <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+
+        {/*                Line                   */}
         <Route path="lineCal" element={<LineCal />}></Route>
         <Route path="distance" element={<Distance />}></Route>
         <Route path="slopeLine" element={<SlopeLine />}></Route>
@@ -66,28 +74,23 @@ root.render(
         <Route path="perpendicular" element={<Perpendicular />}></Route>
         <Route path="twopointform" element={<TwoPointForm />}></Route>
         <Route path="pointslopeform" element={<PointSlopeForm />}></Route>
-        <Route path="circle" element={<Circle />}></Route>
-        <Route path="parabola" element={<Parabola />}></Route>
-        <Route path="ellipse" element={<Ellipse />}></Route>
-        <Route path="hyperbola" element={<Hyperbola />}></Route>
-        <Route path="crequation" element={<CrEquation />}></Route>
-        <Route path="eqfromcr" element={<EqfromCR />}></Route>
-        <Route path="gentostand" element={<GenToStand />}></Route>
-        <Route path="eqfromcp" element={<Eqfromcp />}></Route>
-        <Route path="lengthxy" element={<Lengthxy />}></Route>
-        <Route path="parametriceq" element={<Parametriceq />}></Route>
-        <Route path="powerofpoint" element={<Powerofpoint />}></Route>
-        <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
-        <Route path="contactus" element={<Contactus />}></Route>
-        <Route path="vertexfocusx" element={<Vertexfocus />}></Route>
-        <Route path="areacircum" element={<Areacircum />}></Route>
-        <Route path="attributes" element={<Attributes />}></Route>
-        <Route path="areacircumellipse" element={<Areacircumellipse />}></Route>
-        <Route path="attributesel" element={<AttributesEl />}></Route>
+        <Route path="imageofpoint" element={<Imageofpoint/>}></Route>
+        <Route path="footofperpendicular" element={<Footofperpendicular/>}></Route>
+        <Route path="perpendiculardist" element={<Perpendiculardist/>}></Route>
+        <Route path="anglebwlines" element={<Anglebwlines/>}></Route>
+        <Route path="paralinesdist" element={<Paralinesdist/>}></Route>
+        <Route path="distancepairpara" element={<Distancepairpara/>}></Route>
+        <Route path="anglebwpairlines" element={<Anglebwpairlines/>}></Route>
+        <Route path="intpair" element={<Intpair/>}></Route>
+        <Route path="pairfromlines" element={<Pairfromlines/>}></Route>
+        <Route path="eqlinenormal" element={<Eqlinenormal/>}></Route>
+        <Route path="eqnoftangent" element={<Eqnoftangent/>}></Route>
+        
+
+        {/*                Triangle                */}
         <Route path="triangle" element={<Triangle/>}></Route>
         <Route path="tricircumcentre" element={<Tricircumcentre />}></Route>
         <Route path="tricircumpoints" element={<Tricircumpoints />}></Route>
-        <Route path="attributespara" element={<AttributesPara />}></Route>
         <Route path="orthocentre" element={<Orthocentre />}></Route>
         <Route path="orthopoints" element={<Orthopoints />}></Route>
         <Route path="areaperimeter" element={<Areaperimeter />}></Route>
@@ -98,12 +101,42 @@ root.render(
         <Route path="verticestosides" element={<Verticestosides/>}></Route>
         <Route path="incentre" element={<Incentre/>}></Route>
         <Route path="incentrepoints" element={<Incentrepoints/>}></Route>
-        <Route path="imageofpoint" element={<Imageofpoint/>}></Route>
-        <Route path="footofperpendicular" element={<Footofperpendicular/>}></Route>
-        <Route path="perpendiculardist" element={<Perpendiculardist/>}></Route>
-        <Route path="anglebwlines" element={<Anglebwlines/>}></Route>
-        <Route path="paralinesdist" element={<Paralinesdist/>}></Route>
+
+
+        {/*               Circle               */}
+        <Route path="circle" element={<Circle />}></Route>
+        <Route path="crequation" element={<CrEquation />}></Route>
+        <Route path="eqfromcr" element={<EqfromCR />}></Route>
+        <Route path="gentostand" element={<GenToStand />}></Route>
+        <Route path="eqfromcp" element={<Eqfromcp />}></Route>
+        <Route path="lengthxy" element={<Lengthxy />}></Route>
+        <Route path="parametriceq" element={<Parametriceq />}></Route>
+        <Route path="powerofpoint" element={<Powerofpoint />}></Route>
+        <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
+        <Route path="areacircum" element={<Areacircum />}></Route>
+
+
+        {/*                Parabola                  */}
+        <Route path="parabola" element={<Parabola />}></Route>
+        <Route path="attributespara" element={<AttributesPara />}></Route>
+        <Route path="vertexfocusx" element={<Vertexfocus />}></Route>
+
+
+        {/*               Ellipse                  */}
+        <Route path="ellipse" element={<Ellipse />}></Route>
+        <Route path="attributes" element={<Attributes />}></Route>
+        <Route path="areacircumellipse" element={<Areacircumellipse />}></Route>
+
+
+        {/*                Hyperbola                   */}
+        <Route path="hyperbola" element={<Hyperbola />}></Route>
+        <Route path="attributesel" element={<AttributesEl />}></Route>
         
+        
+        {/*                Others                   */}
+        <Route path="contactus" element={<Contactus />}></Route>
+
+
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           

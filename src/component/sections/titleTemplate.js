@@ -26,14 +26,15 @@ const InputTemplate = ({
   onIChange,
   onJChange,
   onKChange,
-
 }) => {
   switch (type) {
     case "twoPoints":
       return (
         <div className="flex flex-col gap-8">
           <div className="flex gap-4 flex-row items-center">
-            <div className="w-[4rem]"><MathComponent tex={"Point 1:"} /></div>
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point 1:"} />
+            </div>
             <input
               className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
               value={valueA}
@@ -50,7 +51,9 @@ const InputTemplate = ({
             />
           </div>
           <div className="flex gap-4 flex-row items-center">
-            <div className="w-[4rem]"><MathComponent tex={"Point 2:"} /></div>
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point 2:"} />
+            </div>
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
               value={valueC}
@@ -69,11 +72,13 @@ const InputTemplate = ({
         </div>
       );
 
-      case "threePoints":
+    case "threePoints":
       return (
         <div className="flex flex-col gap-1">
           <div className="flex gap-4 flex-row items-center">
-            <div className="w-[4rem]"><MathComponent tex={"Point 1:"} /></div>
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point 1:"} />
+            </div>
             <input
               className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
               value={valueA}
@@ -90,7 +95,9 @@ const InputTemplate = ({
             />
           </div>
           <div className="flex gap-4 flex-row items-center">
-            <div className="w-[4rem]"><MathComponent tex={"Point 2:"} /></div>
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point 2:"} />
+            </div>
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
               value={valueC}
@@ -108,7 +115,9 @@ const InputTemplate = ({
           </div>
 
           <div className="flex gap-4 flex-row items-center">
-            <div className="w-[4rem]"><MathComponent tex={"Point 3:"} /></div>
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point 3:"} />
+            </div>
             <input
               className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
               value={valueE}
@@ -131,7 +140,9 @@ const InputTemplate = ({
       return (
         <div className="flex flex-col gap-8">
           <div className="flex gap-2 flex-row items-center">
-            <div className="w-[3.5rem]"><MathComponent tex={"Line 1:"} /></div>
+            <div className="w-[3.5rem]">
+              <MathComponent tex={"Line 1:"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueA}
@@ -139,7 +150,9 @@ const InputTemplate = ({
               placeholder="a1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"x+ "} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"x+ "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueB}
@@ -147,7 +160,9 @@ const InputTemplate = ({
               placeholder="b1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={" y+"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={" y+"} />
+            </div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -156,10 +171,14 @@ const InputTemplate = ({
               placeholder="c1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
           <div className="flex gap-2 flex-row items-center">
-            <div className="w-[3.5rem]"><MathComponent tex={"Line 2:"} /></div>
+            <div className="w-[3.5rem]">
+              <MathComponent tex={"Line 2:"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueD}
@@ -167,7 +186,9 @@ const InputTemplate = ({
               placeholder="a2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={" x+"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={" x+"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueE}
@@ -175,7 +196,9 @@ const InputTemplate = ({
               placeholder="b2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"y +"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"y +"} />
+            </div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -184,17 +207,20 @@ const InputTemplate = ({
               placeholder="c2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
         </div>
       );
 
-
-      case "threelines":
+    case "threelines":
       return (
         <div className="flex flex-col gap-1">
           <div className="flex gap-2 flex-row items-center">
-            <div className="w-[3.5rem]"><MathComponent tex={"Line 1: "} /></div>
+            <div className="w-[3.5rem]">
+              <MathComponent tex={"Line 1: "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueA}
@@ -202,7 +228,9 @@ const InputTemplate = ({
               placeholder="a1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"x "} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"x "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueB}
@@ -210,7 +238,9 @@ const InputTemplate = ({
               placeholder="b1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"y "} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"y "} />
+            </div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -219,10 +249,14 @@ const InputTemplate = ({
               placeholder="c1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
           <div className="flex gap-2 flex-row items-center">
-            <div className="w-[3.5rem]"><MathComponent tex={"Line 2: "} /></div>
+            <div className="w-[3.5rem]">
+              <MathComponent tex={"Line 2: "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueD}
@@ -230,7 +264,9 @@ const InputTemplate = ({
               placeholder="a2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"x "} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"x "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueE}
@@ -238,7 +274,9 @@ const InputTemplate = ({
               placeholder="b2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={" y"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={" y"} />
+            </div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -247,10 +285,14 @@ const InputTemplate = ({
               placeholder="c2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
           <div className="flex gap-2 flex-row items-center">
-            <div className="w-[3.5rem]"><MathComponent tex={"Line 3: "} /></div>
+            <div className="w-[3.5rem]">
+              <MathComponent tex={"Line 3: "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueG}
@@ -258,7 +300,9 @@ const InputTemplate = ({
               placeholder="a2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"x "} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"x "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueH}
@@ -266,7 +310,9 @@ const InputTemplate = ({
               placeholder="b2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"y "} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"y "} />
+            </div>
 
             <input
               className="rounded-[5px] w-[5rem]"
@@ -275,7 +321,9 @@ const InputTemplate = ({
               placeholder="c2"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
         </div>
       );
@@ -284,7 +332,9 @@ const InputTemplate = ({
       return (
         <div className="flex flex-col gap-8">
           <div className="flex gap-2 flex-row items-center">
-            <div><MathComponent tex={"Line 1: "} /></div>
+            <div>
+              <MathComponent tex={"Line 1: "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueA}
@@ -292,7 +342,9 @@ const InputTemplate = ({
               placeholder="a1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"x +"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"x +"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueB}
@@ -300,7 +352,9 @@ const InputTemplate = ({
               placeholder="b1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={" y+"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={" y+"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueC}
@@ -308,16 +362,20 @@ const InputTemplate = ({
               placeholder="c1"
               type="number"
             />
-            <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
         </div>
       );
 
-      case "onelinepoint":
-        return (
-          <div className="flex flex-col gap-8">
+    case "onelinepoint":
+      return (
+        <div className="flex flex-col gap-8">
           <div className="flex gap-4 flex-row items-center">
-            <div className="w-[4rem]"><MathComponent tex={"Point 1:"} /></div>
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point 1:"} />
+            </div>
             <input
               className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
               value={valueA}
@@ -333,43 +391,51 @@ const InputTemplate = ({
               type="number"
             />
           </div>
-            <div className="flex gap-2 flex-row items-center">
-              <div><MathComponent tex={"Line 1: "} /></div>
-              <input
-                className="rounded-[5px] w-[5rem]"
-                value={valueC}
-                onChange={onCChange}
-                placeholder="a1"
-                type="number"
-              />
-              <div className="lg:mr-8"><MathComponent tex={"x + "} /></div>
-              <input
-                className="rounded-[5px] w-[5rem]"
-                value={valueD}
-                onChange={onDChange}
-                placeholder="b1"
-                type="number"
-              />
-              <div className="lg:mr-8"><MathComponent tex={" y+"} /></div>
-              <input
-                className="rounded-[5px] w-[5rem]"
-                value={valueE}
-                onChange={onEChange}
-                placeholder="c1"
-                type="number"
-              />
-              <div className="lg:mr-8"><MathComponent tex={"=0"} /></div>
+          <div className="flex gap-2 flex-row items-center">
+            <div>
+              <MathComponent tex={"Line 1: "} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueC}
+              onChange={onCChange}
+              placeholder="a1"
+              type="number"
+            />
+            <div className="lg:mr-8">
+              <MathComponent tex={"x + "} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueD}
+              onChange={onDChange}
+              placeholder="b1"
+              type="number"
+            />
+            <div className="lg:mr-8">
+              <MathComponent tex={" y+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueE}
+              onChange={onEChange}
+              placeholder="c1"
+              type="number"
+            />
+            <div className="lg:mr-8">
+              <MathComponent tex={"=0"} />
             </div>
           </div>
-        );
-  
+        </div>
+      );
 
     case "slopePoint":
       return (
         <div className="flex flex-col gap-8">
           <div className="flex gap-2 flex-row items-center">
-            
-            <div className="lg:mr-8"><MathComponent tex={"Point:"} /></div>
+            <div className="lg:mr-8">
+              <MathComponent tex={"Point:"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueB}
@@ -384,7 +450,9 @@ const InputTemplate = ({
               placeholder="y1"
               type="number"
             />
-            <div><MathComponent tex={"Slope:"} /></div>
+            <div>
+              <MathComponent tex={"Slope:"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueA}
@@ -436,6 +504,9 @@ const InputTemplate = ({
               placeholder="c"
               type="number"
             />
+            <div className="lg:mr-3">
+              <MathComponent tex={"= 0"} />
+            </div>
           </div>
         </div>
       );
@@ -444,7 +515,9 @@ const InputTemplate = ({
       return (
         <div className="flex text=[2rem] flex-col gap-8">
           <div className="flex gap-2 flex-row items-center">
-            <div><MathComponent tex={"Point: "} /></div>
+            <div>
+              <MathComponent tex={"Point: "} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueA}
@@ -460,7 +533,9 @@ const InputTemplate = ({
               placeholder="y"
               type="number"
             />
-            <div><MathComponent tex={"Radius:"} /></div>
+            <div>
+              <MathComponent tex={"Radius:"} />
+            </div>
             <input
               className="rounded-[5px] w-[5rem]"
               value={valueC}
@@ -574,6 +649,9 @@ const InputTemplate = ({
               placeholder="c"
               type="number"
             />
+             <div className="lg:mr-3">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
         </div>
       );
@@ -700,6 +778,181 @@ const InputTemplate = ({
         </div>
       );
 
+    case "pairoflines":
+      return (
+        <div className="flex text=[2rem] overflow-hidden lg:scrollbar-hide overflow-x-scroll max-w-[80vw] flex-col gap-8">
+          <div className="flex gap-2 flex-row items-center">
+            <div>
+              <MathComponent tex={"S: "} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueA}
+              onChange={onAChange}
+              placeholder="a"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"x^2+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueB}
+              onChange={onBChange}
+              placeholder="2h"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"xy+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueC}
+              onChange={onCChange}
+              placeholder="b"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"y^2 +"} />
+            </div>
+
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueD}
+              onChange={onDChange}
+              placeholder="2g"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"x+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueE}
+              onChange={onEChange}
+              placeholder="2f"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"y+"} />
+            </div>
+            <input
+              className="rounded-[5px] w-[5rem]"
+              value={valueF}
+              onChange={onFChange}
+              placeholder="c"
+              type="number"
+            />
+            <div>
+              {" "}
+              <MathComponent tex={"= 0"} />
+            </div>
+          </div>
+        </div>
+      );
+
+      case "pointpairoflines":
+        return (
+          <div className="flex text=[2rem] overflow-hidden lg:scrollbar-hide overflow-x-scroll max-w-[80vw] flex-col gap-8">
+            <div className="flex gap-4 flex-row items-center content-center">
+            <div className="w-[4rem]">
+              <MathComponent tex={"Point:"} />
+            </div>
+            <input
+              className="rounded-[5px] base:w-[6.5rem] lg:w-[12rem]"
+              value={valueA}
+              onChange={onAChange}
+              placeholder="x1"
+              type="number"
+            />
+            <input
+              className="rounded-[5px]  base:w-[6.5rem] lg:w-[12rem]"
+              value={valueB}
+              onChange={onBChange}
+              placeholder="y1"
+              type="number"
+            />
+          </div>
+            <div className="flex gap-2 flex-row items-center">
+              <div>
+                <MathComponent tex={"S: "} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueC}
+                onChange={onCChange}
+                placeholder="a"
+                type="number"
+              />
+              <div>
+                {" "}
+                <MathComponent tex={"x^2+"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueD}
+                onChange={onDChange}
+                placeholder="2h"
+                type="number"
+              />
+              <div>
+                {" "}
+                <MathComponent tex={"xy+"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueE}
+                onChange={onEChange}
+                placeholder="b"
+                type="number"
+              />
+              <div>
+                {" "}
+                <MathComponent tex={"y^2 +"} />
+              </div>
+  
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueF}
+                onChange={onFChange}
+                placeholder="2g"
+                type="number"
+              />
+              <div>
+                {" "}
+                <MathComponent tex={"x+"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueG}
+                onChange={onGChange}
+                placeholder="2f"
+                type="number"
+              />
+              <div>
+                {" "}
+                <MathComponent tex={"y+"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueH}
+                onChange={onHChange}
+                placeholder="c"
+                type="number"
+              />
+              <div>
+                {" "}
+                <MathComponent tex={"= 0"} />
+              </div>
+            </div>
+          </div>
+        );
+
     default:
       break;
   }
@@ -733,8 +986,6 @@ const TitleTemplate = ({
   onIChange,
   onJChange,
   onKChange,
-
-  
 }) => {
   return (
     <MainLayout>
@@ -745,7 +996,7 @@ const TitleTemplate = ({
         <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden md:scrollbar-hide overflow-x-scroll  lg:text-[2rem]">
           {formula}
         </div>
-
+        <div className="max-w-[90vw] overflow-hidden overflow-x-scroll lg:scrollbar-hide">
         <InputTemplate
           type={type}
           valueA={valueA}
@@ -770,8 +1021,8 @@ const TitleTemplate = ({
           onIChange={onIChange}
           onJChange={onJChange}
           onKChange={onKChange}
-         
         />
+        </div>
         <button
           onClick={onResult}
           className="hover:bg-black bg-[#292929] rounded-[10px] px-5 py-2 text-white"

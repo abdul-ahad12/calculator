@@ -35,29 +35,42 @@ const Lengthxy = () => {
     const result = circle.lengthXY(eqInput.g, eqInput.f, eqInput.c);
     let a = result[0];
     let b = result[1];
-
-    let final = `Length of intercept on x-axis : ${ a} , Length of intercept on y-axis is : ${ b}`
+    let final =  ``;
+    if (isNaN(a) && isNaN(b))
+    {
+      final =   `The \\ given \\ circle \\ does \\ not \\ touch \\ the \\ X-axis \\ and \\ the \\ Y-axis`;
+    }
+    else if(isNaN(a))
+    {
+      final = `\\displaylines{The \\ given \\ circle \\ does \\ not \\ touch \\ the \\ X-axis \\\\ Length\\  of\\ intercept\\ on\\ Y-axis\\ is : ${b}}`;
+    }
+    else if(isNaN(b))
+    {
+        final = `\\displaylines{Length \\ of \\ intercept \\  on \\ x-axis : ${a} \\\\ The \\ given \\ circle \\ does \\ not \\ touch \\ the \\ Y-axis}`;
+    }
+    else{
+      final = `\\displaylines{Length \\ of \\ intercept \\  on \\ x-axis : ${a} \\\\ Length\\  of\\ intercept\\ on\\ y-axis\\ is : ${b}}`;
+    }
     let res = <MathComponent tex={final}/>
-
     setresult(res);
   };
 
   const onResult = () => {
     eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      :check_circle();
   };
+
+  const check_circle = () =>{
+    Math.pow(eqInput.g/2,2)+Math.pow(eqInput.f/2,2)-(eqInput.c) < 0
+    ? alert("Entered Circle is imaginary! Enter equation of a real circle")
+    :resultDumm();
+  };
+
   return (
     <div>
       <TitleTemplate
-        title={"Length of X and Y intercepts"}
+        title={"Length of X and Y intercepts of a circle"}
         type={"eqCircle"}
         valueA={eqInput.g}
         valueB={eqInput.f}

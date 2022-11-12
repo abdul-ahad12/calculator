@@ -29,13 +29,17 @@ const LineCal = () => {
       link: "/perpendicular",
     },
     {
-      title: "Equation of a line. Two point form.",
+      title: "Equation of a line, Two point form.",
 
       link: "/twopointform",
     },
     {
-      title: "Equation of a line. Point slope form.",
+      title: "Equation of a line, Point slope form.",
       link: "/pointslopeform",
+    },
+    {
+      title: "Equation of a line, Normal form.",
+      link: "/eqlinenormal",
     },
     {
       title: "Mirror image of a point with respect to a Line",
@@ -56,6 +60,22 @@ const LineCal = () => {
     {
       title: "Perpendicular Distance between two parallel lines",
       link: "/paralinesdist",
+    },
+    {
+      title: "Distance between two parallel lines from equation of pair of lines",
+      link: "/distancepairpara",
+    },
+    {
+      title: "Angle between two lines from equation of pair of straight lines",
+      link: "/anglebwpairlines",
+    },
+    {
+      title: "Point of intersection from equation of pair of straight lines",
+      link: "/intpair",
+    },
+    {
+      title: "Equation of pair of straight lines from two lines",
+      link: "/pairfromlines",
     },
   ];
 

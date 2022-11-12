@@ -29,13 +29,21 @@ const Circle = () => {
       link: "/parametriceq",
     },
     {
-      title: "Power of point wrt Circle",
+      title: "Power of point with respect to a Circle",
 
       link: "/powerofpoint",
     },
     {
-      title: "Equation and length of tangent at a point to a circle",
+      title: "Length of Tangent at a point to a circle",
       link: "/lengthoftangent",
+    },
+    {
+      title: "Equation of Tangent and Normal at a point to a circle",
+      link: "/eqnoftangent",
+    },
+    {
+      title: "Length of x and y intercepts of a circle",
+      link: "/lengthxy",
     },
 
 
