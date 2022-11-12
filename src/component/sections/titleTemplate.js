@@ -504,6 +504,9 @@ const InputTemplate = ({
               placeholder="c"
               type="number"
             />
+            <div className="lg:mr-3">
+              <MathComponent tex={"= 0"} />
+            </div>
           </div>
         </div>
       );
@@ -646,6 +649,9 @@ const InputTemplate = ({
               placeholder="c"
               type="number"
             />
+             <div className="lg:mr-3">
+              <MathComponent tex={"=0"} />
+            </div>
           </div>
         </div>
       );
