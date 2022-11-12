@@ -45,10 +45,10 @@ class Circle {
   lengthXY(g, f, c) {
     let a = g / 2;
     let b = f / 2;
-    let x = 2 * Math.sqrt(a * a - c);
-    let y = 2 * Math.sqrt(b * b - c);
+    let x = 2 * Math.sqrt(Number(a * a) - Number(c));
+    let y = 2 * Math.sqrt(Number(b * b) - Number(c));
 
-    return [x, y];
+    return [x.toFixed(2), y.toFixed(2)];
   }
   parametriceq(g, f, c) {
     let c1 = -g / 2;
@@ -65,12 +65,21 @@ class Circle {
 
   }
   lengthoftangent(x, y, g, f, c) {
-    let a = Math.sqrt((Number(x) * Number(x)) + (Number(y) * Number(y)) + (Number(g) * Number(x)) + (Number(f) * Number(y)) + Number(c));
+    let a = Math.sqrt((Number(x) * Number(x)) + (Number(y) * Number(y)) + (Number(g) * Number(x)) + (Number(f) * Number(y)) + Number(c)); 
+
+    return [a];
+  }
+
+  eqnoftangent(x, y, g, f, c)
+  {
     let m = Number(x) + (Number(g) / 2);
     let n = Number(y) + (Number(f) / 2);
     let l = ((Number(g) / 2) * Number(x)) + ((Number(f) / 2) * Number(y)) + Number(c);
 
-    return [a, m, n, l];
+
+    let o = -(-n*x) - (m*y);
+
+    return [m, n, l, o];
   }
   areacircum(g, f, c) {
     let c1 = -g / 2;

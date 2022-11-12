@@ -46,8 +46,17 @@ const Distance = () => {
         variables.bx,
         variables.by
       );
-
-      let a = <MathComponent tex={`d = ${result}`} />
+      let x = variables.ax -  variables.bx;
+      let y = variables.ay - variables.by
+      let x1 = x*x;
+      let y1 = y*y;
+      let a1 = x1+y1
+      let a = <MathComponent tex={`
+      \\displaylines{d = \\sqrt{(${variables.ax} - ${variables.bx})^2 + (${variables.ay} -${variables.by})^2}
+      \\\\ d = \\sqrt{(${x})^2 + (${y})^2}
+      \\\\ d = \\sqrt{${x1} + ${y1}}
+      \\\\ d = \\sqrt{${a1}}
+      \\\\ d = ${result}}`} />
       setResult(a);
    
   };

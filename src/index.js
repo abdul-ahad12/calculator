@@ -56,6 +56,7 @@ import Anglebwpairlines from './pages/line/Anglebwpairlines';
 import Intpair from './pages/line/intpair';
 import Pairfromlines from './pages/line/pairfromlines';
 import Eqlinenormal from './pages/line/eqlinenormal';
+import Eqnoftangent from './pages/circle/eqnoftangent';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -114,6 +115,8 @@ root.render(
         <Route path="intpair" element={<Intpair/>}></Route>
         <Route path="pairfromlines" element={<Pairfromlines/>}></Route>
         <Route path="eqlinenormal" element={<Eqlinenormal/>}></Route>
+        <Route path="eqnoftangent" element={<Eqnoftangent/>}></Route>
+
           {/* <Route index element={<App />} />
           <Route path="blogs" element={<Blogs />} />
           

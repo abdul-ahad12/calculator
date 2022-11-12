@@ -42,7 +42,7 @@ const Xyintercept = () => {
     let y = result[1];
     let c = `(${x},0)`;
     let d = `(0,${y})`;
-    let e = <MathComponent tex={`x-intercept:${c} \\hspace{.5cm} y-intercept:${d}`} />;
+    let e = <MathComponent tex={`\\displaylines{x-intercept:${c} \\\\ y-intercept:${d}}`} />;
     setResult(e);
   };
 
@@ -59,7 +59,7 @@ const Xyintercept = () => {
     // })
   };
 
-  const f = 'line: ax + by + c = 0 \\hspace{1cm} x-intercept : -\\frac{c}{a} \\hspace{1cm} y-intercept : -\\frac{c}{b}';
+  const f = '\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\hspace{1cm} y-intercept : -\\frac{c}{b}}';
   const f1 = <MathComponent tex={f} />
 
   return (
