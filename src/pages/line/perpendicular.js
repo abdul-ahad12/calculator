@@ -45,32 +45,47 @@ const Perpendicular = () => {
         variables.bx,
         variables.by
       );
-
       let m=result[0]
       let b=result[1]
-      let a=<MathComponent tex={`y=${m}x+${b}`} />
+      let final =``;
+      
+      if(variables.ax - variables.bx === 0)
+      {
+        final = `y = ${b}`
+      }
+      else if(variables.ay - variables.by === 0)
+      {
+        final = `x = ${b}`
+      }
+      else
+      {
+        final = `y=${m}x+${b}`
+      }
+      let a=<MathComponent tex={final} />
       setResult(a);
       
   };
 
   const onResult = () => {
-    
       variables.ax === "" ||
       variables.ay === "" ||
       variables.bx === "" ||
       variables.by === ""
         ? alert("Enter all inputs")
-        :  resultDumm()
-        // setvariables({
-        //     ax:"",
-        //     ay:"",
-        //     bx:"",
-        //     by:"",
-
-        // })
-        
-    
+        :  all_zero()
   };
+
+  const all_zero = () => {
+    variables.ax === "0" && variables.ay === "0" && variables.bx === "0" && variables.by === "0"
+    ? alert("Invalid Input!")
+    :  same()
+  }
+
+  const same = () => {
+    variables.ax === variables.bx   && variables.ay ===  variables.by 
+    ? alert("Invalid Input! Enter two Different points")
+    :  resultDumm()
+  }
 
   return (
     <div>

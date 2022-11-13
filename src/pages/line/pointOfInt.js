@@ -84,14 +84,25 @@ const PointOfInt = () => {
     coeficient.bb === "" ||
     coeficient.cb === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
+      : all_zero();
+  };
 
-    // })
+  const all_zero = () => {
+    coeficient.aa === '0' && coeficient.ba === '0' && coeficient.ca === '0' && coeficient.ab === '0' && coeficient.bb === '0' && coeficient.cb === '0'
+    ?alert("Invalid Input! Enter proper Equation of a Line")
+    :check_same()
+  }
+
+const check_same = () => {
+  coeficient.aa === coeficient.ab && coeficient.ba  === coeficient.bb && coeficient.ca  === coeficient.cb
+      ? alert("Lines are Same! Enter two Different Lines")
+      : check_parallel();
+}
+
+  const check_parallel = () => {
+    coeficient.aa / coeficient.ba === coeficient.ab / coeficient.bb
+      ? alert("Lines are parallel! Enter Lines which are not parallel")
+      : resultDumm();
   };
 
   return (
