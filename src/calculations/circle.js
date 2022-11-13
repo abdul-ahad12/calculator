@@ -1,6 +1,10 @@
 
 class Circle {
-  constructor(g, f, c) {
+  constructor(ax,ay,bx,by,g, f, c) {
+    this.ax = ax;
+    this.ay = ay;
+    this.bx = bx;
+    this.by = by;
     this.g = g;
     this.f = f;
     this.c = c;
@@ -92,6 +96,15 @@ class Circle {
 
 
     return [area.toFixed(2), circum.toFixed(2)];
+}
+
+checkconjugate(ax,ay,bx,by,g,f,c)
+{
+  let a = (Number(ax)*Number(bx)) + (Number(by)*Number(ay) + (Number(g/2)*(Number(ax)+Number(ay))) + (Number(f/2)*(Number(bx)+Number(by)))+ Number(c));
+  // let b = Number(g/2)*(Number(ax)+Number(ay))
+  // let c1 = Number(f/2)*(Number(bx)+Number(by))
+  // let d = a+b+c1
+  return [a];
 }
 
 
