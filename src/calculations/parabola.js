@@ -20,7 +20,7 @@ class Parabola {
       let beta = -1 * aa;
       //value of alpha
       let alpha = constant / (nn);
-      let vertex=`(${alpha},${beta})`
+      let vertex=`(${Number(alpha.toFixed(2))},${Number(beta.toFixed(2))})`
       let focus=`(${((-1)*a)+Number(alpha)},${beta})`
       let eqaxis=`y=${beta}`
       let eqdirec=`x=${alpha+a}`
@@ -30,7 +30,7 @@ class Parabola {
       let standform=`((y-(${beta}))^2=${-1*4*a}(x-${alpha}))`
 
 
-      return [vertex,focus,eqaxis,eqdirec,eqlatus,lglatus,eqtanget,standform]
+      return [vertex,focus,eqaxis,eqdirec,eqlatus,lglatus,eqtanget,standform,"","","",""]
     }
     else if(Number(m)===0)
     {
@@ -57,7 +57,7 @@ class Parabola {
 
 
 // return [constant,alpha,beta,a]
-      return [vertex,focus,eqaxis,eqdirec,eqlatus,lglatus,eqtanget,standform]
+      return [vertex,focus,eqaxis,eqdirec,eqlatus,lglatus,eqtanget,standform,"","","",""]
     }
     else{
       return ["wrong input"]
