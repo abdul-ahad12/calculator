@@ -72,14 +72,14 @@ const Perpendicular = () => {
       variables.bx === "" ||
       variables.by === ""
         ? alert("Enter all inputs")
-        :  all_zero()
+        :  same()
   };
 
-  const all_zero = () => {
-    variables.ax === "0" && variables.ay === "0" && variables.bx === "0" && variables.by === "0"
-    ? alert("Invalid Input!")
-    :  same()
-  }
+  // const all_zero = () => {
+  //   variables.ax === "0" && variables.ay === "0" && variables.bx === "0" && variables.by === "0"
+  //   ? alert("Invalid Input!")
+  //   :  same()
+  // }
 
   const same = () => {
     variables.ax === variables.bx   && variables.ay ===  variables.by 
