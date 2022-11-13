@@ -31,34 +31,39 @@ class Line {
     let second = Number(bx) - Number(ax);
     let result = first / second;
 
-    return result.toFixed(3);
+    return result.toFixed(2);
   }
 
   pointOfint(a1, b1, c1, a2, b2, c2) {
-    if (a1 / b1 === a2 / b2) {
-      return "XX";
-    } else {
       let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
       let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
 
-      return [x.toFixed(3), y.toFixed(3)];
-    }
+      return [x.toFixed(), y.toFixed(2)];
   }
 
   intercepts(a1, b1, c1) {
     let xint = -c1 / a1;
     let yint = -c1 / b1;
 
-    return [xint.toFixed(3), yint.toFixed(3)];
+    return [xint.toFixed(2), yint.toFixed(2)];
   }
   bisector(ax, ay, bx, by) {
     let m1 = (Number(ax) + Number(bx)) / 2;
     let m2 = (Number(ay) + Number(by)) / 2;
 
-    let m = -1 / ((Number(by) - Number(ay)) / (Number(bx) - Number(ax)));
+    let a = ((Number(by) - Number(ay)) / (Number(bx) - Number(ax)));
+    let m = -1/a;
     let b = m2 - m * m1;
+    if (ax - bx === 0 )
+    {
+      b = (Number(ay) +Number(by))/2;
+    }
+    if (ay -by ===0)
+    {
+      b = (Number(ax) + Number(bx))/2;
+    }
 
-    return [m.toFixed(3), b.toFixed(3)];
+    return [Number(m.toFixed(2)), b.toFixed(2)];
   }
   twopointform(ax, ay, bx, by) {
     let m = (Number(by) - Number(ay)) / (Number(bx) - Number(ax));

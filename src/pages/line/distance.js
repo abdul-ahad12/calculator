@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
-import 'katex/dist/katex.min.css';
+import "katex/dist/katex.min.css";
 import { MathComponent } from "mathjax-react";
 
 const Distance = () => {
@@ -41,48 +41,26 @@ const Distance = () => {
   };
   const resultDumm = () => {
     const result = line.distance(
-        variables.ax,
-        variables.ay,
-        variables.bx,
-        variables.by
-      );
-      let x = variables.ax -  variables.bx;
-      let y = variables.ay - variables.by
-      let x1 = x*x;
-      let y1 = y*y;
-      let a1 = x1+y1
-      let a = <MathComponent tex={`
-      \\displaylines{d = \\sqrt{(${variables.ax} - ${variables.bx})^2 + (${variables.ay} -${variables.by})^2}
-      \\\\ d = \\sqrt{(${x})^2 + (${y})^2}
-      \\\\ d = \\sqrt{${x1} + ${y1}}
-      \\\\ d = \\sqrt{${a1}}
-      \\\\ d = ${result}}`} />
-      setResult(a);
-   
+      variables.ax,
+      variables.ay,
+      variables.bx,
+      variables.by
+    );
+    let a = <MathComponent tex={`d = ${result}`} />;
+    setResult(a);
   };
 
   const onResult = () => {
-    
-      variables.ax === "" ||
-      variables.ay === "" ||
-      variables.bx === "" ||
-      variables.by === ""
-        ? alert("Enter all inputs")
-        :  resultDumm()
-        // setvariables({
-        //     ax:"",
-        //     ay:"",
-        //     bx:"",
-        //     by:"",
-
-        // })
-        
-    
+    variables.ax === "" ||
+    variables.ay === "" ||
+    variables.bx === "" ||
+    variables.by === ""
+      ? alert("Enter all inputs")
+      : resultDumm();
   };
-  const f = 'd = \\sqrt{{(x_2-x_1)^2}+{(y_2-y_1)^2}}';
-  const f1 = <MathComponent tex={f} />
 
-
+  const f = "d = \\sqrt{{(x_2-x_1)^2}+{(y_2-y_1)^2}}";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>

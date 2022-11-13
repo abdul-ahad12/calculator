@@ -5,60 +5,73 @@ import { MathComponent } from "mathjax-react";
 
 const Xyintercept = () => {
   const [coeficient, setcoeficient] = useState({
-    aa: "",
-    ba: "",
-    ca: "",
-    ab: "",
-    bb: "",
-    cb: "",
+    a: "",
+    b: "",
+    c: "",
   });
   const [result, setResult] = useState("");
 
-  const line = new Line(coeficient.aa, coeficient.ba, coeficient.ca);
+  const line = new Line(coeficient.a, coeficient.b, coeficient.c);
   console.log(coeficient);
 
-  const onAaChange = (e) => {
+  const onAChange = (e) => {
     setcoeficient({
       ...coeficient,
-      aa: e.target.value,
+      a: e.target.value,
     });
   };
-  const onBaChange = (e) => {
+  const onBChange = (e) => {
     setcoeficient({
       ...coeficient,
-      ba: e.target.value,
+      b: e.target.value,
     });
   };
-  const onCaChange = (e) => {
+  const onCChange = (e) => {
     setcoeficient({
       ...coeficient,
-      ca: e.target.value,
+      c: e.target.value,
     });
   };
 
   const resultDumm = () => {
-    const result = line.intercepts(coeficient.aa, coeficient.ba, coeficient.ca);
+    const result = line.intercepts(coeficient.a, coeficient.b, coeficient.c);
     let x = result[0];
     let y = result[1];
     let c = `(${x},0)`;
     let d = `(0,${y})`;
-    let e = <MathComponent tex={`\\displaylines{x-intercept:${c} \\\\ y-intercept:${d}}`} />;
-    setResult(e);
+    let final =``;
+    if (!(isFinite(x)))
+    {
+      final = `\\displaylines{Line \\ is\\ parallel \\ to \\ X-axis, \\ therefore \\ x-intercept \\ does \\ not \\ exist \\\\ y-intercept:${d}}`
+    }
+    else if(!(isFinite(y)))
+    {
+      final = `\\displaylines{x-intercept:${c} \\\\ Line \\ is\\ parallel \\ to \\ Y-axis, \\ therefore \\ y-intercept \\ does \\ not \\ exist}`
+    }
+    else{
+     final = `\\displaylines{x-intercept:${c} \\\\ y-intercept:${d}}`
+    }
+    let e = <MathComponent tex={final} />;
+     setResult(e);
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" || coeficient.b === "" || coeficient.c === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : all_zero();
   };
 
+  const all_zero = () => {
+    coeficient.a === '0' && coeficient.b === '0' && coeficient.c === '0'
+    ?alert("Invalid Input! Enter proper Equation of a Line")
+    :xy_zero()
+  }
+
+  const xy_zero = () => {
+    coeficient.a === '0' && coeficient.b === '0'
+    ?alert("Invalid Input! Enter proper Equation of a Line")
+    :resultDumm()
+  }
   const f = '\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\hspace{1cm} y-intercept : -\\frac{c}{b}}';
   const f1 = <MathComponent tex={f} />
 
@@ -68,12 +81,12 @@ const Xyintercept = () => {
         title={"x-intercept and y-intercept of a line."}
         formula={f1}
         type={"oneline"}
-        valueA={coeficient.aa}
-        valueB={coeficient.ba}
-        valueC={coeficient.ca}
-        onAChange={onAaChange}
-        onBChange={onBaChange}
-        onCChange={onCaChange}
+        valueA={coeficient.a}
+        valueB={coeficient.b}
+        valueC={coeficient.c}
+        onAChange={onAChange}
+        onBChange={onBChange}
+        onCChange={onCChange}
         onResult={onResult}
         result={result}
       />

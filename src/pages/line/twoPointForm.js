@@ -48,7 +48,20 @@ const TwoPointForm = () => {
 
     let m = result[0];
     let c = result[1];
-    let a = <MathComponent tex={`y=${m}x+${c}`} />
+    let final =  ``;
+    if(variables.ax === variables.bx)
+    {
+      final = `x = ${variables.ax}`
+    }
+    else if(variables.ay === variables.by)
+    {
+      final = `y = ${variables.ay}`;
+    }
+    else
+    {
+      final = `y=${m}x+${c}`
+    }
+    let a = <MathComponent tex={final} />
     setResult(a);
   };
 
@@ -58,15 +71,20 @@ const TwoPointForm = () => {
     variables.bx === "" ||
     variables.by === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : all_zero();
   };
+
+  const all_zero = () => {
+    variables.ax === "0" && variables.ay === "0" && variables.bx === "0" && variables.by === "0"
+    ? alert("Invalid Input!")
+    :  same()
+  }
+
+  const same = () => {
+    variables.ax === variables.bx   && variables.ay ===  variables.by 
+    ? alert("Invalid Input! Enter two Different points")
+    :  resultDumm()
+  }
 
   const f = 'y - y_1 = \\frac{y_2-y_1}{x_2-x_1} (x - x_1)';
   const f1 = <MathComponent tex={f} />

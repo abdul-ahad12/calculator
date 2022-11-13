@@ -47,10 +47,17 @@ const Powerofpoint = () => {
       };
       const resultDumm = () => {
         const result = circle.powerofpoint(eqInput.x,eqInput.y,eqInput.g, eqInput.f, eqInput.c);
-        let a = result
+        let a = result;
+        let final = ``;
     
-        let final =<MathComponent tex={`Power \\hspace{0.15cm} of \\hspace{0.15cm} point \\hspace{0.15cm} is:${a}`}/>
-    
+        if (a===0)
+        {
+          final =<MathComponent tex={`\\displaylines{Power \\ of \\ point \\ is:${a} \\\\ The \\ Point (${eqInput.x},${eqInput.y}) \\ lies \\ inside \\ the \\ circle}`}/>
+        }
+        else
+        {
+          final =<MathComponent tex={`\\displaylines{Power \\ of \\ point \\ is:${a} \\\\ The \\ Point (${eqInput.x},${eqInput.y}) \\ lies \\ outside \\ the \\ circle}`}/>
+        }
         setresult(final);
       };
     
@@ -58,13 +65,6 @@ const Powerofpoint = () => {
         eqInput.x===""||eqInput.y===""|| eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
           ? alert("Enter all inputs")
           : resultDumm();
-        // setvariables({
-        //     ax:"",
-        //     ay:"",
-        //     bx:"",
-        //     by:"",
-    
-        // })
       };
 
       const s = 'P:(x_1,y_1), \\hspace{0.5cm} S_{11}: (x_1)^2 + (y_1)^2 + 2g(x_1) + 2f(y_1) - c';
@@ -73,7 +73,7 @@ const Powerofpoint = () => {
   return (
     <div>
       <TitleTemplate
-        title={"Power of point wrt Circle"}
+        title={"Power of point with respect to Circle"}
         type={"pointeqCircle"}
         formula = {f2}
         valueA={eqInput.x}
@@ -81,11 +81,11 @@ const Powerofpoint = () => {
         valueC={eqInput.g}
         valueD={eqInput.f}
         valueE={eqInput.c}
-        onAChange={onGChange}
-        onBChange={onFChange}
-        onCChange={onCChange}
-        onDChange={onXChange}
-        onEChange={onYChange}
+        onAChange={onXChange}
+        onBChange={onYChange}
+        onCChange={onGChange}
+        onDChange={onFChange}
+        onEChange={onCChange}
         result={result}
         onResult={onResult}
       />
