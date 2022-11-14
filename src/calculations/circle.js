@@ -13,13 +13,23 @@ class Circle {
   }
 
   cenAndrad(g, f, c) {
-    let c1 = -g / 2;
-    let c2 = -f / 2;
-    let a = c1 * c1;
-    let b = c2 * c2;
-    let r = Math.sqrt(Number(a) + Number(b) - Number(c));
-
-    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    let c1,c2,r;
+      if(g===0 && f===0)
+      {
+        c1 =0;
+        c2 =0;
+        r = -1 * Math.sqrt(c)
+      }
+      else
+      {
+        c1 = -g / 2;
+        c2 = -f / 2;
+        let a = c1 * c1;
+        let b = c2 * c2;
+        r = Math.sqrt(Number(a) + Number(b) - Number(c));
+  
+      }
+      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
   }
 
   eqFromCR(c1, c2, r) {
@@ -124,12 +134,23 @@ class Circle {
     }
 
     function cenAndrad(g, f, c) {
-      let c1 = -g / 2;
-      let c2 = -f / 2;
-      let a = c1 * c1;
-      let b = c2 * c2;
-      let r = Math.sqrt(Number(a) + Number(b) - Number(c));
+      let c1,c2,r;
+      if(g===0 && f===0)
+      {
+        c1 =0;
+        c2 =0;
+        // r = Math.sqrt(Math.abs(c))
+        r =2
+      }
+      else
+      {
+        c1 = -g / 2;
+        c2 = -f / 2;
+        let a = c1 * c1;
+        let b = c2 * c2;
+        r = Math.sqrt(Number(a) + Number(b) - Number(c));
   
+      }
       return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
     }
 
@@ -139,8 +160,10 @@ class Circle {
     let C1C2 = Number(distance(C1[0],C1[1],C2[0],C2[1]));
 
     let r1r2 = Number(C1[2]) + Number(C2[2]);
+    let a = Math.abs(r1r2);
     let R1R2 = Number(C1[2]) - Number(C2[2]);
-     return[C1C2.toFixed(2), Math.abs(r1r2.toFixed(2)), Math.abs(R1R2.toFixed(2))];
+    let a2 = Math.abs(R1R2);
+     return[C1C2.toFixed(2), a.toFixed(2), a2.toFixed(2)];
 
   }
 }

@@ -74,25 +74,28 @@ const Nopointstangents = () => {
     let y = result[1];
     let z = result[2];
     let final = ``;
+    console.log(x);
+    console.log(y);
+    console.log(z);
     if(x>y)
     {
-        final = `\\displaylines{C_1C_2 = ${x}, |r_1+r2_2| = ${y} \\\\ Number of common Tangents = 4}`;
+        final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\\\ Since, \\hspace{.15cm} C_1C_2 >r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} lie \\hspace{.15cm} completely \\hspace{.15cm} detached \\hspace{.15cm} from \\hspace{.15cm} one \\hspace{.15cm} another  \\\\Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 4}`;
     }
     else if(x === y)
     {
-      final = `\\displaylines{C_1C_2 = ${x}, |r_1+r2_2| = ${y} \\\\ Number of common Tangents = 3}`;
+      final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\\\ Since, \\hspace{.15cm} C_1C_2 = r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} touch \\hspace{.15cm}  one \\hspace{.15cm} another \\hspace{.15cm} externally \\\\ Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 3}`;
     }
     else if(x === z)
     {
-      final = `\\displaylines{C_1C_2 = ${x}, |r_1+r2_2| = ${y} \\\\ Number of common Tangents = 1}`;
+      final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} |r_1-r_2| = ${z} \\\\ Since, \\hspace{.15cm} C_1C_2 = |r_1-r_2|  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} touch \\hspace{.15cm}  one \\hspace{.15cm} another \\hspace{.15cm} internally \\\\ Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 1}`;
     }
     else if(z <x && x<y)
     {
-      final = `\\displaylines{C_1C_2 = ${x}, |r_1+r2_2| = ${y} \\\\ Number of common Tangents = 2}`;
+      final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\hspace{.5cm} |r_1-r_2| = ${z} \\\\ Since, \\hspace{.15cm} |r_1-r_2| < C_1C_2 < r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} intersect \\hspace{.15cm}  each \\hspace{.15cm} other \\\\ Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 2}`;
     }
     else if(x<z)
     {
-      final = `\\displaylines{C_1C_2 = ${x}, |r_1+r2_2| = ${y} \\\\ Number of common Tangents = 1}`;
+      final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} |r_1-r_2| = ${z} \\\\ Since, \\hspace{.15cm} C_1C_2 < |r_1-r_2|  \\hspace{.15cm} one \\hspace{.15cm} circle \\hspace{.15cm} lies \\hspace{.15cm} completely \\hspace{.15cm} inside \\hspace{.15cm} the \\hspace{.15cm} other \\hspace{.15cm} circle  \\\\Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 0}`;
     }
 
     let c = <MathComponent tex={final} />;
@@ -117,7 +120,7 @@ const Nopointstangents = () => {
   return (
     <div>
       <TitleTemplate
-        title={"Find the Relative position of two Circles and Number of common Tangents"}
+        title={"Relative position of two Circles and Number of common Tangents"}
         type={"twocircles"}
         valueA={coeficient.g1}
         valueB={coeficient.f1}
