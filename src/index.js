@@ -56,6 +56,8 @@ import Intpair from './pages/line/intpair';
 import Pairfromlines from './pages/line/pairfromlines';
 import Eqlinenormal from './pages/line/eqlinenormal';
 import Eqnoftangent from './pages/circle/eqnoftangent';
+import Checkconjugate from './pages/circle/checkconjugate';
+import Nopointstangents from './pages/circle/nopointstangents';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -114,6 +116,8 @@ root.render(
         <Route path="powerofpoint" element={<Powerofpoint />}></Route>
         <Route path="lengthoftangent" element={<Lengthoftangent />}></Route>
         <Route path="areacircum" element={<Areacircum />}></Route>
+        <Route path="checkconjugate" element={<Checkconjugate />}></Route>
+        <Route path="nopointstangents" element={<Nopointstangents />}></Route>
 
 
         {/*                Parabola                  */}
