@@ -32,9 +32,13 @@ const ResultTemp = ({
 
 }) => {
   return (
-    <div className="border base:text-[15px] max-w-[1800px] md:text-[25px] lg:text-[30px] lg:p-5 base:p-2 border-black flex flex-col">
+    <div className="border base:text-[15px] max-w-[1800px] md:text-[25px] lg:text-[30px] lg:p-5 base:p-0 border-black flex flex-col">
       <div className="text-start">
         {" "}
+        <div className="flex flex-row">
+          <div className="result">{title8}</div>
+          <div className="border border-black w-[50rem] min-w-[7rem] px-[7px] base:text-[10px] lg:text-[25px]">{<MathComponent tex={`${h}`} />}</div>
+        </div>
        
         <div className="flex flex-row">
           <div className="result">{title1}</div>
@@ -64,10 +68,6 @@ const ResultTemp = ({
         <div className="flex flex-row">
           <div className="result">{title7}</div>
           <div className="result">{<MathComponent tex={`${g}`} />}</div>
-        </div>
-        <div className="flex flex-row">
-          <div className="result">{title8}</div>
-          <div className="result">{<MathComponent tex={`${h}`} />}</div>
         </div>
         <div className="flex flex-row">
           <div className="result">{title9}</div>

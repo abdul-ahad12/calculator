@@ -114,11 +114,45 @@ const AttributesEl = () => {
 
     setresult(final);
   };
+const firstcheck=()=>{
+  eqInput.l==="0"||eqInput.m==="0"?alert("The Equation entered is not of Hyperbola"):check()
+}
+
+  const check=()=>{
+    let nn = eqInput.n / eqInput.l;
+    //    let mm=m/m
+    let oo = eqInput.o / eqInput.m;
+    //this is alpha
+    let aa = -1 * (nn / 2);
+    //this is beta
+    let bb = -1 * (oo / 2);
+    //this is the coeeficient we are dividing with
+    let c =
+      -1 * eqInput.p + eqInput.l * (Number(aa) * Number(aa)) + eqInput.m * (Number(bb) * Number(bb));
+      if (eqInput.l <0 ) {
+        //this is a^2
+      let a = -1*(c / eqInput.l);
+      //this is b^2
+      let b = (c / eqInput.m);
+      console.log(a)
+      console.log(b)
+
+      a<0||b<0?alert("The Equation entered is not of Hyperbola"):resultDumm()
+  }
+  else{
+    let a = (c /  eqInput.l);
+    //this is b^2
+    let b = -1*(c /  eqInput.m);
+
+      a<0||b<0?alert("The Equation entered is not of Hyperbola"):resultDumm()
+
+  }
+}
 
   const onResult = () => {
     eqInput.l === "" || eqInput.m === ""
       ? alert("Enter all inputs")
-      : resultDumm();
+      : firstcheck();
     // setvariables({
     //     ax:"",
     //     ay:"",

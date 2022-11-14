@@ -713,7 +713,7 @@ const InputTemplate = ({
 
     case "ellipse":
       return (
-        <div className="flex text=[2rem] overflow-hidden lg:scrollbar-hide overflow-x-scroll max-w-[80vw] flex-col gap-8">
+        <div className="flex text=[2rem] max-w-[80vw] flex-col gap-8">
           <div className="flex gap-2 flex-row items-center">
             <div>
               <MathComponent tex={"Eqn: "} />

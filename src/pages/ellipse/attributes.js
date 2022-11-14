@@ -85,11 +85,11 @@ const Attributes = () => {
         e={e}
         f={f}
         g={g}
-        h={h}
+        h={l}
         i={i}
         j={j}
         k={k}
-        l={l}
+        l={h}
         title1={"Length of Major Axis"}
         title2={"Length of Minor Axis"}
         title3={"Length of Latus rectrum"}
@@ -97,11 +97,11 @@ const Attributes = () => {
         title5={"e"}
         title6={"Foci"}
         title7={"Equation of directrices"}
-        title8={"Vertices"}
+        title12={"Vertices"}
         title9={"Equation of Major Axis"}
         title10={"Equation of Minor Axis"}
         title11={"Equation of Latus rectrum"}
-        title12={"Standard Form"}
+        title8={"Standard Form"}
    
       />
     );
@@ -109,10 +109,36 @@ const Attributes = () => {
     setresult(final);
   };
 
+  const check=()=>{
+    if(eqInput.l==="0"||eqInput.m==="0"){
+      return alert("The equation entered is not of Ellipse")
+    }
+    
+
+    let nn = eqInput.n / eqInput.l;
+    //    let mm=m/m
+    let oo = eqInput.o / eqInput.m;
+    //this is alpha
+    let aa = -1 * (nn / 2);
+    //this is beta
+    let bb = -1 * (oo / 2);
+    //this is the coeeficient we are dividing with
+    let c =
+      -1 * eqInput.p + eqInput.l * (Number(aa) * Number(aa)) + eqInput.m * (Number(bb) * Number(bb));
+    //this is a^2
+    let a = c / eqInput.l;
+    //this is b^2
+    let b = c / eqInput.m;
+    console.log(a)
+    console.log(b)
+    a<0||b<0?alert("The equation entered is not of Ellipse"):resultDumm()
+
+  }
+
   const onResult = () => {
     eqInput.l === "" || eqInput.m === ""
       ? alert("Enter all inputs")
-      : resultDumm();
+      : check();
     // setvariables({
     //     ax:"",
     //     ay:"",

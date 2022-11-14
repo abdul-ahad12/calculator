@@ -54,6 +54,8 @@ const AttributesPara = () => {
   };
 
   const resultDumm = () => {
+
+  
     const result = parabola.attributes(
       eqInput.l,
       eqInput.m,
@@ -102,16 +104,29 @@ const AttributesPara = () => {
     setresult(final);
   };
 
+  const check=()=>{
+// eqInput.l==1?alert("hello"):alert("bye")
+
+    if(eqInput.l!=0){
+      eqInput.m==0?resultDumm():alert("Coeficient of x^2 or y^2 should be zero ")
+    }
+    else{
+      eqInput.m!=0?resultDumm():alert("Coeficient of x^2 or y^2 should be zero ")
+
+    }
+  }
+  
   const onResult = () => {
     eqInput.l === "" ||
     eqInput.m === "" ||
     eqInput.n === "" ||
     eqInput.o === "" ||
     eqInput.p === ""
-      ? alert("Enter all inputs")
-      : resultDumm();
+    ? alert("Enter all inputs")
+    : check()
+
     // setvariables({
-    //     ax:"",
+      //     ax:"",
     //     ay:"",
     //     bx:"",
     //     by:"",
@@ -120,7 +135,8 @@ const AttributesPara = () => {
   };
   // const s = "Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r";
   // const f2 = <MathComponent tex={s} />;
-
+ 
+  
   return (
     <div>
       {" "}
