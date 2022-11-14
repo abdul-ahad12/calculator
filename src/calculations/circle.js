@@ -1,5 +1,5 @@
 class Circle {
-  constructor(ax, ay, bx, by, g, f, c, g1, f1, c1) {
+  constructor(a,b, ax, ay, bx, by, g, f, c, g1, f1, c1) {
     this.ax = ax;
     this.ay = ay;
     this.bx = bx;
@@ -9,27 +9,25 @@ class Circle {
     this.c = c;
     this.g1 = g1;
     this.f1 = f1;
-    this.c1 = c1
+    this.c1 = c1;
+    this.a = a;
+    this.b = b;
   }
 
   cenAndrad(g, f, c) {
-    let c1,c2,r;
-      if(g===0 && f===0)
-      {
-        c1 =0;
-        c2 =0;
-        r = -1 * Math.sqrt(c)
-      }
-      else
-      {
-        c1 = -g / 2;
-        c2 = -f / 2;
-        let a = c1 * c1;
-        let b = c2 * c2;
-        r = Math.sqrt(Number(a) + Number(b) - Number(c));
-  
-      }
-      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    let c1, c2, r;
+    if (g === 0 && f === 0) {
+      c1 = 0;
+      c2 = 0;
+      r = -1 * Math.sqrt(c);
+    } else {
+      c1 = -g / 2;
+      c2 = -f / 2;
+      let a = c1 * c1;
+      let b = c2 * c2;
+      r = Math.sqrt(Number(a) + Number(b) - Number(c));
+    }
+    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
   }
 
   eqFromCR(c1, c2, r) {
@@ -123,48 +121,73 @@ class Circle {
     return [a];
   }
 
-  nopointstangents(g,f,c,g1,f1,c1) 
-  {
+  nopointstangents(g, f, c, g1, f1, c1) {
     function distance(ax, ay, bx, by) {
       let first = Number(ax) - Number(bx);
       let second = Number(ay) - Number(by);
       let result = Math.sqrt(first * first + second * second);
-  
+
       return result.toFixed(2);
     }
 
     function cenAndrad(g, f, c) {
-      let c1,c2,r;
-      if(g===0 && f===0)
-      {
-        c1 =0;
-        c2 =0;
-        // r = Math.sqrt(Math.abs(c))
-        r =2
-      }
-      else
-      {
+      let c1, c2, r;
+      if (g === 0 && f === 0) {
+        c1 = 0;
+        c2 = 0;
+        r = Math.sqrt(Math.abs(c));
+      } else {
         c1 = -g / 2;
         c2 = -f / 2;
         let a = c1 * c1;
         let b = c2 * c2;
         r = Math.sqrt(Number(a) + Number(b) - Number(c));
-  
       }
       return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
     }
 
-    let C1 = cenAndrad(g,f,c);
-    let C2 = cenAndrad(g1,f1,c1);
-    
-    let C1C2 = Number(distance(C1[0],C1[1],C2[0],C2[1]));
+    let C1 = cenAndrad(g, f, c);
+    let C2 = cenAndrad(g1, f1, c1);
+
+    let C1C2 = Number(distance(C1[0], C1[1], C2[0], C2[1]));
 
     let r1r2 = Number(C1[2]) + Number(C2[2]);
     let a = Math.abs(r1r2);
     let R1R2 = Number(C1[2]) - Number(C2[2]);
     let a2 = Math.abs(R1R2);
-     return[C1C2.toFixed(2), a.toFixed(2), a2.toFixed(2)];
+    return [C1C2.toFixed(2), a.toFixed(2), a2.toFixed(2)];
+  }
 
+  poleofline(a,b,c,g1,f1,c1)
+  {
+    function radius(g, f, c) {
+      let c1, c2, r;
+      if (g === 0 && f === 0) {
+        r = Math.sqrt(Math.abs(c));
+      } else {
+        c1 = -g / 2;
+        c2 = -f / 2;
+        let a = c1 * c1;
+        let b = c2 * c2;
+        r = Math.sqrt(Number(a) + Number(b) - Number(c));
+      }
+      return [r.toFixed(3)];
+    }
+
+    let C = radius(g1,f1,c1);
+
+    let g = g1/2;
+    let f = f1/2;
+
+    let deno = (Number(a)*Number(g)) + (Number(b)*Number(f)) -Number(c);
+
+    let numx = Number(a) * Number(C[0]) * Number(C[0]);
+    let numy = Number(b) * Number(C[0]) * Number(C[0]);
+
+    let px = -Number(g) + Number((Number(numx)/Number(deno)));
+    let py = -Number(f) + Number((Number(numy)/Number(deno)));
+
+    return[px.toFixed(2),py.toFixed(2)];
   }
 }
 
