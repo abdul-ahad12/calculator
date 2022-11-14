@@ -1,5 +1,5 @@
 class Circle {
-  constructor(ax, ay, bx, by, g, f, c, g1, f1, c1) {
+  constructor(a,b, ax, ay, bx, by, g, f, c, g1, f1, c1) {
     this.ax = ax;
     this.ay = ay;
     this.bx = bx;
@@ -10,6 +10,8 @@ class Circle {
     this.g1 = g1;
     this.f1 = f1;
     this.c1 = c1;
+    this.a = a;
+    this.b = b;
   }
 
   cenAndrad(g, f, c) {
@@ -19,7 +21,7 @@ class Circle {
     let b = c2 * c2;
     let r = Math.sqrt(Number(a) + Number(b) - Number(c));
 
-    return [Number(c1.toFixed(3)), Number(c2.toFixed(3)), Number(r.toFixed(3))];
+    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
   }
 
   eqFromCR(c1, c2, r) {
@@ -121,13 +123,14 @@ class Circle {
     return [Number(a.toFixed(2))];
   }
 
-  nopointstangents(g, f, c, g1, f1, c1) {
+  nopointstangents(g,f,c,g1,f1,c1) 
+  {
     function distance(ax, ay, bx, by) {
       let first = Number(ax) - Number(bx);
       let second = Number(ay) - Number(by);
       let result = Math.sqrt(first * first + second * second);
-
-      return Number(result.toFixed(2));
+  
+      return result.toFixed(2);
     }
 
     function cenAndrad(g, f, c) {
@@ -136,26 +139,20 @@ class Circle {
       let a = c1 * c1;
       let b = c2 * c2;
       let r = Math.sqrt(Number(a) + Number(b) - Number(c));
-
-      return [
-        Number(c1.toFixed(3)),
-        Number(c2.toFixed(3)),
-        Number(r.toFixed(3)),
-      ];
+  
+      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
     }
 
-    let C1 = cenAndrad(g, f, c);
-    let C2 = cenAndrad(g1, f1, c1);
-
-    let C1C2 = Number(distance(C1[0], C1[1], C2[0], C2[1]));
+    let C1 = cenAndrad(g,f,c);
+    let C2 = cenAndrad(g1,f1,c1);
+    
+    let C1C2 = Number(distance(C1[0],C1[1],C2[0],C2[1]));
 
     let r1r2 = Number(C1[2]) + Number(C2[2]);
+    let a = Math.abs(r1r2);
     let R1R2 = Number(C1[2]) - Number(C2[2]);
-    return [
-      Number(C1C2.toFixed(2)),
-      Number(Math.abs(r1r2.toFixed(2))),
-      Number(Math.abs(R1R2.toFixed(2))),
-    ];
+     return[C1C2.toFixed(2), Math.abs(r1r2.toFixed(2)), Math.abs(R1R2.toFixed(2))];
+
   }
 }
 

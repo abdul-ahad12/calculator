@@ -50,10 +50,13 @@ const Circle = () => {
       link: "/checkconjugate",
     },
     {
-      title: "Find the Relative position of two Circles and Number of common Tangents",
+      title: "Relative position of two Circles and Number of common Tangents",
       link: "/nopointstangents",
     },
-
+    {
+      title: "Pole of a line with respect to a circle",
+      link: "/poleofline",
+    },
 
   ];
 
