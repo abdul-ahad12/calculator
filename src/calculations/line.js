@@ -24,43 +24,41 @@ class Line {
     let second = Number(ay) - Number(by);
     let result = Math.sqrt(first * first + second * second);
 
-    return result.toFixed(2);
+    return Number(result.toFixed(2));
   }
   slope(ax, ay, bx, by) {
     let first = Number(by) - Number(ay);
     let second = Number(bx) - Number(ax);
     let result = first / second;
 
-    return result.toFixed(2);
+    return Number(result.toFixed(2));
   }
 
   pointOfint(a1, b1, c1, a2, b2, c2) {
-      let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
-      let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
+    let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
+    let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
 
-      return [x.toFixed(), y.toFixed(2)];
+    return [Number(x.toFixed()), Number(y.toFixed(2))];
   }
 
   intercepts(a1, b1, c1) {
     let xint = -c1 / a1;
     let yint = -c1 / b1;
 
-    return [xint.toFixed(2), yint.toFixed(2)];
+    return [Number(xint.toFixed(2)), Number(yint.toFixed(2))];
   }
   bisector(ax, ay, bx, by) {
     let m1 = (Number(ax) + Number(bx)) / 2;
     let m2 = (Number(ay) + Number(by)) / 2;
 
-    let a = ((Number(by) - Number(ay)) / (Number(bx) - Number(ax)));
-    let m = -1/a;
+    let a = (Number(by) - Number(ay)) / (Number(bx) - Number(ax));
+    let m = -1 / a;
     let b = m2 - m * m1;
-    if (ax - bx === 0 )
-    {
-      b = (Number(ay) +Number(by))/2;
+    if (ax - bx === 0) {
+      b = (Number(ay) + Number(by)) / 2;
     }
-    if (ay -by ===0)
-    {
-      b = (Number(ax) + Number(bx))/2;
+    if (ay - by === 0) {
+      b = (Number(ax) + Number(bx)) / 2;
     }
 
     return [Number(m.toFixed(2)), b.toFixed(2)];
@@ -74,7 +72,7 @@ class Line {
   pointslopeform(m, ax, ay) {
     let c = Number(ay) - Number(m) * Number(ax);
 
-    return [m, c];
+    return [Number(m.toFixed(2)), Number(c.toFixed(2))];
   }
 
   imageofpoint(ax, ay, a1, b1, c1) {
@@ -85,7 +83,7 @@ class Line {
     let h = c * a1 + Number(ax);
     let k = c * b1 + Number(ay);
 
-    return [h, k];
+    return [Number(h.toFixed(2)), Number(k.toFixed(2))];
   }
 
   footofperpendicular(ax, ay, a1, b1, c1) {
@@ -96,7 +94,7 @@ class Line {
     let h = c * a1 + Number(ax);
     let k = c * b1 + Number(ay);
 
-    return [h, k];
+    return [Number(h.toFixed(2)), Number(k.toFixed(2))];
   }
 
   perpendiculardist(ax, ay, a1, b1, c1) {
@@ -105,7 +103,7 @@ class Line {
 
     let d = Number(a / b);
 
-    return [d];
+    return [Number(d.toFixed(2))];
   }
 
   anglebwlines(a1, b1, c1, a2, b2, c2) {
@@ -118,7 +116,7 @@ class Line {
 
     let x = d * (180 / Math.PI);
 
-    return [c.toFixed(2), x.toFixed(2)];
+    return [Number(c.toFixed(2)), Number(x.toFixed(2))];
   }
 
   paralinesdist(a1, b1, c1, a2, b2, c2) {
@@ -128,7 +126,7 @@ class Line {
 
       let c = a / b;
 
-      return [c.toFixed(2)];
+      return [Number(c.toFixed(2))];
     }
   }
 
@@ -137,7 +135,7 @@ class Line {
     let m = a * (Number(a) + Number(b));
     let n = 2 * Math.sqrt(l / m);
 
-    return [n.toFixed(2)];
+    return [Number(n.toFixed(2))];
   }
 
   anglebwpairlines(a, h, b, g, f, c) {
@@ -152,7 +150,7 @@ class Line {
 
     let x = d * (180 / Math.PI);
 
-    return [a3.toFixed(2), x.toFixed(2)];
+    return [Number(a3.toFixed(2)), Number(x.toFixed(2))];
   }
 
   intpair(a, h, b, g, f, c) {
@@ -163,7 +161,7 @@ class Line {
     let a4 = a2 / a1;
     let a5 = a3 / a1;
 
-    return [a4, a5];
+    return [Number(a4.toFixed(2)), Number(a5.toFixed(2))];
   }
 
   pairfromlines(a1, b1, c1, a2, b2, c2) {
@@ -174,7 +172,14 @@ class Line {
     let f = Number(b1 * c2) + Number(b2 * c1);
     let c = Number(c1 * c2);
 
-    return [a, h, b, g, f, c];
+    return [
+      Number(a.toFixed(2)),
+      Number(h.toFixed(2)),
+      Number(b.toFixed(2)),
+      Number(g.toFixed(2)),
+      Number(f.toFixed(2)),
+      Number(c.toFixed(2)),
+    ];
   }
 
   eqlinenormal(a1, b1, c1) {
@@ -190,7 +195,7 @@ class Line {
     let x = d * (180 / Math.PI);
     let y = e * (180 / Math.PI);
 
-    return [x.toFixed(2), y.toFixed(2), c.toFixed(2)];
+    return [Number(x.toFixed(2)), Number(y.toFixed(2)), Number(c.toFixed(2))];
   }
 }
 

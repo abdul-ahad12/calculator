@@ -78,11 +78,11 @@ if(aa===0&&bb===0){
       }`;
 
       return [
-        LgMajor.toFixed(2),
-        lgMinor.toFixed(2),
-        lgLactur.toFixed(2),
+        Number(LgMajor.toFixed(2)),
+        Number(lgMinor.toFixed(2)),
+        Number(lgLactur.toFixed(2)),
         center,
-        ee.toFixed(2),
+        Number(ee.toFixed(2)),
         foci,
         eqDirect,
         vertices,

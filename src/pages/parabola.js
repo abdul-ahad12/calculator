@@ -7,11 +7,11 @@ const Parabola = () => {
         title: "Find the attributes of parabola",
         link: "/attributespara",
       },
-        {
-          title: "Find the equation of parabola with given focus and vertex",
+        // {
+        //   title: "Find the equation of parabola with given focus and vertex",
     
-          link: "/vertexfocusx",
-        },
+        //   link: "/vertexfocusx",
+        // },
        
       ];
   return (

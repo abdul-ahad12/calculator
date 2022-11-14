@@ -8,10 +8,10 @@ const Ellipse = () => {
     
           link: "/attributes",
         },
-        {
-          title: "Area and Circumference of an Ellipse from equation",
-          link: "/areacircumellipse",
-        },
+        // {
+        //   title: "Area and Circumference of an Ellipse from equation",
+        //   link: "/areacircumellipse",
+        // },
         
      
       ];

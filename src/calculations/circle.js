@@ -9,7 +9,7 @@ class Circle {
     this.c = c;
     this.g1 = g1;
     this.f1 = f1;
-    this.c1 = c1
+    this.c1 = c1;
   }
 
   cenAndrad(g, f, c) {
@@ -19,14 +19,14 @@ class Circle {
     let b = c2 * c2;
     let r = Math.sqrt(Number(a) + Number(b) - Number(c));
 
-    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    return [Number(c1.toFixed(3)), Number(c2.toFixed(3)), Number(r.toFixed(3))];
   }
 
   eqFromCR(c1, c2, r) {
     let g = -2 * c1;
     let f = -2 * c2;
     let c = c1 * c1 + c2 * c2 - r * r;
-    return [g.toFixed(3), f.toFixed(3), c.toFixed(3)];
+    return [Number(g.toFixed(3)), Number(f.toFixed(3)), Number(c.toFixed(3))];
   }
 
   gentostand(g, f, c) {
@@ -35,7 +35,11 @@ class Circle {
     let r = Math.sqrt(c1 * c1 + c2 * c2 - c);
     let r2 = r * r;
 
-    return [c1, c2, r2];
+    return [
+      Number(c1.toFixed(2)),
+      Number(c2.toFixed(2)),
+      Number(r2.toFixed(2)),
+    ];
   }
 
   eqfromPC(ax, ay, x, y) {
@@ -45,8 +49,7 @@ class Circle {
     let c = x * x + y * y - r * r;
     let g = -2 * x;
     let f = -2 * y;
-
-    return [g, f, c];
+    return [Number(g.toFixed(3)), Number(f.toFixed(3)), Number(c.toFixed(3))];
   }
   lengthXY(g, f, c) {
     let a = g / 2;
@@ -54,7 +57,7 @@ class Circle {
     let x = 2 * Math.sqrt(Number(a * a) - Number(c));
     let y = 2 * Math.sqrt(Number(b * b) - Number(c));
 
-    return [x.toFixed(2), y.toFixed(2)];
+    return [Number(x.toFixed(2)), Number(y.toFixed(2))];
   }
   parametriceq(g, f, c) {
     let c1 = -g / 2;
@@ -62,7 +65,7 @@ class Circle {
 
     let r = Math.sqrt(c1 * c1 + c2 * c2 - c);
 
-    return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    return [Number(c1.toFixed(3)), Number(c2.toFixed(3)), Number(r.toFixed(3))];
   }
 
   powerofpoint(x, y, g, f, c) {
@@ -78,7 +81,7 @@ class Circle {
         Number(c)
     );
 
-    return [a];
+    return [Number(a.toFixed(2))];
   }
 
   eqnoftangent(x, y, g, f, c) {
@@ -89,7 +92,12 @@ class Circle {
 
     let o = -(-n * x) - m * y;
 
-    return [m, n, l, o];
+    return [
+      Number(m.toFixed(2)),
+      Number(n.toFixed(2)),
+      Number(l.toFixed(2)),
+      Number(o.toFixed(2)),
+    ];
   }
   areacircum(g, f, c) {
     let c1 = -g / 2;
@@ -100,7 +108,7 @@ class Circle {
     let area = Math.PI * r * r;
     let circum = 2 * Math.PI * r;
 
-    return [area.toFixed(2), circum.toFixed(2)];
+    return [Number(area.toFixed(2)), Number(circum.toFixed(2))];
   }
 
   checkconjugate(ax, ay, bx, by, g, f, c) {
@@ -110,17 +118,16 @@ class Circle {
         Number(g / 2) * (Number(ax) + Number(ay)) +
         Number(f / 2) * (Number(bx) + Number(by)) +
         Number(c));
-    return [a];
+    return [Number(a.toFixed(2))];
   }
 
-  nopointstangents(g,f,c,g1,f1,c1) 
-  {
+  nopointstangents(g, f, c, g1, f1, c1) {
     function distance(ax, ay, bx, by) {
       let first = Number(ax) - Number(bx);
       let second = Number(ay) - Number(by);
       let result = Math.sqrt(first * first + second * second);
-  
-      return result.toFixed(2);
+
+      return Number(result.toFixed(2));
     }
 
     function cenAndrad(g, f, c) {
@@ -129,19 +136,26 @@ class Circle {
       let a = c1 * c1;
       let b = c2 * c2;
       let r = Math.sqrt(Number(a) + Number(b) - Number(c));
-  
-      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+
+      return [
+        Number(c1.toFixed(3)),
+        Number(c2.toFixed(3)),
+        Number(r.toFixed(3)),
+      ];
     }
 
-    let C1 = cenAndrad(g,f,c);
-    let C2 = cenAndrad(g1,f1,c1);
-    
-    let C1C2 = Number(distance(C1[0],C1[1],C2[0],C2[1]));
+    let C1 = cenAndrad(g, f, c);
+    let C2 = cenAndrad(g1, f1, c1);
+
+    let C1C2 = Number(distance(C1[0], C1[1], C2[0], C2[1]));
 
     let r1r2 = Number(C1[2]) + Number(C2[2]);
     let R1R2 = Number(C1[2]) - Number(C2[2]);
-     return[C1C2.toFixed(2), Math.abs(r1r2.toFixed(2)), Math.abs(R1R2.toFixed(2))];
-
+    return [
+      Number(C1C2.toFixed(2)),
+      Number(Math.abs(r1r2.toFixed(2))),
+      Number(Math.abs(R1R2.toFixed(2))),
+    ];
   }
 }
 

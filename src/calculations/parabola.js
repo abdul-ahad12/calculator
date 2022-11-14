@@ -13,60 +13,80 @@ class Parabola {
       let oo = o / m;
       let pp = p / m;
       let aa = oo / 2;
-      let constant = -1 * pp + (Number(aa)*Number(aa));
+      let constant = -1 * pp + Number(aa) * Number(aa);
       //value of a
-      let a = (nn) / 4;
+      let a = nn / 4;
       //value of beta
       let beta = -1 * aa;
       //value of alpha
-      let alpha = constant / (nn);
-      let vertex=`(${Number(alpha.toFixed(2))},${Number(beta.toFixed(2))})`
-      let focus=`(${((-1)*a)+Number(alpha)},${beta})`
-      let eqaxis=`y=${beta}`
-      let eqdirec=`x=${alpha+a}`
-      let eqlatus=`x=${alpha-a}`
-      let lglatus=`${4*a}`
-      let eqtanget=`x=${alpha}`
-      let standform=`((y-(${beta}))^2=${-1*4*a}(x-${alpha}))`
+      let alpha = constant / nn;
+      let vertex = `(${Number(alpha.toFixed(2))},${Number(beta.toFixed(2))})`;
+      let focus = `(${
+        -1 * Number(a.toFixed(2)) + Number(alpha.toFixed(2))
+      },${Number(beta.toFixed(2))})`;
+      let eqaxis = `y=${Number(beta.toFixed(2))}`;
+      let eqdirec = `x=${Number(alpha.toFixed(2)) + Number(a.toFixed(2))}`;
+      let eqlatus = `x=${Number(alpha.toFixed(2)) - Number(a.toFixed(2))}`;
+      let lglatus = `${4 * Number(a.toFixed(2))}`;
+      let eqtanget = `x=${Number(alpha.toFixed(2))}`;
+      let standform = `((y-(${Number(beta.toFixed(2))}))^2=${-1 * 4 * Number(a.toFixed(2))}(x-${Number(alpha.toFixed(2))}))`;
 
-
-      return [vertex,focus,eqaxis,eqdirec,eqlatus,lglatus,eqtanget,standform,"","","",""]
-    }
-    else if(Number(m)===0)
-    {
+      return [
+        vertex,
+        focus,
+        eqaxis,
+        eqdirec,
+        eqlatus,
+        lglatus,
+        eqtanget,
+        standform,
+        "",
+        "",
+        "",
+        "",
+      ];
+    } else if (Number(m) === 0) {
       let nn = n / l;
       let oo = o / l;
       let pp = p / l;
       let aa = nn / 2;
-      let constant = -1 * pp + (Number(aa)*Number(aa));
+      let constant = -1 * pp + Number(aa) * Number(aa);
       //value of a
-      let a = (oo) / 4;
+      let a = oo / 4;
       //value of alpha
       let alpha = -1 * aa;
       //value of beta
-      let beta = constant / (oo);
-      let vertex=`(${alpha},${beta})`
-      let focus=`(${alpha},${-1*a+Number(beta
-        )})`
-      let eqaxis=`x=${alpha}`
-      let eqdirec=`y=${beta+a}`
-      let eqlatus=`x=${beta-a}`
-      let lglatus=`${4*a}`
-      let eqtanget=`x=${alpha}`
-      let standform=`((x-${alpha})^2=${(-1)*4*a}(y-${beta}))`
+      let beta = constant / oo;
+      let vertex = `(${Number(alpha.toFixed(2))},${Number(beta.toFixed(2))})`;
+      let focus = `(${Number(alpha.toFixed(2))},${-1 * Number(a.toFixed(2)) + Number(Number(beta.toFixed(2)))})`;
+      let eqaxis = `x=${Number(alpha.toFixed(2))}`;
+      let eqdirec = `y=${Number(alpha.toFixed(2)) + Number(a.toFixed(2))}`;
+      let eqlatus = `x=${Number(beta.toFixed(2)) - Number(a.toFixed(2))}`;
+      let lglatus = `${4 * Number(a.toFixed(2))}`;
+      let eqtanget = `x=${Number(alpha.toFixed(2))}`;
+      let standform = `((x-(${Number(alpha.toFixed(2))}))^2=${-1 * 4 * Number(a.toFixed(2))}(y-(${Number(beta.toFixed(2))})))`;
 
-
-// return [constant,alpha,beta,a]
-      return [vertex,focus,eqaxis,eqdirec,eqlatus,lglatus,eqtanget,standform,"","","",""]
-    }
-    else{
-      return ["wrong input"]
+      // return [constant,alpha,beta,a]
+      return [
+        vertex,
+        focus,
+        eqaxis,
+        eqdirec,
+        eqlatus,
+        lglatus,
+        eqtanget,
+        standform,
+        "",
+        "",
+        "",
+        "",
+      ];
+    } else {
+      return ["wrong input"];
     }
   }
 
-eqfocver(a,b,c,d){
-
-}
+  eqfocver(a, b, c, d) {}
 }
 
 export default Parabola;
