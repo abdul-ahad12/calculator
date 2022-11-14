@@ -49,6 +49,10 @@ const Circle = () => {
       title: "Check if two points are conjugate with respect to a circle",
       link: "/checkconjugate",
     },
+    {
+      title: "Find the Relative position of two Circles and Number of common Tangents",
+      link: "/nopointstangents",
+    },
 
 
   ];
