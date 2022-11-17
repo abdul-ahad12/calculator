@@ -149,11 +149,44 @@ class Circle {
     let C1C2 = Number(distance(C1[0],C1[1],C2[0],C2[1]));
 
     let r1r2 = Number(C1[2]) + Number(C2[2]);
-    let a = Math.abs(r1r2);
     let R1R2 = Number(C1[2]) - Number(C2[2]);
      return[C1C2.toFixed(2), Math.abs(r1r2.toFixed(2)), Math.abs(R1R2.toFixed(2))];
 
   }
+
+  poleofline(a,b,c,g1,f1,c1)
+  {
+
+    function radius(g, f, c) {
+      let c1, c2, r;
+      if (g === 0 && f === 0) {
+        r = Math.sqrt(Math.abs(c));
+      } else {
+        c1 = -g / 2;
+        c2 = -f / 2;
+        let a = c1 * c1;
+        let b = c2 * c2;
+        r = Math.sqrt(Number(a) + Number(b) - Number(c));
+      }
+      return [r.toFixed(3)];
+    }
+
+    let C = radius(g1,f1,c1);
+
+    let g = g1/2;
+    let f = f1/2;
+
+    let deno = (Number(a)*Number(g)) + (Number(b)*Number(f)) -Number(c);
+
+    let numx = Number(a) *Number(C[0])*Number(C[0]);
+    let numy = Number(b) *Number(C[0])*Number(C[0]);
+
+    let px = -g + (Number(numx)/Number(deno));
+    let py = -f +(Number(numy)/Number(deno));
+
+    return[px.toFixed(2),py.toFixed(2)];
+  }
+
 }
 
 export default Circle;
