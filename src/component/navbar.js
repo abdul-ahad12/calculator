@@ -22,7 +22,7 @@ const LinkItem = ({ href, text }) => {
 };
 
 const Navbar = () => {
-  const [isMenu, setisMenu] = useState(false);
+  // const [isMenu, setisMenu] = useState(false);
   const [isOpen, setOpen] = useState(false)
 
   // const openDrawer = () => {
