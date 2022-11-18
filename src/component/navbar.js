@@ -73,8 +73,8 @@ const Navbar = () => {
         <div className="flex w-full flex-row align-middle items-center md:justify-start base:justify-between h-16  md:gap-6">
           <Link to={"/"}>
             {" "}
-            <div className="flex flex-row items-center">
-              CG-<img className="w-7" src="/favicon.ico" alt="logo"></img>
+            <div className=" flex flex-row items-center">
+              <img className="mt-2 w-[3.5rem]" src="/Logo.png" alt="logo"></img>
             </div>
           </Link>
           <div
@@ -83,7 +83,7 @@ const Navbar = () => {
             <div className="w-full">
               {" "}
 
-              <div><Hamburger toggled={isOpen} toggle={setOpen} /></div>
+              <div><Hamburger size={25} toggled={isOpen} toggle={setOpen} /></div>
             </div>
           </div>
 

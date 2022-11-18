@@ -63,6 +63,7 @@ import Threepointcircle from './pages/circle/threepointcircle';
 import Anglebwcircles from './pages/circle/anglebwcircles';
 import Radicalaxis from './pages/circle/radicalaxis';
 import Radicalcentre from './pages/circle/radicalcentre';
+import Commonchord from './pages/circle/commonchord';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -128,6 +129,7 @@ root.render(
         <Route path="anglebwcircles" element={<Anglebwcircles />}></Route>
         <Route path="radicalaxis" element={<Radicalaxis />}></Route>
         <Route path="radicalcentre" element={<Radicalcentre />}></Route>
+        <Route path="commonchord" element={<Commonchord />}></Route>
 
 
         {/*                Parabola                  */}

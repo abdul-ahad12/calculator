@@ -46,15 +46,14 @@ const Eqlinenormal = () => {
   const onResult = () => {
     coeficient.a === "" || coeficient.b === "" || coeficient.c === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : zero();
   };
+
+  const zero = () => {
+    coeficient.a === "0" && coeficient.b === "0"
+    ? alert("Invalid Input! Enter proper equation of line")
+    :resultDumm();
+  }
 
   const f = '\\displaylines{Normal \\hspace{.25cm} Form: xCos(\\alpha) +ySin(\\alpha) = r \\hspace{.5cm} \\\\ \\\\ r = \\sqrt{a^2+b^2}}';
   const f1 = <MathComponent tex={f} />

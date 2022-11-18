@@ -73,6 +73,10 @@ const Circle = () => {
       title: "Radical Centre of three circles",
       link: "/radicalcentre",
     },
+    {
+      title: "Equation and Length of Common Chord",
+      link: "/commonchord",
+    },
 
   ];
 

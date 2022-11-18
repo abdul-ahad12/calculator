@@ -73,15 +73,14 @@ const Perpendiculardist = () => {
     coeficient.ab === "" ||
     coeficient.bb === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : zero();
   };
+
+  const zero = () => {
+    coeficient.ca === "0" && coeficient.ab === "0"
+    ? alert("Invalid Input! Enter proper equation of line")
+    :resultDumm();
+  }
 
   const f =
     "d = \\frac{|ax_1+by_1+c|}{\\sqrt{a^2+b^2}}";
