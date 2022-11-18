@@ -72,7 +72,7 @@ class Line {
   pointslopeform(m, ax, ay) {
     let c = Number(ay) - Number(m) * Number(ax);
 
-    return [Number(m.toFixed(2)), Number(c.toFixed(2))];
+    return [m.toFixed(2),c.toFixed(2)];
   }
 
   imageofpoint(ax, ay, a1, b1, c1) {

@@ -61,6 +61,18 @@ const Circle = () => {
       title: "Equation of circle from three points",
       link: "/threepointcircle",
     },
+    {
+      title: "Angle between two Circles",
+      link: "/anglebwcircles",
+    },
+    {
+      title: "Radical Axis of two circles",
+      link: "/radicalaxis",
+    },
+    {
+      title: "Radical Centre of three circles",
+      link: "/radicalcentre",
+    },
 
   ];
 

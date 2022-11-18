@@ -219,7 +219,7 @@ class Circle {
     var h = -g;
     var k = -f;
     var sqr_of_r = h * h + k * k - c;
-    
+
     var r = Math.sqrt(sqr_of_r);
 
     function eqFromCR(c1, c2, r) {
@@ -233,6 +233,77 @@ class Circle {
 
     return [res[0], res[1], res[2]];
   }
+
+  anglebwcircles(g, f, c, g1, f1, c1) {
+    function distance(ax, ay, bx, by) {
+      let first = Number(ax) - Number(bx);
+      let second = Number(ay) - Number(by);
+      let result = Math.sqrt(first * first + second * second);
+
+      return Number(result.toFixed(2));
+    }
+    function cenAndrad(g, f, c) {
+      let c1 = -g / 2;
+      let c2 = -f / 2;
+      let a = c1 * c1;
+      let b = c2 * c2;
+      let r = Math.sqrt(Number(a) + Number(b) - Number(c));
+
+      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    }
+
+    let C1 = cenAndrad(g, f, c);
+    let C2 = cenAndrad(g1, f1, c1);
+
+    let d = distance(C1[0], C1[1], C2[0], C2[1]);
+
+    let num = Number(d * d) - Number(C1[2] * C1[2]) - Number(C2[2] * C2[2]);
+    let denom = 2 * Number(C1[2]) * Number(C2[2]);
+
+    let x = Number(num) / Number(denom);
+
+    let a_rad = Math.acos(x);
+
+    let a_deg = a_rad * (180 / Math.PI);
+
+    return [x.toFixed(2), a_deg.toFixed(1)];
+  }
+
+  radicalaxis(g,f,c,g1,f1,c1)
+  {
+    let a = g - g1;
+    let b = f - f1;
+    let c2 = c - c1;
+
+    return[a,b,c2];
+  }
+
+  radicalcentre(g,f,c,g1,f1,c1,a,b,ax)
+  {
+    function radicalaxis(g,f,c,g1,f1,c1)
+    {
+      let a = g - g1;
+      let b = f - f1;
+      let c2 = c - c1;
+  
+      return[a,b,c2];
+    }
+
+    let L1 = radicalaxis(g,f,c,g1,f1,c1);
+    let L2 = radicalaxis(g,f,c,a,b,ax);
+
+    function pointOfint(a1, b1, c1, a2, b2, c2) {
+      let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
+      let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
+  
+      return [Number(x.toFixed(2)), Number(y.toFixed(2))];
+    }
+
+    let res = pointOfint(L1[0],L1[1],L1[2],L2[0],L2[1],L2[2]);
+
+    return[res[0],res[1]]
+  }
+
 }
 
 export default Circle;
