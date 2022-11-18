@@ -59,6 +59,10 @@ import Eqnoftangent from './pages/circle/eqnoftangent';
 import Checkconjugate from './pages/circle/checkconjugate';
 import Nopointstangents from './pages/circle/nopointstangents';
 import Poleofline from './pages/circle/poleofline';
+import Threepointcircle from './pages/circle/threepointcircle';
+import Anglebwcircles from './pages/circle/anglebwcircles';
+import Radicalaxis from './pages/circle/radicalaxis';
+import Radicalcentre from './pages/circle/radicalcentre';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -120,6 +124,10 @@ root.render(
         <Route path="checkconjugate" element={<Checkconjugate />}></Route>
         <Route path="nopointstangents" element={<Nopointstangents />}></Route>
         <Route path="poleofline" element={<Poleofline />}></Route>
+        <Route path="threepointcircle" element={<Threepointcircle />}></Route>
+        <Route path="anglebwcircles" element={<Anglebwcircles />}></Route>
+        <Route path="radicalaxis" element={<Radicalaxis />}></Route>
+        <Route path="radicalcentre" element={<Radicalcentre />}></Route>
 
 
         {/*                Parabola                  */}

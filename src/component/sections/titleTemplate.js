@@ -686,6 +686,137 @@ const InputTemplate = ({
           </div>
         );
 
+        case "threecircles":
+        return (
+          <div className="flex text=[2rem] flex-col gap-8">
+            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+              <div>
+                <MathComponent tex={"Eqn_1: "} />
+              </div>
+  
+              <div>
+                <MathComponent tex={"x^2 + y^2 +"} />{" "}
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueA}
+                onChange={onAChange}
+                placeholder="2g"
+                type="number"
+              />
+              <div className="lg:mr-3">
+                <MathComponent tex={"x +"} />
+              </div>
+  
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueB}
+                onChange={onBChange}
+                placeholder="2f"
+                type="number"
+              />
+  
+              <div className="lg:mr-3">
+                <MathComponent tex={"y +"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueC}
+                onChange={onCChange}
+                placeholder="c"
+                type="number"
+              />
+              <div className="lg:mr-3">
+                <MathComponent tex={"= 0"} />
+              </div>
+            </div>
+
+            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+              <div>
+                <MathComponent tex={"Eqn_2: "} />
+              </div>
+  
+              <div>
+                <MathComponent tex={"x^2 + y^2 +"} />{" "}
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueD}
+                onChange={onDChange}
+                placeholder="2g"
+                type="number"
+              />
+              <div className="lg:mr-3">
+                <MathComponent tex={"x +"} />
+              </div>
+  
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueE}
+                onChange={onEChange}
+                placeholder="2f"
+                type="number"
+              />
+  
+              <div className="lg:mr-3">
+                <MathComponent tex={"y +"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueF}
+                onChange={onFChange}
+                placeholder="c"
+                type="number"
+              />
+              <div className="lg:mr-3">
+                <MathComponent tex={"= 0"} />
+              </div>
+            </div>
+
+            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+              <div>
+                <MathComponent tex={"Eqn_3: "} />
+              </div>
+  
+              <div>
+                <MathComponent tex={"x^2 + y^2 +"} />{" "}
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueG}
+                onChange={onGChange}
+                placeholder="2g"
+                type="number"
+              />
+              <div className="lg:mr-3">
+                <MathComponent tex={"x +"} />
+              </div>
+  
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueH}
+                onChange={onHChange}
+                placeholder="2f"
+                type="number"
+              />
+  
+              <div className="lg:mr-3">
+                <MathComponent tex={"y +"} />
+              </div>
+              <input
+                className="rounded-[5px] w-[5rem]"
+                value={valueI}
+                onChange={onIChange}
+                placeholder="c"
+                type="number"
+              />
+              <div className="lg:mr-3">
+                <MathComponent tex={"= 0"} />
+              </div>
+            </div>
+          </div>
+        );
+
     case "centerAR":
       return (
         <div className="flex text=[2rem] flex-col gap-8">
