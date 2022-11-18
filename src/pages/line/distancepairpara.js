@@ -84,16 +84,14 @@ const Distancepairpara = () => {
     coeficient.e1 === "" ||
     coeficient.f === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_eqn();
   };
 
+  const check_eqn = () => {
+    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) >0 || (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c)===0
+    ?alert("The equation represents two imaginary lines! Enter Valid Input")
+    :resultDumm();
+  }
 
   const f ="d = 2\\sqrt{\\frac{g^2-ac}{a(a+b)}}";
   const f1 = <MathComponent tex={f} />;
