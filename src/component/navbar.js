@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <div
         className={
-          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4  p-4  bg-[#383838]" : "hidden"
+          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.1rem] gap-4 z-10 p-4  bg-[#383838]" : "hidden"
         }
       >
       {/* <div className="flex w-full justify-between">
@@ -68,13 +68,13 @@ const Navbar = () => {
             </div>
         
       </div>
-      <div className="w-[90%]  text-white flex flex-col  ">
+      <div className="w-[100%]  text-white flex flex-col  ">
         {/* navbar */}
-        <div className="flex w-full flex-row align-middle items-center md:justify-start base:justify-between h-16  md:gap-6">
+        <div className="bg-[#383838] md:pl-[4rem] fixed flex w-full flex-row align-middle items-center md:justify-start base:justify-between h-16  md:gap-6">
           <Link to={"/"}>
             {" "}
             <div className=" flex flex-row items-center">
-              <img className="mt-2 w-[3.5rem]" src="/Logo.png" alt="logo"></img>
+              <img className="mt-3 w-[4rem]" src="/Logo.png" alt="logo"></img>
             </div>
           </Link>
           <div
@@ -118,7 +118,7 @@ const Navbar = () => {
         </div>
 
         {/* Hero */}
-        <div className="w-full flex justify-center items-center flex-col h-56">
+        <div className="w-full flex justify-center items-center flex-col h-[18rem]">
           <div className="base:text-[2rem] text-center font-[500] lg:text-[3rem]">
             {" "}
             Coordinate Geometry Calculator

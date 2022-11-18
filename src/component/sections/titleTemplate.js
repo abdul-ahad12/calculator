@@ -1422,7 +1422,7 @@ const TitleTemplate = ({
         >
           Calculate
         </button>
-        <div>Wrong inputs are likely to show NaN as output</div>
+        <div className="base:text-sm md:text-base text-[#808080]">Wrong inputs are likely to show NaN as output</div>
 
         <div className="font-[500] px-5 text-center max-w-[90vw] overflow-hidden overflow-x-scroll lg:scrollbar-hide base:text=[1.5rem] lg:text-[2rem]">
           {/* {subTitle} : */}
