@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
+    "hamburger-react": "^2.5.0",
     "mathjax-full": "^3.2.2",
     "mathjax-react": "^2.0.1",
     "react": "^18.2.0",
