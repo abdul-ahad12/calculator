@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Divide as Hamburger } from 'hamburger-react'
+import { Fade as Hamburger } from 'hamburger-react'
 
 const LinkItem = ({ href, text }) => {
   const location = useLocation();
@@ -30,12 +30,12 @@ const Navbar = () => {
   // };
 
   return (
-    <div className="w-full justify-center flex  bg-[#383838] ">
+    <div className="w-full justify-center flex relative   bg-[#383838] ">
       {/* menu */}
 
       <div
         className={
-          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4 z-10 p-4  bg-[#383838]" : "hidden"
+          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4  p-4  bg-[#383838]" : "hidden"
         }
       >
       {/* <div className="flex w-full justify-between">
