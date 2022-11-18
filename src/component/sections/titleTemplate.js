@@ -438,15 +438,15 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueB}
-              onChange={onBChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="x1"
               type="number"
             />
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueC}
-              onChange={onCChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="y1"
               type="number"
             />
@@ -455,8 +455,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueA}
-              onChange={onAChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="m"
               type="number"
             />
@@ -1382,14 +1382,14 @@ const TitleTemplate = ({
 }) => {
   return (
     <MainLayout>
-      <div className="w-full flex flex-col items-center  base:my-[6rem] lg:my-[2rem] justify-center gap-10">
+      <div className="w-full flex flex-col items-center  base:my-[6rem] lg:my-[2rem] justify-center base:gap-7 lg:gap-10">
         <div className="font-[500] base:text-[2rem] lg:text-[3rem] mx-4 text-center">
           {title}
         </div>
         <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden md:scrollbar-hide overflow-x-scroll  lg:text-[2rem]">
           {formula}
         </div>
-        <div className="max-w-[90vw] overflow-hidden overflow-x-scroll lg:scrollbar-hide">
+        <div className="max-w-[90vw] base:my-3 lg:my-0 overflow-hidden overflow-x-scroll lg:scrollbar-hide">
         <InputTemplate
           type={type}
           valueA={valueA}
@@ -1424,7 +1424,7 @@ const TitleTemplate = ({
         </button>
         <div>Wrong inputs are likely to show NaN as output</div>
 
-        <div className="font-[500] px-5 text-center max-w-[90vw] overflow-hidden overflow-x-scroll lg:scrollbar-hide text-[2rem]">
+        <div className="font-[500] px-5 text-center max-w-[90vw] overflow-hidden overflow-x-scroll lg:scrollbar-hide base:text=[1.5rem] lg:text-[2rem]">
           {/* {subTitle} : */}
           {result}
         </div>
