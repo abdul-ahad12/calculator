@@ -57,6 +57,10 @@ const Circle = () => {
       title: "Pole of a line with respect to a circle",
       link: "/poleofline",
     },
+    {
+      title: "Equation of circle from three points",
+      link: "/threepointcircle",
+    },
 
   ];
 

@@ -59,6 +59,7 @@ import Eqnoftangent from './pages/circle/eqnoftangent';
 import Checkconjugate from './pages/circle/checkconjugate';
 import Nopointstangents from './pages/circle/nopointstangents';
 import Poleofline from './pages/circle/poleofline';
+import Threepointcircle from './pages/circle/threepointcircle';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -120,6 +121,7 @@ root.render(
         <Route path="checkconjugate" element={<Checkconjugate />}></Route>
         <Route path="nopointstangents" element={<Nopointstangents />}></Route>
         <Route path="poleofline" element={<Poleofline />}></Route>
+        <Route path="threepointcircle" element={<Threepointcircle />}></Route>
 
 
         {/*                Parabola                  */}
