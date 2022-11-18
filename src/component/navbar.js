@@ -35,7 +35,7 @@ const Navbar = () => {
 
       <div
         className={
-          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.1rem] gap-4 z-10 p-4  bg-[#383838]" : "hidden"
+          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4 z-10 p-4  bg-[#383838]" : "hidden"
         }
       >
       {/* <div className="flex w-full justify-between">
@@ -68,17 +68,17 @@ const Navbar = () => {
             </div>
         
       </div>
-      <div className="w-[100%]  text-white flex flex-col  ">
+      <div className="w-full  text-white flex flex-col  ">
         {/* navbar */}
-        <div className="bg-[#383838] md:pl-[4rem] fixed flex w-full flex-row align-middle items-center md:justify-start base:justify-between h-16  md:gap-6">
+        <div className="bg-[#383838] md:pl-[4rem] fixed flex w-[100%] flex-row align-middle items-center md:justify-start base:justify-between h-16  md:gap-6">
           <Link to={"/"}>
             {" "}
             <div className=" flex flex-row items-center">
-              <img className="mt-3 w-[4rem]" src="/Logo.png" alt="logo"></img>
+              <img className="mt-2 w-[4rem]" src="/Logo.png" alt="logo"></img>
             </div>
           </Link>
           <div
-            className="base:justify-self-end self-end md:hidden"
+            className="md:hidden"
           >
             <div className="w-full">
               {" "}
