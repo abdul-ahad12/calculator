@@ -74,7 +74,7 @@ const Navbar = () => {
           <Link to={"/"}>
             {" "}
             <div className=" flex flex-row items-center">
-              <img className="mt-2 w-[3.5rem]" src="/Logo.png" alt="logo"></img>
+              <img className="mt-3 w-[4rem]" src="/Logo.png" alt="logo"></img>
             </div>
           </Link>
           <div
