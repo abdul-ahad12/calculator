@@ -8,7 +8,9 @@ const PointSlopeForm = () => {
     ax: "",
     ay: "",
   });
+  console.log(variables)
   const [valueM, setvalueM] = useState("");
+  console.log(valueM)
 
   const line = new Line(valueM,variables.ax, variables.ay);
   const [result, setResult] = useState("");
@@ -25,6 +27,7 @@ const PointSlopeForm = () => {
       ay: e.target.value,
     });
   };
+
 
   const resultDumm = () => {
     const result = line.pointslopeform(
@@ -43,8 +46,7 @@ const PointSlopeForm = () => {
   const onResult = () => {
     variables.ax === "" ||
     variables.ay === "" ||
-    variables.bx === "" ||
-    variables.by === ""
+   valueM===""
       ? alert("Enter all inputs")
       : resultDumm();
     // setvariables({

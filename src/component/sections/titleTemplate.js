@@ -438,15 +438,15 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueB}
-              onChange={onBChange}
+              value={valueA}
+              onChange={onAChange}
               placeholder="x1"
               type="number"
             />
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueC}
-              onChange={onCChange}
+              value={valueB}
+              onChange={onBChange}
               placeholder="y1"
               type="number"
             />
@@ -455,8 +455,8 @@ const InputTemplate = ({
             </div>
             <input
               className="rounded-[5px] w-[5rem]"
-              value={valueA}
-              onChange={onAChange}
+              value={valueC}
+              onChange={onCChange}
               placeholder="m"
               type="number"
             />
