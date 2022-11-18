@@ -269,41 +269,69 @@ class Circle {
     return [x.toFixed(2), a_deg.toFixed(1)];
   }
 
-  radicalaxis(g,f,c,g1,f1,c1)
-  {
+  radicalaxis(g, f, c, g1, f1, c1) {
     let a = g - g1;
     let b = f - f1;
     let c2 = c - c1;
 
-    return[a,b,c2];
+    return [a, b, c2];
   }
 
-  radicalcentre(g,f,c,g1,f1,c1,a,b,ax)
-  {
-    function radicalaxis(g,f,c,g1,f1,c1)
-    {
+  radicalcentre(g, f, c, g1, f1, c1, a, b, ax) {
+    function radicalaxis(g, f, c, g1, f1, c1) {
       let a = g - g1;
       let b = f - f1;
       let c2 = c - c1;
-  
-      return[a,b,c2];
+
+      return [a, b, c2];
     }
 
-    let L1 = radicalaxis(g,f,c,g1,f1,c1);
-    let L2 = radicalaxis(g,f,c,a,b,ax);
+    let L1 = radicalaxis(g, f, c, g1, f1, c1);
+    let L2 = radicalaxis(g, f, c, a, b, ax);
 
     function pointOfint(a1, b1, c1, a2, b2, c2) {
       let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
       let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
-  
+
       return [Number(x.toFixed(2)), Number(y.toFixed(2))];
     }
 
-    let res = pointOfint(L1[0],L1[1],L1[2],L2[0],L2[1],L2[2]);
+    let res = pointOfint(L1[0], L1[1], L1[2], L2[0], L2[1], L2[2]);
 
-    return[res[0],res[1]]
+    return [res[0], res[1]];
   }
 
+  commonchord(g, f, c, g1, f1, c1) {
+    function radicalaxis(g, f, c, g1, f1, c1) {
+      let a = g - g1;
+      let b = f - f1;
+      let c2 = c - c1;
+
+      return [a, b, c2];
+    }
+
+    function cenAndrad(g, f, c) {
+      let c1 = -g / 2;
+      let c2 = -f / 2;
+      let a = c1 * c1;
+      let b = c2 * c2;
+      let r = Math.sqrt(Number(a) + Number(b) - Number(c));
+
+      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    }
+
+    let a = cenAndrad(g,f,c);
+    let chord = radicalaxis(g, f, c, g1, f1, c1);
+
+    let num = (Number(chord[0]) * Number(a[0])) + (Number(chord[1]) * Number(a[1])) + Number(chord[2]);
+    let denom = Math.sqrt((Number(chord[0]) * Number(chord[0])) +  (Number(chord[1]) * Number(chord[1])));
+
+    let d = Math.abs(Number(num)/Number(denom));
+
+    let l = 2 *  Math.sqrt( (Number(a[2]) * Number(a[2])) - (Number(d) * Number(d)) );
+
+    return[chord[0],chord[1],chord[2],l.toFixed(2)];
+  }
 }
 
 export default Circle;

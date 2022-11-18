@@ -63,7 +63,7 @@ const Footofperpendicular = () => {
     );
     let x = result[0];
     let y = result[1];
-    let c = <MathComponent tex={`Image: (${x},${y})`} />;
+    let c = <MathComponent tex={`(${x},${y})`} />;
     setResult(c);
   };
 
