@@ -72,18 +72,16 @@ const Imageofpoint = () => {
     coeficient.ba === "" ||
     coeficient.ca === "" ||
     coeficient.ab === "" ||
-    coeficient.bb === "" ||
-    coeficient.cb === ""
+    coeficient.bb === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : zero();
   };
+
+  const zero = () => {
+    coeficient.ca === "0" && coeficient.ab === "0"
+    ? alert("Invalid Input! Enter proper equation of line")
+    :resultDumm();
+  }
 
   const f =
     "\\frac{h-x_1}{a} = \\frac{k-y_1}{b} = \\frac{-2(ax_1+by_1+c)}{a^2+b^2}";
