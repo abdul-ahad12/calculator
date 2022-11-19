@@ -967,7 +967,7 @@ const InputTemplate = ({
           <div className="flex text=[2rem] flex-col gap-8">
             <div className="flex gap-6 flex-col items-center">
               <div className="flex gap-2  items-center"> 
-              <div>
+              <div className="ml-9">
                 <MathComponent tex={"Point 1:"} />
               </div>
               <input
@@ -1389,7 +1389,7 @@ const TitleTemplate = ({
         <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden md:scrollbar-hide overflow-x-scroll  lg:text-[2rem]">
           {formula}
         </div>
-        <div className="max-w-[90vw] base:my-3 lg:my-0 overflow-hidden overflow-x-scroll lg:scrollbar-hide">
+        <div className="max-w-[100vw] base:my-3 lg:my-0 overflow-hidden overflow-x-scroll lg:scrollbar-hide">
         <InputTemplate
           type={type}
           valueA={valueA}
