@@ -26,9 +26,9 @@ const Contactus = () => {
     <div>
       <MainLayout>
         <div className="w-full flex justify-center">
-          <div className="w-[90%] flex lg:flex-row base:flex-col   justify-between items-center ">
+          <div className="w-[90%] flex lg:flex-row base:flex-col base:my-11 lg:my-0  max-w-[1500px]  justify-between items-center ">
             <div className="base:hidden lg:inline-block">
-              <div className="lg:text-[2.5vw] w-full font-bold">
+              <div className="lg:text-[2.5vw] xl:text-[3rem] w-full font-bold">
                 Have feedback for us?
                 <br />
                 Want us to add some new calculator?
