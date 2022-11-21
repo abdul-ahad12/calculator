@@ -31,7 +31,7 @@ const Contactus = () => {
               <div className="lg:text-[2.5vw] w-full font-bold">
                 Have feedback for us?
                 <br />
-                Want us to add some new calculator
+                Want us to add some new calculator?
                 <br />
                 Found a bug?
                 <br />

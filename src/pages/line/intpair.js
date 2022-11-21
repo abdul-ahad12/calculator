@@ -84,8 +84,22 @@ const Intpair = () => {
     coeficient.e1 === "" ||
     coeficient.f === ""
       ? alert("Enter all inputs")
-      : resultDumm();
+      : check_eqn();
   };
+
+  const check_eqn = () => {
+    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) < 0
+    ?alert("The equation does not represent a pair of straight lines! Enter Valid Input")
+    :check_pairpara();
+  }
+
+  const check_pairpara = () => {
+    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) === 0
+    ?alert("The equation represents a pair of parallel lines, Point of intersection does not exist for parallel lines! Enter Valid Input")
+    :resultDumm();
+  }
+
+
 
 
   const f ="(\\frac{hf-bg}{ab-h^2}, \\frac{gh-af}{ab-h^2})";
