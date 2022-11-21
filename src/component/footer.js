@@ -56,6 +56,7 @@ const Footer = () => {
 
       </div> */}
       <div className="flex base:flex-col lg:flex-row lg:gap-5 base:text-[20px] base:gap-4">
+      <LinkItem href={"/"} text={"Home"} />
       <LinkItem href={"/circle"} text={"About Us"} />
       <LinkItem href={"/contactus"} text={"Contact Us"} />
       <LinkItem href={"/triangle"} text={"Privacy Policy"} />
