@@ -62,10 +62,20 @@ const Powerofpoint = () => {
       };
     
       const onResult = () => {
-        eqInput.x===""||eqInput.y===""|| eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
+        eqInput.x===""||
+        eqInput.y===""||
+        eqInput.g===""||
+        eqInput.f===""||
+        eqInput.c===""
           ? alert("Enter all inputs")
-          : resultDumm();
+          : check_circle();
       };
+
+      const check_circle = () => {
+        (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
+        ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+        :resultDumm()
+      }
 
       const s = 'P:(x_1,y_1), \\hspace{0.5cm} S_{11}: (x_1)^2 + (y_1)^2 + 2g(x_1) + 2f(y_1) - c';
       const f2 = <MathComponent tex={s} />

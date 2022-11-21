@@ -46,19 +46,20 @@ const GenToStand = () => {
   };
 
   const onResult = () => {
-    eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
+    eqInput.g === "" || 
+    eqInput.f === "" || 
+    eqInput.c === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_circle();
   };
+  
+  const check_circle = () => {
+    (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
+    ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+    :resultDumm()
+  }
 
-  const f = 'General Eq: x^2 + y^2 + 2gx + 2fy + c \\hspace{0.5cm} Standard Eq: (x-h)^2 + (y-k)^2 = r^2';
+  const f = '\\displaylines{General Eq: x^2 + y^2 + 2gx + 2fy + c \\\\ \\\\ Standard Eq: (x-h)^2 + (y-k)^2 = r^2}';
   const f1 = <MathComponent tex={f} />
   
 

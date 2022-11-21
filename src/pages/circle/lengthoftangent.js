@@ -73,15 +73,14 @@ const Lengthoftangent = () => {
         eqInput.f === "" ||
         eqInput.c === ""
           ? alert("Enter all inputs")
-          : resultDumm();
-        // setvariables({
-        //     ax:"",
-        //     ay:"",
-        //     bx:"",
-        //     by:"",
-    
-        // })
+          : check_circle();
       };
+
+      const check_circle = () => {
+        (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
+        ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+        :resultDumm()
+      }
 
       const f = 'Length \\ of \\ Tangent: \\sqrt{S_{11}} = \\sqrt{x_1^2 + y_1^2 + 2gx_1 +2fy_1 + c}';
       const f1 = <MathComponent tex={f} />

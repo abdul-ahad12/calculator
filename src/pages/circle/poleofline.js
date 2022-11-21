@@ -85,8 +85,14 @@ const Poleofline = () => {
     coeficient.f === "" ||
     coeficient.c1 === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
+      : check_circle();
   };
+
+  const check_circle = () => {
+    (coeficient.g/2 * coeficient.g/2) + (coeficient.f/2 * coeficient.f/2) - coeficient.c1 <= 0 
+    ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+    :resultDumm()
+  }
 
 
   const f ="(-g + \\frac{lr^2}{lg+mf-n} , -f + \\frac{mr^2}{lg+mf-n})";

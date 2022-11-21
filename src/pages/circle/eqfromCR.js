@@ -44,17 +44,19 @@ const EqfromCR = () => {
 
     setresult(final);
   };
-  const onResult = () => {
-    point.x === "" || point.y === "" || point.r === ""
-      ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
 
-    // })
+  const onResult = () => {
+    point.x === "" || 
+    point.y === "" || 
+    point.r === ""
+      ? alert("Enter all inputs")
+      : check_radius();
+  };
+
+  const check_radius = () => {
+    point.r <= 0
+      ? alert("Radius cannot be zero or negative! Enter Valid Input")
+      : resultDumm();
   };
 
   const s = 'S: (x-h)^2 + (y-k)^2 = r^2';
