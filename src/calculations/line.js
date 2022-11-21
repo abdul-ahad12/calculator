@@ -67,7 +67,7 @@ class Line {
     let m = (Number(by) - Number(ay)) / (Number(bx) - Number(ax));
     let c = ay - m * ax;
 
-    return [m, c];
+    return [Number(m.toFixed(2)), Number(c.toFixed(2))];
   }
   pointslopeform(m, ax, ay) {
     let c = Number(ay) - Number(m) * Number(ax);

@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const LinkItem = ({ href, text }) => {
@@ -25,7 +24,6 @@ const LinkItem = ({ href, text }) => {
 };
 
 const Footer = () => {
-  const location = useLocation();
 
   
   return (
@@ -38,8 +36,8 @@ const Footer = () => {
         {/* <div className="base: text-[25px] font-[600] ">Follow Us</div> */}
         <div className="flex pt-4 gap-4  justify-center">
         <div className="w-[3rem]  "><img src="/linkedin.svg" alt="" /></div>
-        <div className="w-[3rem] "><img src="/instagram.svg" alt="" /></div>
-        <div className="w-[3rem] "><img src="/twitter.svg" alt="" /></div>
+        <a href="https://www.instagram.com/cg.calculator" className="w-[3rem] "><img src="/instagram.svg" alt="" /></a>
+        <a href="https://twitter.com/CgCalculator" className="w-[3rem] "><img src="/twitter.svg" alt="" /></a>
 
         </div>
       </div>
@@ -56,10 +54,11 @@ const Footer = () => {
 
       </div> */}
       <div className="flex base:flex-col lg:flex-row lg:gap-5 base:text-[20px] base:gap-4">
-      <LinkItem href={"/circle"} text={"About Us"} />
+      <LinkItem href={"/"} text={"Home"} />
+      <LinkItem href={"/aboutus"} text={"About Us"} />
       <LinkItem href={"/contactus"} text={"Contact Us"} />
-      <LinkItem href={"/triangle"} text={"Privacy Policy"} />
-      <LinkItem href={"/parabola"} text={"Terms Of Use"} />
+      <LinkItem href={"/privacypolicy"} text={"Privacy Policy"} />
+      <LinkItem href={"/termsofuse"} text={"Terms Of Use"} />
       
       
       {/* <Link to={"/contactus"}>About Us</Link>
