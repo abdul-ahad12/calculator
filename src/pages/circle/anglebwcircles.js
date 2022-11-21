@@ -85,9 +85,20 @@ const Anglebwcircles = () => {
     coeficient.f2 === "" ||
     coeficient.c2 === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
+      : check_circle1();
   };
 
+  const check_circle1 = () => {
+    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
+    ? alert("The Equation of First circle is invalid! Enter Valid Input")
+    :check_circle2()
+  }
+
+  const check_circle2 = () => {
+    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
+    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+    :resultDumm()
+  }
 
   const f ="Cos(\\theta) = \\frac{c_1 + c_2 - 2(g_1g_2 + f_1f_2)}{2\\sqrt{g_1^2 + f_1^2 - c_1}\\sqrt{g_2^2 + f_2^2 - c_2}}";
   const f1 = <MathComponent tex={f} />;

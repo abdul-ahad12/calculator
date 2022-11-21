@@ -41,17 +41,18 @@ const Areacircum = () => {
       };
     
       const onResult = () => {
-        value.a === "" || value.b === "" || value.c === ""
+        value.a === "" || 
+        value.b === "" || 
+        value.c === ""
           ? alert("Enter all inputs")
-          : resultDumm();
-        // setvariables({
-        //     ax:"",
-        //     ay:"",
-        //     bx:"",
-        //     by:"",
-    
-        // })
+          : check_circle();
       };
+
+      const check_circle = () => {
+        (value.a/2 * value.a/2) + (value.b/2 * value.b/2) - value.c <= 0 
+        ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+        :resultDumm()
+      }
     
       const s = 'Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r';
       const f2 = <MathComponent tex={s} />

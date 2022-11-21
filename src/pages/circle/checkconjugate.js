@@ -103,8 +103,14 @@ const Checkconjugate = () => {
     coeficient.f === "" ||
     coeficient.g === ""
       ? alert("Enter all inputs")
-      : resultDumm();
+      : check_circle();
   };
+
+  const check_circle = () => {
+    (coeficient.e/2 * coeficient.e/2) + (coeficient.f/2 * coeficient.f/2) - coeficient.g <= 0 
+    ? alert("The Equation of circle is invalid! Enter Valid Input")
+    :resultDumm()
+  }
 
 
   const f ="S_{12} = x_1x_2 +y_1y_2 + g(x_1 + x_2) +f(y_1+y_2) + c=0";
