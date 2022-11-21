@@ -467,7 +467,7 @@ const InputTemplate = ({
     case "eqCircle":
       return (
         <div className="flex text=[2rem] flex-col gap-8">
-          <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+          <div className="flex gap-2 w-full  base:justify-start  lg:justify-center flex-row   items-center">
             <div>
               <MathComponent tex={"Eqn: "} />
             </div>
@@ -515,7 +515,7 @@ const InputTemplate = ({
       case "linecircle":
         return (
           <div className="flex text=[2rem] flex-col gap-8">
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+            <div className="flex gap-2 w-full justify-center flex-row  mx-4 items-center">
               <div>
                 <MathComponent tex={"Line: "} />
               </div>
@@ -553,7 +553,7 @@ const InputTemplate = ({
               </div>
             </div>
 
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+            <div className="flex gap-2 w-full base:justify-start lg:justify-center flex-row   items-center">
               <div>
                 <MathComponent tex={"Eqn: "} />
               </div>
@@ -599,8 +599,8 @@ const InputTemplate = ({
 
       case "twocircles":
         return (
-          <div className="flex text=[2rem] flex-col gap-8">
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+          <div className="flex text=[2rem]  flex-col gap-8">
+            <div className="flex gap-2 w-full base:justify-start  lg:justify-center flex-row  items-center">
               <div>
                 <MathComponent tex={"Eqn_1: "} />
               </div>
@@ -642,7 +642,7 @@ const InputTemplate = ({
               </div>
             </div>
 
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+            <div className="flex gap-2 w-full  base:justify-start  lg:justify-center flex-row   items-center">
               <div>
                 <MathComponent tex={"Eqn_2: "} />
               </div>
@@ -689,7 +689,7 @@ const InputTemplate = ({
         case "threecircles":
         return (
           <div className="flex text=[2rem] flex-col gap-8">
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+            <div className="flex gap-2 w-full base:justify-start lg:justify-center flex-row  items-center">
               <div>
                 <MathComponent tex={"Eqn_1: "} />
               </div>
@@ -731,7 +731,7 @@ const InputTemplate = ({
               </div>
             </div>
 
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+            <div className="flex gap-2 w-full base:justify-start lg:justify-center flex-row items-center">
               <div>
                 <MathComponent tex={"Eqn_2: "} />
               </div>
@@ -773,7 +773,7 @@ const InputTemplate = ({
               </div>
             </div>
 
-            <div className="flex gap-2 w-full justify-center flex-row flex-wrap mx-4 items-center">
+            <div className="flex gap-2 w-full base:justify-start lg:justify-center flex-row  items-center">
               <div>
                 <MathComponent tex={"Eqn_3: "} />
               </div>
@@ -964,10 +964,10 @@ const InputTemplate = ({
 
       case "twopointeqCircle":
         return (
-          <div className="flex text=[2rem] flex-col gap-8">
-            <div className="flex gap-6 flex-col items-center">
+          <div className="flex  flex-col gap-8">
+            <div className="flex gap-6 flex-col base:items-start lg:items-center">
               <div className="flex gap-2  items-center"> 
-              <div className="ml-9">
+              <div className="">
                 <MathComponent tex={"Point 1:"} />
               </div>
               <input

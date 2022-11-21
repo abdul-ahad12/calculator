@@ -91,7 +91,7 @@ const Perpendicular = () => {
     <div>
       {" "}
       <TitleTemplate
-        title={"Perpendicular bisector"}
+        title={"Equation of Perpendicular bisector"}
         subTitle={""}
         formula={""}
         type={"twoPoints"}

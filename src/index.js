@@ -64,6 +64,9 @@ import Anglebwcircles from './pages/circle/anglebwcircles';
 import Radicalaxis from './pages/circle/radicalaxis';
 import Radicalcentre from './pages/circle/radicalcentre';
 import Commonchord from './pages/circle/commonchord';
+import Privacy from './pages/privacy';
+import Aboutus from './pages/aboutus';
+import Termsofuse from './pages/termsofuse';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -151,6 +154,9 @@ root.render(
         
         {/*                Others                   */}
         <Route path="contactus" element={<Contactus />}></Route>
+        <Route path="privacypolicy" element={<Privacy />}></Route>
+        <Route path="aboutus" element={<Aboutus />}></Route>
+        <Route path="termsofuse" element={<Termsofuse />}></Route>
 
 
           {/* <Route index element={<App />} />
