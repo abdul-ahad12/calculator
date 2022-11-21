@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Fade as Hamburger } from 'hamburger-react'
+import { Fade as Hamburger } from "hamburger-react";
 
 const LinkItem = ({ href, text }) => {
+ 
+
   const location = useLocation();
   const path = location.pathname;
   const active = href === path;
+  
 
   return (
     <Link
@@ -23,7 +26,7 @@ const LinkItem = ({ href, text }) => {
 
 const Navbar = () => {
   // const [isMenu, setisMenu] = useState(false);
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
   // const openDrawer = () => {
   //   setisMenu(true);
@@ -35,38 +38,39 @@ const Navbar = () => {
 
       <div
         className={
-          isOpen ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4 z-10 p-4  bg-[#383838]" : "hidden"
+          isOpen
+            ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4 z-10 p-4  bg-[#383838]"
+            : "hidden"
         }
       >
-      {/* <div className="flex w-full justify-between">
+        {/* <div className="flex w-full justify-between">
       <div className="text-white font-bold mb-4">CG CALCULATOR</div>
       <div onClick={()=>setisMenu(false)} className="w-7"><img src="/wrong.png" alt="" /></div>
         </div> */}
         <div className="">
-              <LinkItem text={"Home"} href={"/"} />
-            </div>
-            <div>
-              <LinkItem text={"Line"} href={"/lineCal"} />
-            </div>
-            <div>
-              <LinkItem text={"Triangle"} href={"/triangle"} />
-            </div>
-            <div>
-              <LinkItem text={"Circle"} href={"/circle"} />
-            </div>
-            <div>
-              <LinkItem text={"Parabola"} href={"/parabola"} />
-            </div>
-            <div>
-              <LinkItem text={"Ellipse"} href={"/ellipse"} />
-            </div>
-            <div>
-              <LinkItem text={"Hyperbola"} href={"/hyperbola"} />
-            </div>{" "}
-            <div>
-              <LinkItem text={"Contact Us"} href={"/contactus"} />
-            </div>
-        
+          <LinkItem text={"Home"} href={"/"} />
+        </div>
+        <div>
+          <LinkItem text={"Line"} href={"/lineCal"} />
+        </div>
+        <div>
+          <LinkItem text={"Triangle"} href={"/triangle"} />
+        </div>
+        <div>
+          <LinkItem text={"Circle"} href={"/circle"} />
+        </div>
+        <div>
+          <LinkItem text={"Parabola"} href={"/parabola"} />
+        </div>
+        <div>
+          <LinkItem text={"Ellipse"} href={"/ellipse"} />
+        </div>
+        <div>
+          <LinkItem text={"Hyperbola"} href={"/hyperbola"} />
+        </div>{" "}
+        {/* <div>
+          <LinkItem text={"Contact Us"} href={"/contactus"} />
+        </div> */}
       </div>
       <div className="w-full  text-white flex flex-col  ">
         {/* navbar */}
@@ -77,13 +81,12 @@ const Navbar = () => {
               <img className="mt-2 w-[4rem]" src="/Logo.png" alt="logo"></img>
             </div>
           </Link>
-          <div
-            className="md:hidden"
-          >
+          <div className="md:hidden">
             <div className="w-full">
               {" "}
-
-              <div><Hamburger size={25} toggled={isOpen} toggle={setOpen} /></div>
+              <div>
+                <Hamburger size={25} toggled={isOpen} toggle={setOpen} />
+              </div>
             </div>
           </div>
 
@@ -111,9 +114,9 @@ const Navbar = () => {
             <div>
               <LinkItem text={"Hyperbola"} href={"/hyperbola"} />
             </div>{" "}
-            <div>
+            {/* <div>
               <LinkItem text={"Contact Us"} href={"/contactus"} />
-            </div>
+            </div> */}
           </div>
         </div>
 

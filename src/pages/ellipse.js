@@ -16,9 +16,9 @@ const Ellipse = () => {
      
       ];
   return (
-    <div>
-      <GeoTemp title={"Ellipse"} elements={lineElements} />
-    </div>
+      <div>
+        <GeoTemp title={"Ellipse"} elements={lineElements} />
+      </div>
   )
 }
 
