@@ -1386,7 +1386,7 @@ const TitleTemplate = ({
         <div className="font-[500] base:text-[2rem] lg:text-[3rem] mx-4 text-center">
           {title}
         </div>
-        <div className="font-[500] text-center base:text-[1.5rem] max-w-[80vw] overflow-hidden md:scrollbar-hide overflow-x-scroll  lg:text-[2rem]">
+        <div className="font-[500] text-center base:text-[1.1rem] max-w-[80vw] overflow-hidden md:scrollbar-hide overflow-x-scroll  md:text-[2rem]">
           {formula}
         </div>
         <div className="max-w-[100vw] base:my-3 lg:my-0 overflow-hidden overflow-x-scroll lg:scrollbar-hide">

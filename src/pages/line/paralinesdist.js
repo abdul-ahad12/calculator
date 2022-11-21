@@ -95,12 +95,6 @@ const Paralinesdist = () => {
       : check_input();
   };
 
-  const check_eqn = () => {
-    (coeficient.ba/2 * coeficient.ba/2) < (coeficient.aa *coeficient.ca)
-    ?alert("The equation represents two imaginary lines! Enter Valid Input")
-    :resultDumm();
-  }
-
   const f =" d = \\frac{|c_1-c_2|}{\\sqrt{a^2+b^2}}";
   const f1 = <MathComponent tex={f} />;
 

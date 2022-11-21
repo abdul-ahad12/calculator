@@ -88,8 +88,14 @@ const Distancepairpara = () => {
   };
 
   const check_eqn = () => {
-    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) >0 || (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c)===0
-    ?alert("The equation represents two imaginary lines! Enter Valid Input")
+    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) < 0
+    ?alert("The equation does not represent a pair of straight lines! Enter Valid Input")
+    :check_pairpara();
+  }
+
+  const check_pairpara = () => {
+    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) !== 0
+    ?alert("The equation does not represent a pair of parallel straight lines! Enter Valid Input")
     :resultDumm();
   }
 
