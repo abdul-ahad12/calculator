@@ -77,8 +77,14 @@ const Eqnoftangent = () => {
         eqInput.f === "" ||
         eqInput.c === ""
           ? alert("Enter all inputs")
-          : resultDumm();
+          : check_circle();
       };
+
+      const check_circle = () => {
+        (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
+        ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+        :resultDumm()
+      }
 
       const f = 'Tangent \\ at \\ P(x_1,y_1): xx_1 + yy_1 + g(x +x_1) + f(y + y_1) +c';
       const f1 = <MathComponent tex={f} />

@@ -50,17 +50,20 @@ const Eqfromcp = () => {
   };
 
   const onResult = () => {
-    points.ax=== "" || points.ay === "" || points.x === ""||points.y===""
+    points.ax === "" || 
+    points.ay === "" || 
+    points.x === ""||
+    points.y ===""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_points();
   };
+
+  const check_points = () => {
+    points.ax === points.x === "" && points.ay === points.y 
+      ? alert("The Point and Centre cannot be same! Enter valid Input")
+      : resultDumm();
+  };
+
   return (
     <div>
       <TitleTemplate

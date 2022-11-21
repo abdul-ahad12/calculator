@@ -87,15 +87,10 @@ const Threepointcircle = () => {
     coeficient.f === "" 
       ? alert("Enter all inputs")
       : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
   };
 
+
+  
   return (
     <div>
       <TitleTemplate

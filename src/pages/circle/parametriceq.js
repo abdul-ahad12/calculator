@@ -44,17 +44,18 @@ const Parametriceq = () => {
   };
 
   const onResult = () => {
-    eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
+    eqInput.g === "" || 
+    eqInput.f === "" || 
+    eqInput.c === ""
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_circle();
   };
+
+  const check_circle = () => {
+    (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
+    ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+    :resultDumm()
+  }
 
   const f = 'x = -g + rcos(\\theta) \\hspace{1cm} y = -f + rSin(\\theta)';
   const f1 = <MathComponent tex={f} />

@@ -115,12 +115,27 @@ const Radicalcentre = () => {
     coeficient.f3 === "" ||
     coeficient.c3 === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
+      : check_circle1();
   };
 
 
-//   const f ="Radical \\ Axis = S_1 - S_2 =0";
-//   const f1 = <MathComponent tex={f} />;
+  const check_circle1 = () => {
+    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
+    ? alert("The Equation of First circle is invalid! Enter Valid Input")
+    :check_circle2()
+  }
+
+  const check_circle2 = () => {
+    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
+    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+    :check_circle3()
+  }
+
+  const check_circle3 = () => {
+    (coeficient.g3/2 * coeficient.g3/2) + (coeficient.f3/2 * coeficient.f3/2) - coeficient.c3 <= 0 
+    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+    :resultDumm()
+  }
 
   return (
     <div>

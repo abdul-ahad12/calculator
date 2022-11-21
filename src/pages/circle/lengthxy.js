@@ -56,7 +56,9 @@ const Lengthxy = () => {
   };
 
   const onResult = () => {
-    eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
+    eqInput.g === "" || 
+    eqInput.f === "" || 
+    eqInput.c === ""
       ? alert("Enter all inputs")
       :check_circle();
   };
