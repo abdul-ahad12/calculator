@@ -105,16 +105,23 @@ const Orthocentre = () => {
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" ||
+    coeficient.b === "" ||
+    coeficient.c === "" ||
+    coeficient.d === "" ||
+    coeficient.e === "" ||
+    coeficient.f === "" ||
+    coeficient.g === "" ||
+    coeficient.h === "" ||
+    coeficient.i === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
+      : check_parallel();
+  };
 
-    // })
+  const check_parallel = () => {
+    coeficient.a / coeficient.b === coeficient.d / coeficient.e || coeficient.a / coeficient.b === coeficient.g / coeficient.h || coeficient.g / coeficient.h === coeficient.d / coeficient.e 
+      ? alert("Lines are parallel! Enter valid Input.")
+      : resultDumm();
   };
 
   return (

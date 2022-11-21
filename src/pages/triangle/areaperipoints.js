@@ -78,17 +78,21 @@ const Areaperipoints = () => {
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" || //x1
+    coeficient.b === "" || //y1
+    coeficient.c === "" || //x2
+    coeficient.d === "" || //y2
+    coeficient.e === "" || //x3
+    coeficient.f === ""   //y3
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_collinear();
   };
+
+  const check_collinear = () => {
+    (coeficient.a*(coeficient.d - coeficient.f )) +(coeficient.c*(coeficient.f - coeficient.b)) + (coeficient.e*(coeficient.b - coeficient.d)) === 0
+    ? alert("Given points are collinear! Enter valid Input.")
+    :resultDumm()
+  }
 
   return (
     <div>

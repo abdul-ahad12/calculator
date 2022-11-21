@@ -78,17 +78,21 @@ const Centroidpoints = () => {
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" ||
+    coeficient.b === "" ||
+    coeficient.c === "" ||
+    coeficient.d === "" ||
+    coeficient.e === "" ||
+    coeficient.f === ""  
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_collinear();
   };
+
+  const check_collinear = () => {
+    (coeficient.a*(coeficient.d - coeficient.f )) +(coeficient.c*(coeficient.f - coeficient.b)) + (coeficient.e*(coeficient.b - coeficient.d)) === 0
+    ? alert("Given points are collinear! Enter valid Input.")
+    :resultDumm()
+  }
 
   const f = "Centroid = (\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_1}{3})";
   const f1 = (

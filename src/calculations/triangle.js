@@ -208,14 +208,11 @@ class Triangle {
 
   sidestovertices(a1, b1, c1, a2, b2, c2, a3, b3, c3) {
     function pointOfint(a1, b1, c1, a2, b2, c2) {
-      if (a1 / b1 === a2 / b2) {
-        return "XX";
-      } else {
         let x = (b1 * c2 - b2 * c1) / (a1 * b2 - a2 * b1);
         let y = (c1 * a2 - c2 * a1) / (a1 * b2 - a2 * b1);
 
         return [Number(x.toFixed(3)), Number(y.toFixed(3))];
-      }
+    
     }
 
     let a = pointOfint(a1, b1, c1, a2, b2, c2);

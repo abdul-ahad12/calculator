@@ -105,16 +105,23 @@ const Incentre = () => {
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" ||
+    coeficient.b === "" ||
+    coeficient.c === "" ||
+    coeficient.d === "" ||
+    coeficient.e === "" ||
+    coeficient.f === "" ||
+    coeficient.g === "" ||
+    coeficient.h === "" ||
+    coeficient.i === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
+      : check_parallel();
+  };
 
-    // })
+  const check_parallel = () => {
+    coeficient.a / coeficient.b === coeficient.d / coeficient.e || coeficient.a / coeficient.b === coeficient.g / coeficient.h || coeficient.g / coeficient.h === coeficient.d / coeficient.e 
+      ? alert("Lines are parallel! Enter valid Input.")
+      : resultDumm();
   };
 
   const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c}) ";

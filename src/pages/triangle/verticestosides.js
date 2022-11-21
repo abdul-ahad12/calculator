@@ -79,24 +79,28 @@ const Verticestosides = () => {
 
     let e = (
       <MathComponent
-        tex={`Side1: y = ${m1}x + ${c1} \\hspace{1cm} Side2: y = ${m2}x + ${c2} \\hspace{1cm} Side3: y = ${m3}x + ${c3}`}
+        tex={`\\displaylines{Side1: y = ${m1}x + ${c1} \\\\ Side2: y = ${m2}x + ${c2} \\\\ Side3: y = ${m3}x + ${c3}}`}
       />
     );
     setResult(e);
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" ||
+    coeficient.b === "" ||
+    coeficient.c === "" ||
+    coeficient.d === "" ||
+    coeficient.e === "" ||
+    coeficient.f === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_collinear();
   };
+
+  const check_collinear = () => {
+    (coeficient.a*(coeficient.d - coeficient.f )) +(coeficient.c*(coeficient.f - coeficient.b)) + (coeficient.e*(coeficient.b - coeficient.d)) === 0
+    ? alert("Given points are collinear! Enter valid Input.")
+    :resultDumm()
+  }
 
   return (
     <div>

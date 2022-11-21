@@ -105,16 +105,23 @@ const Centroid = () => {
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" ||
+    coeficient.b === "" ||
+    coeficient.c === "" ||
+    coeficient.d === "" ||
+    coeficient.e === "" ||
+    coeficient.f === "" ||
+    coeficient.g === "" ||
+    coeficient.h === "" ||
+    coeficient.i === "" 
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
+      : check_parallel();
+  };
 
-    // })
+  const check_parallel = () => {
+    coeficient.a / coeficient.b === coeficient.d / coeficient.e || coeficient.a / coeficient.b === coeficient.g / coeficient.h || coeficient.g / coeficient.h === coeficient.d / coeficient.e 
+      ? alert("Lines are parallel! Enter valid Input.")
+      : resultDumm();
   };
 
   const f = "Centroid = (\\frac{x_1+x_2+x_3}{3}, \\frac{y_1+y_2+y_1}{3})";

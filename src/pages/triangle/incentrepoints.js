@@ -72,30 +72,27 @@ const Incentrepoints = () => {
     );
     let x = result[0];
     let y = result[1];
-    // let x1 = result[2];
-    // let x2 = result[3];
-    // let x3 = result[4];
-    // let x4 = result[5];
-    // let x5 = result[6];
-    // let x6 = result[7];
-    // ${y},${x1},${x2},${x3},${x4},${x5},${x6}
     let c = `(${x},${y})`;
     let e = <MathComponent tex={`Incenter :${c}`} />;
     setResult(e);
   };
 
   const onResult = () => {
-    coeficient.aa === "" || coeficient.ba === "" || coeficient.ca === ""
+    coeficient.a === "" ||
+    coeficient.b === "" ||
+    coeficient.c === "" ||
+    coeficient.d === "" ||
+    coeficient.e === "" ||
+    coeficient.f === ""  
       ? alert("Enter all inputs")
-      : resultDumm();
-    // setvariables({
-    //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
+      : check_collinear();
   };
+
+  const check_collinear = () => {
+    (coeficient.a*(coeficient.d - coeficient.f )) +(coeficient.c*(coeficient.f - coeficient.b)) + (coeficient.e*(coeficient.b - coeficient.d)) === 0
+    ? alert("Given points are collinear! Enter valid Input.")
+    :resultDumm()
+  }
 
   const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c})";
   const f1 = <MathComponent tex={f} />
