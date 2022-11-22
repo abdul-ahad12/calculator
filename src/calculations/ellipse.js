@@ -62,19 +62,19 @@ if(aa===0&&bb===0){
       let LgMajor = 2 * Math.sqrt(a);
       let lgMinor = 2 * Math.sqrt(b);
       let lgLactur = (2 * b) / Math.sqrt(a);
-      let center = `(${aa.toFixed(2)},${bb.toFixed(2)})`;
+      let center = `(${Number(aa.toFixed(2))},${Number(bb.toFixed(2))})`;
       let ee = Math.sqrt((Number(a) - Number(b)) / Number(a));
-      let foci = `(${aa.toFixed(2)}±${
-        Math.sqrt(a.toFixed(2)) * ee.toFixed(2)
+      let foci = `(${Number(aa.toFixed(2))}±${
+       Number((Math.sqrt(Number(a.toFixed(2))) * Number(ee.toFixed(2))).toFixed(2))
       },${bb.toFixed(2)})`;
       let eqDirect = `x=${aa.toFixed(2)}±${(Math.sqrt(a) / ee).toFixed(2)}`;
-      let vertices = `(${aa.toFixed(2)}±${Math.sqrt(a.toFixed(2))},${bb.toFixed(
+      let vertices = `(${Number(aa.toFixed(2))}±${Number(Math.sqrt((a.toFixed(2))).toFixed(2))},${bb.toFixed(
         2
       )})`;
-      let eqMajor = `y=${bb.toFixed(2)}0`;
-      let eqMinor = `x=${aa.toFixed(2)}0`;
-      let eqOfLatus = `x=${aa.toFixed(2)}±${
-        Math.sqrt(a.toFixed(2)) * ee.toFixed(2)
+      let eqMajor = `y=${Number(bb.toFixed(2))}`;
+      let eqMinor = `x=${Number(aa.toFixed(2))}`;
+      let eqOfLatus = `x=${Number(aa.toFixed(2))}±${
+        Number((Math.sqrt(Number(a.toFixed(2))) * ee.toFixed(2)).toFixed(2))
       }`;
 
       return [
