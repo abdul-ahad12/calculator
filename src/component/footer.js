@@ -13,8 +13,8 @@ const LinkItem = ({ href, text }) => {
     <Link
       className={
         active
-          ? "text-white text-[22px] font-[600]"
-          : "flex base:flex-col lg:flex-row lg:gap-5 text-[#d6d6d6] base:text-[20px] base:gap-4  hover:text-white"
+          ? "text-white text-[17px] font-[600]"
+          : "flex base:flex-col lg:flex-row lg:gap-5 text-[#d6d6d6] base:text-[17px] base:gap-4  hover:text-white"
       }
       to={href}
     >
@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <div className="w-full base:gap-9 base:px-6 base:pt-7 lg:pt-0 lg:px-[7rem] lg:font-[400]  bg-[#383838] text-[#d6d6d6] flex lg:flex-row base:flex-col-reverse justify-between  lg:text-[1rem]   lg:items-center lg:h-[3rem]">
       {" "}
-      <div className="base:self-center base:pb-4 lg:pb-0 base:text-[16px] lg:text-[20px] ">
+      <div className="base:self-center base:pb-4 lg:pb-0 base:text-[16px] lg:text-[17px] ">
       Copyright © 2022 . All rights reserved {" "}
       </div>
       <div className="lg:hidden">

@@ -15,7 +15,7 @@ const LinkItem = ({ href, text }) => {
       className={
         active
           ? "text-white text-[20px] font-[600]"
-          : "text-[#d6d6d6]  hover:text-white"
+          : "text-[#d6d6d6] text-[19px]  hover:text-white"
       }
       to={href}
     >
