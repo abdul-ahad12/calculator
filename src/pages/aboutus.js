@@ -18,7 +18,7 @@ const Aboutus = () => {
 
               <br />
 
-              <div>
+              <div className="mb-6">
                 Hello World! <br />
                 Far too often we find ourselves doing easy geometry calculations
                 that are part of a larger problem, we know how frustrating it is

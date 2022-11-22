@@ -68,7 +68,7 @@ const Footer = () => {
             onMouseLeave={() => setIsShown(false)}
             className={
               isShown
-                ? "absolute h-[12rem] w-[4rem] bottom-6 rounded-t-[30px] rounded-br-[30px] left-11 bg-[#5c5c5c] fkex flex-col"
+                ? "absolute h-[12rem] w-[4rem] bottom-5 rounded-t-[30px] rounded-br-[30px] left-11 bg-[#5c5c5c] fkex flex-col"
                 : "hidden"
             }
           >
