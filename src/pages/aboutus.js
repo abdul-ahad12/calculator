@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MainLayout from "./mainLayout";
 
 const Aboutus = () => {
@@ -23,16 +24,16 @@ const Aboutus = () => {
                 that are part of a larger problem, we know how frustrating it is
                 to repeatedly do small calculations. We developed this website
                 to offer a host of Calculators that provide solutions to many
-                different Coordinate Geometry problems. 
-                <br/>
-                We hope that this
-                website will help you in your academic or professional pursuits.
+                different Coordinate Geometry problems.
+                <br />
+                We hope that this website will help you in your academic or
+                professional pursuits.
               </div>
-
-              <div className="w-[30%] flex self-center">
-                <img src="/mainlogo.png"/>
+              <div className="lg:flex w-full justify-center items-center mt-20  base:hidden  ">
+                <Link to={"/"} className="w-[20%] h-12 flex items-center justify-center pr-3 hover:bg-black bg-[#363434] rounded-full ">
+                  <img src="/mainlogo.png" alt="svg"/>
+                </Link>
               </div>
-
             </div>
           </div>
         </div>
