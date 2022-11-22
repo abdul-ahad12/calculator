@@ -90,7 +90,7 @@ const Footer = () => {
             onMouseLeave={() => setIsShown(false)}
             className={isShown?"text-white":"text-[#d6d6d6]"}
           >
-            Socials
+            Social
           </div>
         </div>
 
