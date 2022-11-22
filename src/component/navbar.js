@@ -39,7 +39,7 @@ const Navbar = () => {
       <div
         className={
           isOpen
-            ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.5rem] gap-4 z-10 p-4  bg-[#383838]"
+            ? "fixed w-full mt-14 h-fit justify-self-end flex flex-col text-[1.1rem] gap-4 z-10 p-4  bg-[#383838]"
             : "hidden"
         }
       >
