@@ -29,14 +29,19 @@ const Aboutus = () => {
                 We hope that this website will help you in your academic or
                 professional pursuits.
               </div>
-              <div className="lg:flex w-full justify-center items-center mt-20  base:hidden  ">
+              {/* <div className="lg:flex w-full justify-center items-center mt-20  base:hidden  ">
                 <Link to={"/"} className="w-[20%] h-12 flex items-center justify-center pr-3 hover:bg-black bg-[#363434] rounded-full ">
                   <img src="/mainlogo.png" alt="svg"/>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
+        <div className="lg:flex w-full justify-center items-center h-[7rem]  base:hidden  ">
+                <Link to={"/"} className="w-[12%] h-12 flex items-center justify-center pr-3 hover:bg-black bg-[#363434] rounded-full ">
+                  <img src="/mainlogo.png" alt="svg"/>
+                </Link>
+              </div>
       </MainLayout>
     </div>
   );
