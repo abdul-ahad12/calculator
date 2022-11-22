@@ -88,7 +88,7 @@ const Footer = () => {
           <div
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
-            className={isShown?"text-white":"text-[#d6d6d6]"}
+            className={isShown?"text-white":"text-[#d6d6d6] base:hidden lg:inline-block"}
           >
             Social
           </div>
