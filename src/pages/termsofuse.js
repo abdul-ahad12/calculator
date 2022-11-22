@@ -14,7 +14,7 @@ const Termsofuse = () => {
             <div className="lg:text-[1.2rem] base:text-[1rem]">
               <div>
                 This site and all Calculators together with answers are the
-                copyrighted property of cgcalculator.com, and are not to be
+                copyrighted property of <span className="font-[600]">cgcalculator.com</span>, and are not to be
                 considered to be in the public domain. This site and all the
                 content within this site, unless otherwise noted, is subject to
                 the following terms and conditions.
