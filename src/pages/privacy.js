@@ -41,7 +41,7 @@ const Privacy = () => {
             links, may be constantly changing. These sites and services may have
             their own privacy policies and customer service policies. Browsing
             and interaction on any other website, including websites which have
-            a link to our Site, is subject to that website's own terms and
+            a link to our Site, is subject to that website&apos;s own terms and
             policies.
           </div>
 
@@ -57,7 +57,7 @@ const Privacy = () => {
             about you or others who use your computer. This information allows
             ad networks to, among other things, deliver targeted advertisements
             that they believe will be of most interest to you. This privacy
-            policy doesn't cover the use of cookies by any advertisers. For more
+            policy doesn&apos;t cover the use of cookies by any advertisers. For more
             information, see CCPA and GDPR Compliance Notice.
           </div>
 
@@ -76,7 +76,7 @@ const Privacy = () => {
             <ul className="list-disc ml-7">
               <li>
                 Third party vendors, including Google, use cookies to serve ads
-                based on a user's prior visits to your website.
+                based on a user&apos;s prior visits to your website.
               </li>
               <li>
                 Google's use of the DoubleClick cookie enables it and its
@@ -84,7 +84,7 @@ const Privacy = () => {
                 this site and/or other sites across the Internet.
               </li>
               <li>
-                You may opt out of a third-party vendor's use of cookies for
+                You may opt out of a third-party vendor&apos;s use of cookies for
                 interest-based advertising.
               </li>
             </ul>
