@@ -19,4 +19,6 @@ code {
     width: 50rem;
     min-width: 7rem;
     padding: 0px 7px;
+    align-items: center;
+    display: flex;
 }

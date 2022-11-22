@@ -25,9 +25,9 @@ class Ellipse {
     //this is b^2
     let b = c / m;
 if(aa===0&&bb===0){
-  var genForm=`\\frac{x^2}{${a}}+\\frac{y^2}{${b}}=1`
+  var genForm=`\\frac{x^2}{${Number(a.toFixed(2))}}+\\frac{y^2}{${Number(b.toFixed(2))}}=1`
 }else{
-  genForm=`\\frac{(x-(${aa}))^2}{${a}}+\\frac{(y-(${bb}))^2}{${b}}=1`
+  genForm=`\\frac{(x-(${Number(aa.toFixed(2))}))^2}{${Number(a.toFixed(2))}}+\\frac{(y-(${Number(bb.toFixed(2))}))^2}{${Number(b.toFixed(2))}}=1`
 
 }
 
@@ -35,21 +35,21 @@ if(aa===0&&bb===0){
       let LgMajor = 2 * Math.sqrt(b);
       let lgMinor = 2 * Math.sqrt(a);
       let lgLactur = (2 * a) / Math.sqrt(b);
-      let center = `(${aa.toFixed(2)},${bb.toFixed(2)})`;
+      let center = `(${Number(aa.toFixed(2))},${Number(bb.toFixed(2))})`;
       let ee = Math.sqrt((Number(b) - Number(a)) / Number(b));
-      let foci = `(${aa.toFixed(2)},${bb.toFixed(2)}±${(Math.sqrt(b) * ee).toFixed(2)})`;
-      let eqDirect = `y=${bb.toFixed(2)}±${(Math.sqrt(b) / ee).toFixed(2)}`;
-      let vertices = `(${aa.toFixed(2)},${bb.toFixed(2)}±${(Math.sqrt(b)).toFixed(2)})`;
-      let eqMajor = `x=${aa.toFixed(2)}`;
-      let eqMinor = `y=${bb.toFixed(2)}`;
-      let eqOfLatus = `y=${bb.toFixed(2)}±${(Math.sqrt(b) * ee).toFixed(2)}`;
+      let foci = `(${Number(aa.toFixed(2))},${Number(bb.toFixed(2))}±${(Math.sqrt(b) * ee).toFixed(2)})`;
+      let eqDirect = `y=${Number(bb.toFixed(2))}±${(Math.sqrt(b) / ee).toFixed(2)}`;
+      let vertices = `(${Number(aa.toFixed(2))},${Number(bb.toFixed(2))}±${(Math.sqrt(b)).toFixed(2)})`;
+      let eqMajor = `x=${Number(aa.toFixed(2))}`;
+      let eqMinor = `y=${Number(bb.toFixed(2))}`;
+      let eqOfLatus = `y=${Number(bb.toFixed(2))}±${(Math.sqrt(b) * ee).toFixed(2)}`;
 
       return [
-        LgMajor.toFixed(2),
-        lgMinor.toFixed(2),
-        lgLactur.toFixed(2),
+        Number(LgMajor.toFixed(2)),
+        Number(lgMinor.toFixed(2)),
+        Number(lgLactur.toFixed(2)),
         center,
-        ee.toFixed(2),
+        Number(ee.toFixed(2)),
         foci,
         eqDirect,
         vertices,

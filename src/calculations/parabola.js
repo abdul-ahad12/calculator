@@ -21,9 +21,7 @@ class Parabola {
       //value of alpha
       let alpha = constant / nn;
       let vertex = `(${Number(alpha.toFixed(2))},${Number(beta.toFixed(2))})`;
-      let focus = `(${
-        -1 * Number(a.toFixed(2)) + Number(alpha.toFixed(2))
-      },${Number(beta.toFixed(2))})`;
+      let focus = `(${Number((-1)*Number(a.toFixed(2)) + Number(alpha.toFixed(2)).toFixed(2))},${Number(beta.toFixed(2))})`;
       let eqaxis = `y=${Number(beta.toFixed(2))}`;
       let eqdirec = `x=${Number(alpha.toFixed(2)) + Number(a.toFixed(2))}`;
       let eqlatus = `x=${Number(alpha.toFixed(2)) - Number(a.toFixed(2))}`;
@@ -58,10 +56,10 @@ class Parabola {
       //value of beta
       let beta = constant / oo;
       let vertex = `(${Number(alpha.toFixed(2))},${Number(beta.toFixed(2))})`;
-      let focus = `(${Number(alpha.toFixed(2))},${-1 * Number(a.toFixed(2)) + Number(Number(beta.toFixed(2)))})`;
+      let focus = `(${Number(alpha.toFixed(2))},${Number((-1 * Number(a.toFixed(2)) + Number(Number(beta.toFixed(2)))).toFixed(2))})`;
       let eqaxis = `x=${Number(alpha.toFixed(2))}`;
       let eqdirec = `y=${Number(alpha.toFixed(2)) + Number(a.toFixed(2))}`;
-      let eqlatus = `x=${Number(beta.toFixed(2)) - Number(a.toFixed(2))}`;
+      let eqlatus = `x=${Number((Number(beta.toFixed(2)) - Number(a.toFixed(2))).toFixed(2))}`;
       let lglatus = `${4 * Number(a.toFixed(2))}`;
       let eqtanget = `x=${Number(alpha.toFixed(2))}`;
       let standform = `((x-(${Number(alpha.toFixed(2))}))^2=${-1 * 4 * Number(a.toFixed(2))}(y-(${Number(beta.toFixed(2))})))`;

@@ -119,10 +119,11 @@ const Navbar = () => {
             </div> */}
           </div>
         </div>
+        <div className=" w-full h-[3rem] lg:hidden"></div>
 
         {/* Hero */}
-        <div className="w-full flex justify-center items-center flex-col h-[18rem]">
-          <div className="base:text-[2rem] text-center font-[500] lg:text-[3rem]">
+        <div className="w-full flex justify-center items-center flex-col base:h-[10rem] lg:h-[18rem]">
+          <div className="base:text-[1.5rem] base:px-6 text-center font-[500] lg:text-[3rem]">
             {" "}
             Coordinate Geometry Calculator
           </div>
