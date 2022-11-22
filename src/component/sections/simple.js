@@ -6,8 +6,23 @@ const Simple = ({ title }) => {
       <div className="font-[500] base:mb-4 lg:mb-[4rem] base:text-[2rem] lg:text-[3rem] mt-7 ">
         {title}
       </div>
-      <div className="text-[2rem] text-center">
+      <div className="text-[2rem] lg:w-[60%]  ">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+        maiores aliquid iste nisi, dicta cum amet ut, quo expedita cumque ipsam
+        voluptatibus natus veritatis eveniet quae autem accusantium veniam
+        doloribus.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+        maiores aliquid iste nisi, dicta cum amet ut, quo expedita cumque ipsam
+        voluptatibus natus veritatis eveniet quae autem accusantium veniam
+        doloribus.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+        maiores aliquid iste nisi, dicta cum amet ut, quo expedita cumque ipsam
+        voluptatibus natus veritatis eveniet quae autem accusantium veniam
+        doloribus.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+        maiores aliquid iste nisi, dicta cum amet ut, quo expedita cumque ipsam
+        voluptatibus natus veritatis eveniet quae autem accusantium veniam
+        doloribus.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
+        maiores aliquid iste nisi, dicta cum amet ut, quo expedita cumque ipsam
+        voluptatibus natus veritatis eveniet quae autem accusantium veniam
+        doloribus.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque
         maiores aliquid iste nisi, dicta cum amet ut, quo expedita cumque ipsam
         voluptatibus natus veritatis eveniet quae autem accusantium veniam
         doloribus.
