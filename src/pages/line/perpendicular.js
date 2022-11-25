@@ -59,7 +59,7 @@ const Perpendicular = () => {
       }
       else
       {
-        final = `y=${m}x+${b}`
+        final = `y=${m}x+(${b})`
       }
       let a=<MathComponent tex={final} />
       setResult(a);

@@ -59,7 +59,7 @@ const TwoPointForm = () => {
     }
     else
     {
-      final = `y=${m}x+${c}`
+      final = `y=${m}x+(${c})`
     }
     let a = <MathComponent tex={final} />
     setResult(a);

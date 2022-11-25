@@ -38,7 +38,17 @@ const PointSlopeForm = () => {
      
     let m=result[0]
     let c=result[1]
-    let a=<MathComponent tex={`y=${m}x+${c}`} />
+    let final = ``
+
+    if(valueM === '0')
+    {
+      final = `y=${c}`
+    }
+    else
+    {
+      final = `y=${m}x+(${c})`
+    }
+    let a=<MathComponent tex={final} />
     
     setResult(a);
   };
