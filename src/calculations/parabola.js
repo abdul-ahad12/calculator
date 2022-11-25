@@ -37,11 +37,7 @@ class Parabola {
         eqlatus,
         lglatus,
         eqtanget,
-        standform,
-        "",
-        "",
-        "",
-        "",
+        standform
       ];
     } else if (Number(m) === 0) {
       let nn = n / l;
@@ -73,11 +69,7 @@ class Parabola {
         eqlatus,
         lglatus,
         eqtanget,
-        standform,
-        "",
-        "",
-        "",
-        "",
+        standform
       ];
     } else {
       return ["wrong input"];

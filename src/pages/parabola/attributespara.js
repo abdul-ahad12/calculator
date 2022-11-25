@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
-import ResultTemp from "../../component/sections/resultTemp";
+import ResultTempPara from "../../component/sections/resultTempPara";
 import Parabola from "../../calculations/parabola";
 
 const AttributesPara = () => {
@@ -71,13 +71,9 @@ const AttributesPara = () => {
     let f = result[5];
     let g = result[6];
     let h = result[7];
-    let i = result[8];
-    let j = result[9];
-    let k = result[10];
-    let l = result[11];
 
     let final = (
-      <ResultTemp
+      <ResultTempPara
         a={a}
         b={b}
         c={c}
@@ -86,10 +82,6 @@ const AttributesPara = () => {
         f={f}
         g={g}
         h={h}
-        i={i}
-        j={j}
-        k={k}
-        l={l}
         title1={"Vertex"}
         title2={"Focus"}
         title3={"Equation of Axis"}
@@ -105,8 +97,6 @@ const AttributesPara = () => {
   };
 
   const check=()=>{
-// eqInput.l==1?alert("hello"):alert("bye")
-
     if(eqInput.l!=0){
       eqInput.m==0?resultDumm():alert("Coeficient of x^2 or y^2 should be zero ")
     }
@@ -124,18 +114,7 @@ const AttributesPara = () => {
     eqInput.p === ""
     ? alert("Enter all inputs")
     : check()
-
-    // setvariables({
-      //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
   };
-  // const s = "Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r";
-  // const f2 = <MathComponent tex={s} />;
- 
   
   return (
     <div>
