@@ -1,4 +1,4 @@
-# Coordinate GEometry Calculator
+# Coordinate Geometry Calculator
 
 This project is a web based calculator that does many Coordinate Geometry Operations.
 
