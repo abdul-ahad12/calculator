@@ -1,5 +1,7 @@
 {
-  "name": "calculator",
+  "name": "hostinger-react",
+  "homepage": "http://www.cgcalculator.com",
+  "description": "Coordinate Geometry Calculator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
