@@ -67,7 +67,7 @@ class Triangle {
 
     let res = pointOfint(p, q, r, p1, q1, r1);
 
-    return [Number(res[0].toFixed(2)), Number(res[1].toFixed(2))];
+    return [Number(res[0].toFixed(3)), Number(res[1].toFixed(3))];
   }
 
   orthocentre(a1, b1, c1, a2, b2, c2, a3, b3, c3) {
@@ -144,7 +144,7 @@ class Triangle {
 
     let x = (a[0] - b[0]) * (a[1] - c[1]);
     let y = (a[0] - c[0]) * (a[1] - b[1]);
-    let area = 0.5 * (Number(x) - Number(y));
+    let area = Math.abs(0.5 * (Number(x) - Number(y)));
 
     let ab = distance(a[0], a[1], b[0], b[1]);
     let bc = distance(b[0], b[1], c[0], c[1]);
@@ -166,7 +166,7 @@ class Triangle {
 
     let x = (x1 - x2) * (y1 - y3);
     let y = (x1 - x3) * (y1 - y2);
-    let area = 0.5 * (Number(x) - Number(y));
+    let area = Math.abs(0.5 * (Number(x) - Number(y)));
 
     let ab = distance(x1, y1, x2, y2);
     let bc = distance(x2, y2, x3, y3);

@@ -54,7 +54,7 @@ const Areacircum = () => {
         :resultDumm()
       }
     
-      const s = 'Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r';
+      const s = '\\displaylines{Area = \\pi r^2 \\\\ \\\\ Circumference = 2 \\pi r}';
       const f2 = <MathComponent tex={s} />
   
     return (

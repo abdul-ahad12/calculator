@@ -74,7 +74,7 @@ const Radicalaxis = () => {
     let y = result[1];
     let z = result[2]
 
-    let c = <MathComponent tex={`(${x})x + (${y})y + (${z}) = 0`} />;
+    let c = <MathComponent tex={`${x}x + (${y})y + (${z}) = 0`} />;
     setResult(c);
   };
 

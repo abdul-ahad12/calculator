@@ -55,7 +55,7 @@ const Eqlinenormal = () => {
     :resultDumm();
   }
 
-  const f = '\\displaylines{Normal \\hspace{.25cm} Form: xCos(\\alpha) +ySin(\\alpha) = r \\hspace{.5cm} \\\\ \\\\ r = \\sqrt{a^2+b^2}}';
+  const f = '\\displaylines{xCos(\\alpha) +ySin(\\alpha) = r \\hspace{.5cm} \\\\ \\\\ r = \\sqrt{a^2+b^2}}';
   const f1 = <MathComponent tex={f} />
 
   return (

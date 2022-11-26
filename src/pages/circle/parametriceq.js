@@ -38,7 +38,7 @@ const Parametriceq = () => {
     let b = result[1];
     let c=result[2]
 
-    let final =<MathComponent tex={`\\displaylines{x=${a}+${c}Cos(\\theta) \\\\ y=${b}+${c}Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}/>
+    let final =<MathComponent tex={`\\displaylines{x=${a}+(${c})Cos(\\theta) \\\\ y=${b}+(${c})Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}/>
 
     setresult(final);
   };
@@ -57,7 +57,7 @@ const Parametriceq = () => {
     :resultDumm()
   }
 
-  const f = 'x = -g + rcos(\\theta) \\hspace{1cm} y = -f + rSin(\\theta)';
+  const f = '\\displaylines{ x = -g + rcos(\\theta) \\\\ \\\\ y = -f + rSin(\\theta)}';
   const f1 = <MathComponent tex={f} />
 
   return (

@@ -94,11 +94,14 @@ const Areaperipoints = () => {
     :resultDumm()
   }
 
+  const f = "\\displaylines{Area = \\frac{1}{2}|(x_1-x_2)(y_1-y_3) - (x_1-x_3)(y_1-y_2)| \\\\ \\\\ Perimeter = AB + BC + CA  }";
+  const f1 = <MathComponent tex={f} />
+
   return (
     <div>
       <TitleTemplate
         title={"Area and Perimeter of a triangle from equations of sides"}
-        // formula={f1}
+        formula={f1}
         type={"threePoints"}
         valueA={coeficient.a}
         valueB={coeficient.b}

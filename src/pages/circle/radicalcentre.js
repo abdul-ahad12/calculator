@@ -26,7 +26,7 @@ const Radicalcentre = () => {
     coeficient.c2,
     coeficient.g3,
     coeficient.f3,
-    coeficient.c3,
+    coeficient.c3
   );
   console.log(coeficient);
 
@@ -95,7 +95,7 @@ const Radicalcentre = () => {
       coeficient.c2,
       coeficient.g3,
       coeficient.f3,
-      coeficient.c3,
+      coeficient.c3
     );
     let x = result[0];
     let y = result[1];
@@ -113,29 +113,37 @@ const Radicalcentre = () => {
     coeficient.c2 === "" ||
     coeficient.g3 === "" ||
     coeficient.f3 === "" ||
-    coeficient.c3 === "" 
+    coeficient.c3 === ""
       ? alert("Enter all inputs")
       : check_circle1();
   };
 
-
   const check_circle1 = () => {
-    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
-    ? alert("The Equation of First circle is invalid! Enter Valid Input")
-    :check_circle2()
-  }
+    ((coeficient.g1 / 2) * coeficient.g1) / 2 +
+      ((coeficient.f1 / 2) * coeficient.f1) / 2 -
+      coeficient.c1 <=
+    0
+      ? alert("The Equation of First circle is invalid! Enter Valid Input")
+      : check_circle2();
+  };
 
   const check_circle2 = () => {
-    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
-    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
-    :check_circle3()
-  }
+    ((coeficient.g2 / 2) * coeficient.g2) / 2 +
+      ((coeficient.f2 / 2) * coeficient.f2) / 2 -
+      coeficient.c2 <=
+    0
+      ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+      : check_circle3();
+  };
 
   const check_circle3 = () => {
-    (coeficient.g3/2 * coeficient.g3/2) + (coeficient.f3/2 * coeficient.f3/2) - coeficient.c3 <= 0 
-    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((coeficient.g3 / 2) * coeficient.g3) / 2 +
+      ((coeficient.f3 / 2) * coeficient.f3) / 2 -
+      coeficient.c3 <=
+    0
+      ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
 
   return (
     <div>

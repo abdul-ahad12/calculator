@@ -20,7 +20,7 @@ const Commonchord = () => {
     coeficient.c1,
     coeficient.g2,
     coeficient.f2,
-    coeficient.c2,
+    coeficient.c2
   );
   console.log(coeficient);
 
@@ -68,14 +68,18 @@ const Commonchord = () => {
       coeficient.c1,
       coeficient.g2,
       coeficient.f2,
-      coeficient.c2,
+      coeficient.c2
     );
     let x = result[0];
     let y = result[1];
     let z = result[2];
     let a = result[3];
 
-    let c = <MathComponent tex={`\\displaylines{(${x})x + (${y})y + (${z}) = 0   \\\\ Length \\ of \\ Common \\ Chord = ${a}}`} />;
+    let c = (
+      <MathComponent
+        tex={`\\displaylines{(${x})x + (${y})y + (${z}) = 0   \\\\ Length \\ of \\ Common \\ Chord = ${a}}`}
+      />
+    );
     setResult(c);
   };
 
@@ -85,24 +89,61 @@ const Commonchord = () => {
     coeficient.c1 === "" ||
     coeficient.g2 === "" ||
     coeficient.f2 === "" ||
-    coeficient.c2 === "" 
+    coeficient.c2 === ""
       ? alert("Enter all inputs")
       : check_circle1();
   };
 
   const check_circle1 = () => {
-    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
-    ? alert("The Equation of First circle is invalid! Enter Valid Input")
-    :check_circle2()
-  }
+    ((coeficient.g1 / 2) * coeficient.g1) / 2 +
+      ((coeficient.f1 / 2) * coeficient.f1) / 2 -
+      coeficient.c1 <=
+    0
+      ? alert("The Equation of First circle is invalid! Enter Valid Input")
+      : check_circle2();
+  };
 
   const check_circle2 = () => {
-    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
-    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((coeficient.g2 / 2) * coeficient.g2) / 2 +
+      ((coeficient.f2 / 2) * coeficient.f2) / 2 -
+      coeficient.c2 <=
+    0
+      ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+      : check_pos();
+  };
 
-  const f ="\\displaylines{Common \\ Chord = S_1 - S_2 =0 \\\\ Length \\ of \\ Common \\ Chord  = 2\\sqrt{r^2-d^2}}";
+  const check_pos = () => {
+    function cenAndrad(g, f, c) {
+      let c1 = -g / 2;
+      let c2 = -f / 2;
+      let a = c1 * c1;
+      let b = c2 * c2;
+      let r = Math.sqrt(Number(a) + Number(b) - Number(c));
+
+      return [c1.toFixed(3), c2.toFixed(3), r.toFixed(3)];
+    }
+    function distance(ax, ay, bx, by) {
+      let first = Number(ax) - Number(bx);
+      let second = Number(ay) - Number(by);
+      let result = Math.sqrt(first * first + second * second);
+
+      return Number(result.toFixed(2));
+    }
+
+    let c1 = cenAndrad(coeficient.g1, coeficient.f1, coeficient.c1);
+    let c2 = cenAndrad(coeficient.g2, coeficient.f2, coeficient.c2);
+
+    let d = distance(c1[0], c1[1], c2[0], c2[1]);
+
+    d + c2[2] <= c1[2]
+      ? alert(
+          "One Circle lies completely inside another circle! Common Chord does not exist! Enter Valid Input"
+        )
+      : resultDumm();
+  };
+
+  const f =
+    "\\displaylines{Common \\ Chord = S_1 - S_2 =0 \\\\ \\\\ Length \\ of \\ Common \\ Chord  = 2\\sqrt{r^2-d^2}}";
   const f1 = <MathComponent tex={f} />;
 
   return (
@@ -110,7 +151,7 @@ const Commonchord = () => {
       <TitleTemplate
         title={"Equation and length of common chord of two circles"}
         type={"twocircles"}
-        formula = {f1}
+        formula={f1}
         valueA={coeficient.g1}
         valueB={coeficient.f1}
         valueC={coeficient.c1}

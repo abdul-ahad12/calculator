@@ -77,7 +77,7 @@ const Powerofpoint = () => {
         :resultDumm()
       }
 
-      const s = 'P:(x_1,y_1), \\hspace{0.5cm} S_{11}: (x_1)^2 + (y_1)^2 + 2g(x_1) + 2f(y_1) - c';
+      const s = '\\displaylines{P:(x_1,y_1), \\\\ \\\\ S_{11}: (x_1)^2 + (y_1)^2 + 2g(x_1) + 2f(y_1) - c}';
       const f2 = <MathComponent tex={s} />
 
   return (

@@ -44,7 +44,7 @@ const Eqfromcp = () => {
     let b=result[1]
     let c=result[2]
 
-    let final= <MathComponent tex={`Eq:x^2+y^2+${a}x+${b}y+${c}`} />
+    let final= <MathComponent tex={`Eq:x^2+y^2+(${a})x+(${b})y+(${c}) = 0`} />
 
     setresult(final)
   };

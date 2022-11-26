@@ -55,7 +55,7 @@ const CrEquation = () => {
     :resultDumm()
   }
 
-  const s = 'Centre: (-g,-f) \\hspace{0.5cm} Radius: \\sqrt{g^2+f^2-c}';
+  const s = '\\displaylines{Centre: (-g,-f) \\\\ \\\\ Radius: \\sqrt{g^2+f^2-c}}';
   const f2 = <MathComponent tex={s} />
   
   return (

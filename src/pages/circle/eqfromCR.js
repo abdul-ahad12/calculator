@@ -40,7 +40,7 @@ const EqfromCR = () => {
     let b = result[1];
     let c = result[2];
 
-    let final = <MathComponent tex={`x^2 + y^2 +${a}x +${b}y +${c} = 0`} />
+    let final = <MathComponent tex={`x^2 + y^2 +(${a})x +(${b})y +(${c}) = 0`} />
 
     setresult(final);
   };

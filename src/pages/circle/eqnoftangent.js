@@ -86,7 +86,7 @@ const Eqnoftangent = () => {
         :resultDumm()
       }
 
-      const f = 'Tangent \\ at \\ P(x_1,y_1): xx_1 + yy_1 + g(x +x_1) + f(y + y_1) +c';
+      const f = '\\displaylines{Tangent \\ at \\ P(x_1,y_1): \\\\ \\\\ xx_1 + yy_1 + g(x +x_1) + f(y + y_1) +c}';
       const f1 = <MathComponent tex={f} />
 
   return (

@@ -82,7 +82,7 @@ const Lengthoftangent = () => {
         :resultDumm()
       }
 
-      const f = 'Length \\ of \\ Tangent: \\sqrt{S_{11}} = \\sqrt{x_1^2 + y_1^2 + 2gx_1 +2fy_1 + c}';
+      const f = '\\displaylines{Length \\ of \\ Tangent: \\sqrt{S_{11}}, \\\\ \\\\ \\sqrt{S_{11}} = \\sqrt{x_1^2 + y_1^2 + 2gx_1 +2fy_1 + c}}';
       const f1 = <MathComponent tex={f} />
 
   return (
