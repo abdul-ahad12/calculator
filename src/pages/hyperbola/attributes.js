@@ -90,11 +90,11 @@ const AttributesEl = () => {
         e={e}
         f={f}
         g={g}
-        h={h}
+        h={l}
         i={i}
         j={j}
         k={k}
-        l={l}
+        l={h}
         m={m}
         title1={"Length of Tranverse Axis"}
         title2={"Length of Conjugate Axis"}
@@ -103,11 +103,11 @@ const AttributesEl = () => {
         title5={"e"}
         title6={"Foci"}
         title7={"Equation of directrices"}
-        title8={"Vertices"}
+        title8={"Standard Form"}
         title9={"Equation of Tranverse Axis"}
         title10={"Equation of Conjugate Axis"}
         title11={"Equation of Latus rectrum"}
-        title12={"Standard Form"}
+        title12={"Vertices"}
    
       />
     );
