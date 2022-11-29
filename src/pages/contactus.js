@@ -9,7 +9,6 @@ const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 
 const Contactus = () => {
-
   useEffect(() => {
     ReactGA.pageview(window.location.pathname);
   }, []);

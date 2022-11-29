@@ -96,7 +96,7 @@ const Checkconjugate = () => {
       coeficient.g,
     );
     let x = result[0];
-    {console.log(x)}
+
     let final = ``;
     if(x === 0 )
     {
