@@ -9,10 +9,10 @@ ReactGA.initialize(TRACKING_ID);
 
 
 function App() {
-
+  let location = useLocation();
   useEffect(() => {
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+  }, [location]);
 
   const pathname = useLocation();
 
