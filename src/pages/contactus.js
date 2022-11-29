@@ -1,33 +1,64 @@
 // import emailjs from '@emailjs/browser';
 import emailjs from "emailjs-com";
 import MainLayout from "./mainLayout";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 const Contactus = () => {
+  const [form, setform] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onNameChange = (e) => {
+    setform({
+      ...form,
+      name: e.target.value,
+    });
+  };
+
+  const onEmailChange = (e) => {
+    setform({
+      ...form,
+      email: e.target.value,
+    });
+  };
+
+  const onMessageChange = (e) => {
+    setform({
+      ...form,
+      message: e.target.value,
+    });
+  };
+  console.log(form);
 
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_owzhoi9",
-        "template_8zrb4m3",
-        e.target,
-        "ugaGXz6g1deIfQib2"
-      )
-      .then(
-        (result) => console.log(result.text),
-        (error) => console.log(error.text),
-        e.target.reset(),
-        alert("We will contact you soon")
-      );
+    {
+      form.name === "" || form.email === "" || form.message === ""
+        ? alert("Enter all Fields")
+        : emailjs
+            .sendForm(
+              "service_owzhoi9",
+              "template_8zrb4m3",
+              e.target,
+              "ugaGXz6g1deIfQib2"
+            )
+            .then(
+              (result) => console.log(result.text),
+              (error) => console.log(error.text),
+              e.target.reset(),
+              alert("We will contact you soon")
+            );
+    }
   };
 
   return (
@@ -61,15 +92,16 @@ const Contactus = () => {
                 <label className="font-[600]">Name</label>
                 <input
                   name="name"
-                  // value={contact.name}
+                  value={form.name}
+                  onChange={onNameChange}
                   className="p-2 shadow-md bg-[#fbfbfb] rounded-[20px]"
                   type="text"
                 />
                 <label className="font-[600]">Email address</label>
                 <input
                   name="email"
-                  // value={contact.email}
-
+                  value={form.email}
+                  onChange={onEmailChange}
                   className="p-2 bg-[#fbfbfb] shadow-md rounded-[20px]"
                   type="text"
                 />
@@ -77,6 +109,8 @@ const Contactus = () => {
                 <textarea
                   rows={"7"}
                   name="message"
+                  value={form.message}
+                  onChange={onMessageChange}
                   className=" bg-[#fbfbfb] shadow-md p-2 rounded-[20px]"
                   type="text"
                 />
