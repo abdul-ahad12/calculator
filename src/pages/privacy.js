@@ -9,6 +9,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const Privacy = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const pathname = useLocation();
 
   useEffect(() => {

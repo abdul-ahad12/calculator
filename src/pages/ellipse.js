@@ -1,37 +1,38 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import GeoTemp from '../component/sections/geoTemp'
+import GeoTemp from "../component/sections/geoTemp";
 
 import ReactGA from "react-ga";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 
 const Ellipse = () => {
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-    const lineElements = [
-        {
-          title: "Attributes of ellipse",
-    
-          link: "/attributes",
-        },
-        {
-          title: "Area and Circumference of an Ellipse from equation",
-          link: "/areacircumellipse",
-        },
-        
-     
-      ];
+  const lineElements = [
+    {
+      title: "Attributes of ellipse",
+
+      link: "/attributes",
+    },
+    {
+      title: "Area and Circumference of an Ellipse from equation",
+      link: "/areacircumellipse",
+    },
+  ];
   return (
-      <div>
-        <GeoTemp title={"Ellipse"} elements={lineElements} />
-      </div>
-  )
-}
+    <div>
+      <GeoTemp title={"Ellipse"} elements={lineElements} />
+    </div>
+  );
+};
 
-export default Ellipse
+export default Ellipse;

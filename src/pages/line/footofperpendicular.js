@@ -10,6 +10,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const Footofperpendicular = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const pathname = useLocation();
 
   useEffect(() => {

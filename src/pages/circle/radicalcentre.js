@@ -10,6 +10,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const Radicalcentre = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const pathname = useLocation();
 
   useEffect(() => {

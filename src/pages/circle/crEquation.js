@@ -11,6 +11,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const CrEquation = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const pathname = useLocation();
 
   useEffect(() => {

@@ -8,6 +8,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const Hyperbola = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const pathname = useLocation();
 
   useEffect(() => {

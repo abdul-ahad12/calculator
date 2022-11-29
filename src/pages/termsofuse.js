@@ -8,6 +8,10 @@ ReactGA.initialize(TRACKING_ID);
 
 const Termsofuse = () => {
 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const pathname = useLocation();
 
   useEffect(() => {

@@ -9,6 +9,11 @@ const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 
 const Contactus = () => {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   const [form, setform] = useState({
     name: "",
     email: "",
@@ -48,7 +53,7 @@ const Contactus = () => {
 
     {
       form.name === "" || form.email === "" || form.message === ""
-        ? alert("Enter all Fields")
+        ? alert("Please Enter all Fields")
         : emailjs
             .sendForm(
               "service_owzhoi9",
