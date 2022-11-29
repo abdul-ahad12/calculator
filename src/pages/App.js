@@ -6,19 +6,20 @@ import MainLayout from "./mainLayout";
 import ReactGA from "react-ga";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 function App() {
-  let location = useLocation();
-  useEffect(() => {
-    if (!window.GA_INTIALIZED)
-    {
-      ReactGA.initialize("G-H6HVLL90WP");
-      window.GA_INTIALIZED = true
-    }
-    ReactGA.set({ page: location.pathname})
-    ReactGA.pageview(location.pathname);
-  }, [location]);
+  // let location = useLocation();
+  // useEffect(() => {
+  //   if (!window.GA_INTIALIZED)
+  //   {
+  //     ReactGA.initialize("G-H6HVLL90WP");
+  //     window.GA_INTIALIZED = true
+  //   }
+  //   ReactGA.set({ page: location.pathname})
+  //   ReactGA.pageview(location.pathname);
+  // }, [location]);
 
   const pathname = useLocation();
 
