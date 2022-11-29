@@ -5,7 +5,9 @@ import Hyperbola from "../../calculations/hyperbola";
 import ResultTemp from "../../component/sections/resultTemp";
 import TitleTemplate from "../../component/sections/titleTemplate";
 
-
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
 
 const AttributesEl = () => {
 

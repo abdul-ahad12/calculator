@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import MainCard from "../component/sections/mainCard";
 import MainLayout from "./mainLayout";
-import ReactGA from "react-ga";
 
+import ReactGA from "react-ga";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 
 
 function App() {
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }, []);
 
   const pathname = useLocation();
 

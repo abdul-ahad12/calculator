@@ -5,6 +5,10 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { InlineMath } from "react-katex";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+
 const SlopeLine = () => {
 
   const pathname = useLocation();

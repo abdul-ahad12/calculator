@@ -4,6 +4,10 @@ import Ellipse from "../../calculations/ellipse";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import ResultTemp from "../../component/sections/resultTemp";
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+
 const Attributes = () => {
 
   const pathname = useLocation();

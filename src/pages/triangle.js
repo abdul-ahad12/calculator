@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import GeoTemp from "../component/sections/geoTemp";
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+
 const Triangle = () => {
 
   const pathname = useLocation();

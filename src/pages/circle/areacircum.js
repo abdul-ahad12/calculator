@@ -4,6 +4,10 @@ import Circle from "../../calculations/circle";
 import { MathComponent } from "mathjax-react";
 import TitleTemplate from '../../component/sections/titleTemplate';
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+
 const Areacircum = () => {
 
   const pathname = useLocation();

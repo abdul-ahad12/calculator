@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import MainLayout from "./mainLayout";
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+
 const Termsofuse = () => {
 
   const pathname = useLocation();

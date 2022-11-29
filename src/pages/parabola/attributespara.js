@@ -5,6 +5,10 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import ResultTempPara from "../../component/sections/resultTempPara";
 import Parabola from "../../calculations/parabola";
 
+import ReactGA from "react-ga";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+
 const AttributesPara = () => {
 
   const pathname = useLocation();
