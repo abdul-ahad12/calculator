@@ -1,9 +1,17 @@
 // import emailjs from '@emailjs/browser';
 import emailjs from "emailjs-com";
-
 import MainLayout from "./mainLayout";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Contactus = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
