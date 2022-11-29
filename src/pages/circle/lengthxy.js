@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Circle from "../../calculations/circle";
 
 const Lengthxy = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     g: "",
     f: "",

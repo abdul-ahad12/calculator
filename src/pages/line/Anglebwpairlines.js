@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 const Anglebwpairlines = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",

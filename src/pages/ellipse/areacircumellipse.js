@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Ellipse from "../../calculations/ellipse";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 
 const Areacircumellipse = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",

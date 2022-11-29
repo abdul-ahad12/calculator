@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 const PointSlopeForm = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [variables, setvariables] = useState({
     ax: "",
     ay: "",

@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import TitleTemplate from "../../component/sections/titleTemplate";
-import { MathComponent } from "mathjax-react";
+// import { MathComponent } from "mathjax-react";
 import ResultTempPara from "../../component/sections/resultTempPara";
 import Parabola from "../../calculations/parabola";
 
 const AttributesPara = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",

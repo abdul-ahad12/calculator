@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import GeoTemp from "../component/sections/geoTemp";
 // import SubCard from "../component/sections/subCard";
 // import MainLayout from "./mainLayout";
 
 const LineCal = () => {
 
-  
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
+
   const lineElements = [
     {
       title: "Distance between two points",

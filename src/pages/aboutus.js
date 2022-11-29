@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import MainLayout from "./mainLayout";
 
 const Aboutus = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   return (
     <div>
       <MainLayout>

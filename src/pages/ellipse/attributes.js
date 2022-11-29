@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Ellipse from "../../calculations/ellipse";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import ResultTemp from "../../component/sections/resultTemp";
 
 const Attributes = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",
@@ -92,7 +100,7 @@ const Attributes = () => {
         l={h}
         title1={"Length of Major Axis"}
         title2={"Length of Minor Axis"}
-        title3={"Length of Latus rectrum"}
+        title3={"Length of Latus rectum"}
         title4={" Center"}
         title5={"e"}
         title6={"Foci"}

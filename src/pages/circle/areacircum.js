@@ -1,9 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import { MathComponent } from "mathjax-react";
 import TitleTemplate from '../../component/sections/titleTemplate';
 
 const Areacircum = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
     const [value, setValue] = useState({
         a: "",
         b: "",

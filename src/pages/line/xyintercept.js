@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
+import { useLocation } from "react-router-dom";
 
 const Xyintercept = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
+
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -72,7 +81,7 @@ const Xyintercept = () => {
     ?alert("Invalid Input! Enter proper Equation of a Line")
     :resultDumm()
   }
-  const f = '\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\hspace{1cm} y-intercept : -\\frac{c}{b}}';
+  const f = '\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\\\ \\\\ y-intercept : -\\frac{c}{b}}';
   const f1 = <MathComponent tex={f} />
 
   return (
