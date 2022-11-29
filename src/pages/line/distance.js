@@ -5,6 +5,11 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import "katex/dist/katex.min.css";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const Distance = () => {
 
   const pathname = useLocation();

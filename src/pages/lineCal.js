@@ -4,6 +4,11 @@ import GeoTemp from "../component/sections/geoTemp";
 // import SubCard from "../component/sections/subCard";
 // import MainLayout from "./mainLayout";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const LineCal = () => {
 
   const pathname = useLocation();
