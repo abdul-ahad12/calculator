@@ -3,10 +3,10 @@ import { useLocation } from "react-router-dom";
 import MainCard from "../component/sections/mainCard";
 import MainLayout from "./mainLayout";
 
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.send("pageview");
 
 
 function App() {
