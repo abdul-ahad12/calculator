@@ -5,9 +5,16 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { InlineMath } from "react-katex";
 import { MathComponent } from "mathjax-react";
 
+<<<<<<< HEAD
 import ReactGA from "react-ga";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
+=======
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+>>>>>>> 02a88ef35917d7c3a709c83cb8f14e574c0a1062
 
 const SlopeLine = () => {
 

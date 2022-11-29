@@ -4,9 +4,16 @@ import Ellipse from "../../calculations/ellipse";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import ResultTemp from "../../component/sections/resultTemp";
 
+<<<<<<< HEAD
 import ReactGA from "react-ga";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
+=======
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+>>>>>>> 02a88ef35917d7c3a709c83cb8f14e574c0a1062
 
 const Attributes = () => {
 
@@ -116,7 +123,7 @@ const Attributes = () => {
         title12={"Vertices"}
         title9={"Equation of Major Axis"}
         title10={"Equation of Minor Axis"}
-        title11={"Equation of Latus rectrum"}
+        title11={"Equation of Latus rectum"}
         title8={"Standard Form"}
    
       />

@@ -8,7 +8,6 @@ const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
-
 function App() {
   // let location = useLocation();
   // useEffect(() => {

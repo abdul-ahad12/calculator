@@ -4,9 +4,10 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Circle from "../../calculations/circle";
 
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
 
 const Threepointcircle = () => {
 

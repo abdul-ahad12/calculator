@@ -5,9 +5,16 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import ResultTempPara from "../../component/sections/resultTempPara";
 import Parabola from "../../calculations/parabola";
 
+<<<<<<< HEAD
 import ReactGA from "react-ga";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
+=======
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+>>>>>>> 02a88ef35917d7c3a709c83cb8f14e574c0a1062
 
 const AttributesPara = () => {
 
@@ -102,8 +109,8 @@ const AttributesPara = () => {
         title2={"Focus"}
         title3={"Equation of Axis"}
         title4={"Equation of directrix"}
-        title5={"Equation of lactus rectrum"}
-        title6={"Length of Lactus rectrum"}
+        title5={"Equation of lactus rectum"}
+        title6={"Length of Lactus rectum"}
         title7={"Equation of tangent"}
         title8={"Standard Form"}
       />
