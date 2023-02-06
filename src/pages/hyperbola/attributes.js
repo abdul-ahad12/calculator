@@ -1,12 +1,23 @@
-import React, { useState } from "react";
-import { MathComponent } from "mathjax-react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+// import { MathComponent } from "mathjax-react";
 import Hyperbola from "../../calculations/hyperbola";
 import ResultTemp from "../../component/sections/resultTemp";
 import TitleTemplate from "../../component/sections/titleTemplate";
 
-
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
 
 const AttributesEl = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",
@@ -90,24 +101,24 @@ const AttributesEl = () => {
         e={e}
         f={f}
         g={g}
-        h={h}
+        h={l}
         i={i}
         j={j}
         k={k}
-        l={l}
+        l={h}
         m={m}
         title1={"Length of Tranverse Axis"}
         title2={"Length of Conjugate Axis"}
-        title3={"Length of Latus rectrum"}
+        title3={"Length of Latus rectum"}
         title4={" Center"}
         title5={"e"}
         title6={"Foci"}
         title7={"Equation of directrices"}
-        title8={"Vertices"}
+        title8={"Standard Form"}
         title9={"Equation of Tranverse Axis"}
         title10={"Equation of Conjugate Axis"}
-        title11={"Equation of Latus rectrum"}
-        title12={"Standard Form"}
+        title11={"Equation of Latus rectum"}
+        title12={"Vertices"}
    
       />
     );

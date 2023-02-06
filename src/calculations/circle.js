@@ -266,7 +266,7 @@ class Circle {
 
     let a_deg = a_rad * (180 / Math.PI);
 
-    return [x.toFixed(2), a_deg.toFixed(1)];
+    return [x.toFixed(2), a_deg.toFixed(0)];
   }
 
   radicalaxis(g, f, c, g1, f1, c1) {

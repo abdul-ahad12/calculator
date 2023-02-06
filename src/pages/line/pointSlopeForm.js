@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const PointSlopeForm = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [variables, setvariables] = useState({
     ax: "",
     ay: "",
@@ -38,7 +51,17 @@ const PointSlopeForm = () => {
      
     let m=result[0]
     let c=result[1]
-    let a=<MathComponent tex={`y=${m}x+${c}`} />
+    let final = ``
+
+    if(valueM === '0')
+    {
+      final = `y=${c}`
+    }
+    else
+    {
+      final = `y=${m}x+(${c})`
+    }
+    let a=<MathComponent tex={final} />
     
     setResult(a);
   };

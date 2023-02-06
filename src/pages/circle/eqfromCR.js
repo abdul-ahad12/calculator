@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const EqfromCR = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [point, setpoint] = useState({
     x: "",
     y: "",
@@ -40,7 +53,7 @@ const EqfromCR = () => {
     let b = result[1];
     let c = result[2];
 
-    let final = <MathComponent tex={`x^2 + y^2 +${a}x +${b}y +${c} = 0`} />
+    let final = <MathComponent tex={`x^2 + y^2 +(${a})x +(${b})y +(${c}) = 0`} />
 
     setresult(final);
   };

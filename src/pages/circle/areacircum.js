@@ -1,9 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import { MathComponent } from "mathjax-react";
 import TitleTemplate from '../../component/sections/titleTemplate';
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const Areacircum = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
     const [value, setValue] = useState({
         a: "",
         b: "",
@@ -54,7 +67,7 @@ const Areacircum = () => {
         :resultDumm()
       }
     
-      const s = 'Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r';
+      const s = '\\displaylines{Area = \\pi r^2 \\\\ \\\\ Circumference = 2 \\pi r}';
       const f2 = <MathComponent tex={s} />
   
     return (

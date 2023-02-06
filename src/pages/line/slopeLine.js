@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Line from "../../calculations/line";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { InlineMath } from "react-katex";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const SlopeLine = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [variables, setvariables] = useState({
     ax: "",
     ay: "",

@@ -1,8 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
+
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const CrEquation = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     g: "",
     f: "",
@@ -55,7 +69,7 @@ const CrEquation = () => {
     :resultDumm()
   }
 
-  const s = 'Centre: (-g,-f) \\hspace{0.5cm} Radius: \\sqrt{g^2+f^2-c}';
+  const s = '\\displaylines{Centre: (-g,-f) \\\\ \\\\ Radius: \\sqrt{g^2+f^2-c}}';
   const f2 = <MathComponent tex={s} />
   
   return (

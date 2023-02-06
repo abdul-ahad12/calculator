@@ -53,7 +53,7 @@ class Line {
 
     let a = (Number(by) - Number(ay)) / (Number(bx) - Number(ax));
     let m = -1 / a;
-    let b = m2 - m * m1;
+    let b = m2 - (m * m1);
     if (ax - bx === 0) {
       b = (Number(ay) + Number(by)) / 2;
     }
@@ -141,7 +141,7 @@ class Line {
   anglebwpairlines(a, h, b, g, f, c) {
     let a1 = Math.abs(Number(a) + Number(b));
     let a2 = Math.sqrt(
-      (Number(a) - Number(b)) * (Number(a) - Number(b)) + 2 * h * h
+      (Number(a) - Number(b)) * (Number(a) - Number(b)) + (1 * h * h)
     );
 
     let a3 = a1 / a2;
@@ -161,7 +161,7 @@ class Line {
     let a4 = a2 / a1;
     let a5 = a3 / a1;
 
-    return [Number(a4.toFixed(2)), Number(a5.toFixed(2))];
+    return [Number(a4.toFixed(3)), Number(a5.toFixed(3))];
   }
 
   pairfromlines(a1, b1, c1, a2, b2, c2) {

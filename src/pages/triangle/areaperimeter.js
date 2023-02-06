@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const Areaperimeter = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [coeficient, setcoeficient] = useState({
     a: "",
     b: "",
@@ -124,13 +137,14 @@ const Areaperimeter = () => {
       : resultDumm();
   };
 
-
+  const f = "\\displaylines{Area = \\frac{1}{2}|(x_1-x_2)(y_1-y_3) - (x_1-x_3)(y_1-y_2)| \\\\ \\\\ Perimeter = AB + BC + CA  }";
+  const f1 = <MathComponent tex={f} />
 
   return (
     <div>
       <TitleTemplate
         title={"Area and Perimeter of a triangle from equations of sides"}
-        // formula={f1}
+        formula={f1}
         type={"threelines"}
         valueA={coeficient.a}
         valueB={coeficient.b}

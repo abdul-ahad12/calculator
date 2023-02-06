@@ -31,9 +31,13 @@ const Footer = () => {
       <div className="lg:hidden">
         {/* <div className="base: text-[25px] font-[600] ">Follow Us</div> */}
         <div className="flex pt-4 gap-4  justify-center">
-          <div className="w-[3rem]  ">
+          
+          <a
+            href="https://www.linkedin.com/company/coordinate-geometry-calculator"
+            className="w-[3rem] "
+          >
             <img src="/linkedin.svg" alt="" />
-          </div>
+          </a>
           <a
             href="https://www.instagram.com/cg.calculator"
             className="w-[3rem] "
@@ -72,9 +76,12 @@ const Footer = () => {
                 : "hidden"
             }
           >
-            <div className="  ">
-              <img src="/linkedin.svg" alt="" />
-            </div>
+            <a
+            href="https://www.linkedin.com/company/coordinate-geometry-calculator"
+            className="w-[3rem] "
+          >
+            <img src="/linkedin.svg" alt="" />
+          </a>
             <a
               href="https://www.instagram.com/cg.calculator"
               className="w-[3rem] "

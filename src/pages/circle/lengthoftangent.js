@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const Lengthoftangent = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
     const [eqInput, seteqInput] = useState({
         x: "",
         y: "",
@@ -82,7 +95,7 @@ const Lengthoftangent = () => {
         :resultDumm()
       }
 
-      const f = 'Length \\ of \\ Tangent: \\sqrt{S_{11}} = \\sqrt{x_1^2 + y_1^2 + 2gx_1 +2fy_1 + c}';
+      const f = '\\displaylines{Length \\ of \\ Tangent: \\sqrt{S_{11}}, \\\\ \\\\ \\sqrt{S_{11}} = \\sqrt{x_1^2 + y_1^2 + 2gx_1 +2fy_1 + c}}';
       const f1 = <MathComponent tex={f} />
 
   return (

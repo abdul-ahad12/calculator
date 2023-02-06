@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import TitleTemplate from "../../component/sections/titleTemplate";
-import { MathComponent } from "mathjax-react";
-import ResultTemp from "../../component/sections/resultTemp";
+// import { MathComponent } from "mathjax-react";
+import ResultTempPara from "../../component/sections/resultTempPara";
 import Parabola from "../../calculations/parabola";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const AttributesPara = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     l: "",
     m: "",
@@ -71,13 +84,9 @@ const AttributesPara = () => {
     let f = result[5];
     let g = result[6];
     let h = result[7];
-    let i = result[8];
-    let j = result[9];
-    let k = result[10];
-    let l = result[11];
 
     let final = (
-      <ResultTemp
+      <ResultTempPara
         a={a}
         b={b}
         c={c}
@@ -86,16 +95,12 @@ const AttributesPara = () => {
         f={f}
         g={g}
         h={h}
-        i={i}
-        j={j}
-        k={k}
-        l={l}
         title1={"Vertex"}
         title2={"Focus"}
         title3={"Equation of Axis"}
         title4={"Equation of directrix"}
-        title5={"Equation of lactus rectrum"}
-        title6={"Length of Lactus rectrum"}
+        title5={"Equation of lactus rectum"}
+        title6={"Length of Lactus rectum"}
         title7={"Equation of tangent"}
         title8={"Standard Form"}
       />
@@ -105,8 +110,6 @@ const AttributesPara = () => {
   };
 
   const check=()=>{
-// eqInput.l==1?alert("hello"):alert("bye")
-
     if(eqInput.l!=0){
       eqInput.m==0?resultDumm():alert("Coeficient of x^2 or y^2 should be zero ")
     }
@@ -124,18 +127,7 @@ const AttributesPara = () => {
     eqInput.p === ""
     ? alert("Enter all inputs")
     : check()
-
-    // setvariables({
-      //     ax:"",
-    //     ay:"",
-    //     bx:"",
-    //     by:"",
-
-    // })
   };
-  // const s = "Area = \\pi r^2 \\hspace{1cm} Circumference = 2 \\pi r";
-  // const f2 = <MathComponent tex={s} />;
- 
   
   return (
     <div>

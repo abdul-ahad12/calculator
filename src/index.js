@@ -32,7 +32,6 @@ import Xyintercept from './pages/line/xyintercept';
 import LineCal from './pages/lineCal';
 import Parabola from './pages/parabola';
 import AttributesPara from './pages/parabola/attributespara';
-import Vertexfocus from './pages/parabola/vertexfocus';
 import Triangle from './pages/triangle';
 import reportWebVitals from './reportWebVitals';
 import Orthocentre from './pages/triangle/orthocentre';
@@ -138,7 +137,6 @@ root.render(
         {/*                Parabola                  */}
         <Route path="parabola" element={<Parabola />}></Route>
         <Route path="attributespara" element={<AttributesPara />}></Route>
-        <Route path="vertexfocusx" element={<Vertexfocus />}></Route>
 
 
         {/*               Ellipse                  */}

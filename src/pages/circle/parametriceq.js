@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
 
 const Parametriceq = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
   const [eqInput, seteqInput] = useState({
     g: "",
     f: "",
@@ -38,7 +50,7 @@ const Parametriceq = () => {
     let b = result[1];
     let c=result[2]
 
-    let final =<MathComponent tex={`\\displaylines{x=${a}+${c}Cos(\\theta) \\\\ y=${b}+${c}Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}/>
+    let final =<MathComponent tex={`\\displaylines{x=${a}+(${c})Cos(\\theta) \\\\ y=${b}+(${c})Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}/>
 
     setresult(final);
   };
@@ -57,7 +69,7 @@ const Parametriceq = () => {
     :resultDumm()
   }
 
-  const f = 'x = -g + rcos(\\theta) \\hspace{1cm} y = -f + rSin(\\theta)';
+  const f = '\\displaylines{ x = -g + rcos(\\theta) \\\\ \\\\ y = -f + rSin(\\theta)}';
   const f1 = <MathComponent tex={f} />
 
   return (

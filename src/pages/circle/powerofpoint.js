@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
+import ReactGA from "react-ga4";
+const TRACKING_ID = "G-H6HVLL90WP";
+ReactGA.initialize(TRACKING_ID);
+ReactGA.send("pageview");
+
 const Powerofpoint = () => {
+
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[pathname]);
+
     const [eqInput, seteqInput] = useState({
         x:"",
         y:"",
@@ -77,7 +90,7 @@ const Powerofpoint = () => {
         :resultDumm()
       }
 
-      const s = 'P:(x_1,y_1), \\hspace{0.5cm} S_{11}: (x_1)^2 + (y_1)^2 + 2g(x_1) + 2f(y_1) - c';
+      const s = '\\displaylines{P:(x_1,y_1), \\\\ \\\\ S_{11}: (x_1)^2 + (y_1)^2 + 2g(x_1) + 2f(y_1) - c}';
       const f2 = <MathComponent tex={s} />
 
   return (
