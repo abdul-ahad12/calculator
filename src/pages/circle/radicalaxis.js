@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Radicalaxis = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     g1: "",
@@ -33,7 +33,7 @@ const Radicalaxis = () => {
     coeficient.c1,
     coeficient.g2,
     coeficient.f2,
-    coeficient.c2,
+    coeficient.c2
   );
   console.log(coeficient);
 
@@ -81,11 +81,11 @@ const Radicalaxis = () => {
       coeficient.c1,
       coeficient.g2,
       coeficient.f2,
-      coeficient.c2,
+      coeficient.c2
     );
     let x = result[0];
     let y = result[1];
-    let z = result[2]
+    let z = result[2];
 
     let c = <MathComponent tex={`${x}x + (${y})y + (${z}) = 0`} />;
     setResult(c);
@@ -97,33 +97,45 @@ const Radicalaxis = () => {
     coeficient.c1 === "" ||
     coeficient.g2 === "" ||
     coeficient.f2 === "" ||
-    coeficient.c2 === "" 
+    coeficient.c2 === ""
       ? alert("Enter all inputs")
       : check_circle1();
   };
 
-
-const check_circle1 = () => {
-    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
-    ? alert("The Equation of First circle is invalid! Enter Valid Input")
-    :check_circle2()
-  }
+  const check_circle1 = () => {
+    ((coeficient.g1 / 2) * coeficient.g1) / 2 +
+      ((coeficient.f1 / 2) * coeficient.f1) / 2 -
+      coeficient.c1 <=
+    0
+      ? alert("The Equation of First circle is invalid! Enter Valid Input")
+      : check_circle2();
+  };
 
   const check_circle2 = () => {
-    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
-    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((coeficient.g2 / 2) * coeficient.g2) / 2 +
+      ((coeficient.f2 / 2) * coeficient.f2) / 2 -
+      coeficient.c2 <=
+    0
+      ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
 
-  const f ="Radical \\ Axis = S_1 - S_2 =0";
+  const f = "Radical \\ Axis = S_1 - S_2 =0";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Radical Axis of two Circles.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Radical Axis of two circles"}
         type={"twocircles"}
-        formula = {f1}
+        formula={f1}
         valueA={coeficient.g1}
         valueB={coeficient.f1}
         valueC={coeficient.c1}

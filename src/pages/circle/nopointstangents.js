@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Nopointstangents = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     g1: "",
@@ -33,7 +33,7 @@ const Nopointstangents = () => {
     coeficient.c1,
     coeficient.g2,
     coeficient.f2,
-    coeficient.c2,
+    coeficient.c2
   );
   console.log(coeficient);
 
@@ -81,7 +81,7 @@ const Nopointstangents = () => {
       coeficient.c1,
       coeficient.g2,
       coeficient.f2,
-      coeficient.c2,
+      coeficient.c2
     );
     let x = result[0];
     let y = result[1];
@@ -90,24 +90,15 @@ const Nopointstangents = () => {
     console.log(x);
     console.log(y);
     console.log(z);
-    if(x>y)
-    {
-        final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\\\ Since, \\hspace{.15cm} C_1C_2 >r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} lie \\hspace{.15cm} completely \\hspace{.15cm} detached \\hspace{.15cm} from \\hspace{.15cm} one \\hspace{.15cm} another  \\\\Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 4}`;
-    }
-    else if(x === y)
-    {
+    if (x > y) {
+      final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\\\ Since, \\hspace{.15cm} C_1C_2 >r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} lie \\hspace{.15cm} completely \\hspace{.15cm} detached \\hspace{.15cm} from \\hspace{.15cm} one \\hspace{.15cm} another  \\\\Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 4}`;
+    } else if (x === y) {
       final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\\\ Since, \\hspace{.15cm} C_1C_2 = r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} touch \\hspace{.15cm}  one \\hspace{.15cm} another \\hspace{.15cm} externally \\\\ Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 3}`;
-    }
-    else if(x === z)
-    {
+    } else if (x === z) {
       final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} |r_1-r_2| = ${z} \\\\ Since, \\hspace{.15cm} C_1C_2 = |r_1-r_2|  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} touch \\hspace{.15cm}  one \\hspace{.15cm} another \\hspace{.15cm} internally \\\\ Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 1}`;
-    }
-    else if(z <x && x<y)
-    {
+    } else if (z < x && x < y) {
       final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} r_1+r_2 = ${y} \\hspace{.5cm} |r_1-r_2| = ${z} \\\\ Since, \\hspace{.15cm} |r_1-r_2| < C_1C_2 < r_1+r_2  \\hspace{.15cm} the \\hspace{.15cm} circles \\hspace{.15cm} intersect \\hspace{.15cm}  each \\hspace{.15cm} other \\\\ Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 2}`;
-    }
-    else if(x<z)
-    {
+    } else if (x < z) {
       final = `\\displaylines{C_1C_2 = ${x} \\hspace{.5cm} |r_1-r_2| = ${z} \\\\ Since, \\hspace{.15cm} C_1C_2 < |r_1-r_2|  \\hspace{.15cm} one \\hspace{.15cm} circle \\hspace{.15cm} lies \\hspace{.15cm} completely \\hspace{.15cm} inside \\hspace{.15cm} the \\hspace{.15cm} other \\hspace{.15cm} circle  \\\\Number \\hspace{.15cm} of \\hspace{.15cm} common \\hspace{.15cm} Tangents = 0}`;
     }
 
@@ -121,25 +112,41 @@ const Nopointstangents = () => {
     coeficient.c1 === "" ||
     coeficient.g2 === "" ||
     coeficient.f2 === "" ||
-    coeficient.c2 === "" 
+    coeficient.c2 === ""
       ? alert("Enter all inputs")
       : check_circle1();
   };
 
   const check_circle1 = () => {
-    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
-    ? alert("The Equation of First circle is invalid! Enter Valid Input")
-    :check_circle2()
-  }
+    ((coeficient.g1 / 2) * coeficient.g1) / 2 +
+      ((coeficient.f1 / 2) * coeficient.f1) / 2 -
+      coeficient.c1 <=
+    0
+      ? alert("The Equation of First circle is invalid! Enter Valid Input")
+      : check_circle2();
+  };
 
   const check_circle2 = () => {
-    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
-    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((coeficient.g2 / 2) * coeficient.g2) / 2 +
+      ((coeficient.f2 / 2) * coeficient.f2) / 2 -
+      coeficient.c2 <=
+    0
+      ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Relative position of two Circles and Number of common Tangents.
+        </title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
+
       <TitleTemplate
         title={"Relative position of two Circles and Number of common Tangents"}
         type={"twocircles"}

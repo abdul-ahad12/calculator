@@ -5,17 +5,17 @@ import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Verticestosides = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -104,19 +104,29 @@ const Verticestosides = () => {
     coeficient.c === "" ||
     coeficient.d === "" ||
     coeficient.e === "" ||
-    coeficient.f === "" 
+    coeficient.f === ""
       ? alert("Enter all inputs")
       : check_collinear();
   };
 
   const check_collinear = () => {
-    (coeficient.a*(coeficient.d - coeficient.f )) +(coeficient.c*(coeficient.f - coeficient.b)) + (coeficient.e*(coeficient.b - coeficient.d)) === 0
-    ? alert("Given points are collinear! Enter valid Input.")
-    :resultDumm()
-  }
+    coeficient.a * (coeficient.d - coeficient.f) +
+      coeficient.c * (coeficient.f - coeficient.b) +
+      coeficient.e * (coeficient.b - coeficient.d) ===
+    0
+      ? alert("Given points are collinear! Enter valid Input.")
+      : resultDumm();
+  };
 
   return (
     <div>
+      <Helmet>
+        <title>Equations of Sides of a Triangle from Vertices.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Equations of Sides of a Triangle from Vertices"}
         // formula={f1}

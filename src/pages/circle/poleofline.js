@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Poleofline = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -33,7 +33,7 @@ const Poleofline = () => {
     coeficient.c,
     coeficient.g,
     coeficient.f,
-    coeficient.c1,
+    coeficient.c1
   );
   console.log(coeficient);
 
@@ -81,10 +81,10 @@ const Poleofline = () => {
       coeficient.c,
       coeficient.g,
       coeficient.f,
-      coeficient.c1,
+      coeficient.c1
     );
     let x = result[0];
-    let y = result[1]
+    let y = result[1];
 
     let c = <MathComponent tex={`(${x},${y})`} />;
     setResult(c);
@@ -96,27 +96,36 @@ const Poleofline = () => {
     coeficient.c === "" ||
     coeficient.g === "" ||
     coeficient.f === "" ||
-    coeficient.c1 === "" 
+    coeficient.c1 === ""
       ? alert("Enter all inputs")
       : check_circle();
   };
 
   const check_circle = () => {
-    (coeficient.g/2 * coeficient.g/2) + (coeficient.f/2 * coeficient.f/2) - coeficient.c1 <= 0 
-    ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((coeficient.g / 2) * coeficient.g) / 2 +
+      ((coeficient.f / 2) * coeficient.f) / 2 -
+      coeficient.c1 <=
+    0
+      ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
 
-
-  const f ="(-g + \\frac{lr^2}{lg+mf-n} , -f + \\frac{mr^2}{lg+mf-n})";
+  const f = "(-g + \\frac{lr^2}{lg+mf-n} , -f + \\frac{mr^2}{lg+mf-n})";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Pole of a line with respect to a circle.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Pole of a line with respect to a circle"}
         type={"linecircle"}
-        formula = {f1}
+        formula={f1}
         valueA={coeficient.a}
         valueB={coeficient.b}
         valueC={coeficient.c}

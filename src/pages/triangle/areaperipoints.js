@@ -5,6 +5,7 @@ import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
@@ -112,6 +113,13 @@ const Areaperipoints = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Area and Perimeter of a triangle from equations of sides.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Area and Perimeter of a triangle from equations of sides"}
         formula={f1}

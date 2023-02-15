@@ -6,17 +6,17 @@ import "katex/dist/katex.min.css";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Distance = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [variables, setvariables] = useState({
     ax: "",
@@ -77,6 +77,14 @@ const Distance = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Distance between two Points.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
+
       <TitleTemplate
         title={"Distance between two points"}
         type={"twoPoints"}

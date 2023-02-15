@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Checkconjugate = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -35,7 +35,7 @@ const Checkconjugate = () => {
     coeficient.d,
     coeficient.e,
     coeficient.f,
-    coeficient.g,
+    coeficient.g
   );
   console.log(coeficient);
 
@@ -90,17 +90,16 @@ const Checkconjugate = () => {
       coeficient.d,
       coeficient.e,
       coeficient.f,
-      coeficient.g,
+      coeficient.g
     );
     let x = result[0];
-    {console.log(x)}
-    let final = ``;
-    if(x === 0 )
     {
-        final = `\\displaylines{S_{12} = ${x} \\\\ Since \\hspace{.15cm} S_{12} \\hspace{.15cm} is \\hspace{.15cm}  equal \\hspace{.15cm}  to \\hspace{.15cm} zero, \\hspace{.15cm} Therefore \\hspace{.15cm} the \\hspace{.15cm} points \\hspace{.15cm} are \\hspace{.15cm} conjugate }`
+      console.log(x);
     }
-    else
-    {
+    let final = ``;
+    if (x === 0) {
+      final = `\\displaylines{S_{12} = ${x} \\\\ Since \\hspace{.15cm} S_{12} \\hspace{.15cm} is \\hspace{.15cm}  equal \\hspace{.15cm}  to \\hspace{.15cm} zero, \\hspace{.15cm} Therefore \\hspace{.15cm} the \\hspace{.15cm} points \\hspace{.15cm} are \\hspace{.15cm} conjugate }`;
+    } else {
       final = `\\displaylines{S_{12} = ${x} \\\\ Since \\hspace{.15cm} S_{12} \\hspace{.15cm} is \\hspace{.15cm} not \\hspace{.15cm}  equal \\hspace{.15cm}  to \\hspace{.15cm} zero, \\hspace{.15cm} Therefore \\hspace{.15cm} the \\hspace{.15cm} points \\hspace{.15cm} are \\hspace{.15cm} not \\hspace{.15cm} conjugate }`;
     }
     let c = <MathComponent tex={final} />;
@@ -120,17 +119,28 @@ const Checkconjugate = () => {
   };
 
   const check_circle = () => {
-    (coeficient.e/2 * coeficient.e/2) + (coeficient.f/2 * coeficient.f/2) - coeficient.g <= 0 
-    ? alert("The Equation of circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((coeficient.e / 2) * coeficient.e) / 2 +
+      ((coeficient.f / 2) * coeficient.f) / 2 -
+      coeficient.g <=
+    0
+      ? alert("The Equation of circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
 
-
-  const f ="S_{12} = x_1x_2 +y_1y_2 + g(x_1 + x_2) +f(y_1+y_2) + c=0";
+  const f = "S_{12} = x_1x_2 +y_1y_2 + g(x_1 + x_2) +f(y_1+y_2) + c=0";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Check if two Points are Conjugate with respect to a circle.
+        </title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Check if two Points are Conjugate with respect to a circle"}
         formula={f1}

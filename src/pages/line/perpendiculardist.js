@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Perpendiculardist = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     aa: "",
@@ -84,23 +84,29 @@ const Perpendiculardist = () => {
     coeficient.ba === "" ||
     coeficient.ca === "" ||
     coeficient.ab === "" ||
-    coeficient.bb === "" 
+    coeficient.bb === ""
       ? alert("Enter all inputs")
       : zero();
   };
 
   const zero = () => {
     coeficient.ca === "0" && coeficient.ab === "0"
-    ? alert("Invalid Input! Enter proper equation of line")
-    :resultDumm();
-  }
+      ? alert("Invalid Input! Enter proper equation of line")
+      : resultDumm();
+  };
 
-  const f =
-    "d = \\frac{|ax_1+by_1+c|}{\\sqrt{a^2+b^2}}";
+  const f = "d = \\frac{|ax_1+by_1+c|}{\\sqrt{a^2+b^2}}";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Perpendicular Distance between a Line and a Point.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Perpendicular Distance between a Line and a Point"}
         formula={f1}

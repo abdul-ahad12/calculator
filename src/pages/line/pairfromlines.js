@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Pairfromlines = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -89,7 +89,11 @@ const Pairfromlines = () => {
     let x4 = result[3];
     let x5 = result[4];
     let x6 = result[5];
-    let c = <MathComponent tex={`S: ${x1}x^2 + (${x2})xy + (${x3})y^2+ (${x4})x + (${x5})y + (${x6})`}/>;
+    let c = (
+      <MathComponent
+        tex={`S: ${x1}x^2 + (${x2})xy + (${x3})y^2+ (${x4})x + (${x5})y + (${x6})`}
+      />
+    );
     setResult(c);
   };
 
@@ -111,11 +115,18 @@ const Pairfromlines = () => {
     // })
   };
 
-  const f ="S: ax^2 + 2hxy +by^2 +2gx + 2fy +c = 0";
+  const f = "S: ax^2 + 2hxy +by^2 +2gx + 2fy +c = 0";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Equation of pair of straight lines from two lines.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Equation of pair of straight lines from two lines"}
         formula={f1}

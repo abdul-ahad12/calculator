@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Perpendicular = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [variables, setvariables] = useState({
     ax: "",
@@ -53,39 +53,33 @@ const Perpendicular = () => {
   };
   const resultDumm = () => {
     const result = line.bisector(
-        variables.ax,
-        variables.ay,
-        variables.bx,
-        variables.by
-      );
-      let m=result[0]
-      let b=result[1]
-      let final =``;
-      
-      if(variables.ax - variables.bx === 0)
-      {
-        final = `y = ${b}`
-      }
-      else if(variables.ay - variables.by === 0)
-      {
-        final = `x = ${b}`
-      }
-      else
-      {
-        final = `y=${m}x+(${b})`
-      }
-      let a=<MathComponent tex={final} />
-      setResult(a);
-      
+      variables.ax,
+      variables.ay,
+      variables.bx,
+      variables.by
+    );
+    let m = result[0];
+    let b = result[1];
+    let final = ``;
+
+    if (variables.ax - variables.bx === 0) {
+      final = `y = ${b}`;
+    } else if (variables.ay - variables.by === 0) {
+      final = `x = ${b}`;
+    } else {
+      final = `y=${m}x+(${b})`;
+    }
+    let a = <MathComponent tex={final} />;
+    setResult(a);
   };
 
   const onResult = () => {
-      variables.ax === "" ||
-      variables.ay === "" ||
-      variables.bx === "" ||
-      variables.by === ""
-        ? alert("Enter all inputs")
-        :  same()
+    variables.ax === "" ||
+    variables.ay === "" ||
+    variables.bx === "" ||
+    variables.by === ""
+      ? alert("Enter all inputs")
+      : same();
   };
 
   // const all_zero = () => {
@@ -95,14 +89,20 @@ const Perpendicular = () => {
   // }
 
   const same = () => {
-    variables.ax === variables.bx   && variables.ay ===  variables.by 
-    ? alert("Invalid Input! Enter two Different points")
-    :  resultDumm()
-  }
+    variables.ax === variables.bx && variables.ay === variables.by
+      ? alert("Invalid Input! Enter two Different points")
+      : resultDumm();
+  };
 
   return (
     <div>
-      {" "}
+      <Helmet>
+        <title>Equation of Perpendicular bisector.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Equation of Perpendicular bisector"}
         subTitle={""}

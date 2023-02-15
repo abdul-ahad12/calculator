@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const GenToStand = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [eqInput, seteqInput] = useState({
     g: "",
@@ -50,37 +50,43 @@ const GenToStand = () => {
     let b = result[1];
     let c = result[2];
 
-    let final = (
-      <MathComponent tex={`(x-(${a}))^2+(y-(${b}))^2=${c}`} />
-    );
+    let final = <MathComponent tex={`(x-(${a}))^2+(y-(${b}))^2=${c}`} />;
 
     setresult(final);
   };
 
   const onResult = () => {
-    eqInput.g === "" || 
-    eqInput.f === "" || 
-    eqInput.c === ""
+    eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
       ? alert("Enter all inputs")
       : check_circle();
   };
-  
-  const check_circle = () => {
-    (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
-    ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
 
-  const f = '\\displaylines{General Eq: x^2 + y^2 + 2gx + 2fy + c \\\\ \\\\ Standard Eq: (x-h)^2 + (y-k)^2 = r^2}';
-  const f1 = <MathComponent tex={f} />
-  
+  const check_circle = () => {
+    ((eqInput.g / 2) * eqInput.g) / 2 +
+      ((eqInput.f / 2) * eqInput.f) / 2 -
+      eqInput.c <=
+    0
+      ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
+
+  const f =
+    "\\displaylines{General Eq: x^2 + y^2 + 2gx + 2fy + c \\\\ \\\\ Standard Eq: (x-h)^2 + (y-k)^2 = r^2}";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>General form equation to standard form.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"General form equation to standard form"}
         type={"eqCircle"}
-        formula = {f1}
+        formula={f1}
         valueA={eqInput.g}
         valueB={eqInput.f}
         valueC={eqInput.c}

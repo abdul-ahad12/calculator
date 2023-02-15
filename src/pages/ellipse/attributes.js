@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import ResultTemp from "../../component/sections/resultTemp";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Attributes = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [eqInput, seteqInput] = useState({
     l: "",
@@ -85,7 +85,6 @@ const Attributes = () => {
     let j = result[9];
     let k = result[10];
     let l = result[11];
- 
 
     // let final=`${a},${b},${c},${d},${e},${f},${g}`
 
@@ -115,18 +114,16 @@ const Attributes = () => {
         title10={"Equation of Minor Axis"}
         title11={"Equation of Latus rectum"}
         title8={"Standard Form"}
-   
       />
     );
 
     setresult(final);
   };
 
-  const check=()=>{
-    if(eqInput.l==="0"||eqInput.m==="0"){
-      return alert("The equation entered is not of Ellipse")
+  const check = () => {
+    if (eqInput.l === "0" || eqInput.m === "0") {
+      return alert("The equation entered is not of Ellipse");
     }
-    
 
     let nn = eqInput.n / eqInput.l;
     //    let mm=m/m
@@ -137,21 +134,22 @@ const Attributes = () => {
     let bb = -1 * (oo / 2);
     //this is the coeeficient we are dividing with
     let c =
-      -1 * eqInput.p + eqInput.l * (Number(aa) * Number(aa)) + eqInput.m * (Number(bb) * Number(bb));
+      -1 * eqInput.p +
+      eqInput.l * (Number(aa) * Number(aa)) +
+      eqInput.m * (Number(bb) * Number(bb));
     //this is a^2
     let a = c / eqInput.l;
     //this is b^2
     let b = c / eqInput.m;
-    console.log(a)
-    console.log(b)
-    a<0||b<0?alert("The equation entered is not of Ellipse"):resultDumm()
-
-  }
+    console.log(a);
+    console.log(b);
+    a < 0 || b < 0
+      ? alert("The equation entered is not of Ellipse")
+      : resultDumm();
+  };
 
   const onResult = () => {
-    eqInput.l === "" || eqInput.m === ""
-      ? alert("Enter all inputs")
-      : check();
+    eqInput.l === "" || eqInput.m === "" ? alert("Enter all inputs") : check();
     // setvariables({
     //     ax:"",
     //     ay:"",
@@ -163,7 +161,13 @@ const Attributes = () => {
 
   return (
     <div>
-      {" "}
+      <Helmet>
+        <title>Program to find attributes of ellipse.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Program to find attributes of ellipse"}
         type={"ellipse"}

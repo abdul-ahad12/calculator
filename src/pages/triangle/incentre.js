@@ -5,17 +5,17 @@ import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Incentre = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -126,22 +126,32 @@ const Incentre = () => {
     coeficient.f === "" ||
     coeficient.g === "" ||
     coeficient.h === "" ||
-    coeficient.i === "" 
+    coeficient.i === ""
       ? alert("Enter all inputs")
       : check_parallel();
   };
 
   const check_parallel = () => {
-    coeficient.a / coeficient.b === coeficient.d / coeficient.e || coeficient.a / coeficient.b === coeficient.g / coeficient.h || coeficient.g / coeficient.h === coeficient.d / coeficient.e 
+    coeficient.a / coeficient.b === coeficient.d / coeficient.e ||
+    coeficient.a / coeficient.b === coeficient.g / coeficient.h ||
+    coeficient.g / coeficient.h === coeficient.d / coeficient.e
       ? alert("Lines are parallel! Enter valid Input.")
       : resultDumm();
   };
 
-  const f = "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c}) ";
-  const f1 = <MathComponent tex={f} />
+  const f =
+    "Incenter = (\\frac{ax_1+bx_2+cx_3}{a+b+c}, \\frac{ay_1+by_2+cy_3}{a+b+c}) ";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Incenter of a triangle from sides.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Incenter of a triangle from sides"}
         formula={f1}
@@ -169,8 +179,6 @@ const Incentre = () => {
       />
     </div>
   );
-  
-
 };
 
 export default Incentre;

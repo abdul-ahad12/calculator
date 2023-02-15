@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Paralinesdist = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     aa: "",
@@ -83,19 +83,18 @@ const Paralinesdist = () => {
       coeficient.bb,
       coeficient.cb
     );
-    
-  
+
     let x = `${result[0]}`;
-    
+
     let c = <MathComponent tex={`d = ${x}`} />;
     setResult(c);
   };
- 
+
   const check_input = () => {
-    coeficient.aa/coeficient.ba !== coeficient.ab/coeficient.bb 
-    ? alert("Lines are not Parallel")
-    : resultDumm();
-  }
+    coeficient.aa / coeficient.ba !== coeficient.ab / coeficient.bb
+      ? alert("Lines are not Parallel")
+      : resultDumm();
+  };
 
   const onResult = () => {
     coeficient.aa === "" ||
@@ -108,11 +107,18 @@ const Paralinesdist = () => {
       : check_input();
   };
 
-  const f =" d = \\frac{|c_1-c_2|}{\\sqrt{a^2+b^2}}";
+  const f = " d = \\frac{|c_1-c_2|}{\\sqrt{a^2+b^2}}";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Perpendicular Distance between two parallel lines.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Perpendicular Distance between two parallel lines"}
         formula={f1}

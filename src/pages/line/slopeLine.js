@@ -6,17 +6,17 @@ import { InlineMath } from "react-katex";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const SlopeLine = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [variables, setvariables] = useState({
     ax: "",
@@ -77,7 +77,7 @@ const SlopeLine = () => {
   const check_input = () => {
     variables.ax === variables.bx && variables.ay === variables.by
       ? alert("The Points are same! Enter two Different Points")
-      :resultDumm();
+      : resultDumm();
   };
 
   const f = "m = \\frac{y_2-y_1}{x_2-x_1}";
@@ -90,6 +90,13 @@ const SlopeLine = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Calculate Slope of a Line.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Calculate Slope of a Line"}
         formula={f1}

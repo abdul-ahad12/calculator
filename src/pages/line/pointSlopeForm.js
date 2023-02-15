@@ -5,27 +5,27 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const PointSlopeForm = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [variables, setvariables] = useState({
     ax: "",
     ay: "",
   });
-  console.log(variables)
+  console.log(variables);
   const [valueM, setvalueM] = useState("");
-  console.log(valueM)
+  console.log(valueM);
 
-  const line = new Line(valueM,variables.ax, variables.ay);
+  const line = new Line(valueM, variables.ax, variables.ay);
   const [result, setResult] = useState("");
 
   const onAxChange = (e) => {
@@ -41,35 +41,25 @@ const PointSlopeForm = () => {
     });
   };
 
-
   const resultDumm = () => {
-    const result = line.pointslopeform(
-      valueM,
-      variables.ax,
-      variables.ay
-    );
-     
-    let m=result[0]
-    let c=result[1]
-    let final = ``
+    const result = line.pointslopeform(valueM, variables.ax, variables.ay);
 
-    if(valueM === '0')
-    {
-      final = `y=${c}`
+    let m = result[0];
+    let c = result[1];
+    let final = ``;
+
+    if (valueM === "0") {
+      final = `y=${c}`;
+    } else {
+      final = `y=${m}x+(${c})`;
     }
-    else
-    {
-      final = `y=${m}x+(${c})`
-    }
-    let a=<MathComponent tex={final} />
-    
+    let a = <MathComponent tex={final} />;
+
     setResult(a);
   };
 
   const onResult = () => {
-    variables.ax === "" ||
-    variables.ay === "" ||
-   valueM===""
+    variables.ax === "" || variables.ay === "" || valueM === ""
       ? alert("Enter all inputs")
       : resultDumm();
     // setvariables({
@@ -85,11 +75,18 @@ const PointSlopeForm = () => {
     setvalueM(e.target.value);
   };
 
-  const f = 'y - y_1 = m (x - x_1)';
-  const f1 = <MathComponent tex={f} />
+  const f = "y - y_1 = m (x - x_1)";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Equation of a line. Point slope form.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Equation of a line. Point slope form."}
         type={"slopePoint"}

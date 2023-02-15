@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Imageofpoint = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     aa: "",
@@ -85,16 +85,16 @@ const Imageofpoint = () => {
     coeficient.ba === "" ||
     coeficient.ca === "" ||
     coeficient.ab === "" ||
-    coeficient.bb === "" 
+    coeficient.bb === ""
       ? alert("Enter all inputs")
       : zero();
   };
 
   const zero = () => {
     coeficient.ca === "0" && coeficient.ab === "0"
-    ? alert("Invalid Input! Enter proper equation of line")
-    :resultDumm();
-  }
+      ? alert("Invalid Input! Enter proper equation of line")
+      : resultDumm();
+  };
 
   const f =
     "\\frac{h-x_1}{a} = \\frac{k-y_1}{b} = \\frac{-2(ax_1+by_1+c)}{a^2+b^2}";
@@ -102,6 +102,13 @@ const Imageofpoint = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Mirror image of a point with respect to a Line.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Mirror image of a point with respect to a Line"}
         formula={f1}

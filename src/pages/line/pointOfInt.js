@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const PointOfInt = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     aa: "",
@@ -101,16 +101,23 @@ const PointOfInt = () => {
   };
 
   const all_zero = () => {
-    coeficient.aa === '0' && coeficient.ba === '0' && coeficient.ca === '0' && coeficient.ab === '0' && coeficient.bb === '0' && coeficient.cb === '0'
-    ?alert("Invalid Input! Enter proper Equation of a Line")
-    :check_same()
-  }
+    coeficient.aa === "0" &&
+    coeficient.ba === "0" &&
+    coeficient.ca === "0" &&
+    coeficient.ab === "0" &&
+    coeficient.bb === "0" &&
+    coeficient.cb === "0"
+      ? alert("Invalid Input! Enter proper Equation of a Line")
+      : check_same();
+  };
 
-const check_same = () => {
-  coeficient.aa === coeficient.ab && coeficient.ba  === coeficient.bb && coeficient.ca  === coeficient.cb
+  const check_same = () => {
+    coeficient.aa === coeficient.ab &&
+    coeficient.ba === coeficient.bb &&
+    coeficient.ca === coeficient.cb
       ? alert("Lines are Same! Enter two Different Lines")
       : check_parallel();
-}
+  };
 
   const check_parallel = () => {
     coeficient.aa / coeficient.ba === coeficient.ab / coeficient.bb
@@ -120,6 +127,13 @@ const check_same = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Point of intersection of two lines.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Point of intersection of two lines"}
         formula={""}

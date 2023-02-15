@@ -6,17 +6,17 @@ import ResultTempPara from "../../component/sections/resultTempPara";
 import Parabola from "../../calculations/parabola";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const AttributesPara = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [eqInput, seteqInput] = useState({
     l: "",
@@ -67,8 +67,6 @@ const AttributesPara = () => {
   };
 
   const resultDumm = () => {
-
-  
     const result = parabola.attributes(
       eqInput.l,
       eqInput.m,
@@ -109,29 +107,37 @@ const AttributesPara = () => {
     setresult(final);
   };
 
-  const check=()=>{
-    if(eqInput.l!=0){
-      eqInput.m==0?resultDumm():alert("Coeficient of x^2 or y^2 should be zero ")
+  const check = () => {
+    if (eqInput.l != 0) {
+      eqInput.m == 0
+        ? resultDumm()
+        : alert("Coeficient of x^2 or y^2 should be zero ");
+    } else {
+      eqInput.m != 0
+        ? resultDumm()
+        : alert("Coeficient of x^2 or y^2 should be zero ");
     }
-    else{
-      eqInput.m!=0?resultDumm():alert("Coeficient of x^2 or y^2 should be zero ")
+  };
 
-    }
-  }
-  
   const onResult = () => {
     eqInput.l === "" ||
     eqInput.m === "" ||
     eqInput.n === "" ||
     eqInput.o === "" ||
     eqInput.p === ""
-    ? alert("Enter all inputs")
-    : check()
+      ? alert("Enter all inputs")
+      : check();
   };
-  
+
   return (
     <div>
-      {" "}
+      <Helmet>
+        <title>Program to find attributes of parabola.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Program to find attributes of parabola"}
         type={"ellipse"}

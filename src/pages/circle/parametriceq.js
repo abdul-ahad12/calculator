@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Parametriceq = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [eqInput, seteqInput] = useState({
     g: "",
@@ -48,36 +48,49 @@ const Parametriceq = () => {
     const result = circle.parametriceq(eqInput.g, eqInput.f, eqInput.c);
     let a = result[0];
     let b = result[1];
-    let c=result[2]
+    let c = result[2];
 
-    let final =<MathComponent tex={`\\displaylines{x=${a}+(${c})Cos(\\theta) \\\\ y=${b}+(${c})Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}/>
+    let final = (
+      <MathComponent
+        tex={`\\displaylines{x=${a}+(${c})Cos(\\theta) \\\\ y=${b}+(${c})Sin(\\theta)  \\\\  0<\\theta<2\\pi}`}
+      />
+    );
 
     setresult(final);
   };
 
   const onResult = () => {
-    eqInput.g === "" || 
-    eqInput.f === "" || 
-    eqInput.c === ""
+    eqInput.g === "" || eqInput.f === "" || eqInput.c === ""
       ? alert("Enter all inputs")
       : check_circle();
   };
 
   const check_circle = () => {
-    (eqInput.g/2 * eqInput.g/2) + (eqInput.f/2 * eqInput.f/2) - eqInput.c <= 0 
-    ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
-    :resultDumm()
-  }
+    ((eqInput.g / 2) * eqInput.g) / 2 +
+      ((eqInput.f / 2) * eqInput.f) / 2 -
+      eqInput.c <=
+    0
+      ? alert("The Entered Equation of circle is invalid! Enter Valid Input")
+      : resultDumm();
+  };
 
-  const f = '\\displaylines{ x = -g + rcos(\\theta) \\\\ \\\\ y = -f + rSin(\\theta)}';
-  const f1 = <MathComponent tex={f} />
+  const f =
+    "\\displaylines{ x = -g + rcos(\\theta) \\\\ \\\\ y = -f + rSin(\\theta)}";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Parametric equation of circle.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Parametric equation of circle"}
         type={"eqCircle"}
-        formula = {f1}
+        formula={f1}
         valueA={eqInput.g}
         valueB={eqInput.f}
         valueC={eqInput.c}
