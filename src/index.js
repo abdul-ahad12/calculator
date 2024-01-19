@@ -9,7 +9,7 @@ import CrEquation from './pages/circle/crEquation'
 import Areacircum from './pages/circle/areacircum';
 import Eqfromcp from './pages/circle/eqfromcp';
 import EqfromCR from './pages/circle/eqfromCR';
-import GenToStand from './pages/circle/gentostand';
+import GenToStand from './pages/circle/genToStand';
 import Lengthoftangent from './pages/circle/lengthoftangent';
 import Lengthxy from './pages/circle/lengthxy';
 import Parametriceq from './pages/circle/parametriceq';
