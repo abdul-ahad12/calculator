@@ -3,7 +3,6 @@ import { useLocation } from "react-router-dom";
 import Circle from "../../calculations/circle";
 import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
-
 import ReactGA from "react-ga4";
 import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";

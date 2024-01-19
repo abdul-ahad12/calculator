@@ -3,17 +3,17 @@ import { useLocation } from "react-router-dom";
 import GeoTemp from "../component/sections/geoTemp";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Triangle = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const lineElements = [
     {
@@ -75,13 +75,17 @@ const Triangle = () => {
 
       link: "/incentrepoints",
     },
-    
-
-
   ];
 
   return (
     <div>
+      <Helmet>
+        <title>Triangle | Coordinate Geometry</title>
+        <meta
+          name="description"
+          content="Unleash the power of precision in triangle geometry with our intuitive Coordinate Geometry Calculator. Effortlessly tackle triangle-related challenges, compute side lengths, angles, and centroids with ease. Explore the efficiency of our calculator for accurate solutions, making triangle problem-solving a breeze. Elevate your geometric mastery today!"
+        />
+      </Helmet>
       <GeoTemp title={"Triangle"} elements={lineElements} />
     </div>
   );

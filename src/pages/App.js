@@ -4,17 +4,17 @@ import MainCard from "../component/sections/mainCard";
 import MainLayout from "./mainLayout";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 function App() {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const mainElements = [
     {
@@ -50,19 +50,35 @@ function App() {
   ];
 
   return (
-    <MainLayout>
-      <div className="w-full flex justify-center items-start  min-h-[30rem] py-[3rem]  ">
-        <div className="w-90vw mx-3 flex flex-wrap items-center justify-center normal gap-11">
-          {mainElements.map((data, index) => {
-            return (
-              <div key={index}>
-                <MainCard title={data.title} url={data.url} link={data.link} />
-              </div>
-            );
-          })}
+    <>
+      <Helmet>
+        <title>
+          Advanced Coordinate Geometry Calculator - Streamline Your Solutions
+          with Precision
+        </title>
+        <meta
+          name="description"
+          content="Explore the world of precise solutions with our Coordinate Geometry Calculator. Effortlessly solve equations, plot points, and navigate the intricacies of geometric calculations. Your key to unlocking accuracy and efficiency in coordinate geometry."
+        />
+      </Helmet>
+      <MainLayout>
+        <div className="w-full flex justify-center items-start  min-h-[30rem] py-[3rem]  ">
+          <div className="w-90vw mx-3 flex flex-wrap items-center justify-center normal gap-11">
+            {mainElements.map((data, index) => {
+              return (
+                <div key={index}>
+                  <MainCard
+                    title={data.title}
+                    url={data.url}
+                    link={data.link}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </MainLayout>
+      </MainLayout>
+    </>
   );
 }
 

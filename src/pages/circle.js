@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import GeoTemp from "../component/sections/geoTemp";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
@@ -95,6 +96,13 @@ const Circle = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Circle | Coordinate Geometry</title>
+        <meta
+          name="description"
+          content="Explore the world of circles with confidence using our advanced Coordinate Geometry Calculator. Effortlessly solve circle-related problems, calculate radii, find intersections, and master equations seamlessly. Unlock precision solutions at your fingertips for a seamless journey through circle geometry. Elevate your understanding with our intuitive calculator today!"
+        />
+      </Helmet>
       <GeoTemp title={"Circle"} elements={lineElements} />
     </div>
   );
