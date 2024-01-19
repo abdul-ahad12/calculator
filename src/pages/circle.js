@@ -95,6 +95,7 @@ const Circle = () => {
 
   return (
     <div>
+      hello
       <GeoTemp title={"Circle"} elements={lineElements} />
     </div>
   );
