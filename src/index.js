@@ -5,7 +5,7 @@ import './font/stylesheet.css'
 import './index.css';
 import App from './pages/App';
 import Circle from './pages/circlepage';
-import CrEquation from './pages/circle/crequation'
+import CrEquation from './pages/circle/crEquation'
 import Areacircum from './pages/circle/areacircum';
 import Eqfromcp from './pages/circle/eqfromcp';
 import EqfromCR from './pages/circle/eqfromcr';
