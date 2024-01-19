@@ -6,7 +6,7 @@ import './index.css';
 import App from './pages/App';
 import Circle from './pages/circle';
 import Areacircum from './pages/circle/areacircum';
-import CrEquation from './pages/circle/crequation';
+// import CrEquation from './pages/circle/crequation';
 import Eqfromcp from './pages/circle/eqfromcp';
 import EqfromCR from './pages/circle/eqfromcr';
 import GenToStand from './pages/circle/gentostand';
@@ -115,7 +115,7 @@ root.render(
 
         {/*               Circle               */}
         <Route path="circle" element={<Circle />}></Route>
-        <Route path="crequation" element={<CrEquation />}></Route>
+        {/* <Route path="crequation" element={<CrEquation />}></Route> */}
         <Route path="eqfromcr" element={<EqfromCR />}></Route>
         <Route path="gentostand" element={<GenToStand />}></Route>
         <Route path="eqfromcp" element={<Eqfromcp />}></Route>
