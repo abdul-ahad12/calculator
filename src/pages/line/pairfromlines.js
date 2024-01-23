@@ -124,7 +124,7 @@ const Pairfromlines = () => {
         <title>Equation of pair of straight lines from two lines.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation of pair of straight lines from two lines."
         />
       </Helmet>
       <TitleTemplate

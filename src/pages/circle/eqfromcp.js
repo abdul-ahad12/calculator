@@ -84,7 +84,7 @@ const Eqfromcp = () => {
         <title>Equation of circle passing through a point with center given.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation of circle passing through a point with center given."
         />
       </Helmet>
       <TitleTemplate

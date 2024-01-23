@@ -53,12 +53,11 @@ function App() {
     <>
       <Helmet>
         <title>
-          Advanced Coordinate Geometry Calculator - Streamline Your Solutions
-          with Precision
+          Coordinate Geometry Calculator
         </title>
         <meta
           name="description"
-          content="Explore the world of precise solutions with our Coordinate Geometry Calculator. Effortlessly solve equations, plot points, and navigate the intricacies of geometric calculations. Your key to unlocking accuracy and efficiency in coordinate geometry."
+          content="Free Distance, Slope, and many other Calculators. Explore the world of precise solutions with our Coordinate Geometry Calculator Today."
         />
       </Helmet>
       <MainLayout>

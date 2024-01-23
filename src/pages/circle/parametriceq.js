@@ -84,7 +84,7 @@ const Parametriceq = () => {
         <title>Parametric equation of circle.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Parametric equation of circle."
         />
       </Helmet>
       <TitleTemplate

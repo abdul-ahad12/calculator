@@ -114,10 +114,10 @@ const Anglebwpairlines = () => {
   return (
     <div>
       <Helmet>
-        <title>Angle between two lines.</title>
+        <title>Angle between two lines from equation of pair of straight lines</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Angle between two lines from equation of pair of straight lines"
         />
       </Helmet>
       <TitleTemplate

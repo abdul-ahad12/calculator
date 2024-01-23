@@ -80,7 +80,7 @@ const GenToStand = () => {
         <title>General form equation to standard form.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find General form equation to standard form."
         />
       </Helmet>
       <TitleTemplate

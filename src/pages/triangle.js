@@ -83,7 +83,7 @@ const Triangle = () => {
         <title>Triangle | Coordinate Geometry</title>
         <meta
           name="description"
-          content="Unleash the power of precision in triangle geometry with our intuitive Coordinate Geometry Calculator. Effortlessly tackle triangle-related challenges, compute side lengths, angles, and centroids with ease. Explore the efficiency of our calculator for accurate solutions, making triangle problem-solving a breeze. Elevate your geometric mastery today!"
+          content="Effortlessly tackle triangle-related challenges, compute side lengths, angles, and centroids with ease. Elevate your geometric mastery today!"
         />
       </Helmet>
       <GeoTemp title={"Triangle"} elements={lineElements} />

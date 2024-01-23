@@ -97,10 +97,10 @@ const Circle = () => {
   return (
     <div>
        <Helmet>
-        <title>Circle | Coordinate Geometry</title>
+        <title>Circle | Coordinate Geometry Calculator</title>
         <meta
           name="description"
-          content="Explore the world of circles with confidence using our advanced Coordinate Geometry Calculator. Effortlessly solve circle-related problems, calculate radii, find intersections, and master equations seamlessly. Unlock precision solutions at your fingertips for a seamless journey through circle geometry. Elevate your understanding with our intuitive calculator today!"
+          content="Explore the world of circles with confidence using our Coordinate Geometry Calculator. Solve circle-related problems, calculate radii, find intersections, and master equations seamlessly. Elevate your understanding with our intuitive calculator today!"
         />
       </Helmet>
       <GeoTemp title={"Circle"} elements={lineElements} />

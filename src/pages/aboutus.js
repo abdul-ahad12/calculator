@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import MainLayout from "./mainLayout";
+import { Helmet } from "react-helmet";
+
 
 import ReactGA from "react-ga4";
 const TRACKING_ID = "G-H6HVLL90WP";
@@ -18,6 +20,13 @@ const Aboutus = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>About Us | Coordinate Geometry Calculator</title>
+        <meta
+          name="description"
+          content="Our Story!"
+        />
+      </Helmet>
       <MainLayout>
         <div className='className="w-full flex mx-10 flex-col items-center h-[100%] '>
           <div className="lg:w-[60%] ">

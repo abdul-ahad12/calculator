@@ -119,7 +119,7 @@ const Poleofline = () => {
         <title>Pole of a line with respect to a circle.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Pole of a line with respect to a circle."
         />
       </Helmet>
       <TitleTemplate

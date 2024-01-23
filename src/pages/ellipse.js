@@ -29,10 +29,10 @@ const Ellipse = () => {
   return (
     <div>
       <Helmet>
-        <title>Ellipse | Coordinate Geometry</title>
+        <title>Ellipse | Coordinate Geometry Calculator</title>
         <meta
           name="description"
-          content="Master ellipse geometry effortlessly using our Coordinate Geometry Calculator. Whether you're calculating axes, finding foci, or exploring ellipse equations, our tool provides precision solutions. Elevate your geometric expertise and conquer ellipse challenges with ease. Explore accurate ellipse solutions today!"
+          content="Master ellipse geometry effortlessly using our Coordinate Geometry Calculator. Whether you're calculating axes, finding foci, or exploring ellipse equations, our tool provides precision solutions. Explore accurate ellipse solutions today!"
         />
       </Helmet>
       <GeoTemp title={"Ellipse"} elements={lineElements} />

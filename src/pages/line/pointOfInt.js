@@ -131,7 +131,7 @@ const PointOfInt = () => {
         <title>Point of intersection of two lines.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Point of intersection of two lines."
         />
       </Helmet>{" "}
       <TitleTemplate

@@ -120,7 +120,7 @@ const Powerofpoint = () => {
         <title>Power of point with respect to Circle.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Power of point with respect to Circle."
         />
       </Helmet>
       <TitleTemplate

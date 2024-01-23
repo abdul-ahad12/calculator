@@ -110,7 +110,7 @@ const Threepointcircle = () => {
         <title>Equation of circle from Three points.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation of circle from Three points."
         />
       </Helmet>
       <TitleTemplate

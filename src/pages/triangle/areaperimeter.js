@@ -149,7 +149,7 @@ const Areaperimeter = () => {
         <title>Area and Perimeter of a triangle from equations of sides.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Area and Perimeter of a triangle from equations of sides."
         />
       </Helmet>
       <TitleTemplate

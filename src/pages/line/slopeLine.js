@@ -94,7 +94,7 @@ const SlopeLine = () => {
         <title>Calculate Slope of a Line.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Calculate Slope of a Line."
         />
       </Helmet>{" "}
       <TitleTemplate

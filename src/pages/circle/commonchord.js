@@ -165,7 +165,7 @@ const Commonchord = () => {
         <title>Equation and length of common chord of two circles.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation and length of common chord of two circles."
         />
       </Helmet>
       <TitleTemplate

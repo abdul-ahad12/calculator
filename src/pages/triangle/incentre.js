@@ -149,7 +149,7 @@ const Incentre = () => {
         <title>Incenter of a triangle from sides.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Incenter of a triangle from sides."
         />
       </Helmet>
       <TitleTemplate

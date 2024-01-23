@@ -106,7 +106,7 @@ const Imageofpoint = () => {
         <title>Mirror image of a point with respect to a Line.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Mirror image of a point with respect to a Line."
         />
       </Helmet>
       <TitleTemplate

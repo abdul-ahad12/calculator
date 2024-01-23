@@ -81,7 +81,7 @@ const EqfromCR = () => {
         <title>Equation of circle from center and radius.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation of circle from center and radius."
         />
       </Helmet>
       <TitleTemplate

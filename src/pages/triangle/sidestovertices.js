@@ -155,7 +155,7 @@ const Sidestovertices = () => {
         <title>Vertices of a Triangle from equations of sides.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Vertices of a Triangle from equations of sides."
         />
       </Helmet>
       <TitleTemplate

@@ -91,7 +91,7 @@ const Xyintercept = () => {
         <title>x-intercept and y-intercept of a line.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find x-intercept and y-intercept of a line."
         />
       </Helmet>{" "}
       <TitleTemplate

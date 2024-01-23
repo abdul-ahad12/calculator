@@ -164,7 +164,7 @@ const Radicalcentre = () => {
         <title>Radical Centre of three circles.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Radical Centre of three circles."
         />
       </Helmet>
       <TitleTemplate

@@ -162,14 +162,14 @@ const Attributes = () => {
   return (
     <div>
       <Helmet>
-        <title>Program to find attributes of ellipse.</title>
+        <title>Calculator to find attributes of ellipse.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Calculator to find attributes of ellipse."
         />
       </Helmet>{" "}
       <TitleTemplate
-        title={"Program to find attributes of ellipse"}
+        title={"Calculator to find attributes of ellipse"}
         type={"ellipse"}
         // formula = {f2}
         valueA={eqInput.l}

@@ -80,7 +80,7 @@ const Eqlinenormal = () => {
         </title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Normal Form of a Line from equation of a line."
         />
       </Helmet>
       <TitleTemplate

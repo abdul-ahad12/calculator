@@ -143,7 +143,7 @@ const Nopointstangents = () => {
         </title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Relative position of two Circles and Number of common Tangents."
         />
       </Helmet>
 

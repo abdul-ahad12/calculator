@@ -84,7 +84,7 @@ const PointSlopeForm = () => {
         <title>Equation of a line. Point slope form.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation of a line. Point slope form."
         />
       </Helmet>{" "}
       <TitleTemplate

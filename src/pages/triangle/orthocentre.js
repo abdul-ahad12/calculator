@@ -145,7 +145,7 @@ const Orthocentre = () => {
         <title>Orthocentre of a triangle from sides.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Orthocentre of a triangle from sides."
         />
       </Helmet>
       <TitleTemplate

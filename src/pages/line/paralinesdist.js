@@ -116,7 +116,7 @@ const Paralinesdist = () => {
         <title>Perpendicular Distance between two parallel lines.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Perpendicular Distance between two parallel lines."
         />
       </Helmet>
       <TitleTemplate

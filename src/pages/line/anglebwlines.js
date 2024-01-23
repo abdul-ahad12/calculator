@@ -127,7 +127,7 @@ const Anglebwlines = () => {
         <title>Angle between two lines.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Angle between two lines."
         />
       </Helmet>
       <TitleTemplate

@@ -108,7 +108,7 @@ const Lengthoftangent = () => {
         <title>Length of tangent at a point to a circle.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Length of tangent at a point to a circle."
         />
       </Helmet>
       <TitleTemplate

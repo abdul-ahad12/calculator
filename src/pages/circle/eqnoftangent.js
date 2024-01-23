@@ -116,7 +116,7 @@ const Eqnoftangent = () => {
         <title>Equation of Tangent and Normal at a point to a circle.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equation of Tangent and Normal at a point to a circle."
         />
       </Helmet>
       <TitleTemplate

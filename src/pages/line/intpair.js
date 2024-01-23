@@ -131,7 +131,7 @@ const Intpair = () => {
         </title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Point of Intersection from equation of pair of straight lines."
         />
       </Helmet>
       <TitleTemplate

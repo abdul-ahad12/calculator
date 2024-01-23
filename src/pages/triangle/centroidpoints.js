@@ -124,7 +124,7 @@ const Centroidpoints = () => {
         <title>Centroid of a triangle from Vertices.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Centroid of a triangle from Vertices."
         />
       </Helmet>
       <TitleTemplate

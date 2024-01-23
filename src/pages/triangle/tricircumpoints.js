@@ -116,7 +116,7 @@ const Tricircumpoints = () => {
         <title>Circumcentre of a triangle from Vertices.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Circumcentre of a triangle from Vertices."
         />
       </Helmet>
       <TitleTemplate

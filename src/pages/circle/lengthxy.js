@@ -80,7 +80,7 @@ const Lengthxy = () => {
         <title>Length of X and Y intercepts of a circle.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Length of X and Y intercepts of a circle."
         />
       </Helmet>
       <TitleTemplate

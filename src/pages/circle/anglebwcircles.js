@@ -163,7 +163,7 @@ const Anglebwcircles = () => {
         <title>Angle between two Circles.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Angle between two Circles"
         />
       </Helmet>
       <TitleTemplate

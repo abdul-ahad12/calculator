@@ -3,6 +3,8 @@ import emailjs from "emailjs-com";
 import MainLayout from "./mainLayout";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 
 import ReactGA from "react-ga4";
 const TRACKING_ID = "G-H6HVLL90WP";
@@ -68,6 +70,13 @@ const Contactus = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Contact Us | Coordinate Geometry Calculator</title>
+        <meta
+          name="description"
+          content="Send a Message, Get in Touch!"
+        />
+      </Helmet>
       <MainLayout>
         <div className="w-full flex justify-center">
           <div className="w-[90%] flex lg:flex-row base:flex-col base:my-11 lg:my-0  max-w-[1500px]  justify-between items-center ">

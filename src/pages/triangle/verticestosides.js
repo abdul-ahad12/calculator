@@ -124,7 +124,7 @@ const Verticestosides = () => {
         <title>Equations of Sides of a Triangle from Vertices.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Equations of Sides of a Triangle from Vertices."
         />
       </Helmet>
       <TitleTemplate

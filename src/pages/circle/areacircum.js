@@ -77,7 +77,7 @@ const Areacircum = () => {
         <title>Area and Circumference of a circle from equation.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to Area and Circumference of a circle from equation."
         />
       </Helmet>
       <TitleTemplate

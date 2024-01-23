@@ -76,7 +76,7 @@ const Areacircumellipse = () => {
         <title>Area and circumference of ellipse from equation.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Area and circumference of ellipse from equation."
         />
       </Helmet>
       <TitleTemplate

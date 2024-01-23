@@ -181,14 +181,14 @@ const AttributesEl = () => {
   return (
     <div>
       <Helmet>
-        <title>Program to find attributes of hyperbola.</title>
+        <title>Calculator to find attributes of hyperbola.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Calculator to find attributes of hyperbola."
         />
       </Helmet>{" "}
       <TitleTemplate
-        title={"Program to find attributes of hyperbola"}
+        title={"Calculator to find attributes of hyperbola"}
         type={"ellipse"}
         // formula = {f2}
         valueA={eqInput.l}

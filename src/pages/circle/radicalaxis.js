@@ -129,7 +129,7 @@ const Radicalaxis = () => {
         <title>Radical Axis of two Circles.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Radical Axis of two Circles."
         />
       </Helmet>
       <TitleTemplate

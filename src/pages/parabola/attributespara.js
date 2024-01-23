@@ -132,14 +132,14 @@ const AttributesPara = () => {
   return (
     <div>
       <Helmet>
-        <title>Program to find attributes of parabola.</title>
+        <title>Calculator to find attributes of parabola.</title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Calculator to find attributes of parabola."
         />
       </Helmet>{" "}
       <TitleTemplate
-        title={"Program to find attributes of parabola"}
+        title={"Calculator to find attributes of parabola"}
         type={"ellipse"}
         // formula = {f2}
         valueA={eqInput.l}

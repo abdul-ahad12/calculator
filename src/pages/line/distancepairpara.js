@@ -127,7 +127,7 @@ const Distancepairpara = () => {
         </title>
         <meta
           name="description"
-          content="Free calculator to find distance between two points"
+          content="Free calculator to find Distance between two parallel lines from equation of pair of lines."
         />
       </Helmet>
       <TitleTemplate

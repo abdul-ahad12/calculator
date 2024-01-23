@@ -34,7 +34,7 @@ const Parabola = () => {
         <title>Parabola | Coordinate Geometry</title>
         <meta
           name="description"
-          content="Navigate the intricacies of parabolas effortlessly with our advanced Coordinate Geometry Calculator. Tackle parabola-related challenges with ease, from vertex calculations to finding focus points. Unlock the precision of our calculator for seamless solutions in parabolic geometry. Elevate your understanding and conquer parabola problems effortlessly today!"
+          content="Navigate the intricacies of parabolas effortlessly with our advanced Coordinate Geometry Calculator. Tackle parabola-related challenges with ease, from vertex calculations to finding focus points. Elevate your understanding of parabolas effortlessly today!"
         />
       </Helmet>
       <GeoTemp title={"Parabola"} elements={lineElements} />
