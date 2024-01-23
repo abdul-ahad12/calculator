@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Areacircumellipse = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [eqInput, seteqInput] = useState({
     l: "",
@@ -40,7 +40,7 @@ const Areacircumellipse = () => {
       m: e.target.value,
     });
   };
-  
+
   const resultDumm = () => {
     const result = ellipse.areacircum(eqInput.l, eqInput.m);
     let a = result[0];
@@ -66,23 +66,31 @@ const Areacircumellipse = () => {
     // })
   };
 
-  const s = "Area = \\pi ab \\hspace{1cm} Circumference = \\pi \\sqrt{2(a^2+b^2)}";
+  const s =
+    "Area = \\pi ab \\hspace{1cm} Circumference = \\pi \\sqrt{2(a^2+b^2)}";
   const f2 = <MathComponent tex={s} />;
 
   return (
     <div>
-    <TitleTemplate
-      title={"Area and circumference of ellipse from equation"}
-      type={"ellipse"}
-      formula = {f2}
-      valueA={eqInput.l}
-      valueB={eqInput.m}
-      onAChange={onLChange}
-      onBChange={onMChange}
-      result={result}
-      onResult={onResult}
-    />
-  </div>
-  )
+      <Helmet>
+        <title>Area and circumference of ellipse from equation.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
+      <TitleTemplate
+        title={"Area and circumference of ellipse from equation"}
+        type={"ellipse"}
+        formula={f2}
+        valueA={eqInput.l}
+        valueB={eqInput.m}
+        onAChange={onLChange}
+        onBChange={onMChange}
+        result={result}
+        onResult={onResult}
+      />
+    </div>
+  );
 };
 export default Areacircumellipse;

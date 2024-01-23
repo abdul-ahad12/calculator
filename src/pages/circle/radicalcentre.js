@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Radicalcentre = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     g1: "",
@@ -160,6 +160,13 @@ const Radicalcentre = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Radical Centre of three circles.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Radical Centre of three circles"}
         type={"threecircles"}

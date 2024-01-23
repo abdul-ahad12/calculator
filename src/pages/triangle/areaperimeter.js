@@ -5,17 +5,17 @@ import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Areaperimeter = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -126,22 +126,32 @@ const Areaperimeter = () => {
     coeficient.f === "" ||
     coeficient.g === "" ||
     coeficient.h === "" ||
-    coeficient.i === "" 
+    coeficient.i === ""
       ? alert("Enter all inputs")
       : check_parallel();
   };
 
   const check_parallel = () => {
-    coeficient.a / coeficient.b === coeficient.d / coeficient.e || coeficient.a / coeficient.b === coeficient.g / coeficient.h || coeficient.g / coeficient.h === coeficient.d / coeficient.e 
+    coeficient.a / coeficient.b === coeficient.d / coeficient.e ||
+    coeficient.a / coeficient.b === coeficient.g / coeficient.h ||
+    coeficient.g / coeficient.h === coeficient.d / coeficient.e
       ? alert("Lines are parallel! Enter valid Input.")
       : resultDumm();
   };
 
-  const f = "\\displaylines{Area = \\frac{1}{2}|(x_1-x_2)(y_1-y_3) - (x_1-x_3)(y_1-y_2)| \\\\ \\\\ Perimeter = AB + BC + CA  }";
-  const f1 = <MathComponent tex={f} />
+  const f =
+    "\\displaylines{Area = \\frac{1}{2}|(x_1-x_2)(y_1-y_3) - (x_1-x_3)(y_1-y_2)| \\\\ \\\\ Perimeter = AB + BC + CA  }";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Area and Perimeter of a triangle from equations of sides.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Area and Perimeter of a triangle from equations of sides"}
         formula={f1}

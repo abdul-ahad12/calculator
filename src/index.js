@@ -4,12 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './font/stylesheet.css'
 import './index.css';
 import App from './pages/App';
-import Circle from './pages/circle';
+import Circle from './pages/circlepage';
+import CrEquation from './pages/circle/crEquation'
 import Areacircum from './pages/circle/areacircum';
-import CrEquation from './pages/circle/crequation';
 import Eqfromcp from './pages/circle/eqfromcp';
-import EqfromCR from './pages/circle/eqfromcr';
-import GenToStand from './pages/circle/gentostand';
+import EqfromCR from './pages/circle/eqfromCR';
+import GenToStand from './pages/circle/genToStand';
 import Lengthoftangent from './pages/circle/lengthoftangent';
 import Lengthxy from './pages/circle/lengthxy';
 import Parametriceq from './pages/circle/parametriceq';

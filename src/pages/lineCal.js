@@ -5,6 +5,7 @@ import GeoTemp from "../component/sections/geoTemp";
 // import MainLayout from "./mainLayout";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
@@ -93,6 +94,13 @@ const LineCal = () => {
 
   return (
     <>
+     <Helmet>
+        <title>Line | Coordinate Geometry</title>
+        <meta
+          name="description"
+          content="Empower your geometry skills with our user-friendly Coordinate Geometry Calculator. Quickly tackle line-related problems, calculate slopes, find intersections, and master equations with ease. Precision solutions at your fingertips for seamless learning and problem-solving. Explore the efficiency of our calculator today!"
+        />
+      </Helmet>
       <GeoTemp elements={lineElements} title={"Line"} />
     </>
   );

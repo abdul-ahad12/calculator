@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const EqfromCR = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [point, setpoint] = useState({
     x: "",
@@ -23,7 +23,7 @@ const EqfromCR = () => {
     r: "",
   });
 
-  console.log(point)
+  console.log(point);
   const [result, setresult] = useState("");
 
   const circle = new Circle(point.x, point.y, point.r);
@@ -31,7 +31,7 @@ const EqfromCR = () => {
   const onXChange = (e) => {
     setpoint({
       ...point,
-      x:e.target.value,
+      x: e.target.value,
     });
   };
   const onYChange = (e) => {
@@ -53,15 +53,15 @@ const EqfromCR = () => {
     let b = result[1];
     let c = result[2];
 
-    let final = <MathComponent tex={`x^2 + y^2 +(${a})x +(${b})y +(${c}) = 0`} />
+    let final = (
+      <MathComponent tex={`x^2 + y^2 +(${a})x +(${b})y +(${c}) = 0`} />
+    );
 
     setresult(final);
   };
 
   const onResult = () => {
-    point.x === "" || 
-    point.y === "" || 
-    point.r === ""
+    point.x === "" || point.y === "" || point.r === ""
       ? alert("Enter all inputs")
       : check_radius();
   };
@@ -72,11 +72,18 @@ const EqfromCR = () => {
       : resultDumm();
   };
 
-  const s = 'S: (x-h)^2 + (y-k)^2 = r^2';
-  const f2 = <MathComponent tex={s} />
+  const s = "S: (x-h)^2 + (y-k)^2 = r^2";
+  const f2 = <MathComponent tex={s} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Equation of circle from center and radius.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Equation of circle from center and radius"}
         formula={f2}

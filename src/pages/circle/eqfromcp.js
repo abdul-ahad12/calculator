@@ -5,6 +5,7 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
@@ -79,6 +80,13 @@ const Eqfromcp = () => {
 
   return (
     <div>
+       <Helmet>
+        <title>Equation of circle passing through a point with center given.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Equation of circle passing through a point with center given"}
         type={"centerpoint"}

@@ -5,17 +5,17 @@ import { MathComponent } from "mathjax-react";
 import Circle from "../../calculations/circle";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Threepointcircle = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -87,25 +87,32 @@ const Threepointcircle = () => {
     let y = result[1];
     let z = result[2];
 
-    let e = <MathComponent tex={`x^2 + y^2 + (${x})x + (${y})y + (${z}) = 0`} />;
+    let e = (
+      <MathComponent tex={`x^2 + y^2 + (${x})x + (${y})y + (${z}) = 0`} />
+    );
     setResult(e);
   };
 
   const onResult = () => {
-    coeficient.a === "" || 
-    coeficient.b === "" || 
+    coeficient.a === "" ||
+    coeficient.b === "" ||
     coeficient.c === "" ||
     coeficient.d === "" ||
     coeficient.e === "" ||
-    coeficient.f === "" 
+    coeficient.f === ""
       ? alert("Enter all inputs")
       : resultDumm();
   };
 
-
-  
   return (
     <div>
+      <Helmet>
+        <title>Equation of circle from Three points.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Equation of circle from Three points"}
         // formula={f1}

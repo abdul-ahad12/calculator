@@ -5,17 +5,17 @@ import { MathComponent } from "mathjax-react";
 import Triangle from "../../calculations/triangle";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Sidestovertices = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -136,19 +136,28 @@ const Sidestovertices = () => {
     coeficient.f === "" ||
     coeficient.g === "" ||
     coeficient.h === "" ||
-    coeficient.i === "" 
+    coeficient.i === ""
       ? alert("Enter all inputs")
       : check_parallel();
   };
 
   const check_parallel = () => {
-    coeficient.a / coeficient.b === coeficient.d / coeficient.e || coeficient.a / coeficient.b === coeficient.g / coeficient.h || coeficient.g / coeficient.h === coeficient.d / coeficient.e 
+    coeficient.a / coeficient.b === coeficient.d / coeficient.e ||
+    coeficient.a / coeficient.b === coeficient.g / coeficient.h ||
+    coeficient.g / coeficient.h === coeficient.d / coeficient.e
       ? alert("Lines are parallel! Enter valid Input.")
       : resultDumm();
   };
 
   return (
     <div>
+      <Helmet>
+        <title>Vertices of a Triangle from equations of sides.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Vertices of a Triangle from equations of sides"}
         // formula={f1}

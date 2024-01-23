@@ -5,18 +5,17 @@ import { MathComponent } from "mathjax-react";
 import { useLocation } from "react-router-dom";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Xyintercept = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
-
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -53,20 +52,16 @@ const Xyintercept = () => {
     let y = result[1];
     let c = `(${x},0)`;
     let d = `(0,${y})`;
-    let final =``;
-    if (!(isFinite(x)))
-    {
-      final = `\\displaylines{Line \\ is\\ parallel \\ to \\ X-axis, \\ therefore \\ x-intercept \\ does \\ not \\ exist \\\\ y-intercept:${d}}`
-    }
-    else if(!(isFinite(y)))
-    {
-      final = `\\displaylines{x-intercept:${c} \\\\ Line \\ is\\ parallel \\ to \\ Y-axis, \\ therefore \\ y-intercept \\ does \\ not \\ exist}`
-    }
-    else{
-     final = `\\displaylines{x-intercept:${c} \\\\ y-intercept:${d}}`
+    let final = ``;
+    if (!isFinite(x)) {
+      final = `\\displaylines{Line \\ is\\ parallel \\ to \\ X-axis, \\ therefore \\ x-intercept \\ does \\ not \\ exist \\\\ y-intercept:${d}}`;
+    } else if (!isFinite(y)) {
+      final = `\\displaylines{x-intercept:${c} \\\\ Line \\ is\\ parallel \\ to \\ Y-axis, \\ therefore \\ y-intercept \\ does \\ not \\ exist}`;
+    } else {
+      final = `\\displaylines{x-intercept:${c} \\\\ y-intercept:${d}}`;
     }
     let e = <MathComponent tex={final} />;
-     setResult(e);
+    setResult(e);
   };
 
   const onResult = () => {
@@ -76,21 +71,29 @@ const Xyintercept = () => {
   };
 
   const all_zero = () => {
-    coeficient.a === '0' && coeficient.b === '0' && coeficient.c === '0'
-    ?alert("Invalid Input! Enter proper Equation of a Line")
-    :xy_zero()
-  }
+    coeficient.a === "0" && coeficient.b === "0" && coeficient.c === "0"
+      ? alert("Invalid Input! Enter proper Equation of a Line")
+      : xy_zero();
+  };
 
   const xy_zero = () => {
-    coeficient.a === '0' && coeficient.b === '0'
-    ?alert("Invalid Input! Enter proper Equation of a Line")
-    :resultDumm()
-  }
-  const f = '\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\\\ \\\\ y-intercept : -\\frac{c}{b}}';
-  const f1 = <MathComponent tex={f} />
+    coeficient.a === "0" && coeficient.b === "0"
+      ? alert("Invalid Input! Enter proper Equation of a Line")
+      : resultDumm();
+  };
+  const f =
+    "\\displaylines{line: ax + by + c = 0 \\\\ \\\\ x-intercept : -\\frac{c}{a} \\\\ \\\\ y-intercept : -\\frac{c}{b}}";
+  const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>x-intercept and y-intercept of a line.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"x-intercept and y-intercept of a line."}
         formula={f1}

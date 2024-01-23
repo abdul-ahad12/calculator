@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Anglebwcircles = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     g1: "",
@@ -33,7 +33,7 @@ const Anglebwcircles = () => {
     coeficient.c1,
     coeficient.g2,
     coeficient.f2,
-    coeficient.c2,
+    coeficient.c2
   );
   console.log(coeficient);
 
@@ -81,12 +81,16 @@ const Anglebwcircles = () => {
       coeficient.c1,
       coeficient.g2,
       coeficient.f2,
-      coeficient.c2,
+      coeficient.c2
     );
     let x = result[0];
     let y = result[1];
 
-    let c = <MathComponent tex={`\\theta = Cos^{-1}(${x}) \\hspace{1cm} \\theta = ${y}`} />;
+    let c = (
+      <MathComponent
+        tex={`\\theta = Cos^{-1}(${x}) \\hspace{1cm} \\theta = ${y}`}
+      />
+    );
     setResult(c);
   };
 
@@ -96,22 +100,28 @@ const Anglebwcircles = () => {
     coeficient.c1 === "" ||
     coeficient.g2 === "" ||
     coeficient.f2 === "" ||
-    coeficient.c2 === "" 
+    coeficient.c2 === ""
       ? alert("Enter all inputs")
       : check_circle1();
   };
 
   const check_circle1 = () => {
-    (coeficient.g1/2 * coeficient.g1/2) + (coeficient.f1/2 * coeficient.f1/2) - coeficient.c1 <= 0 
-    ? alert("The Equation of First circle is invalid! Enter Valid Input")
-    :check_circle2()
-  }
+    ((coeficient.g1 / 2) * coeficient.g1) / 2 +
+      ((coeficient.f1 / 2) * coeficient.f1) / 2 -
+      coeficient.c1 <=
+    0
+      ? alert("The Equation of First circle is invalid! Enter Valid Input")
+      : check_circle2();
+  };
 
   const check_circle2 = () => {
-    (coeficient.g2/2 * coeficient.g2/2) + (coeficient.f2/2 * coeficient.f2/2) - coeficient.c2 <= 0 
-    ? alert("The Equation of Second circle is invalid! Enter Valid Input")
-    :check_pos()
-  }
+    ((coeficient.g2 / 2) * coeficient.g2) / 2 +
+      ((coeficient.f2 / 2) * coeficient.f2) / 2 -
+      coeficient.c2 <=
+    0
+      ? alert("The Equation of Second circle is invalid! Enter Valid Input")
+      : check_pos();
+  };
 
   const check_pos = () => {
     function cenAndrad(g, f, c) {
@@ -143,15 +153,23 @@ const Anglebwcircles = () => {
       : resultDumm();
   };
 
-  const f ="Cos(\\theta) = \\frac{c_1 + c_2 - 2(g_1g_2 + f_1f_2)}{2\\sqrt{g_1^2 + f_1^2 - c_1}\\sqrt{g_2^2 + f_2^2 - c_2}}";
+  const f =
+    "Cos(\\theta) = \\frac{c_1 + c_2 - 2(g_1g_2 + f_1f_2)}{2\\sqrt{g_1^2 + f_1^2 - c_1}\\sqrt{g_2^2 + f_2^2 - c_2}}";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>Angle between two Circles.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Angle between two Circles"}
         type={"twocircles"}
-        formula = {f1}
+        formula={f1}
         valueA={coeficient.g1}
         valueB={coeficient.f1}
         valueC={coeficient.c1}

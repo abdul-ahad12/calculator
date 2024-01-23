@@ -6,17 +6,17 @@ import ResultTemp from "../../component/sections/resultTemp";
 import TitleTemplate from "../../component/sections/titleTemplate";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const AttributesEl = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [eqInput, seteqInput] = useState({
     l: "",
@@ -87,8 +87,6 @@ const AttributesEl = () => {
     let k = result[10];
     let l = result[11];
     let m = result[12];
-    
- 
 
     // let final=`${a},${b},${c},${d},${e},${f},${g}`
 
@@ -119,17 +117,18 @@ const AttributesEl = () => {
         title10={"Equation of Conjugate Axis"}
         title11={"Equation of Latus rectum"}
         title12={"Vertices"}
-   
       />
     );
 
     setresult(final);
   };
-const firstcheck=()=>{
-  eqInput.l==="0"||eqInput.m==="0"?alert("The Equation entered is not of Hyperbola"):check()
-}
+  const firstcheck = () => {
+    eqInput.l === "0" || eqInput.m === "0"
+      ? alert("The Equation entered is not of Hyperbola")
+      : check();
+  };
 
-  const check=()=>{
+  const check = () => {
     let nn = eqInput.n / eqInput.l;
     //    let mm=m/m
     let oo = eqInput.o / eqInput.m;
@@ -139,26 +138,30 @@ const firstcheck=()=>{
     let bb = -1 * (oo / 2);
     //this is the coeeficient we are dividing with
     let c =
-      -1 * eqInput.p + eqInput.l * (Number(aa) * Number(aa)) + eqInput.m * (Number(bb) * Number(bb));
-      if (eqInput.l <0 ) {
-        //this is a^2
-      let a = -1*(c / eqInput.l);
+      -1 * eqInput.p +
+      eqInput.l * (Number(aa) * Number(aa)) +
+      eqInput.m * (Number(bb) * Number(bb));
+    if (eqInput.l < 0) {
+      //this is a^2
+      let a = -1 * (c / eqInput.l);
       //this is b^2
-      let b = (c / eqInput.m);
-      console.log(a)
-      console.log(b)
+      let b = c / eqInput.m;
+      console.log(a);
+      console.log(b);
 
-      a<0||b<0?alert("The Equation entered is not of Hyperbola"):resultDumm()
-  }
-  else{
-    let a = (c /  eqInput.l);
-    //this is b^2
-    let b = -1*(c /  eqInput.m);
+      a < 0 || b < 0
+        ? alert("The Equation entered is not of Hyperbola")
+        : resultDumm();
+    } else {
+      let a = c / eqInput.l;
+      //this is b^2
+      let b = -1 * (c / eqInput.m);
 
-      a<0||b<0?alert("The Equation entered is not of Hyperbola"):resultDumm()
-
-  }
-}
+      a < 0 || b < 0
+        ? alert("The Equation entered is not of Hyperbola")
+        : resultDumm();
+    }
+  };
 
   const onResult = () => {
     eqInput.l === "" || eqInput.m === ""
@@ -177,7 +180,13 @@ const firstcheck=()=>{
 
   return (
     <div>
-      {" "}
+      <Helmet>
+        <title>Program to find attributes of hyperbola.</title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>{" "}
       <TitleTemplate
         title={"Program to find attributes of hyperbola"}
         type={"ellipse"}

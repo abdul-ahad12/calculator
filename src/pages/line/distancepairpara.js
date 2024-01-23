@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Distancepairpara = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -101,24 +101,39 @@ const Distancepairpara = () => {
   };
 
   const check_eqn = () => {
-    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) < 0
-    ?alert("The equation does not represent a pair of straight lines! Enter Valid Input")
-    :check_pairpara();
-  }
+    ((coeficient.b / 2) * coeficient.b) / 2 - coeficient.a * coeficient.c < 0
+      ? alert(
+          "The equation does not represent a pair of straight lines! Enter Valid Input"
+        )
+      : check_pairpara();
+  };
 
   const check_pairpara = () => {
-    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) !== 0
-    ?alert("The equation does not represent a pair of parallel straight lines! Enter Valid Input")
-    :resultDumm();
-  }
+    ((coeficient.b / 2) * coeficient.b) / 2 - coeficient.a * coeficient.c !== 0
+      ? alert(
+          "The equation does not represent a pair of parallel straight lines! Enter Valid Input"
+        )
+      : resultDumm();
+  };
 
-  const f ="d = 2\\sqrt{\\frac{g^2-ac}{a(a+b)}}";
+  const f = "d = 2\\sqrt{\\frac{g^2-ac}{a(a+b)}}";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Distance between two parallel lines from equation of pair of lines.
+        </title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
-        title={"Distance between two parallel lines from equation of pair of lines"}
+        title={
+          "Distance between two parallel lines from equation of pair of lines"
+        }
         formula={f1}
         type={"pairoflines"}
         valueA={coeficient.a}

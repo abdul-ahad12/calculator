@@ -5,17 +5,17 @@ import TitleTemplate from "../../component/sections/titleTemplate";
 import { MathComponent } from "mathjax-react";
 
 import ReactGA from "react-ga4";
+import { Helmet } from "react-helmet";
 const TRACKING_ID = "G-H6HVLL90WP";
 ReactGA.initialize(TRACKING_ID);
 ReactGA.send("pageview");
 
 const Intpair = () => {
-
   const pathname = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0,0);
-  },[pathname]);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const [coeficient, setcoeficient] = useState({
     a: "",
@@ -85,7 +85,11 @@ const Intpair = () => {
     );
     let x = result[0];
     let y = result[1];
-    let c = <MathComponent tex={`Point \\hspace{.25cm} of \\hspace{.25cm} Intersection = (${x},${y})`} />;
+    let c = (
+      <MathComponent
+        tex={`Point \\hspace{.25cm} of \\hspace{.25cm} Intersection = (${x},${y})`}
+      />
+    );
     setResult(c);
   };
 
@@ -101,25 +105,35 @@ const Intpair = () => {
   };
 
   const check_eqn = () => {
-    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) < 0
-    ?alert("The equation does not represent a pair of straight lines! Enter Valid Input")
-    :check_pairpara();
-  }
+    ((coeficient.b / 2) * coeficient.b) / 2 - coeficient.a * coeficient.c < 0
+      ? alert(
+          "The equation does not represent a pair of straight lines! Enter Valid Input"
+        )
+      : check_pairpara();
+  };
 
   const check_pairpara = () => {
-    (coeficient.b/2 * coeficient.b/2) - (coeficient.a * coeficient.c) === 0
-    ?alert("The equation represents a pair of parallel lines, Point of intersection does not exist for parallel lines! Enter Valid Input")
-    :resultDumm();
-  }
+    ((coeficient.b / 2) * coeficient.b) / 2 - coeficient.a * coeficient.c === 0
+      ? alert(
+          "The equation represents a pair of parallel lines, Point of intersection does not exist for parallel lines! Enter Valid Input"
+        )
+      : resultDumm();
+  };
 
-
-
-
-  const f ="(\\frac{hf-bg}{ab-h^2}, \\frac{gh-af}{ab-h^2})";
+  const f = "(\\frac{hf-bg}{ab-h^2}, \\frac{gh-af}{ab-h^2})";
   const f1 = <MathComponent tex={f} />;
 
   return (
     <div>
+      <Helmet>
+        <title>
+          Point of Intersection from equation of pair of straight lines.
+        </title>
+        <meta
+          name="description"
+          content="Free calculator to find distance between two points"
+        />
+      </Helmet>
       <TitleTemplate
         title={"Point of Intersection from equation of pair of straight lines"}
         formula={f1}
